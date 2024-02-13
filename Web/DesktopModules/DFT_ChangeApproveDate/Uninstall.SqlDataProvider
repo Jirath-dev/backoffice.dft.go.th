@@ -1,0 +1,44 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/** Drop FAQs Table **/
+
+ALTER TABLE {databaseOwner}[{objectQualifier}YourCompany_DFT_ChangeApproveDate] DROP CONSTRAINT [FK_{objectQualifier}DFT_ChangeApproveDate_{objectQualifier}Modules]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}YourCompany_DFT_ChangeApproveDate] DROP CONSTRAINT [PK_{objectQualifier}YourCompany_DFT_ChangeApproveDate]
+GO
+
+DROP INDEX {databaseOwner}[{objectQualifier}YourCompany_DFT_ChangeApproveDate].[IX_{objectQualifier}YourCompany_DFT_ChangeApproveDate]
+GO
+
+DROP TABLE {databaseOwner}[{objectQualifier}YourCompany_DFT_ChangeApproveDate]
+GO
+
+/** Drop Stored Procedures **/
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_GetDFT_ChangeApproveDates]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_GetDFT_ChangeApproveDate]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_AddDFT_ChangeApproveDate]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_UpdateDFT_ChangeApproveDate]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_DeleteDFT_ChangeApproveDate]
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

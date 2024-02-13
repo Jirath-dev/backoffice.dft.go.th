@@ -1,0 +1,44 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/** Drop FAQs Table **/
+
+ALTER TABLE {databaseOwner}[{objectQualifier}NTi_DFT_FormE20Approve] DROP CONSTRAINT [FK_{objectQualifier}DFT_FormE20Approve_{objectQualifier}Modules]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}NTi_DFT_FormE20Approve] DROP CONSTRAINT [PK_{objectQualifier}NTi_DFT_FormE20Approve]
+GO
+
+DROP INDEX {databaseOwner}[{objectQualifier}NTi_DFT_FormE20Approve].[IX_{objectQualifier}NTi_DFT_FormE20Approve]
+GO
+
+DROP TABLE {databaseOwner}[{objectQualifier}NTi_DFT_FormE20Approve]
+GO
+
+/** Drop Stored Procedures **/
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}NTi_GetDFT_FormE20Approves]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}NTi_GetDFT_FormE20Approve]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}NTi_AddDFT_FormE20Approve]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}NTi_UpdateDFT_FormE20Approve]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}NTi_DeleteDFT_FormE20Approve]
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

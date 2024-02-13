@@ -1,0 +1,44 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/** Drop FAQs Table **/
+
+ALTER TABLE {databaseOwner}[{objectQualifier}NTi_DFT_EDI_CheckingCertificate] DROP CONSTRAINT [FK_{objectQualifier}DFT_EDI_CheckingCertificate_{objectQualifier}Modules]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}NTi_DFT_EDI_CheckingCertificate] DROP CONSTRAINT [PK_{objectQualifier}NTi_DFT_EDI_CheckingCertificate]
+GO
+
+DROP INDEX {databaseOwner}[{objectQualifier}NTi_DFT_EDI_CheckingCertificate].[IX_{objectQualifier}NTi_DFT_EDI_CheckingCertificate]
+GO
+
+DROP TABLE {databaseOwner}[{objectQualifier}NTi_DFT_EDI_CheckingCertificate]
+GO
+
+/** Drop Stored Procedures **/
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}NTi_GetDFT_EDI_CheckingCertificates]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}NTi_GetDFT_EDI_CheckingCertificate]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}NTi_AddDFT_EDI_CheckingCertificate]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}NTi_UpdateDFT_EDI_CheckingCertificate]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}NTi_DeleteDFT_EDI_CheckingCertificate]
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

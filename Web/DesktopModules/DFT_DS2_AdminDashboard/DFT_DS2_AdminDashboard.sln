@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{00000000-0000-0000-0000-000000000000}") = "DFT_DS2_AdminDashboard", "DFT_DS2_AdminDashboard.vbproj", "{A38818B4-5B0D-40FE-A4C5-9EC26D471368}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A38818B4-5B0D-40FE-A4C5-9EC26D471368}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A38818B4-5B0D-40FE-A4C5-9EC26D471368}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A38818B4-5B0D-40FE-A4C5-9EC26D471368}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A38818B4-5B0D-40FE-A4C5-9EC26D471368}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

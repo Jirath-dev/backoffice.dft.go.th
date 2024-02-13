@@ -1,0 +1,44 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/** Drop FAQs Table **/
+
+ALTER TABLE {databaseOwner}[{objectQualifier}YourCompany_RadModuleTest] DROP CONSTRAINT [FK_{objectQualifier}RadModuleTest_{objectQualifier}Modules]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}YourCompany_RadModuleTest] DROP CONSTRAINT [PK_{objectQualifier}YourCompany_RadModuleTest]
+GO
+
+DROP INDEX {databaseOwner}[{objectQualifier}YourCompany_RadModuleTest].[IX_{objectQualifier}YourCompany_RadModuleTest]
+GO
+
+DROP TABLE {databaseOwner}[{objectQualifier}YourCompany_RadModuleTest]
+GO
+
+/** Drop Stored Procedures **/
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_GetRadModuleTests]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_GetRadModuleTest]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_AddRadModuleTest]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_UpdateRadModuleTest]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_DeleteRadModuleTest]
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

@@ -1,0 +1,1120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="TextBox38.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtcompany_name.Text" xml:space="preserve">
+    <value>company_name</value>
+  </data>
+  <data name="TextBox38.Text" xml:space="preserve">
+    <value>ใบรับไปรษณีย</value>
+  </data>
+  <data name="TextBox46.Text" xml:space="preserve">
+    <value>( ...................................................................... )</value>
+  </data>
+  <data name="txtbill_type_other.Text" xml:space="preserve">
+    <value>bill_type_other</value>
+  </data>
+  <data name="txtbill_type1.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-decoration: none; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtship_by1.Style" xml:space="preserve">
+    <value>text-decoration: none; ddo-char-set: 222; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox30.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox41.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtTemp_edi_date.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtship_by2.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtdestination_fax.Text" xml:space="preserve">
+    <value>destination_fax</value>
+  </data>
+  <data name="TextBox5.Text" xml:space="preserve">
+    <value>สำหรับผู้รับเรื่อง</value>
+  </data>
+  <data name="txtcompany_taxno.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtcompany_fax.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; font-weight: bold; font-size: 13pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtimport_country.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; font-weight: bold; font-size: 13pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtdestination_fax.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; font-weight: bold; font-size: 13pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtedi_date.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtinvoice_date1.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox40.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtForm_Name_Temp.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txttxtsailing_date.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtinvoice_date3.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox12.Style" xml:space="preserve">
+    <value>text-decoration: none; ddo-char-set: 222; text-align: center; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtfactory_Temp.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtbill_type.Text" xml:space="preserve">
+    <value>bill_type</value>
+  </data>
+  <data name="txtinvoice_date4.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtinvoice_date5.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtinvoice_date5.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; text-align: center; font-weight: normal; font-size: 10pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox20.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtgross_weightH.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtbill_type2.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtcompany_address.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; font-weight: bold; font-size: 13pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="TextBox39.Text" xml:space="preserve">
+    <value>ลงชื่อ.....................................................................</value>
+  </data>
+  <data name="txtcompany_name.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; font-weight: bold; font-size: 13pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="TextBox31.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtcompany_address.Text" xml:space="preserve">
+    <value>company_taxno</value>
+  </data>
+  <data name="txtinvoice_no1.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; text-align: center; font-weight: normal; font-size: 10pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtinvoice_no4.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; text-align: center; font-weight: normal; font-size: 10pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtInvoince_Date.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox13.Style" xml:space="preserve">
+    <value>text-decoration: none; ddo-char-set: 222; text-align: left; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: top; </value>
+  </data>
+  <data name="txtfactory.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtinvoice_no1.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtfactory.Text" xml:space="preserve">
+    <value>factory</value>
+  </data>
+  <data name="txtrequest_person_2.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="C_TotalRowDe.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; text-align: center; font-weight: normal; font-size: 10pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox17.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtcard_id.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; font-weight: bold; font-size: 13pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtinvoice_date4.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; text-align: center; font-weight: normal; font-size: 10pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtTemp_sailing_date.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtREFERENCE_CODE2.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; font-weight: bold; font-size: 13pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtship_by3.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtedi_date.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txttemp_edi_date.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtgross_weightH.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox21.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox9.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox14.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-decoration: none; text-align: left; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: top; </value>
+  </data>
+  <data name="TextBox20.Text" xml:space="preserve">
+    <value>(1) สินค้าตามรายการในข้อ 4.ที่ขอหนังสือรับรองถิ่นกำเนิดสินค้าตามเอกสารประกอบการขอหนังสือรับรองฯในข้อ 5. เป็นสินค้าที่ผลิตในประเทศไทยและผลิตถูกต้องตามหลักเกณฑ์การผลิตภายใต้กฏว่าด้วยถิ่นกำเนิดสินค้าที่กำหนดตามความ ตกลงทางการค้าระหว่างประเทศหรือการปฏิบัติทางการค้าระหว่างประเทศ โดยได้ผลิต / ซื้อจาก โรงงาน/บริษัท/ห้าง/ร้าน</value>
+  </data>
+  <data name="txtTARIFF_CODE_Temp.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtFOB_AMT_Temp.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtdestination_address_province_dest_receive_country.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtdestination_company.Text" xml:space="preserve">
+    <value>destination_company</value>
+  </data>
+  <data name="TextBox18.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtTotal.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-align: right; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtcompany_address.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox8.Text" xml:space="preserve">
+    <value>ผู้รับ .................................................</value>
+  </data>
+  <data name="TextBox23.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox16.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtbill_type_other.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox25.Text" xml:space="preserve">
+    <value>นำติดตัว</value>
+  </data>
+  <data name="txtg_unit_code.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtbill_type.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox15.Text" xml:space="preserve">
+    <value>3. ส่งออกโดย</value>
+  </data>
+  <data name="TextBox27.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox25.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox15.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtship_by2.Style" xml:space="preserve">
+    <value>text-decoration: none; ddo-char-set: 222; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox33.Text" xml:space="preserve">
+    <value>(2) ข้าพเจ้ายินดีให้ความร่วมมือในการตรวจสอบคุณสมบัติของสินค้าทางด้านถิ่นกำเนิด โดยหากพิสูจน์ได้ว่าสินค้าไม่มีการผลิตในประเทศไทยหรือผลิต ไม่ถูกต้องตามกฏว่าด้วยถิ่นกำเนิดสินค้า ข้าพเจ้ายินยอมให้กรมการค้าต่างประเทศยกเลิก ระงับหรือเพิกถอนหนังสือรับรองฯฉบับนี้โดยทันที</value>
+  </data>
+  <data name="txtattach_file.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtcompany_taxno_Temp.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtcompany_fax.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtNET_WEIGHT.Text" xml:space="preserve">
+    <value>NET_WEIGHT</value>
+  </data>
+  <data name="TextBox3.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtinvoice_date3.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; text-align: center; font-weight: normal; font-size: 10pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtREFERENCE_CODE2_Temp.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtfactory_Temp.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtrequest_person.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtedi_date.Text" xml:space="preserve">
+    <value>edi_date</value>
+  </data>
+  <data name="TextBox2.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox47_man.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtdestination_address.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; font-weight: bold; font-size: 13pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="TextBox28.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox46.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox5.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox34.Text" xml:space="preserve">
+    <value>B/L</value>
+  </data>
+  <data name="TextBox46.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox26.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox39.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtcard_id_Temp.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox43.Text" xml:space="preserve">
+    <value>(ประทับตราสำคัญ)</value>
+  </data>
+  <data name="TextBox6.Style" xml:space="preserve">
+    <value>text-decoration: none; ddo-char-set: 222; text-align: left; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: top; </value>
+  </data>
+  <data name="txtship_by1.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtNum_Product.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-align: center; font-weight: normal; font-size: 10pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtForm_Name.Text" xml:space="preserve">
+    <value>Form_Name</value>
+  </data>
+  <data name="txtattach_file.Text" xml:space="preserve">
+    <value>attach_file</value>
+  </data>
+  <data name="txtunit_code2.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtship_by.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; font-weight: bold; font-size: 13pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txttxtsailing_date.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtbill_type3.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-decoration: none; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox51.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; text-align: center; font-weight: normal; font-size: 10pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtNET_WEIGHT.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox35.Text" xml:space="preserve">
+    <value>(3) เอกสาร หลักฐานและรายละเอียดดังกล่าวข้างต้นเป็นความจริงทุกประการ หากคำรับรองตาม (1)-(2) เป็นความเท็จข้าพเจ้ายินยอมให้ กรมการค้าต่างประเทศดำเนินคดีตามกฏหมาย</value>
+  </data>
+  <data name="txtimport_country_Temp.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox47.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox45.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox44.Text" xml:space="preserve">
+    <value>ลงวันที่</value>
+  </data>
+  <data name="txtSum_Net_Weight.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox14.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox18.Text" xml:space="preserve">
+    <value>5.5 เอกสารอื่นๆ (ระบุ)</value>
+  </data>
+  <data name="txtNET_WEIGHT.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtSum_Fob_Amt.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtPRODUCT_NAME.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox10.Style" xml:space="preserve">
+    <value>text-decoration: underline; ddo-char-set: 222; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: top; </value>
+  </data>
+  <data name="txtcard_id.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtdestination_phone.Text" xml:space="preserve">
+    <value>destination_phone</value>
+  </data>
+  <data name="txtdestination_address.Text" xml:space="preserve">
+    <value>destination_address</value>
+  </data>
+  <data name="txtbill_type2.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-decoration: none; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtSum_Net_Weight.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox36.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtsailing_date.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox48.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox11.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-decoration: none; text-align: center; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtdestination_province.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox45.Text" xml:space="preserve">
+    <value>วันที่ส่งออกสินค้า</value>
+  </data>
+  <data name="txtNET_WEIGHT_unit_code2.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-align: center; font-weight: normal; font-size: 10pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtNum_Product.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtattach_file.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtimport_country.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox9.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtdest_receive_country.Text" xml:space="preserve">
+    <value>dest_receive_country</value>
+  </data>
+  <data name="txtFOB_AMT.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtrequest_person_2.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtsailing_date.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtdestination_phone.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtcompany_phone.Text" xml:space="preserve">
+    <value>company_phone</value>
+  </data>
+  <data name="txtdestination_province.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; font-weight: bold; font-size: 13pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtForm_Name_Temp.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-decoration: underline; text-align: center; font-weight: bold; font-size: 13pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox37.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-align: center; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="Barcode1_invh_run_auto.Text" xml:space="preserve">
+    <value>Barcode1</value>
+  </data>
+  <data name="TextBox21.Text" xml:space="preserve">
+    <value>ทางเรือ</value>
+  </data>
+  <data name="txtcard_id.Text" xml:space="preserve">
+    <value>card_id</value>
+  </data>
+  <data name="TextBox24.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox19.Text" xml:space="preserve">
+    <value>6.ข้าพเจ้าตามที่ระบุในข้อ 1. ขอให้คำรับรองว่า :-</value>
+  </data>
+  <data name="txtinvoice_no2.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox28.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox38.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox47_man.Style" xml:space="preserve">
+    <value />
+  </data>
+  <data name="txtPRODUCT_NAME.Text" xml:space="preserve">
+    <value>PRODUCT_NAME</value>
+  </data>
+  <data name="txtcompany_phone.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox4.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox33.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox6.Text" xml:space="preserve">
+    <value>เลขที่ ...............................................</value>
+  </data>
+  <data name="TextBox19.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtPRODUCT_NAME.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-align: left; font-weight: normal; font-size: 10pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox15.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox30.Text" xml:space="preserve">
+    <value>มูลค่า US$ (FOB)</value>
+  </data>
+  <data name="txtinvoice_no3.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; text-align: center; font-weight: normal; font-size: 10pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtinvh_run_auto.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtREFERENCE_CODE2.Text" xml:space="preserve">
+    <value>REFERENCE_CODE2</value>
+  </data>
+  <data name="txtship_by4.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtFOB_AMT.Text" xml:space="preserve">
+    <value>FOB_AMT</value>
+  </data>
+  <data name="TextBox26.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtcompany_taxno.Text" xml:space="preserve">
+    <value>company_taxno</value>
+  </data>
+  <data name="txtrequest_person.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox21.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtunit_code2.Text" xml:space="preserve">
+    <value>unit_code2</value>
+  </data>
+  <data name="txtbill_type0.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-decoration: none; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtimport_country.Text" xml:space="preserve">
+    <value>import_country</value>
+  </data>
+  <data name="txtdest_receive_country.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtForm_Name.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; font-weight: bold; font-size: 13pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="TextBox31.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtship_by0.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtcompany_address_Temp.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox32.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox35.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox26.Text" xml:space="preserve">
+    <value>4.</value>
+  </data>
+  <data name="txtTotal.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox27.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox40.Text" xml:space="preserve">
+    <value>อื่นๆ</value>
+  </data>
+  <data name="txtinvoice_date2.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; text-align: center; font-weight: normal; font-size: 10pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox30.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtcompany_phone_fax_Temp.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox8.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtdestination_company.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox31.Text" xml:space="preserve">
+    <value>5.เอกสารประกอบการขอหนังสือรับรองถิ่นกำเนิดสินค้า</value>
+  </data>
+  <data name="txtTARIFF_CODE.Text" xml:space="preserve">
+    <value>TARIFF_CODE</value>
+  </data>
+  <data name="txtSum_Fob_Amt.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox44.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtbill_type.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtcompany_name.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtbill_type0.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox7.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox13.Text" xml:space="preserve">
+    <value>อนุมัติ</value>
+  </data>
+  <data name="txtinvoice_no4.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtdestination_address_province_dest_receive_country.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox27.Text" xml:space="preserve">
+    <value>รายละเอียดสินค้า</value>
+  </data>
+  <data name="txtinvoice_no2.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; text-align: center; font-weight: normal; font-size: 10pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtcard_id_Temp.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtSum_Gross_Weight.Style" xml:space="preserve">
+    <value>color: Lime; ddo-char-set: 222; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox47.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox28.Text" xml:space="preserve">
+    <value>พิกัด (6 ตัวแรก)</value>
+  </data>
+  <data name="txtcompany_phone_fax_Temp.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox2.Text" xml:space="preserve">
+    <value>ข้าพเจ้า</value>
+  </data>
+  <data name="TextBox7.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-decoration: none; text-align: left; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: top; </value>
+  </data>
+  <data name="TextBox32.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox44.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="C_TotalRowDe.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtbl_no.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtship_by3.Style" xml:space="preserve">
+    <value>text-decoration: none; ddo-char-set: 222; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox41.Text" xml:space="preserve">
+    <value>5.2 ใบตราส่งสินค้า</value>
+  </data>
+  <data name="TextBox14.Text" xml:space="preserve">
+    <value>ต้องแก้ไขตามรายละเอียดด้านหลังคำขอฯ</value>
+  </data>
+  <data name="txtship_by0.Style" xml:space="preserve">
+    <value>text-decoration: none; ddo-char-set: 222; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox29.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox48.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox6.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtrequest_person.Text" xml:space="preserve">
+    <value>request_person</value>
+  </data>
+  <data name="txtFOB_AMT_Temp.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-align: center; font-weight: normal; font-size: 10pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtNET_WEIGHT_unit_code2.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtship_by.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox13.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtForm_Name.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox33.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtunit_code2.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtfactory_address.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtTARIFF_CODE.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtdestination_province.Text" xml:space="preserve">
+    <value>destination_province</value>
+  </data>
+  <data name="txtTARIFF_CODE.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox29.Text" xml:space="preserve">
+    <value>ปริมาณ/น้ำหนักสุทธิ (กก.)</value>
+  </data>
+  <data name="TextBox32.Text" xml:space="preserve">
+    <value>5.1 ใบกำกับสินค้า</value>
+  </data>
+  <data name="TextBox3.Text" xml:space="preserve">
+    <value>และ ................ ผู้มีอำนาจกระทำการแทนนิติบุคคล</value>
+  </data>
+  <data name="TextBox51.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtSum_Gross_Weight.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtTARIFF_CODE_Temp.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-align: center; font-weight: normal; font-size: 10pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox12.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="C_TotalRowDe.Text" xml:space="preserve">
+    <value>C_TotalRowDe</value>
+  </data>
+  <data name="TextBox2.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox11.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtg_unit_code.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox16.Text" xml:space="preserve">
+    <value>5.3 แบบขอรับการตรวจคุณสมบัติของสินค้าทางด้านถิ่นกำเนิดเพื่อขอใช้สิทธิพิเศษทางด้านภาษีศุลกากร ( พิกัดฯตอนที่ 01-24 ) ลงวันที่ .........................</value>
+  </data>
+  <data name="txtrequest_person_2.Text" xml:space="preserve">
+    <value>request_person</value>
+  </data>
+  <data name="TextBox34.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtinvh_run_auto.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-align: center; font-weight: bold; font-size: 13pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="TextBox7.Text" xml:space="preserve">
+    <value>วันที่ ................................................</value>
+  </data>
+  <data name="TextBox22.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtdestination_company.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtship_by.Text" xml:space="preserve">
+    <value>ship_by</value>
+  </data>
+  <data name="txtauthorize2.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox16.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtcompany_phone.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; font-weight: bold; font-size: 13pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtcompany_fax.Text" xml:space="preserve">
+    <value>company_fax</value>
+  </data>
+  <data name="txtinvoice_date1.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; text-align: center; font-weight: normal; font-size: 10pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox37.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox42.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtbill_type1.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtcompany_taxno.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; font-weight: bold; font-size: 13pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="TextBox8.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-decoration: none; text-align: left; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: top; </value>
+  </data>
+  <data name="TextBox42.Text" xml:space="preserve">
+    <value>เลขที่</value>
+  </data>
+  <data name="txtREFERENCE_CODE2_Temp.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox1.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox40.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox22.Text" xml:space="preserve">
+    <value>ทางอากาศ</value>
+  </data>
+  <data name="TextBox4.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox17.Text" xml:space="preserve">
+    <value>5.4 ผลการตรวจสอบคุณสมบัติทางด้านถิ่นกำเนิดของสินค้า ลงวันที่ .....................</value>
+  </data>
+  <data name="TextBox5.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-decoration: underline; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: top; </value>
+  </data>
+  <data name="txtbill_type_other.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox23.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox1.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox29.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox36.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox42.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox17.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox3.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtdest_receive_country.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; font-weight: bold; font-size: 13pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtInvoince_Date.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtdestination_address.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox18.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox22.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtinvh_run_auto.Text" xml:space="preserve">
+    <value>invh_run_auto</value>
+  </data>
+  <data name="TextBox4.Text" xml:space="preserve">
+    <value>ตามที่ได้มีการจดทะเบียนไว้ตามบัตรประจำตัวผู้ส่งออก- นำเข้าสินค้าฯ /ผู้รับมอบอำนาจตามบัตรประจำตัวผู้รับมอบ</value>
+  </data>
+  <data name="txtsailing_date.Text" xml:space="preserve">
+    <value>sailing_date</value>
+  </data>
+  <data name="txtauthorize2.Text" xml:space="preserve">
+    <value>authorize2</value>
+  </data>
+  <data name="txtcompany_address_Temp.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtship_by4.Style" xml:space="preserve">
+    <value>text-decoration: none; ddo-char-set: 222; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox37.Text" xml:space="preserve">
+    <value>ลงชื่อ.....................................................................</value>
+  </data>
+  <data name="TextBox23.Text" xml:space="preserve">
+    <value>ทางบก</value>
+  </data>
+  <data name="txtdestination_phone.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; font-weight: bold; font-size: 13pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="TextBox20.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtfactory.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtbill_type3.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtFOB_AMT.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox24.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox10.Text" xml:space="preserve">
+    <value>ความเห็น</value>
+  </data>
+  <data name="TextBox43.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtinvoice_no5.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox36.Text" xml:space="preserve">
+    <value>AWB</value>
+  </data>
+  <data name="txtREFERENCE_CODE2.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox35.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox34.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtfactory_address.Text" xml:space="preserve">
+    <value>factory_address</value>
+  </data>
+  <data name="txtinvoice_no3.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtfactory_address.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox43.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtcompany_taxno_Temp.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox10.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtbl_no.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtimport_country_Temp.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-align: right; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox24.Text" xml:space="preserve">
+    <value>ทางไปรษณีย์</value>
+  </data>
+  <data name="TextBox1.Text" xml:space="preserve">
+    <value>1.ผู้ขอ</value>
+  </data>
+  <data name="TextBox19.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox39.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox45.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="TextBox25.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtdestination_fax.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="txtinvoice_date2.OutputFormat" type="System.Resources.ResXNullRef, System.Windows.Forms">
+    <value />
+  </data>
+  <data name="TextBox9.Text" xml:space="preserve">
+    <value>2. ผู้ซื้อหรือผู้รับประเทศปลายทาง (ระบุ ชื่อ ที่อยู่ ประเทศ)</value>
+  </data>
+  <data name="txtinvoice_no5.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; text-align: center; font-weight: normal; font-size: 10pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtauthorize2.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; text-align: center; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <data name="txtbl_no.Text" xml:space="preserve">
+    <value>bl_no</value>
+  </data>
+  <data name="TextBox41.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-weight: bold; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: middle; </value>
+  </data>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>English (United Kingdom)</value>
+  </metadata>
+</root>

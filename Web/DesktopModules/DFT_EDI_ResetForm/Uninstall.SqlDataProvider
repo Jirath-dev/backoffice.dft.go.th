@@ -1,0 +1,44 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/** Drop FAQs Table **/
+
+ALTER TABLE {databaseOwner}[{objectQualifier}Nti_DFT_EDI_ResetForm] DROP CONSTRAINT [FK_{objectQualifier}DFT_EDI_ResetForm_{objectQualifier}Modules]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}Nti_DFT_EDI_ResetForm] DROP CONSTRAINT [PK_{objectQualifier}Nti_DFT_EDI_ResetForm]
+GO
+
+DROP INDEX {databaseOwner}[{objectQualifier}Nti_DFT_EDI_ResetForm].[IX_{objectQualifier}Nti_DFT_EDI_ResetForm]
+GO
+
+DROP TABLE {databaseOwner}[{objectQualifier}Nti_DFT_EDI_ResetForm]
+GO
+
+/** Drop Stored Procedures **/
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Nti_GetDFT_EDI_ResetForms]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Nti_GetDFT_EDI_ResetForm]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Nti_AddDFT_EDI_ResetForm]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Nti_UpdateDFT_EDI_ResetForm]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}Nti_DeleteDFT_EDI_ResetForm]
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

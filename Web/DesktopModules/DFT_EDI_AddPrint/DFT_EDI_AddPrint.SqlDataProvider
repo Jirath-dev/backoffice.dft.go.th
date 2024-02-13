@@ -1,0 +1,67 @@
+/************************************************************/
+/*****              RegisterModule                      *****/
+/*****                                                  *****/
+/***** Use this script to register a module in the      *****/
+/***** database using Query Analyzer                    *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+exec {databaseOwner}[{objectQualifier}AddDesktopModule]
+  @ModuleName = N'DFT_EDI_AddPrint', 
+  @FolderName = N'DFT_EDI_AddPrint', 
+  @FriendlyName = N'DFT_EDI_AddPrint', 
+  @Description = N'A DFT_EDI_AddPrint module', 
+  @Version = N'01.00.00', 
+  @IsPremium = 0, 
+  @IsAdmin = 0, 
+  @BusinessController = N'Nti.Modules.DFT_EDI_AddPrint.DFT_EDI_AddPrintController', 
+  @SupportedFeatures = 3
+
+declare @DesktopModuleId int
+select @DesktopModuleId = DesktopModuleId 
+from {databaseOwner}[{objectQualifier}DesktopModules] 
+where ModuleName = 'DFT_EDI_AddPrint'
+
+exec {databaseOwner}[{objectQualifier}AddModuleDefinition] @DesktopModuleId, 
+  @FriendlyName = N'DFT_EDI_AddPrint', 
+  @DefaultCacheTime = 0
+
+declare @ModuleDefID int
+select @ModuleDefID = ModuleDefID 
+from {databaseOwner}[{objectQualifier}ModuleDefinitions] 
+where FriendlyName = 'DFT_EDI_AddPrint'
+
+exec {databaseOwner}[{objectQualifier}AddModuleControl]
+  @ModuleDefID, 
+  @ControlKey = NULL, 
+  @ControlTitle = NULL, 
+  @ControlSrc = N'DesktopModules/DFT_EDI_AddPrint/ViewDFT_EDI_AddPrint.ascx', 
+  @IconFile = NULL, 
+  @ControlType = 0, 
+  @ViewOrder = NULL, 
+  @HelpUrl = NULL
+
+exec {databaseOwner}[{objectQualifier}AddModuleControl]
+  @ModuleDefID, 
+  @ControlKey = 'Edit', 
+  @ControlTitle = 'Edit Content', 
+  @ControlSrc = N'DesktopModules/DFT_EDI_AddPrint/EditDFT_EDI_AddPrint.ascx', 
+  @IconFile = NULL, 
+  @ControlType = 1, 
+  @ViewOrder = NULL, 
+  @HelpUrl = NULL
+
+exec {databaseOwner}[{objectQualifier}AddModuleControl]
+  @ModuleDefID, 
+  @ControlKey = 'Settings', 
+  @ControlTitle = 'DFT_EDI_AddPrint Settings', 
+  @ControlSrc = N'DesktopModules/DFT_EDI_AddPrint/Settings.ascx', 
+  @IconFile = NULL, 
+  @ControlType = 1, 
+  @ViewOrder = NULL, 
+  @HelpUrl = NULL

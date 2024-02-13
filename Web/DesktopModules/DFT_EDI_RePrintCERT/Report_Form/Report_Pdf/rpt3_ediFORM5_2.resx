@@ -1,0 +1,929 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="txtNumRowCount.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-align: center; font-size: 12pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtTemp_marks.Style" xml:space="preserve">
+    <value>ddo-char-set: 1; font-size: 10pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtT_product.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-size: 12pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtTemp_box8.Style" xml:space="preserve">
+    <value>ddo-char-set: 1; text-align: center; font-size: 10pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtTolInvoice.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-align: center; font-size: 12pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtinvoice_no1.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtinvoice_no1.Text" xml:space="preserve">
+    <value>invoice_no1</value>
+  </data>
+  <data name="txtinvoice_no2.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtinvoice_no2.Text" xml:space="preserve">
+    <value>invoice_no2</value>
+  </data>
+  <data name="txtinvoice_no3.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtinvoice_no3.Text" xml:space="preserve">
+    <value>invoice_no3</value>
+  </data>
+  <data name="txtinvoice_no4.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtinvoice_no4.Text" xml:space="preserve">
+    <value>invoice_no4</value>
+  </data>
+  <data name="txtinvoice_no5.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtinvoice_no5.Text" xml:space="preserve">
+    <value>invoice_no5</value>
+  </data>
+  <data name="txtinvoice_date1.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtinvoice_date1.Text" xml:space="preserve">
+    <value>invoice_date1</value>
+  </data>
+  <data name="txtinvoice_date2.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtinvoice_date2.Text" xml:space="preserve">
+    <value>invoice_date2</value>
+  </data>
+  <data name="txtinvoice_date3.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtinvoice_date3.Text" xml:space="preserve">
+    <value>invoice_date3</value>
+  </data>
+  <data name="txtinvoice_date4.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtinvoice_date4.Text" xml:space="preserve">
+    <value>invoice_date4</value>
+  </data>
+  <data name="txtinvoice_date5.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtinvoice_date5.Text" xml:space="preserve">
+    <value>invoice_date5</value>
+  </data>
+  <data name="txtGross_Weight.Style" xml:space="preserve">
+    <value>color: Lime; </value>
+  </data>
+  <data name="txtGross_Weight.Text" xml:space="preserve">
+    <value>Gross_Weight</value>
+  </data>
+  <data name="txtmarks.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-size: 12pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtmarks.Text" xml:space="preserve">
+    <value>marks</value>
+  </data>
+  <data name="txtproduct_n1.Style" xml:space="preserve">
+    <value>color: Red; text-align: left; </value>
+  </data>
+  <data name="txtproduct_n1.Text" xml:space="preserve">
+    <value>product_n1</value>
+  </data>
+  <data name="txtproduct_n2.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtproduct_n2.Text" xml:space="preserve">
+    <value>product_n2</value>
+  </data>
+  <data name="txtquantity1.Style" xml:space="preserve">
+    <value>color: Red; text-align: left; </value>
+  </data>
+  <data name="txtquantity1.Text" xml:space="preserve">
+    <value>quantity1</value>
+  </data>
+  <data name="txtq_unit_code1.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtq_unit_code1.Text" xml:space="preserve">
+    <value>q_unit_code1</value>
+  </data>
+  <data name="txtquantity2.Style" xml:space="preserve">
+    <value>color: Red; text-align: left; </value>
+  </data>
+  <data name="txtquantity2.Text" xml:space="preserve">
+    <value>quantity2</value>
+  </data>
+  <data name="txtq_unit_code2.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtq_unit_code2.Text" xml:space="preserve">
+    <value>q_unit_code2</value>
+  </data>
+  <data name="txtquantity3.Style" xml:space="preserve">
+    <value>color: Red; text-align: left; </value>
+  </data>
+  <data name="txtquantity3.Text" xml:space="preserve">
+    <value>quantity3</value>
+  </data>
+  <data name="txtq_unit_code3.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtq_unit_code3.Text" xml:space="preserve">
+    <value>q_unit_code3</value>
+  </data>
+  <data name="txtquantity4.Style" xml:space="preserve">
+    <value>color: Red; text-align: left; </value>
+  </data>
+  <data name="txtquantity4.Text" xml:space="preserve">
+    <value>quantity4</value>
+  </data>
+  <data name="txtq_unit_code4.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtq_unit_code4.Text" xml:space="preserve">
+    <value>q_unit_code4</value>
+  </data>
+  <data name="txtquantity5.Style" xml:space="preserve">
+    <value>color: Red; text-align: left; </value>
+  </data>
+  <data name="txtquantity5.Text" xml:space="preserve">
+    <value>quantity5</value>
+  </data>
+  <data name="txtq_unit_code5.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtq_unit_code5.Text" xml:space="preserve">
+    <value>q_unit_code5</value>
+  </data>
+  <data name="txtg_unit_code.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtg_unit_code.Text" xml:space="preserve">
+    <value>g_unit_code</value>
+  </data>
+  <data name="C_TotalRowDe.Style" xml:space="preserve">
+    <value>color: Lime; </value>
+  </data>
+  <data name="C_TotalRowDe.Text" xml:space="preserve">
+    <value>C_TotalRowDe</value>
+  </data>
+  <data name="txttariff_code.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txttariff_code.Text" xml:space="preserve">
+    <value>tariff_code</value>
+  </data>
+  <data name="txtGrossTxt.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-align: center; font-size: 12pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtg_Unit_Desc.Style" xml:space="preserve">
+    <value>color: Lime; </value>
+  </data>
+  <data name="txtg_Unit_Desc.Text" xml:space="preserve">
+    <value>g_Unit_Desc</value>
+  </data>
+  <data name="txtFOB_AMT.Style" xml:space="preserve">
+    <value>color: Lime; </value>
+  </data>
+  <data name="txtFOB_AMT.Text" xml:space="preserve">
+    <value>FOB_AMT</value>
+  </data>
+  <data name="txtinvoice_board.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtinvoice_board.Text" xml:space="preserve">
+    <value>invoice_board</value>
+  </data>
+  <data name="txtWeightDisplayHeader.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtWeightDisplayHeader.Text" xml:space="preserve">
+    <value>WeightDisplayHeader</value>
+  </data>
+  <data name="txtFOBDisplay.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtFOBDisplay.Text" xml:space="preserve">
+    <value>FOBDisplay</value>
+  </data>
+  <data name="txtunit_code2.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtunit_code2.Text" xml:space="preserve">
+    <value>unit_code2</value>
+  </data>
+  <data name="txtnet_weight.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtnet_weight.Text" xml:space="preserve">
+    <value>net_weight</value>
+  </data>
+  <data name="txtgross_weightH.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtgross_weightH.Text" xml:space="preserve">
+    <value>gross_weightH</value>
+  </data>
+  <data name="txtGrossTxt_.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; text-align: center; font-size: 12pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtGrossTxt_.Text" xml:space="preserve">
+    <value>txtGrossTxt</value>
+  </data>
+  <data name="txtthird_country.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtthird_country.Text" xml:space="preserve">
+    <value>third_country</value>
+  </data>
+  <data name="txtplace_exibition.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtplace_exibition.Text" xml:space="preserve">
+    <value>place_exibition</value>
+  </data>
+  <data name="txtCompany_Check_1.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-size: 12pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtreference_code2_Temp.Style" xml:space="preserve">
+    <value>ddo-char-set: 1; font-weight: bold; font-size: 16pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtdestination_Check2.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-size: 12pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txttransport_by.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-size: 12pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txttransport_by.Text" xml:space="preserve">
+    <value>transport_by</value>
+  </data>
+  <data name="txtcompany_taxno.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtcompany_taxno.Text" xml:space="preserve">
+    <value>company_taxno</value>
+  </data>
+  <data name="txtcompany_country.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtcompany_country.Text" xml:space="preserve">
+    <value>company_country</value>
+  </data>
+  <data name="txtcompany_province.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtcompany_province.Text" xml:space="preserve">
+    <value>company_province</value>
+  </data>
+  <data name="txtcompany_address.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtcompany_address.Text" xml:space="preserve">
+    <value>company_address</value>
+  </data>
+  <data name="txtcompany_name.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtcompany_name.Text" xml:space="preserve">
+    <value>company_name</value>
+  </data>
+  <data name="txtob_address.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtob_address.Text" xml:space="preserve">
+    <value>ob_address</value>
+  </data>
+  <data name="txtdest_remark.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtdest_remark.Text" xml:space="preserve">
+    <value>dest_remark</value>
+  </data>
+  <data name="txtcompany_fax.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtcompany_fax.Text" xml:space="preserve">
+    <value>company_fax</value>
+  </data>
+  <data name="txtcompany_phone.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtcompany_phone.Text" xml:space="preserve">
+    <value>company_phone</value>
+  </data>
+  <data name="txtdestination_company.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtdestination_company.Text" xml:space="preserve">
+    <value>destination_company</value>
+  </data>
+  <data name="txtdestination_fax.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtdestination_fax.Text" xml:space="preserve">
+    <value>destination_fax</value>
+  </data>
+  <data name="txtdestination_address.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtdestination_address.Text" xml:space="preserve">
+    <value>destination_address</value>
+  </data>
+  <data name="txtdestination_phone.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtdestination_phone.Text" xml:space="preserve">
+    <value>destination_phone</value>
+  </data>
+  <data name="txtdestination_province.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtdestination_province.Text" xml:space="preserve">
+    <value>destination_province</value>
+  </data>
+  <data name="txtdest_Receive_country.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtdest_Receive_country.Text" xml:space="preserve">
+    <value>dest_Receive_country</value>
+  </data>
+  <data name="txtreference_code2.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; font-weight: bold; font-size: 13pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtreference_code2.Text" xml:space="preserve">
+    <value>reference_code2</value>
+  </data>
+  <data name="txtcompany_email.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtcompany_email.Text" xml:space="preserve">
+    <value>company_email</value>
+  </data>
+  <data name="txtdestination_email.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtdestination_email.Text" xml:space="preserve">
+    <value>destination_email</value>
+  </data>
+  <data name="txtdestination_taxid.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtdestination_taxid.Text" xml:space="preserve">
+    <value>destination_taxid</value>
+  </data>
+  <data name="txtdest_remark1.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtdest_remark1.Text" xml:space="preserve">
+    <value>dest_remark1</value>
+  </data>
+  <data name="txtob_dest_address.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtob_dest_address.Text" xml:space="preserve">
+    <value>ob_dest_address</value>
+  </data>
+  <data name="txtedi_date.OutputFormat" xml:space="preserve">
+    <value>d/MM/yyyy</value>
+  </data>
+  <data name="txtedi_date.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; font-size: 12pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtedi_date.Text" xml:space="preserve">
+    <value>edi_date</value>
+  </data>
+  <data name="txtTemp_back_country.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-align: center; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: bottom; </value>
+  </data>
+  <data name="txtTemp_back_country.Text" xml:space="preserve">
+    <value>THAILAND</value>
+  </data>
+  <data name="txtIMPORT_COUNTRY.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-align: center; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: bottom; </value>
+  </data>
+  <data name="txtIMPORT_COUNTRY.Text" xml:space="preserve">
+    <value>IMPORT_COUNTRY</value>
+  </data>
+  <data name="txtcompany_provincefoot1.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtcompany_provincefoot1.Text" xml:space="preserve">
+    <value>company_province</value>
+  </data>
+  <data name="txtcompany_provincefoot.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-align: center; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: bottom; </value>
+  </data>
+  <data name="txtshow_check.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtshow_check.Text" xml:space="preserve">
+    <value>show_check</value>
+  </data>
+  <data name="txtback_country.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtback_country.Text" xml:space="preserve">
+    <value>back_country</value>
+  </data>
+  <data name="ReportInfo1.Style" xml:space="preserve">
+    <value>text-align: center; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtNumInvoice.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; font-size: 12pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtUSDInvoice.Style" xml:space="preserve">
+    <value>color: Red; ddo-char-set: 222; font-size: 12pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtbox8.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; text-align: center; font-size: 12pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtbox8.Text" xml:space="preserve">
+    <value>box8</value>
+  </data>
+  <data name="txtform_type.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtWeightDisplayHeaderH.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtNumpageForm.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtnumTotalpage.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtgross_weightD.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtCheckGrossDetail.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtunit_code3.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtunit_code3.Text" xml:space="preserve">
+    <value>unit_code3</value>
+  </data>
+  <data name="testxx.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtUSDInvoiceDetail.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtUSDInvoiceDetail.Text" xml:space="preserve">
+    <value>USDInvoiceDetail</value>
+  </data>
+  <data name="TextBox1.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtinvh_run_auto.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtinvh_run_auto.Text" xml:space="preserve">
+    <value>invh_run_auto</value>
+  </data>
+  <data name="txtCheckIssued.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtCheckIssued.Text" xml:space="preserve">
+    <value>CheckIssued</value>
+  </data>
+  <data name="txttotalSum_fob_amt.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txttotalSum_fob_amt.Text" xml:space="preserve">
+    <value>totalSum_fob_amt</value>
+  </data>
+  <data name="txtNewEmail_ch02.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtNewEmail_ch02.Text" xml:space="preserve">
+    <value>NewEmail_ch02</value>
+  </data>
+  <data name="txtNewEmail_ch01.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtNewEmail_ch01.Text" xml:space="preserve">
+    <value>NewEmail_ch01</value>
+  </data>
+  <data name="txtTotalAll.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-size: 12pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtSINGLE_COUNTRY_CONTENT.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtSINGLE_COUNTRY_CONTENT.Text" xml:space="preserve">
+    <value>SINGLE_COUNTRY_CONTENT</value>
+  </data>
+  <data name="txtInvoiceDetailTH.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtInvoiceDetailTH.Text" xml:space="preserve">
+    <value>InvoiceDetailTH</value>
+  </data>
+  <data name="txt_NewEmail_ch02.Style" xml:space="preserve">
+    <value>color: Fuchsia; </value>
+  </data>
+  <data name="txt_NewEmail_ch02.Text" xml:space="preserve">
+    <value>NewEmail_ch02</value>
+  </data>
+  <data name="txtproduct_model.Style" xml:space="preserve">
+    <value>color: Fuchsia; </value>
+  </data>
+  <data name="txtproduct_model.Text" xml:space="preserve">
+    <value>product_model</value>
+  </data>
+  <data name="txtTitleHead.Style" xml:space="preserve">
+    <value>ddo-char-set: 222; font-size: 12pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtTitleMain.Style" xml:space="preserve">
+    <value>color: Fuchsia; ddo-char-set: 222; font-size: 12pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtTitleMain.Text" xml:space="preserve">
+    <value>txtTitleMain</value>
+  </data>
+  <data name="txtprintFormDate.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtprintFormDate.Text" xml:space="preserve">
+    <value>printFormDate</value>
+  </data>
+  <data name="txtPriceOtherDetail.Style" xml:space="preserve">
+    <value>color: Fuchsia; ddo-char-set: 222; font-size: 12pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtCurrency_Code.Style" xml:space="preserve">
+    <value>color: Fuchsia; ddo-char-set: 222; font-size: 12pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtletter.Style" xml:space="preserve">
+    <value>color: Fuchsia; ddo-char-set: 222; font-size: 12pt; font-family: BrowalliaUPC; </value>
+  </data>
+  <data name="txtCheck_CaseRVCCount.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtDisplayUDS7.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtByCom_CH03.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtByCom_CH03.Text" xml:space="preserve">
+    <value>ByCom_CH03</value>
+  </data>
+  <data name="txtRemarks.Style" xml:space="preserve">
+    <value>color: Blue; ddo-char-set: 222; text-align: left; font-size: 12pt; font-family: BrowalliaUPC; vertical-align: top; </value>
+  </data>
+  <data name="txtTemp_Third.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtTemp_Third.Text" xml:space="preserve">
+    <value>txtTemp_Third</value>
+  </data>
+  <data name="txtTemp_Exhibition.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtTemp_Exhibition.Text" xml:space="preserve">
+    <value>txtTemp_Exhibition</value>
+  </data>
+  <data name="txtEditForm.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtEditForm.Text" xml:space="preserve">
+    <value>txtEditForm</value>
+  </data>
+  <data name="txtSendCheckSeletedate.Style" xml:space="preserve">
+    <value>color: Lime; </value>
+  </data>
+  <data name="txtSendCheckSeletedate.Text" xml:space="preserve">
+    <value>SendCheckSeletedate</value>
+  </data>
+  <data name="txtdateSelectRPT.Style" xml:space="preserve">
+    <value>color: Lime; </value>
+  </data>
+  <data name="txtdateSelectRPT.Text" xml:space="preserve">
+    <value>dateSelectRPT</value>
+  </data>
+  <data name="txtapprove_date.Style" xml:space="preserve">
+    <value>color: Red; </value>
+  </data>
+  <data name="txtapprove_date.Text" xml:space="preserve">
+    <value>approve_date</value>
+  </data>
+  <data name="ChkNoneDisplayInv10.Style" xml:space="preserve">
+    <value />
+  </data>
+  <data name="ChkNoneDisplayInv10.Text" xml:space="preserve">
+    <value>ChkNoneDisplayInv10</value>
+  </data>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="PCheck_Exhibition.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABcAAAAWCAMAAAAcqPc3AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADAFBMVEUAAACAAAAAgACAgAAAAICAAIAA
+        gIDAwMDA3MCmyvBAIABgIACAIACgIADAIADgIAAAQAAgQABAQABgQACAQACgQADAQADgQAAAYAAgYABA
+        YABgYACAYACgYADAYADgYAAAgAAggABAgABggACAgACggADAgADggAAAoAAgoABAoABgoACAoACgoADA
+        oADgoAAAwAAgwABAwABgwACAwACgwADAwADgwAAA4AAg4ABA4ABg4ACA4ACg4ADA4ADg4AAAAEAgAEBA
+        AEBgAECAAECgAEDAAEDgAEAAIEAgIEBAIEBgIECAIECgIEDAIEDgIEAAQEAgQEBAQEBgQECAQECgQEDA
+        QEDgQEAAYEAgYEBAYEBgYECAYECgYEDAYEDgYEAAgEAggEBAgEBggECAgECggEDAgEDggEAAoEAgoEBA
+        oEBgoECAoECgoEDAoEDgoEAAwEAgwEBAwEBgwECAwECgwEDAwEDgwEAA4EAg4EBA4EBg4ECA4ECg4EDA
+        4EDg4EAAAIAgAIBAAIBgAICAAICgAIDAAIDgAIAAIIAgIIBAIIBgIICAIICgIIDAIIDgIIAAQIAgQIBA
+        QIBgQICAQICgQIDAQIDgQIAAYIAgYIBAYIBgYICAYICgYIDAYIDgYIAAgIAggIBAgIBggICAgICggIDA
+        gIDggIAAoIAgoIBAoIBgoICAoICgoIDAoIDgoIAAwIAgwIBAwIBgwICAwICgwIDAwIDgwIAA4IAg4IBA
+        4IBg4ICA4ICg4IDA4IDg4IAAAMAgAMBAAMBgAMCAAMCgAMDAAMDgAMAAIMAgIMBAIMBgIMCAIMCgIMDA
+        IMDgIMAAQMAgQMBAQMBgQMCAQMCgQMDAQMDgQMAAYMAgYMBAYMBgYMCAYMCgYMDAYMDgYMAAgMAggMBA
+        gMBggMCAgMCggMDAgMDggMAAoMAgoMBAoMBgoMCAoMCgoMDAoMDgoMAAwMAgwMBAwMBgwMCAwMCgwMD/
+        +/CgoKSAgID/AAAA/wD//wAAAP//AP8A//////9Y0jREAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAUklE
+        QVQoU7XQMQ4AIAgDQP7/YFdELWJBR7tUL4QB0XvCG9piz9v8sOoyqfji4uCWHJznN7MHk0vxCSdvtz7Z
+        95gRh9MW+LgTs8+/He3Jf89fV+0iSs4cNy3ZBgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="PCheck_Exhibition.ImageData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
+        cmlnaW4JX3Bvc2l0aW9uB19sZW5ndGgJX2NhcGFjaXR5C19leHBhbmRhYmxlCV93cml0YWJsZQpfZXhw
+        b3NhYmxlB19pc09wZW4dTWFyc2hhbEJ5UmVmT2JqZWN0K19faWRlbnRpdHkHAAAAAAAAAAACAggICAgB
+        AQEBCQIAAAAAAAAAAAAAAAAEAAAABAAAAQEBAQoPAgAAAAAEAAACAvsDAACJUE5HDQoaCgAAAA1JSERS
+        AAAAFwAAABYIAwAAAByo9zcAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAA
+        gIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADAFBMVEUAAACAAAAAgACAgAAAAICAAIAAgIDA
+        wMDA3MCmyvBAIABgIACAIACgIADAIADgIAAAQAAgQABAQABgQACAQACgQADAQADgQAAAYAAgYABAYABg
+        YACAYACgYADAYADgYAAAgAAggABAgABggACAgACggADAgADggAAAoAAgoABAoABgoACAoACgoADAoADg
+        oAAAwAAgwABAwABgwACAwACgwADAwADgwAAA4AAg4ABA4ABg4ACA4ACg4ADA4ADg4AAAAEAgAEBAAEBg
+        AECAAECgAEDAAEDgAEAAIEAgIEBAIEBgIECAIECgIEDAIEDgIEAAQEAgQEBAQEBgQECAQECgQEDAQEDg
+        QEAAYEAgYEBAYEBgYECAYECgYEDAYEDgYEAAgEAggEBAgEBggECAgECggEDAgEDggEAAoEAgoEBAoEBg
+        oECAoECgoEDAoEDgoEAAwEAgwEBAwEBgwECAwECgwEDAwEDgwEAA4EAg4EBA4EBg4ECA4ECg4EDA4EDg
+        4EAAAIAgAIBAAIBgAICAAICgAIDAAIDgAIAAIIAgIIBAIIBgIICAIICgIIDAIIDgIIAAQIAgQIBAQIBg
+        QICAQICgQIDAQIDgQIAAYIAgYIBAYIBgYICAYICgYIDAYIDgYIAAgIAggIBAgIBggICAgICggIDAgIDg
+        gIAAoIAgoIBAoIBgoICAoICgoIDAoIDgoIAAwIAgwIBAwIBgwICAwICgwIDAwIDgwIAA4IAg4IBA4IBg
+        4ICA4ICg4IDA4IDg4IAAAMAgAMBAAMBgAMCAAMCgAMDAAMDgAMAAIMAgIMBAIMBgIMCAIMCgIMDAIMDg
+        IMAAQMAgQMBAQMBgQMCAQMCgQMDAQMDgQMAAYMAgYMBAYMBgYMCAYMCgYMDAYMDgYMAAgMAggMBAgMBg
+        gMCAgMCggMDAgMDggMAAoMAgoMBAoMBgoMCAoMCgoMDAoMDgoMAAwMAgwMBAwMBgwMCAwMCgwMD/+/Cg
+        oKSAgID/AAAA/wD//wAAAP//AP8A//////9Y0jREAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAWElEQVQo
+        U63ROQ4AIAgEQP7/YFoFRG47rcxkQYKw5gPG6AG6ujuzdQeh5oebK2PJK9e8ce7jnByaC0TWvFBI27tk
+        iW9/Khic95TZ5nl6+YZpz+M+te5XfgMiSs4ctutesgAAAABJRU5ErkJgggs=
+</value>
+  </data>
+  <data name="PCheck_third_country.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABcAAAAWCAMAAAAcqPc3AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADAFBMVEUAAACAAAAAgACAgAAAAICAAIAA
+        gIDAwMDA3MCmyvBAIABgIACAIACgIADAIADgIAAAQAAgQABAQABgQACAQACgQADAQADgQAAAYAAgYABA
+        YABgYACAYACgYADAYADgYAAAgAAggABAgABggACAgACggADAgADggAAAoAAgoABAoABgoACAoACgoADA
+        oADgoAAAwAAgwABAwABgwACAwACgwADAwADgwAAA4AAg4ABA4ABg4ACA4ACg4ADA4ADg4AAAAEAgAEBA
+        AEBgAECAAECgAEDAAEDgAEAAIEAgIEBAIEBgIECAIECgIEDAIEDgIEAAQEAgQEBAQEBgQECAQECgQEDA
+        QEDgQEAAYEAgYEBAYEBgYECAYECgYEDAYEDgYEAAgEAggEBAgEBggECAgECggEDAgEDggEAAoEAgoEBA
+        oEBgoECAoECgoEDAoEDgoEAAwEAgwEBAwEBgwECAwECgwEDAwEDgwEAA4EAg4EBA4EBg4ECA4ECg4EDA
+        4EDg4EAAAIAgAIBAAIBgAICAAICgAIDAAIDgAIAAIIAgIIBAIIBgIICAIICgIIDAIIDgIIAAQIAgQIBA
+        QIBgQICAQICgQIDAQIDgQIAAYIAgYIBAYIBgYICAYICgYIDAYIDgYIAAgIAggIBAgIBggICAgICggIDA
+        gIDggIAAoIAgoIBAoIBgoICAoICgoIDAoIDgoIAAwIAgwIBAwIBgwICAwICgwIDAwIDgwIAA4IAg4IBA
+        4IBg4ICA4ICg4IDA4IDg4IAAAMAgAMBAAMBgAMCAAMCgAMDAAMDgAMAAIMAgIMBAIMBgIMCAIMCgIMDA
+        IMDgIMAAQMAgQMBAQMBgQMCAQMCgQMDAQMDgQMAAYMAgYMBAYMBgYMCAYMCgYMDAYMDgYMAAgMAggMBA
+        gMBggMCAgMCggMDAgMDggMAAoMAgoMBAoMBgoMCAoMCgoMDAoMDgoMAAwMAgwMBAwMBgwMCAwMCgwMD/
+        +/CgoKSAgID/AAAA/wD//wAAAP//AP8A//////9Y0jREAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAUklE
+        QVQoU7XQMQ4AIAgDQP7/YFdELWJBR7tUL4QB0XvCG9piz9v8sOoyqfji4uCWHJznN7MHk0vxCSdvtz7Z
+        95gRh9MW+LgTs8+/He3Jf89fV+0iSs4cNy3ZBgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="PCheck_third_country.ImageData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
+        cmlnaW4JX3Bvc2l0aW9uB19sZW5ndGgJX2NhcGFjaXR5C19leHBhbmRhYmxlCV93cml0YWJsZQpfZXhw
+        b3NhYmxlB19pc09wZW4dTWFyc2hhbEJ5UmVmT2JqZWN0K19faWRlbnRpdHkHAAAAAAAAAAACAggICAgB
+        AQEBCQIAAAAAAAAAAAAAAAAEAAAABAAAAQEBAQoPAgAAAAAEAAACAvsDAACJUE5HDQoaCgAAAA1JSERS
+        AAAAFwAAABYIAwAAAByo9zcAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAA
+        gIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADAFBMVEUAAACAAAAAgACAgAAAAICAAIAAgIDA
+        wMDA3MCmyvBAIABgIACAIACgIADAIADgIAAAQAAgQABAQABgQACAQACgQADAQADgQAAAYAAgYABAYABg
+        YACAYACgYADAYADgYAAAgAAggABAgABggACAgACggADAgADggAAAoAAgoABAoABgoACAoACgoADAoADg
+        oAAAwAAgwABAwABgwACAwACgwADAwADgwAAA4AAg4ABA4ABg4ACA4ACg4ADA4ADg4AAAAEAgAEBAAEBg
+        AECAAECgAEDAAEDgAEAAIEAgIEBAIEBgIECAIECgIEDAIEDgIEAAQEAgQEBAQEBgQECAQECgQEDAQEDg
+        QEAAYEAgYEBAYEBgYECAYECgYEDAYEDgYEAAgEAggEBAgEBggECAgECggEDAgEDggEAAoEAgoEBAoEBg
+        oECAoECgoEDAoEDgoEAAwEAgwEBAwEBgwECAwECgwEDAwEDgwEAA4EAg4EBA4EBg4ECA4ECg4EDA4EDg
+        4EAAAIAgAIBAAIBgAICAAICgAIDAAIDgAIAAIIAgIIBAIIBgIICAIICgIIDAIIDgIIAAQIAgQIBAQIBg
+        QICAQICgQIDAQIDgQIAAYIAgYIBAYIBgYICAYICgYIDAYIDgYIAAgIAggIBAgIBggICAgICggIDAgIDg
+        gIAAoIAgoIBAoIBgoICAoICgoIDAoIDgoIAAwIAgwIBAwIBgwICAwICgwIDAwIDgwIAA4IAg4IBA4IBg
+        4ICA4ICg4IDA4IDg4IAAAMAgAMBAAMBgAMCAAMCgAMDAAMDgAMAAIMAgIMBAIMBgIMCAIMCgIMDAIMDg
+        IMAAQMAgQMBAQMBgQMCAQMCgQMDAQMDgQMAAYMAgYMBAYMBgYMCAYMCgYMDAYMDgYMAAgMAggMBAgMBg
+        gMCAgMCggMDAgMDggMAAoMAgoMBAoMBgoMCAoMCgoMDAoMDgoMAAwMAgwMBAwMBgwMCAwMCgwMD/+/Cg
+        oKSAgID/AAAA/wD//wAAAP//AP8A//////9Y0jREAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAWElEQVQo
+        U63ROQ4AIAgEQP7/YFoFRG47rcxkQYKw5gPG6AG6ujuzdQeh5oebK2PJK9e8ce7jnByaC0TWvFBI27tk
+        iW9/Khic95TZ5nl6+YZpz+M+te5XfgMiSs4ctutesgAAAABJRU5ErkJgggs=
+</value>
+  </data>
+  <data name="Pic_ch7_Issued.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABcAAAAWCAMAAAAcqPc3AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADAFBMVEUAAACAAAAAgACAgAAAAICAAIAA
+        gIDAwMDA3MCmyvBAIABgIACAIACgIADAIADgIAAAQAAgQABAQABgQACAQACgQADAQADgQAAAYAAgYABA
+        YABgYACAYACgYADAYADgYAAAgAAggABAgABggACAgACggADAgADggAAAoAAgoABAoABgoACAoACgoADA
+        oADgoAAAwAAgwABAwABgwACAwACgwADAwADgwAAA4AAg4ABA4ABg4ACA4ACg4ADA4ADg4AAAAEAgAEBA
+        AEBgAECAAECgAEDAAEDgAEAAIEAgIEBAIEBgIECAIECgIEDAIEDgIEAAQEAgQEBAQEBgQECAQECgQEDA
+        QEDgQEAAYEAgYEBAYEBgYECAYECgYEDAYEDgYEAAgEAggEBAgEBggECAgECggEDAgEDggEAAoEAgoEBA
+        oEBgoECAoECgoEDAoEDgoEAAwEAgwEBAwEBgwECAwECgwEDAwEDgwEAA4EAg4EBA4EBg4ECA4ECg4EDA
+        4EDg4EAAAIAgAIBAAIBgAICAAICgAIDAAIDgAIAAIIAgIIBAIIBgIICAIICgIIDAIIDgIIAAQIAgQIBA
+        QIBgQICAQICgQIDAQIDgQIAAYIAgYIBAYIBgYICAYICgYIDAYIDgYIAAgIAggIBAgIBggICAgICggIDA
+        gIDggIAAoIAgoIBAoIBgoICAoICgoIDAoIDgoIAAwIAgwIBAwIBgwICAwICgwIDAwIDgwIAA4IAg4IBA
+        4IBg4ICA4ICg4IDA4IDg4IAAAMAgAMBAAMBgAMCAAMCgAMDAAMDgAMAAIMAgIMBAIMBgIMCAIMCgIMDA
+        IMDgIMAAQMAgQMBAQMBgQMCAQMCgQMDAQMDgQMAAYMAgYMBAYMBgYMCAYMCgYMDAYMDgYMAAgMAggMBA
+        gMBggMCAgMCggMDAgMDggMAAoMAgoMBAoMBgoMCAoMCgoMDAoMDgoMAAwMAgwMBAwMBgwMCAwMCgwMD/
+        +/CgoKSAgID/AAAA/wD//wAAAP//AP8A//////9Y0jREAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAUklE
+        QVQoU7XQMQ4AIAgDQP7/YFdELWJBR7tUL4QB0XvCG9piz9v8sOoyqfji4uCWHJznN7MHk0vxCSdvtz7Z
+        95gRh9MW+LgTs8+/He3Jf89fV+0iSs4cNy3ZBgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="Pic_ch7_Issued.ImageData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
+        cmlnaW4JX3Bvc2l0aW9uB19sZW5ndGgJX2NhcGFjaXR5C19leHBhbmRhYmxlCV93cml0YWJsZQpfZXhw
+        b3NhYmxlB19pc09wZW4dTWFyc2hhbEJ5UmVmT2JqZWN0K19faWRlbnRpdHkHAAAAAAAAAAACAggICAgB
+        AQEBCQIAAAAAAAAAAAAAAAAEAAAABAAAAQEBAQoPAgAAAAAEAAACAvsDAACJUE5HDQoaCgAAAA1JSERS
+        AAAAFwAAABYIAwAAAByo9zcAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAA
+        gIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADAFBMVEUAAACAAAAAgACAgAAAAICAAIAAgIDA
+        wMDA3MCmyvBAIABgIACAIACgIADAIADgIAAAQAAgQABAQABgQACAQACgQADAQADgQAAAYAAgYABAYABg
+        YACAYACgYADAYADgYAAAgAAggABAgABggACAgACggADAgADggAAAoAAgoABAoABgoACAoACgoADAoADg
+        oAAAwAAgwABAwABgwACAwACgwADAwADgwAAA4AAg4ABA4ABg4ACA4ACg4ADA4ADg4AAAAEAgAEBAAEBg
+        AECAAECgAEDAAEDgAEAAIEAgIEBAIEBgIECAIECgIEDAIEDgIEAAQEAgQEBAQEBgQECAQECgQEDAQEDg
+        QEAAYEAgYEBAYEBgYECAYECgYEDAYEDgYEAAgEAggEBAgEBggECAgECggEDAgEDggEAAoEAgoEBAoEBg
+        oECAoECgoEDAoEDgoEAAwEAgwEBAwEBgwECAwECgwEDAwEDgwEAA4EAg4EBA4EBg4ECA4ECg4EDA4EDg
+        4EAAAIAgAIBAAIBgAICAAICgAIDAAIDgAIAAIIAgIIBAIIBgIICAIICgIIDAIIDgIIAAQIAgQIBAQIBg
+        QICAQICgQIDAQIDgQIAAYIAgYIBAYIBgYICAYICgYIDAYIDgYIAAgIAggIBAgIBggICAgICggIDAgIDg
+        gIAAoIAgoIBAoIBgoICAoICgoIDAoIDgoIAAwIAgwIBAwIBgwICAwICgwIDAwIDgwIAA4IAg4IBA4IBg
+        4ICA4ICg4IDA4IDg4IAAAMAgAMBAAMBgAMCAAMCgAMDAAMDgAMAAIMAgIMBAIMBgIMCAIMCgIMDAIMDg
+        IMAAQMAgQMBAQMBgQMCAQMCgQMDAQMDgQMAAYMAgYMBAYMBgYMCAYMCgYMDAYMDgYMAAgMAggMBAgMBg
+        gMCAgMCggMDAgMDggMAAoMAgoMBAoMBgoMCAoMCgoMDAoMDgoMAAwMAgwMBAwMBgwMCAwMCgwMD/+/Cg
+        oKSAgID/AAAA/wD//wAAAP//AP8A//////9Y0jREAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAWElEQVQo
+        U63ROQ4AIAgEQP7/YFoFRG47rcxkQYKw5gPG6AG6ujuzdQeh5oebK2PJK9e8ce7jnByaC0TWvFBI27tk
+        iW9/Khic95TZ5nl6+YZpz+M+te5XfgMiSs4ctutesgAAAABJRU5ErkJgggs=
+</value>
+  </data>
+  <data name="PCheck_TrueCopy.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABcAAAAWCAMAAAAcqPc3AAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6
+        JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADAFBMVEUAAACAAAAAgACAgAAAAICAAIAA
+        gIDAwMDA3MCmyvBAIABgIACAIACgIADAIADgIAAAQAAgQABAQABgQACAQACgQADAQADgQAAAYAAgYABA
+        YABgYACAYACgYADAYADgYAAAgAAggABAgABggACAgACggADAgADggAAAoAAgoABAoABgoACAoACgoADA
+        oADgoAAAwAAgwABAwABgwACAwACgwADAwADgwAAA4AAg4ABA4ABg4ACA4ACg4ADA4ADg4AAAAEAgAEBA
+        AEBgAECAAECgAEDAAEDgAEAAIEAgIEBAIEBgIECAIECgIEDAIEDgIEAAQEAgQEBAQEBgQECAQECgQEDA
+        QEDgQEAAYEAgYEBAYEBgYECAYECgYEDAYEDgYEAAgEAggEBAgEBggECAgECggEDAgEDggEAAoEAgoEBA
+        oEBgoECAoECgoEDAoEDgoEAAwEAgwEBAwEBgwECAwECgwEDAwEDgwEAA4EAg4EBA4EBg4ECA4ECg4EDA
+        4EDg4EAAAIAgAIBAAIBgAICAAICgAIDAAIDgAIAAIIAgIIBAIIBgIICAIICgIIDAIIDgIIAAQIAgQIBA
+        QIBgQICAQICgQIDAQIDgQIAAYIAgYIBAYIBgYICAYICgYIDAYIDgYIAAgIAggIBAgIBggICAgICggIDA
+        gIDggIAAoIAgoIBAoIBgoICAoICgoIDAoIDgoIAAwIAgwIBAwIBgwICAwICgwIDAwIDgwIAA4IAg4IBA
+        4IBg4ICA4ICg4IDA4IDg4IAAAMAgAMBAAMBgAMCAAMCgAMDAAMDgAMAAIMAgIMBAIMBgIMCAIMCgIMDA
+        IMDgIMAAQMAgQMBAQMBgQMCAQMCgQMDAQMDgQMAAYMAgYMBAYMBgYMCAYMCgYMDAYMDgYMAAgMAggMBA
+        gMBggMCAgMCggMDAgMDggMAAoMAgoMBAoMBgoMCAoMCgoMDAoMDgoMAAwMAgwMBAwMBgwMCAwMCgwMD/
+        +/CgoKSAgID/AAAA/wD//wAAAP//AP8A//////9Y0jREAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAUklE
+        QVQoU7XQMQ4AIAgDQP7/YFdELWJBR7tUL4QB0XvCG9piz9v8sOoyqfji4uCWHJznN7MHk0vxCSdvtz7Z
+        95gRh9MW+LgTs8+/He3Jf89fV+0iSs4cNy3ZBgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="PCheck_TrueCopy.ImageData" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAEAQAAABZTeXN0ZW0uSU8uTWVtb3J5U3RyZWFtCgAAAAdfYnVmZmVyB19v
+        cmlnaW4JX3Bvc2l0aW9uB19sZW5ndGgJX2NhcGFjaXR5C19leHBhbmRhYmxlCV93cml0YWJsZQpfZXhw
+        b3NhYmxlB19pc09wZW4dTWFyc2hhbEJ5UmVmT2JqZWN0K19faWRlbnRpdHkHAAAAAAAAAAACAggICAgB
+        AQEBCQIAAAAAAAAAAAAAAAAEAAAABAAAAQEBAQoPAgAAAAAEAAACAvsDAACJUE5HDQoaCgAAAA1JSERS
+        AAAAFwAAABYIAwAAAByo9zcAAAABc1JHQgCuzhzpAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAA
+        gIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAADAFBMVEUAAACAAAAAgACAgAAAAICAAIAAgIDA
+        wMDA3MCmyvBAIABgIACAIACgIADAIADgIAAAQAAgQABAQABgQACAQACgQADAQADgQAAAYAAgYABAYABg
+        YACAYACgYADAYADgYAAAgAAggABAgABggACAgACggADAgADggAAAoAAgoABAoABgoACAoACgoADAoADg
+        oAAAwAAgwABAwABgwACAwACgwADAwADgwAAA4AAg4ABA4ABg4ACA4ACg4ADA4ADg4AAAAEAgAEBAAEBg
+        AECAAECgAEDAAEDgAEAAIEAgIEBAIEBgIECAIECgIEDAIEDgIEAAQEAgQEBAQEBgQECAQECgQEDAQEDg
+        QEAAYEAgYEBAYEBgYECAYECgYEDAYEDgYEAAgEAggEBAgEBggECAgECggEDAgEDggEAAoEAgoEBAoEBg
+        oECAoECgoEDAoEDgoEAAwEAgwEBAwEBgwECAwECgwEDAwEDgwEAA4EAg4EBA4EBg4ECA4ECg4EDA4EDg
+        4EAAAIAgAIBAAIBgAICAAICgAIDAAIDgAIAAIIAgIIBAIIBgIICAIICgIIDAIIDgIIAAQIAgQIBAQIBg
+        QICAQICgQIDAQIDgQIAAYIAgYIBAYIBgYICAYICgYIDAYIDgYIAAgIAggIBAgIBggICAgICggIDAgIDg
+        gIAAoIAgoIBAoIBgoICAoICgoIDAoIDgoIAAwIAgwIBAwIBgwICAwICgwIDAwIDgwIAA4IAg4IBA4IBg
+        4ICA4ICg4IDA4IDg4IAAAMAgAMBAAMBgAMCAAMCgAMDAAMDgAMAAIMAgIMBAIMBgIMCAIMCgIMDAIMDg
+        IMAAQMAgQMBAQMBgQMCAQMCgQMDAQMDgQMAAYMAgYMBAYMBgYMCAYMCgYMDAYMDgYMAAgMAggMBAgMBg
+        gMCAgMCggMDAgMDggMAAoMAgoMBAoMBgoMCAoMCgoMDAoMDgoMAAwMAgwMBAwMBgwMCAwMCgwMD/+/Cg
+        oKSAgID/AAAA/wD//wAAAP//AP8A//////9Y0jREAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAWElEQVQo
+        U63ROQ4AIAgEQP7/YFoFRG47rcxkQYKw5gPG6AG6ujuzdQeh5oebK2PJK9e8ce7jnByaC0TWvFBI27tk
+        iW9/Khic95TZ5nl6+YZpz+M+te5XfgMiSs4ctutesgAAAABJRU5ErkJgggs=
+</value>
+  </data>
+  <metadata name="$this.TrayLargeIcon" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+</root>

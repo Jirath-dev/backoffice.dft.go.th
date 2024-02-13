@@ -1,0 +1,76 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}[GetOnlineUserStatistics]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}GetOnlineUserStatistics
+GO
+
+create procedure {databaseOwner}{objectQualifier}GetOnlineUserStatistics
+
+@PortalID  int
+
+as
+
+-- Anonymous User Count
+select count(*) 
+from  {objectQualifier}AnonymousUsers
+where PortalId = @PortalID
+
+-- Users Online Count
+select count(*) 
+from {objectQualifier}UsersOnline
+where PortalId = @PortalID
+
+-- Last User Registered
+SELECT UserName, 
+       UserID 
+FROM   {objectQualifier}Users
+WHERE  UserID = (select top 1 UserId from {objectQualifier}UserPortals where PortalID = @PortalID order by UserPortalId desc)
+
+-- Membership Count
+select count(*) 
+from   {objectQualifier}UserPortals
+where PortalId = @PortalID
+
+-- Members in last day
+select count(*) 
+from {objectQualifier}UserPortals
+where PortalId = @PortalID and CreatedDate > DateAdd(d, -1, GetDate())
+
+-- Members day before
+select count(*)
+from {objectQualifier}UserPortals
+where PortalId = @PortalID and CreatedDate > DateAdd(d, -2, GetDate()) and CreatedDate < DateAdd(d, -1, GetDate())
+
+
+GO
+ 
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}{objectQualifier}[GetOnlineUsers]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}GetOnlineUsers
+GO
+
+CREATE PROCEDURE {databaseOwner}{objectQualifier}GetOnlineUsers
+
+@PortalID int
+
+AS
+
+select {objectQualifier}UsersOnline.UserID,
+       {objectQualifier}Users.UserName
+from   {objectQualifier}UsersOnline, {objectQualifier}Users
+where  {objectQualifier}UsersOnline.PortalID = @PortalID
+and    {objectQualifier}UsersOnline.UserID = {objectQualifier}Users.UserID
+
+GO
+
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

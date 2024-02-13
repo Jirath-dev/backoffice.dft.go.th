@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{00000000-0000-0000-0000-000000000000}") = "DFT_PrinterSetting", "DFT_PrinterSetting.vbproj", "{798225C9-C470-4F5D-A598-B4A73056CE4A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{798225C9-C470-4F5D-A598-B4A73056CE4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{798225C9-C470-4F5D-A598-B4A73056CE4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{798225C9-C470-4F5D-A598-B4A73056CE4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{798225C9-C470-4F5D-A598-B4A73056CE4A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

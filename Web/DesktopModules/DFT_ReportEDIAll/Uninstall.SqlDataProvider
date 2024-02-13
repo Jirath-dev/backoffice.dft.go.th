@@ -1,0 +1,44 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/** Drop FAQs Table **/
+
+ALTER TABLE {databaseOwner}[{objectQualifier}YourCompany_DFT_ReportEDIAll] DROP CONSTRAINT [FK_{objectQualifier}DFT_ReportEDIAll_{objectQualifier}Modules]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}YourCompany_DFT_ReportEDIAll] DROP CONSTRAINT [PK_{objectQualifier}YourCompany_DFT_ReportEDIAll]
+GO
+
+DROP INDEX {databaseOwner}[{objectQualifier}YourCompany_DFT_ReportEDIAll].[IX_{objectQualifier}YourCompany_DFT_ReportEDIAll]
+GO
+
+DROP TABLE {databaseOwner}[{objectQualifier}YourCompany_DFT_ReportEDIAll]
+GO
+
+/** Drop Stored Procedures **/
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_GetDFT_ReportEDIAlls]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_GetDFT_ReportEDIAll]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_AddDFT_ReportEDIAll]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_UpdateDFT_ReportEDIAll]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_DeleteDFT_ReportEDIAll]
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

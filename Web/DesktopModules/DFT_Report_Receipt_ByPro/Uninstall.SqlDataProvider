@@ -1,0 +1,44 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/** Drop FAQs Table **/
+
+ALTER TABLE {databaseOwner}[{objectQualifier}YourCompany_DFT_Report_Receipt_ByPro] DROP CONSTRAINT [FK_{objectQualifier}DFT_Report_Receipt_ByPro_{objectQualifier}Modules]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}YourCompany_DFT_Report_Receipt_ByPro] DROP CONSTRAINT [PK_{objectQualifier}YourCompany_DFT_Report_Receipt_ByPro]
+GO
+
+DROP INDEX {databaseOwner}[{objectQualifier}YourCompany_DFT_Report_Receipt_ByPro].[IX_{objectQualifier}YourCompany_DFT_Report_Receipt_ByPro]
+GO
+
+DROP TABLE {databaseOwner}[{objectQualifier}YourCompany_DFT_Report_Receipt_ByPro]
+GO
+
+/** Drop Stored Procedures **/
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_GetDFT_Report_Receipt_ByPros]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_GetDFT_Report_Receipt_ByPro]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_AddDFT_Report_Receipt_ByPro]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_UpdateDFT_Report_Receipt_ByPro]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_DeleteDFT_Report_Receipt_ByPro]
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

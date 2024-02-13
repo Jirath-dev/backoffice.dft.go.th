@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.34112.143
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DFT_EDI_Approved", "DFT_EDI_Approved.vbproj", "{D00628BC-E0E1-4320-88EB-377CC3282FA7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D00628BC-E0E1-4320-88EB-377CC3282FA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D00628BC-E0E1-4320-88EB-377CC3282FA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D00628BC-E0E1-4320-88EB-377CC3282FA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D00628BC-E0E1-4320-88EB-377CC3282FA7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0134F8DA-B5C6-452E-8899-D295BD42E233}
+	EndGlobalSection
+EndGlobal

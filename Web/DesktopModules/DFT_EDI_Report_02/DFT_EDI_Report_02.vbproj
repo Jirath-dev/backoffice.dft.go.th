@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1C72FBA7-D8D8-455E-A649-5CC27B86DEA5}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <AssemblyName>DFT_EDI_Report_02</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DocumentationFile>DFT_EDI_Report_02.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DocumentationFile>DFT_EDI_Report_02.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ActiveReports.PdfExport, Version=5.3.1436.2, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL" />
+    <Reference Include="ActiveReports.Viewer3, Version=5.3.1436.2, Culture=neutral, PublicKeyToken=cc4967777c49a3ff" />
+    <Reference Include="ActiveReports3, Version=5.3.1436.2, Culture=neutral, PublicKeyToken=cc4967777c49a3ff" />
+    <Reference Include="DFT.Dotnetnuke.ClassLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="DotNetNuke">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\dotnetnuke.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="Telerik.Web.UI, Version=2009.2.701.20, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Telerik\RadControls for ASP.NET AJAX Q2 2009\Bin\Telerik.Web.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="DotNetNuke" />
+    <Import Include="DotNetNuke.Common" />
+    <Import Include="DotNetNuke.Common.Utilities" />
+    <Import Include="DotNetNuke.Data" />
+    <Import Include="DotNetNuke.Entities" />
+    <Import Include="DotNetNuke.Entities.Tabs" />
+    <Import Include="DotNetNuke.Framework" />
+    <Import Include="DotNetNuke.Modules" />
+    <Import Include="DotNetNuke.Security" />
+    <Import Include="DotNetNuke.Services" />
+    <Import Include="DotNetNuke.Services.Exceptions" />
+    <Import Include="DotNetNuke.Services.Localization" />
+    <Import Include="DotNetNuke.UI" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\DataProvider.vb" />
+    <Compile Include="Components\DFT_EDI_Report_02Controller.vb" />
+    <Compile Include="Components\DFT_EDI_Report_02Info.vb" />
+    <Compile Include="Components\SqlDataProvider.vb" />
+    <Compile Include="EditDFT_EDI_Report_02.ascx.designer.vb">
+      <DependentUpon>EditDFT_EDI_Report_02.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditDFT_EDI_Report_02.ascx.vb">
+      <DependentUpon>EditDFT_EDI_Report_02.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmEDI_Report_02.aspx.designer.vb">
+      <DependentUpon>frmEDI_Report_02.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmEDI_Report_02.aspx.vb">
+      <DependentUpon>frmEDI_Report_02.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="rptEDI_Report_02_Type1.Designer.vb">
+      <DependentUpon>rptEDI_Report_02_Type1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptEDI_Report_02_Type1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="rptEDI_Report_02_Type2.Designer.vb">
+      <DependentUpon>rptEDI_Report_02_Type2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="rptEDI_Report_02_Type2.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Settings.ascx.designer.vb">
+      <DependentUpon>Settings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.ascx.vb">
+      <DependentUpon>Settings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewDFT_EDI_Report_02.ascx.designer.vb">
+      <DependentUpon>ViewDFT_EDI_Report_02.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewDFT_EDI_Report_02.ascx.vb">
+      <DependentUpon>ViewDFT_EDI_Report_02.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_Data\RadSpell\de-DE.tdf" />
+    <None Include="App_Data\RadSpell\en-US.tdf" />
+    <None Include="App_Data\RadSpell\fr-FR.tdf" />
+    <None Include="App_LocalResources\EditDFT_EDI_Report_02.ascx.resx">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_LocalResources\Settings.ascx.resx">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_LocalResources\ViewDFT_EDI_Report_02.ascx.resx">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="01.00.00.SqlDataProvider" />
+    <None Include="DFT_EDI_Report_02.dnn" />
+    <None Include="DFT_EDI_Report_02.SqlDataProvider" />
+    <None Include="Uninstall.SqlDataProvider" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bin\Telerik.Web.UI.dll" />
+    <Content Include="Bin\Telerik.Web.UI.xml" />
+    <Content Include="Documentation\Documentation.css" />
+    <Content Include="Documentation\Documentation.html" />
+    <Content Include="Documentation\logo.gif" />
+    <Content Include="EditDFT_EDI_Report_02.ascx" />
+    <Content Include="frmEDI_Report_02.aspx" />
+    <Content Include="images\CORNER.gif" />
+    <Content Include="Settings.ascx" />
+    <Content Include="ViewDFT_EDI_Report_02.ascx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frmEDI_Report_02.aspx.resx">
+      <DependentUpon>frmEDI_Report_02.aspx.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="rptEDI_Report_02_Type1.resx">
+      <DependentUpon>rptEDI_Report_02_Type1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="rptEDI_Report_02_Type2.resx">
+      <DependentUpon>rptEDI_Report_02_Type2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:12930/</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost/DotNetNuke_2</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

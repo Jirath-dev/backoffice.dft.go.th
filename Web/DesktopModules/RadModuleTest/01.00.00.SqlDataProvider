@@ -1,0 +1,151 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/** Create Table **/
+
+if not exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}YourCompany_RadModuleTest]') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	BEGIN
+		CREATE TABLE {databaseOwner}[{objectQualifier}YourCompany_RadModuleTest]
+		(
+			[ModuleID] [int] NOT NULL,
+			[ItemID] [int] NOT NULL IDENTITY(1, 1),
+			[Content] [ntext] NOT NULL,
+			[CreatedByUser] [int] NOT NULL,
+			[CreatedDate] [datetime] NOT NULL
+		)
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}YourCompany_RadModuleTest] ADD CONSTRAINT [PK_{objectQualifier}YourCompany_RadModuleTest] PRIMARY KEY CLUSTERED  ([ItemID])
+		CREATE NONCLUSTERED INDEX [IX_{objectQualifier}YourCompany_RadModuleTest] ON {databaseOwner}[{objectQualifier}YourCompany_RadModuleTest] ([ModuleID])
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}YourCompany_RadModuleTest] WITH NOCHECK ADD CONSTRAINT [FK_{objectQualifier}YourCompany_RadModuleTest_{objectQualifier}Modules] FOREIGN KEY ([ModuleID]) REFERENCES {databaseOwner}[{objectQualifier}Modules] ([ModuleID]) ON DELETE CASCADE NOT FOR REPLICATION
+	END
+GO
+
+
+/** Drop Existing Stored Procedures **/
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}YourCompany_GetRadModuleTests]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}YourCompany_GetRadModuleTests
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}YourCompany_GetRadModuleTest]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}YourCompany_GetRadModuleTest
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}YourCompany_AddRadModuleTest]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}YourCompany_AddRadModuleTest
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}YourCompany_UpdateRadModuleTest]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}YourCompany_UpdateRadModuleTest
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}YourCompany_DeleteRadModuleTest]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}YourCompany_DeleteRadModuleTest
+GO
+
+/** Create Stored Procedures **/
+
+
+create procedure {databaseOwner}{objectQualifier}YourCompany_GetRadModuleTests
+
+	@ModuleId int
+
+as
+
+select ModuleId,
+       ItemId,
+       Content,
+       CreatedByUser,
+       CreatedDate,
+       'CreatedByUserName' = {objectQualifier}Users.FirstName + ' ' + {objectQualifier}Users.LastName
+from {objectQualifier}YourCompany_RadModuleTest
+inner join {objectQualifier}Users on {objectQualifier}YourCompany_RadModuleTest.CreatedByUser = {objectQualifier}Users.UserId
+where  ModuleId = @ModuleId
+GO
+
+create procedure {databaseOwner}{objectQualifier}YourCompany_GetRadModuleTest
+
+	@ModuleId int,
+        @ItemId int
+
+as
+
+select ModuleId,
+       ItemId,
+       Content,
+       CreatedByUser,
+       CreatedDate,
+       'CreatedByUserName' = {objectQualifier}Users.FirstName + ' ' + {objectQualifier}Users.LastName
+from {objectQualifier}YourCompany_RadModuleTest
+inner join {objectQualifier}Users on {objectQualifier}YourCompany_RadModuleTest.CreatedByUser = {objectQualifier}Users.UserId
+where  ModuleId = @ModuleId
+and ItemId = @ItemId
+GO
+
+
+create procedure {databaseOwner}{objectQualifier}YourCompany_AddRadModuleTest
+
+	@ModuleId       int,
+	@Content        ntext,
+	@UserID         int
+
+as
+
+insert into {objectQualifier}YourCompany_RadModuleTest (
+	ModuleId,
+	Content,
+	CreatedByUser,
+	CreatedDate
+) 
+values (
+	@ModuleId,
+	@Content,
+	@UserID,
+	getdate()
+)
+
+GO
+
+create procedure {databaseOwner}{objectQualifier}YourCompany_UpdateRadModuleTest
+
+	@ModuleId       int,
+        @ItemId         int,
+	@Content        ntext,
+	@UserID         int
+
+as
+
+update {objectQualifier}YourCompany_RadModuleTest
+set    Content       = @Content,
+       CreatedByUser = @UserID,
+       CreatedDate   = getdate()
+where  ModuleId = @ModuleId
+and    ItemId = @ItemId
+
+GO
+
+create procedure {databaseOwner}{objectQualifier}YourCompany_DeleteRadModuleTest
+
+	@ModuleId       int,
+        @ItemId         int
+
+as
+
+delete
+from   {objectQualifier}YourCompany_RadModuleTest
+where  ModuleId = @ModuleId
+and    ItemId = @ItemId
+
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

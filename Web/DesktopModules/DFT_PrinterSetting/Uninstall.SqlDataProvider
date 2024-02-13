@@ -1,0 +1,44 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/** Drop FAQs Table **/
+
+ALTER TABLE {databaseOwner}[{objectQualifier}YourCompany_DFT_PrinterSetting] DROP CONSTRAINT [FK_{objectQualifier}DFT_PrinterSetting_{objectQualifier}Modules]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}YourCompany_DFT_PrinterSetting] DROP CONSTRAINT [PK_{objectQualifier}YourCompany_DFT_PrinterSetting]
+GO
+
+DROP INDEX {databaseOwner}[{objectQualifier}YourCompany_DFT_PrinterSetting].[IX_{objectQualifier}YourCompany_DFT_PrinterSetting]
+GO
+
+DROP TABLE {databaseOwner}[{objectQualifier}YourCompany_DFT_PrinterSetting]
+GO
+
+/** Drop Stored Procedures **/
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_GetDFT_PrinterSettings]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_GetDFT_PrinterSetting]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_AddDFT_PrinterSetting]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_UpdateDFT_PrinterSetting]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_DeleteDFT_PrinterSetting]
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

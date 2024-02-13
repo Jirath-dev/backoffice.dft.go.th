@@ -1,0 +1,151 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/** Create Table **/
+
+if not exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}YourCompany_DFT_EDI_CheckInvoice_Cost]') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	BEGIN
+		CREATE TABLE {databaseOwner}[{objectQualifier}YourCompany_DFT_EDI_CheckInvoice_Cost]
+		(
+			[ModuleID] [int] NOT NULL,
+			[ItemID] [int] NOT NULL IDENTITY(1, 1),
+			[Content] [ntext] NOT NULL,
+			[CreatedByUser] [int] NOT NULL,
+			[CreatedDate] [datetime] NOT NULL
+		)
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}YourCompany_DFT_EDI_CheckInvoice_Cost] ADD CONSTRAINT [PK_{objectQualifier}YourCompany_DFT_EDI_CheckInvoice_Cost] PRIMARY KEY CLUSTERED  ([ItemID])
+		CREATE NONCLUSTERED INDEX [IX_{objectQualifier}YourCompany_DFT_EDI_CheckInvoice_Cost] ON {databaseOwner}[{objectQualifier}YourCompany_DFT_EDI_CheckInvoice_Cost] ([ModuleID])
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}YourCompany_DFT_EDI_CheckInvoice_Cost] WITH NOCHECK ADD CONSTRAINT [FK_{objectQualifier}YourCompany_DFT_EDI_CheckInvoice_Cost_{objectQualifier}Modules] FOREIGN KEY ([ModuleID]) REFERENCES {databaseOwner}[{objectQualifier}Modules] ([ModuleID]) ON DELETE CASCADE NOT FOR REPLICATION
+	END
+GO
+
+
+/** Drop Existing Stored Procedures **/
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}YourCompany_GetDFT_EDI_CheckInvoice_Costs]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}YourCompany_GetDFT_EDI_CheckInvoice_Costs
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}YourCompany_GetDFT_EDI_CheckInvoice_Cost]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}YourCompany_GetDFT_EDI_CheckInvoice_Cost
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}YourCompany_AddDFT_EDI_CheckInvoice_Cost]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}YourCompany_AddDFT_EDI_CheckInvoice_Cost
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}YourCompany_UpdateDFT_EDI_CheckInvoice_Cost]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}YourCompany_UpdateDFT_EDI_CheckInvoice_Cost
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}YourCompany_DeleteDFT_EDI_CheckInvoice_Cost]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}YourCompany_DeleteDFT_EDI_CheckInvoice_Cost
+GO
+
+/** Create Stored Procedures **/
+
+
+create procedure {databaseOwner}{objectQualifier}YourCompany_GetDFT_EDI_CheckInvoice_Costs
+
+	@ModuleId int
+
+as
+
+select ModuleId,
+       ItemId,
+       Content,
+       CreatedByUser,
+       CreatedDate,
+       'CreatedByUserName' = {objectQualifier}Users.FirstName + ' ' + {objectQualifier}Users.LastName
+from {objectQualifier}YourCompany_DFT_EDI_CheckInvoice_Cost
+inner join {objectQualifier}Users on {objectQualifier}YourCompany_DFT_EDI_CheckInvoice_Cost.CreatedByUser = {objectQualifier}Users.UserId
+where  ModuleId = @ModuleId
+GO
+
+create procedure {databaseOwner}{objectQualifier}YourCompany_GetDFT_EDI_CheckInvoice_Cost
+
+	@ModuleId int,
+        @ItemId int
+
+as
+
+select ModuleId,
+       ItemId,
+       Content,
+       CreatedByUser,
+       CreatedDate,
+       'CreatedByUserName' = {objectQualifier}Users.FirstName + ' ' + {objectQualifier}Users.LastName
+from {objectQualifier}YourCompany_DFT_EDI_CheckInvoice_Cost
+inner join {objectQualifier}Users on {objectQualifier}YourCompany_DFT_EDI_CheckInvoice_Cost.CreatedByUser = {objectQualifier}Users.UserId
+where  ModuleId = @ModuleId
+and ItemId = @ItemId
+GO
+
+
+create procedure {databaseOwner}{objectQualifier}YourCompany_AddDFT_EDI_CheckInvoice_Cost
+
+	@ModuleId       int,
+	@Content        ntext,
+	@UserID         int
+
+as
+
+insert into {objectQualifier}YourCompany_DFT_EDI_CheckInvoice_Cost (
+	ModuleId,
+	Content,
+	CreatedByUser,
+	CreatedDate
+) 
+values (
+	@ModuleId,
+	@Content,
+	@UserID,
+	getdate()
+)
+
+GO
+
+create procedure {databaseOwner}{objectQualifier}YourCompany_UpdateDFT_EDI_CheckInvoice_Cost
+
+	@ModuleId       int,
+        @ItemId         int,
+	@Content        ntext,
+	@UserID         int
+
+as
+
+update {objectQualifier}YourCompany_DFT_EDI_CheckInvoice_Cost
+set    Content       = @Content,
+       CreatedByUser = @UserID,
+       CreatedDate   = getdate()
+where  ModuleId = @ModuleId
+and    ItemId = @ItemId
+
+GO
+
+create procedure {databaseOwner}{objectQualifier}YourCompany_DeleteDFT_EDI_CheckInvoice_Cost
+
+	@ModuleId       int,
+        @ItemId         int
+
+as
+
+delete
+from   {objectQualifier}YourCompany_DFT_EDI_CheckInvoice_Cost
+where  ModuleId = @ModuleId
+and    ItemId = @ItemId
+
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

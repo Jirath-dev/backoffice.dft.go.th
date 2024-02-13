@@ -1,0 +1,44 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/** Drop FAQs Table **/
+
+ALTER TABLE {databaseOwner}[{objectQualifier}YourCompany_DFT_ADDCardid_DS] DROP CONSTRAINT [FK_{objectQualifier}DFT_ADDCardid_DS_{objectQualifier}Modules]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}YourCompany_DFT_ADDCardid_DS] DROP CONSTRAINT [PK_{objectQualifier}YourCompany_DFT_ADDCardid_DS]
+GO
+
+DROP INDEX {databaseOwner}[{objectQualifier}YourCompany_DFT_ADDCardid_DS].[IX_{objectQualifier}YourCompany_DFT_ADDCardid_DS]
+GO
+
+DROP TABLE {databaseOwner}[{objectQualifier}YourCompany_DFT_ADDCardid_DS]
+GO
+
+/** Drop Stored Procedures **/
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_GetDFT_ADDCardid_DSs]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_GetDFT_ADDCardid_DS]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_AddDFT_ADDCardid_DS]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_UpdateDFT_ADDCardid_DS]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_DeleteDFT_ADDCardid_DS]
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

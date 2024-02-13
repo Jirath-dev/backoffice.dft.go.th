@@ -1,0 +1,67 @@
+/************************************************************/
+/*****              RegisterModule                      *****/
+/*****                                                  *****/
+/***** Use this script to register a module in the      *****/
+/***** database using Query Analyzer                    *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+exec {databaseOwner}[{objectQualifier}AddDesktopModule]
+  @ModuleName = N'DFT_ReportEDIAll', 
+  @FolderName = N'DFT_ReportEDIAll', 
+  @FriendlyName = N'DFT_ReportEDIAll', 
+  @Description = N'A DFT_ReportEDIAll module', 
+  @Version = N'01.00.00', 
+  @IsPremium = 0, 
+  @IsAdmin = 0, 
+  @BusinessController = N'YourCompany.Modules.DFT_ReportEDIAll.DFT_ReportEDIAllController', 
+  @SupportedFeatures = 3
+
+declare @DesktopModuleId int
+select @DesktopModuleId = DesktopModuleId 
+from {databaseOwner}[{objectQualifier}DesktopModules] 
+where ModuleName = 'DFT_ReportEDIAll'
+
+exec {databaseOwner}[{objectQualifier}AddModuleDefinition] @DesktopModuleId, 
+  @FriendlyName = N'DFT_ReportEDIAll', 
+  @DefaultCacheTime = 0
+
+declare @ModuleDefID int
+select @ModuleDefID = ModuleDefID 
+from {databaseOwner}[{objectQualifier}ModuleDefinitions] 
+where FriendlyName = 'DFT_ReportEDIAll'
+
+exec {databaseOwner}[{objectQualifier}AddModuleControl]
+  @ModuleDefID, 
+  @ControlKey = NULL, 
+  @ControlTitle = NULL, 
+  @ControlSrc = N'DesktopModules/DFT_ReportEDIAll/ViewDFT_ReportEDIAll.ascx', 
+  @IconFile = NULL, 
+  @ControlType = 0, 
+  @ViewOrder = NULL, 
+  @HelpUrl = NULL
+
+exec {databaseOwner}[{objectQualifier}AddModuleControl]
+  @ModuleDefID, 
+  @ControlKey = 'Edit', 
+  @ControlTitle = 'Edit Content', 
+  @ControlSrc = N'DesktopModules/DFT_ReportEDIAll/EditDFT_ReportEDIAll.ascx', 
+  @IconFile = NULL, 
+  @ControlType = 1, 
+  @ViewOrder = NULL, 
+  @HelpUrl = NULL
+
+exec {databaseOwner}[{objectQualifier}AddModuleControl]
+  @ModuleDefID, 
+  @ControlKey = 'Settings', 
+  @ControlTitle = 'DFT_ReportEDIAll Settings', 
+  @ControlSrc = N'DesktopModules/DFT_ReportEDIAll/Settings.ascx', 
+  @IconFile = NULL, 
+  @ControlType = 1, 
+  @ViewOrder = NULL, 
+  @HelpUrl = NULL

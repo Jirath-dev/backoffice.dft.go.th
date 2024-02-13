@@ -1,0 +1,44 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/** Drop FAQs Table **/
+
+ALTER TABLE {databaseOwner}[{objectQualifier}YourCompany_DFT_EDI_Report_02_new] DROP CONSTRAINT [FK_{objectQualifier}DFT_EDI_Report_02_new_{objectQualifier}Modules]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}YourCompany_DFT_EDI_Report_02_new] DROP CONSTRAINT [PK_{objectQualifier}YourCompany_DFT_EDI_Report_02_new]
+GO
+
+DROP INDEX {databaseOwner}[{objectQualifier}YourCompany_DFT_EDI_Report_02_new].[IX_{objectQualifier}YourCompany_DFT_EDI_Report_02_new]
+GO
+
+DROP TABLE {databaseOwner}[{objectQualifier}YourCompany_DFT_EDI_Report_02_new]
+GO
+
+/** Drop Stored Procedures **/
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_GetDFT_EDI_Report_02_news]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_GetDFT_EDI_Report_02_new]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_AddDFT_EDI_Report_02_new]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_UpdateDFT_EDI_Report_02_new]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_DeleteDFT_EDI_Report_02_new]
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

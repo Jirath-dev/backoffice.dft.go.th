@@ -1,0 +1,70 @@
+/************************************************************/
+/*****              RegisterModule                      *****/
+/*****                                                  *****/
+/***** Use this script to register a module in the      *****/
+/***** database using Query Analyzer                    *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+exec {databaseOwner}[{objectQualifier}AddDesktopModule]
+  @ModuleName = N'DS2COReportSummary', 
+  @FolderName = N'DS2COReportSummary', 
+  @FriendlyName = N'DS2COReportSummary', 
+  @Description = N'A DS2COReportSummary module', 
+  @Version = N'01.00.00', 
+  @IsPremium = 0, 
+  @IsAdmin = 0, 
+  @BusinessController = N'YourCompany.Modules.DS2COReportSummary.DS2COReportSummaryController', 
+  @SupportedFeatures = 3
+  @CompatibleVersions = ""
+  @Dependencies = ""
+  @Permissions = ""
+
+declare @DesktopModuleId int
+select @DesktopModuleId = DesktopModuleId 
+from {databaseOwner}[{objectQualifier}DesktopModules] 
+where ModuleName = 'DS2COReportSummary'
+
+exec {databaseOwner}[{objectQualifier}AddModuleDefinition] @DesktopModuleId, 
+  @FriendlyName = N'DS2COReportSummary', 
+  @DefaultCacheTime = 0
+
+declare @ModuleDefID int
+select @ModuleDefID = ModuleDefID 
+from {databaseOwner}[{objectQualifier}ModuleDefinitions] 
+where FriendlyName = 'DS2COReportSummary'
+
+exec {databaseOwner}[{objectQualifier}AddModuleControl]
+  @ModuleDefID, 
+  @ControlKey = NULL, 
+  @ControlTitle = NULL, 
+  @ControlSrc = N'DesktopModules/DS2COReportSummary/ViewDS2COReportSummary.ascx', 
+  @IconFile = NULL, 
+  @ControlType = 0, 
+  @ViewOrder = NULL, 
+  @HelpUrl = NULL
+
+exec {databaseOwner}[{objectQualifier}AddModuleControl]
+  @ModuleDefID, 
+  @ControlKey = 'Edit', 
+  @ControlTitle = 'Edit Content', 
+  @ControlSrc = N'DesktopModules/DS2COReportSummary/EditDS2COReportSummary.ascx', 
+  @IconFile = NULL, 
+  @ControlType = 1, 
+  @ViewOrder = NULL, 
+  @HelpUrl = NULL
+
+exec {databaseOwner}[{objectQualifier}AddModuleControl]
+  @ModuleDefID, 
+  @ControlKey = 'Settings', 
+  @ControlTitle = 'DS2COReportSummary Settings', 
+  @ControlSrc = N'DesktopModules/DS2COReportSummary/Settings.ascx', 
+  @IconFile = NULL, 
+  @ControlType = 1, 
+  @ViewOrder = NULL, 
+  @HelpUrl = NULL

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--5246432363042559700@http://www.dotnetnuke.com/Portals/25/SolutionsExplorer/GlobalDirectory.opml-->
+<opml version="2.0">
+  <head>
+    <title>DotNetNuke Solutions Explorer</title>
+    <ownerName>DotNetNuke Corporation</ownerName>
+    <ownerEmail>info@dotnetnuke.com</ownerEmail>
+    <docs>http://www.opml.org/spec2</docs>
+  </head>
+  <body>
+    <outline text="Products" type="none" category="Tab">
+      <outline text="Professional Edition" type="none" category="Section">
+        <outline text="About" type="rss" category="Category/@@3000px" xmlUrl="http://www.dotnetnuke.com/Products/ProfessionalEdition.aspx?skinsrc=[g]Skins/Ultimo/plain" />
+        <outline text="Buy" type="rss" category="Category/@@3000px" xmlUrl="http://marketplace.dotnetnuke.com/p-565-dotnetnuke-professional-edition.aspx?skinsrc=[g]Skins/Ultimo/plain" />
+        <outline text="Online Demo" type="rss" category="Category/@@3000px" xmlUrl="http://www.dotnetnuke.com/Products/OnlineDemo/tabid/1239/Default.aspx?skinsrc=[g]Skins/Ultimo/plain" />
+      </outline>
+      <outline text="Community Edition" type="none" category="Section">
+        <outline text="Downloads" type="rss" category="Category/@@3000px" xmlUrl="http://www.dotnetnuke.com/tabid/125/default.aspx?skinsrc=[g]Skins/Ultimo/plain" />
+        <outline text="Forge" type="rss" category="Category/@@3000px" xmlUrl="http://www.dotnetnuke.com/tabid/824/default.aspx?skinsrc=[g]Skins/Ultimo/plain" />
+      </outline>
+    </outline>
+    <outline text="DotNetNuke.com" type="none" category="Tab">
+      <outline text="Resources" type="none" category="Section">
+        <outline text="Webinars" type="rss" category="Category/@@3000px" xmlUrl="http://www.dotnetnuke.com/Products/Webinars.aspx?skinsrc=[g]Skins/Ultimo/plain" />
+        <outline text="Showcase" type="rss" category="Category/@@3000px" xmlUrl="http://www.dotnetnuke.com/Products/NewtoDotNetNuke/DotNetNukeShowcaseSites.aspx?skinsrc=[g]Skins/Ultimo/plain" />
+      </outline>
+    </outline>
+  </body>
+</opml>

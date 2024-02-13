@@ -1,0 +1,44 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/** Drop FAQs Table **/
+
+ALTER TABLE {databaseOwner}[{objectQualifier}NTI_DFT_EDI_SiteManage] DROP CONSTRAINT [FK_{objectQualifier}DFT_EDI_SiteManage_{objectQualifier}Modules]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}NTI_DFT_EDI_SiteManage] DROP CONSTRAINT [PK_{objectQualifier}NTI_DFT_EDI_SiteManage]
+GO
+
+DROP INDEX {databaseOwner}[{objectQualifier}NTI_DFT_EDI_SiteManage].[IX_{objectQualifier}NTI_DFT_EDI_SiteManage]
+GO
+
+DROP TABLE {databaseOwner}[{objectQualifier}NTI_DFT_EDI_SiteManage]
+GO
+
+/** Drop Stored Procedures **/
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}NTI_GetDFT_EDI_SiteManages]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}NTI_GetDFT_EDI_SiteManage]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}NTI_AddDFT_EDI_SiteManage]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}NTI_UpdateDFT_EDI_SiteManage]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}NTI_DeleteDFT_EDI_SiteManage]
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

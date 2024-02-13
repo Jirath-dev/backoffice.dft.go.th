@@ -1,0 +1,44 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/** Drop FAQs Table **/
+
+ALTER TABLE {databaseOwner}[{objectQualifier}NTi_DFT_Tariff_ECO] DROP CONSTRAINT [FK_{objectQualifier}DFT_Tariff_ECO_{objectQualifier}Modules]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}NTi_DFT_Tariff_ECO] DROP CONSTRAINT [PK_{objectQualifier}NTi_DFT_Tariff_ECO]
+GO
+
+DROP INDEX {databaseOwner}[{objectQualifier}NTi_DFT_Tariff_ECO].[IX_{objectQualifier}NTi_DFT_Tariff_ECO]
+GO
+
+DROP TABLE {databaseOwner}[{objectQualifier}NTi_DFT_Tariff_ECO]
+GO
+
+/** Drop Stored Procedures **/
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}NTi_GetDFT_Tariff_ECOs]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}NTi_GetDFT_Tariff_ECO]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}NTi_AddDFT_Tariff_ECO]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}NTi_UpdateDFT_Tariff_ECO]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}NTi_DeleteDFT_Tariff_ECO]
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

@@ -1,0 +1,86 @@
+.cn_wraper{
+	width:100%;
+	margin:0 0 4px 0;
+}
+.ctn_edi_tl{
+	background:url(images/ctn_edi_tl.png) top left no-repeat;
+	height:31px;
+	margin:0;
+	padding:0;
+}
+.ctn_edi_tr{
+	background:url(images/ctn_edi_tr.png) top right no-repeat;
+	height:31px;
+	margin:0;
+	padding:0;
+}
+.ctn_edi_tc{
+	background:url(images/ctn_edi_tc.png) top repeat-x;
+	height:31px;
+	margin: 0 10px 0 10px;
+	padding:0;
+}
+.ctn_edi_ml{
+	background:url(images/ctn_edi_ml.png) top left repeat-y;
+	margin: 0 ;
+	padding:0;
+}
+.ctn_edi_mr{
+	background:url(images/ctn_edi_mr.png) top right repeat-y;
+	margin: 0 ;
+	padding:0;	
+}
+.ctn_edi_mc{
+	background:#fff;
+	vertical-align:text-top;
+	margin:0 2px 0 2px;
+	padding:0 4px 0 4px ;
+              min-height:20px;	
+}
+.ctn_edi_bl{
+	background:url(images/ctn_edi_bl.png) top left no-repeat;
+	padding:0;
+	margin:0;
+	height:12px;
+	
+}
+.ctn_edi_br{
+	background:url(images/ctn_edi_br.png) top right no-repeat;
+	padding:0;
+	margin:0;
+	height:12px;
+	
+}
+.ctn_edi_bc{
+	background:url(images/ctn_edi_bc.png) top  repeat-x;
+	margin: 0 12px 0 12px;
+	padding:0;
+	height:12px;
+	
+}
+.Content_Style{
+	padding:0 4px 0 4px;
+	margin:0;
+	text-align:left;
+}
+.Content_Style p{
+	padding:0;
+	margin:0;
+}
+.TitleStyle{
+	padding:10px 4px 0 4px;
+}
+.Head{
+color:#357;
+}
+.text_right{
+text-align:right;
+}
+.Clear_Both{
+	clear:both;
+}
+
+
+
+
+

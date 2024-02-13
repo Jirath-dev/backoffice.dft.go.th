@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{00000000-0000-0000-0000-000000000000}") = "DFT_EDI_CheckAttachment", "DFT_EDI_CheckAttachment.vbproj", "{8A04218F-D0EB-420F-9D91-63A9851450A8}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8A04218F-D0EB-420F-9D91-63A9851450A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A04218F-D0EB-420F-9D91-63A9851450A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A04218F-D0EB-420F-9D91-63A9851450A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A04218F-D0EB-420F-9D91-63A9851450A8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

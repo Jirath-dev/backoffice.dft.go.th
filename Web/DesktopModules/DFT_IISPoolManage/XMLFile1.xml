@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<AppPoolsList>
+  <!--<AppPool>IIS://ASPIRE-D09/W3SVC/AppPools/TESTPoolMy</AppPool>-->
+  <AppPool>IIS://ASPIRE-D09/W3SVC/AppPools/mysite.backoffice.dft.go.th</AppPool>
+  <AppPool>IIS://ASPIRE-D09/W3SVC/AppPools/mysite.backoffice2.dft.go.th</AppPool>
+  </AppPoolsList>
+
+<!--<AppPoolsList>
+  <AppPool>IIS://SERVER00123/W3SVC/AppPools/Northwind</AppPool>
+  <AppPool>IIS://SERVER00123/W3SVC/AppPools/Acme</AppPool>
+  <AppPool>IIS://SERVER00125/W3SVC/AppPools/Northwind</AppPool>
+  <AppPool>IIS://SERVER00125/W3SVC/AppPools/Acme</AppPool>
+</AppPoolsList>-->

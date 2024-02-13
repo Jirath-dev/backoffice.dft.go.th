@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A38818B4-5B0D-40FE-A4C5-9EC26D471368}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <AssemblyName>DFT_DS2_AdminDashboard</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DocumentationFile>DFT_DS2_AdminDashboard.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DocumentationFile>DFT_DS2_AdminDashboard.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DFT.Dotnetnuke.ClassLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="DotNetNuke, Version=4.9.2.66, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Windows\assembly\GAC_MSIL\System.Web.Extensions\1.0.61025.0__31bf3856ad364e35\System.Web.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="Telerik.Web.UI, Version=2009.1.311.20, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\edi.dft.go.th\bin\Telerik.Web.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="DotNetNuke" />
+    <Import Include="DotNetNuke.Common" />
+    <Import Include="DotNetNuke.Common.Utilities" />
+    <Import Include="DotNetNuke.Data" />
+    <Import Include="DotNetNuke.Entities" />
+    <Import Include="DotNetNuke.Entities.Tabs" />
+    <Import Include="DotNetNuke.Framework" />
+    <Import Include="DotNetNuke.Modules" />
+    <Import Include="DotNetNuke.Security" />
+    <Import Include="DotNetNuke.Services" />
+    <Import Include="DotNetNuke.Services.Exceptions" />
+    <Import Include="DotNetNuke.Services.Localization" />
+    <Import Include="DotNetNuke.UI" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Components\DataProvider.vb" />
+    <Compile Include="Components\DFT_DS2_AdminDashboardController.vb" />
+    <Compile Include="Components\DFT_DS2_AdminDashboardInfo.vb" />
+    <Compile Include="Components\SqlDataProvider.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="Settings.ascx.designer.vb">
+      <DependentUpon>Settings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.ascx.vb">
+      <DependentUpon>Settings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewDFT_DS2_AdminDashboard.ascx.designer.vb">
+      <DependentUpon>ViewDFT_DS2_AdminDashboard.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewDFT_DS2_AdminDashboard.ascx.vb">
+      <DependentUpon>ViewDFT_DS2_AdminDashboard.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebControls\ChangeSite.ascx.designer.vb">
+      <DependentUpon>ChangeSite.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebControls\ChangeSite.ascx.vb">
+      <DependentUpon>ChangeSite.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebControls\InvoiceEDI.ascx.designer.vb">
+      <DependentUpon>InvoiceEDI.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebControls\InvoiceEDI.ascx.vb">
+      <DependentUpon>InvoiceEDI.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebControls\ListAttachSheet.ascx.designer.vb">
+      <DependentUpon>ListAttachSheet.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebControls\ListAttachSheet.ascx.vb">
+      <DependentUpon>ListAttachSheet.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebControls\ListPDF.ascx.designer.vb">
+      <DependentUpon>ListPDF.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebControls\ListPDF.ascx.vb">
+      <DependentUpon>ListPDF.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebControls\ListSite.ascx.designer.vb">
+      <DependentUpon>ListSite.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebControls\ListSite.ascx.vb">
+      <DependentUpon>ListSite.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebControls\ListXML.ascx.designer.vb">
+      <DependentUpon>ListXML.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebControls\ListXML.ascx.vb">
+      <DependentUpon>ListXML.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebControls\OpenCard.ascx.designer.vb">
+      <DependentUpon>OpenCard.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebControls\OpenCard.ascx.vb">
+      <DependentUpon>OpenCard.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebControls\Printer.ascx.designer.vb">
+      <DependentUpon>Printer.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebControls\Printer.ascx.vb">
+      <DependentUpon>Printer.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebControls\RemoveName.ascx.designer.vb">
+      <DependentUpon>RemoveName.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebControls\RemoveName.ascx.vb">
+      <DependentUpon>RemoveName.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebControls\Report.ascx.designer.vb">
+      <DependentUpon>Report.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebControls\Report.ascx.vb">
+      <DependentUpon>Report.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebControls\Reports\Report1.ascx.designer.vb">
+      <DependentUpon>Report1.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebControls\Reports\Report1.ascx.vb">
+      <DependentUpon>Report1.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebControls\ReStatus.ascx.designer.vb">
+      <DependentUpon>ReStatus.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebControls\ReStatus.ascx.vb">
+      <DependentUpon>ReStatus.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebControls\Rollver.ascx.designer.vb">
+      <DependentUpon>Rollver.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebControls\Rollver.ascx.vb">
+      <DependentUpon>Rollver.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebControls\ValunteerEDI.ascx.designer.vb">
+      <DependentUpon>ValunteerEDI.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebControls\ValunteerEDI.ascx.vb">
+      <DependentUpon>ValunteerEDI.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_LocalResources\EditDFT_DS2_AdminDashboard.ascx.resx" />
+    <None Include="App_LocalResources\Settings.ascx.resx" />
+    <None Include="App_LocalResources\ViewDFT_DS2_AdminDashboard.ascx.resx" />
+    <None Include="01.00.00.SqlDataProvider" />
+    <None Include="DFT_DS2_AdminDashboard.dnn" />
+    <None Include="DFT_DS2_AdminDashboard.SqlDataProvider" />
+    <None Include="Uninstall.SqlDataProvider" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Documentation\Documentation.css" />
+    <Content Include="Documentation\Documentation.html" />
+    <Content Include="Documentation\logo.gif" />
+    <Content Include="Images\Add-Appointment-icon.png" />
+    <Content Include="Images\Appointment-Cool-icon.png" />
+    <Content Include="Images\Appointment-Urgent-icon.png" />
+    <Content Include="Images\arrows.png" />
+    <Content Include="Images\Backup-Green-Button-icon.png" />
+    <Content Include="Images\Delete.gif" />
+    <Content Include="Images\dft_edi_co_sgnature_backoffice.png" />
+    <Content Include="Images\earth.png" />
+    <Content Include="Images\Gear-icon.png" />
+    <Content Include="Images\Line-Chart-icon.png" />
+    <Content Include="Images\open_source.png" />
+    <Content Include="Images\Pie-Chart-icon.png" />
+    <Content Include="Images\Refresh.gif" />
+    <Content Include="Images\Run-icon.png" />
+    <Content Include="Images\Users-icon.png" />
+    <Content Include="Images\wheel.png" />
+    <Content Include="Settings.ascx" />
+    <Content Include="ViewDFT_DS2_AdminDashboard.ascx" />
+    <Content Include="WebControls\ChangeSite.ascx" />
+    <Content Include="WebControls\InvoiceEDI.ascx" />
+    <Content Include="WebControls\ListAttachSheet.ascx" />
+    <Content Include="WebControls\ListPDF.ascx" />
+    <Content Include="WebControls\ListSite.ascx" />
+    <Content Include="WebControls\ListXML.ascx" />
+    <Content Include="WebControls\OpenCard.ascx" />
+    <Content Include="WebControls\Printer.ascx" />
+    <Content Include="WebControls\RemoveName.ascx" />
+    <Content Include="WebControls\Report.ascx" />
+    <Content Include="WebControls\Reports\Report1.ascx" />
+    <Content Include="WebControls\ReStatus.ascx" />
+    <Content Include="WebControls\Rollver.ascx" />
+    <Content Include="WebControls\ValunteerEDI.ascx" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" Condition="" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>62597</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://production.local/482/DesktopModules/DFT_DS2_AdminDashboard</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://production.local/482</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

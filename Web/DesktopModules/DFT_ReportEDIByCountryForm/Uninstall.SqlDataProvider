@@ -1,0 +1,44 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/** Drop FAQs Table **/
+
+ALTER TABLE {databaseOwner}[{objectQualifier}YourCompany_DFT_ReportEDIByCountryForm] DROP CONSTRAINT [FK_{objectQualifier}DFT_ReportEDIByCountryForm_{objectQualifier}Modules]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}YourCompany_DFT_ReportEDIByCountryForm] DROP CONSTRAINT [PK_{objectQualifier}YourCompany_DFT_ReportEDIByCountryForm]
+GO
+
+DROP INDEX {databaseOwner}[{objectQualifier}YourCompany_DFT_ReportEDIByCountryForm].[IX_{objectQualifier}YourCompany_DFT_ReportEDIByCountryForm]
+GO
+
+DROP TABLE {databaseOwner}[{objectQualifier}YourCompany_DFT_ReportEDIByCountryForm]
+GO
+
+/** Drop Stored Procedures **/
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_GetDFT_ReportEDIByCountryForms]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_GetDFT_ReportEDIByCountryForm]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_AddDFT_ReportEDIByCountryForm]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_UpdateDFT_ReportEDIByCountryForm]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}YourCompany_DeleteDFT_ReportEDIByCountryForm]
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

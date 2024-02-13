@@ -1,0 +1,44 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/** Drop FAQs Table **/
+
+ALTER TABLE {databaseOwner}[{objectQualifier}NTI_DFT_DS2_AdminDashboard] DROP CONSTRAINT [FK_{objectQualifier}DFT_DS2_AdminDashboard_{objectQualifier}Modules]
+GO
+
+ALTER TABLE {databaseOwner}[{objectQualifier}NTI_DFT_DS2_AdminDashboard] DROP CONSTRAINT [PK_{objectQualifier}NTI_DFT_DS2_AdminDashboard]
+GO
+
+DROP INDEX {databaseOwner}[{objectQualifier}NTI_DFT_DS2_AdminDashboard].[IX_{objectQualifier}NTI_DFT_DS2_AdminDashboard]
+GO
+
+DROP TABLE {databaseOwner}[{objectQualifier}NTI_DFT_DS2_AdminDashboard]
+GO
+
+/** Drop Stored Procedures **/
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}NTI_GetDFT_DS2_AdminDashboards]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}NTI_GetDFT_DS2_AdminDashboard]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}NTI_AddDFT_DS2_AdminDashboard]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}NTI_UpdateDFT_DS2_AdminDashboard]
+GO
+
+DROP PROCEDURE {databaseOwner}[{objectQualifier}NTI_DeleteDFT_DS2_AdminDashboard]
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

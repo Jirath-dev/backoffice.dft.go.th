@@ -1,0 +1,1324 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5D5B2D87-7B14-424D-8F9D-3ECD48C98B22}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <AssemblyName>DFT_EDI_PrintCertificate</AssemblyName>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>14.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DocumentationFile>DFT_EDI_PrintCertificate.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DocumentationFile>DFT_EDI_PrintCertificate.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ActiveReports.PdfExport, Version=5.3.1436.2, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\ActiveReports.PdfExport.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ActiveReports.Viewer3, Version=5.3.1436.2, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\ActiveReports.Viewer3.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ActiveReports.Web, Version=5.3.1436.2, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\ActiveReports.Web.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ActiveReports3, Version=5.3.1436.2, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\ActiveReports3.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DFT.Dotnetnuke.ClassLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DotNetNuke">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\dotnetnuke.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions, Version=1.0.61025.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="Telerik.Web.Design, Version=2009.2.701.20, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\BinTeQ2\Telerik.Web.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2009.2.701.20, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\BinTeQ2\Telerik.Web.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="DotNetNuke" />
+    <Import Include="DotNetNuke.Common" />
+    <Import Include="DotNetNuke.Common.Utilities" />
+    <Import Include="DotNetNuke.Data" />
+    <Import Include="DotNetNuke.Entities" />
+    <Import Include="DotNetNuke.Entities.Tabs" />
+    <Import Include="DotNetNuke.Framework" />
+    <Import Include="DotNetNuke.Modules" />
+    <Import Include="DotNetNuke.Security" />
+    <Import Include="DotNetNuke.Services" />
+    <Import Include="DotNetNuke.Services.Exceptions" />
+    <Import Include="DotNetNuke.Services.Localization" />
+    <Import Include="DotNetNuke.UI" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="class\DataUtil.vb" />
+    <Compile Include="Components\DataProvider.vb" />
+    <Compile Include="Components\DFT_EDI_PrintCertificateController.vb" />
+    <Compile Include="Components\DFT_EDI_PrintCertificateInfo.vb" />
+    <Compile Include="Components\SqlDataProvider.vb" />
+    <Compile Include="EditDFT_EDI_PrintCertificate.ascx.designer.vb">
+      <DependentUpon>EditDFT_EDI_PrintCertificate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditDFT_EDI_PrintCertificate.ascx.vb">
+      <DependentUpon>EditDFT_EDI_PrintCertificate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Module_CallBathEng.vb" />
+    <Compile Include="ReportPrintClass.vb" />
+    <Compile Include="Report_Form\receipt_Form\rpt3_ReEdi_A44.Designer.vb">
+      <DependentUpon>rpt3_ReEdi_A44.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\receipt_Form\rpt3_ReEdi_A44.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\receipt_Form\rpt3_ReEdi_A_24.Designer.vb">
+      <DependentUpon>rpt3_ReEdi_A_24.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\receipt_Form\rpt3_ReEdi_A_24.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\receipt_Form\rpt3_ReEdi_A.Designer.vb">
+      <DependentUpon>rpt3_ReEdi_A.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\receipt_Form\rpt3_ReEdi_A.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\receipt_Form\rpt3_ReEdi_B2B.Designer.vb">
+      <DependentUpon>rpt3_ReEdi_B2B.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\receipt_Form\rpt3_ReEdi_B2B.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\receipt_Form\rpt3_ReEdi_FormST6.Designer.vb">
+      <DependentUpon>rpt3_ReEdi_FormST6.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\receipt_Form\rpt3_ReEdi_FormST6.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\receipt_Form\rpt3_ReEdi_FormST6_1.Designer.vb">
+      <DependentUpon>rpt3_ReEdi_FormST6_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\receipt_Form\rpt3_ReEdi_FormST6_1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\receipt_Form\rpt3_ReEdi_FormST6_2.Designer.vb">
+      <DependentUpon>rpt3_ReEdi_FormST6_2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\receipt_Form\rpt3_ReEdi_FormST6_2.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\receipt_Form\rpt3_ReEdi_InvoiceList.Designer.vb">
+      <DependentUpon>rpt3_ReEdi_InvoiceList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\receipt_Form\rpt3_ReEdi_InvoiceList.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\receipt_Form\rpt3_ReEdi_Temp.Designer.vb">
+      <DependentUpon>rpt3_ReEdi_Temp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\receipt_Form\rpt3_ReEdi_Temp.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM2_6.Designer.vb">
+      <DependentUpon>rpt3_ediFORM2_6.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM2_6.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM2_5.Designer.vb">
+      <DependentUpon>rpt3_ediFORM2_5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM2_5.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM4_911.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_911.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM4_911.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM2_6_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM2_6_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM2_6_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM2_5_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM2_5_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM2_5_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM44_01.Designer.vb">
+      <DependentUpon>rpt3_ediFORM44_01.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM44_01.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM44_02.Designer.vb">
+      <DependentUpon>rpt3_ediFORM44_02.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM44_02.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM4_911_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_911_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM4_911_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM5_2_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM5_2_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM5_2_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM5_2.Designer.vb">
+      <DependentUpon>rpt3_ediFORM5_2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM5_2.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM4_61.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_61.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM4_61.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM4_8_New.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_8_New.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM4_8_New.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM441_4.Designer.vb">
+      <DependentUpon>rpt3_ediFORM441_4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM441_4.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM44_41.Designer.vb">
+      <DependentUpon>rpt3_ediFORM44_41.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM44_41.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM44_44.Designer.vb">
+      <DependentUpon>rpt3_ediFORM44_44.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM44_44.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM44_4.Designer.vb">
+      <DependentUpon>rpt3_ediFORM44_4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM44_4.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM4_6.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_6.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM4_6.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM5_1.Designer.vb">
+      <DependentUpon>rpt3_ediFORM5_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM5_1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM44.Designer.vb">
+      <DependentUpon>rpt3_ediFORM44.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM44.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM441.designer.vb">
+      <DependentUpon>rpt3_ediFORM441.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM441.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM4_2_New.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_2_New.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM4_2_New.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM2_4.Designer.vb">
+      <DependentUpon>rpt3_ediFORM2_4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM2_4.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM3_1.Designer.vb">
+      <DependentUpon>rpt3_ediFORM3_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM3_1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM4_1.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM4_1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM4_2.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM4_2.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM4_2_ST003.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_2_ST003.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM4_2_ST003.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM4_91.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_91.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM4_91.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM7.Designer.vb">
+      <DependentUpon>rpt3_ediFORM7.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM7.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM8.designer.vb">
+      <DependentUpon>rpt3_ediFORM8.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM8.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM8_7.designer.vb">
+      <DependentUpon>rpt3_ediFORM8_7.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM8_7.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM4_61_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_61_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM4_61_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM4_8_New_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_8_New_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM4_8_New_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM441_4_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM441_4_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM441_4_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM44_41_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM44_41_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM44_41_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM44_44_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM44_44_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM44_44_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM44_4_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM44_4_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM44_4_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM4_8_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_8_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM4_8_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM5_1_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM5_1_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM5_1_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM2_1CM001_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM2_1CM001_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM2_1CM001_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM441_pr.designer.vb">
+      <DependentUpon>rpt3_ediFORM441_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM441_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM44_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM44_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM44_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM4_2_pr_New.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_2_pr_New.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM4_2_pr_New.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM2_4_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM2_4_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM2_4_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM3_1_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM3_1_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM3_1_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM4_1_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_1_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM4_1_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM4_2_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_2_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM4_2_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM4_2_pr_ST003.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_2_pr_ST003.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM4_2_pr_ST003.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM4_91_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_91_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM4_91_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM1_1_pr.designer.vb">
+      <DependentUpon>rpt3_ediFORM1_1_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM1_1_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM1_4_pr.designer.vb">
+      <DependentUpon>rpt3_ediFORM1_4_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM1_4_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM1_3_pr.designer.vb">
+      <DependentUpon>rpt3_ediFORM1_3_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM1_3_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM1_2_pr.designer.vb">
+      <DependentUpon>rpt3_ediFORM1_2_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM1_2_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM4_9_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_9_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM4_9_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM4_9.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_9.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM4_9.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM4_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM4_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM7_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM7_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM7_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM8_7_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM8_7_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM8_7_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM8_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM8_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM8_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORMs4_3_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORMs4_3_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORMs4_3_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM9_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM9_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM9_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM6_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM6_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM6_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM5_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM5_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM5_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM4_5_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_5_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM4_5_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM4_4_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_4_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM4_4_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM3_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM3_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM3_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM2_3_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM2_3_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM2_3_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM2_2_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM2_2_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM2_2_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM2_1_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM2_1_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM2_1_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM2_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM2_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM2_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM1RU_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM1RU_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM1RU_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORMs4_3.Designer.vb">
+      <DependentUpon>rpt3_ediFORMs4_3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORMs4_3.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM4_8.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_8.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM4_8.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM4_6_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_6_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM4_6_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM1_pr.designer.vb">
+      <DependentUpon>rpt3_ediFORM1_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Print\rpt3_ediFORM1_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM2_2.Designer.vb">
+      <DependentUpon>rpt3_ediFORM2_2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM2_2.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM1.designer.vb">
+      <DependentUpon>rpt3_ediFORM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM1RU.Designer.vb">
+      <DependentUpon>rpt3_ediFORM1RU.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM1RU.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM1_1.Designer.vb">
+      <DependentUpon>rpt3_ediFORM1_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM1_1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM1_2.Designer.vb">
+      <DependentUpon>rpt3_ediFORM1_2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM1_2.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM1_3.Designer.vb">
+      <DependentUpon>rpt3_ediFORM1_3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM1_3.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM1_4.designer.vb">
+      <DependentUpon>rpt3_ediFORM1_4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM1_4.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM2.Designer.vb">
+      <DependentUpon>rpt3_ediFORM2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM2.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM2_1.Designer.vb">
+      <DependentUpon>rpt3_ediFORM2_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM2_1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM2_3.Designer.vb">
+      <DependentUpon>rpt3_ediFORM2_3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM2_3.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM3.Designer.vb">
+      <DependentUpon>rpt3_ediFORM3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM3.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM4.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM4.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM4_4.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM4_4.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM4_5.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM4_5.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM5.Designer.vb">
+      <DependentUpon>rpt3_ediFORM5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM5.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM6.Designer.vb">
+      <DependentUpon>rpt3_ediFORM6.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM6.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM9.Designer.vb">
+      <DependentUpon>rpt3_ediFORM9.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Report_Form\Report_Pdf\rpt3_ediFORM9.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Settings.ascx.designer.vb">
+      <DependentUpon>Settings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.ascx.vb">
+      <DependentUpon>Settings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewDFT_EDI_PrintCertificate.ascx.designer.vb">
+      <DependentUpon>ViewDFT_EDI_PrintCertificate.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewDFT_EDI_PrintCertificate.ascx.vb">
+      <DependentUpon>ViewDFT_EDI_PrintCertificate.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="View_Report.aspx.designer.vb">
+      <DependentUpon>View_Report.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="View_Report.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>View_Report.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_LocalResources\EditDFT_EDI_PrintCertificate.ascx.resx">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_LocalResources\Settings.ascx.resx">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_LocalResources\ViewDFT_EDI_PrintCertificate.ascx.resx">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="01.00.00.SqlDataProvider" />
+    <None Include="DFT_EDI_PrintCertificate.dnn" />
+    <None Include="DFT_EDI_PrintCertificate.SqlDataProvider" />
+    <None Include="Uninstall.SqlDataProvider" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="arview2.cab" />
+    <Content Include="Documentation\Documentation.css" />
+    <Content Include="Documentation\Documentation.html" />
+    <Content Include="Documentation\logo.gif" />
+    <Content Include="EditDFT_EDI_PrintCertificate.ascx" />
+    <Content Include="images\25-8-2552 16-21-47.bmp" />
+    <Content Include="images\check_.bmp" />
+    <Content Include="images\CORNER.gif" />
+    <Content Include="images\OK_Disabled copy.bmp" />
+    <Content Include="images\WaterMark--DRAFT.jpg" />
+    <Content Include="Settings.ascx" />
+    <Content Include="ViewDFT_EDI_PrintCertificate.ascx" />
+    <Content Include="View_Report.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="Report_Form\receipt_Form\rpt3_ReEdi_A44.resx">
+      <DependentUpon>rpt3_ReEdi_A44.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\receipt_Form\rpt3_ReEdi_A_24.resx">
+      <DependentUpon>rpt3_ReEdi_A_24.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\receipt_Form\rpt3_ReEdi_A.resx">
+      <DependentUpon>rpt3_ReEdi_A.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\receipt_Form\rpt3_ReEdi_B2B.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>rpt3_ReEdi_B2B.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\receipt_Form\rpt3_ReEdi_FormST6_1.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>rpt3_ReEdi_FormST6_1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\receipt_Form\rpt3_ReEdi_FormST6_2.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>rpt3_ReEdi_FormST6_2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\receipt_Form\rpt3_ReEdi_InvoiceList.resx">
+      <DependentUpon>rpt3_ReEdi_InvoiceList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM2_6.resx">
+      <DependentUpon>rpt3_ediFORM2_6.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM2_5.resx">
+      <DependentUpon>rpt3_ediFORM2_5.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM4_911.resx">
+      <DependentUpon>rpt3_ediFORM4_911.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM2_6_pr.resx">
+      <DependentUpon>rpt3_ediFORM2_6_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM2_5_pr.resx">
+      <DependentUpon>rpt3_ediFORM2_5_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM44_01.en-GB.resx">
+      <DependentUpon>rpt3_ediFORM44_01.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM44_01.resx">
+      <DependentUpon>rpt3_ediFORM44_01.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM44_02.en-GB.resx">
+      <DependentUpon>rpt3_ediFORM44_02.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM44_02.resx">
+      <DependentUpon>rpt3_ediFORM44_02.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM4_911_pr.resx">
+      <DependentUpon>rpt3_ediFORM4_911_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM5_2_pr.en-GB.resx">
+      <DependentUpon>rpt3_ediFORM5_2_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM5_2_pr.resx">
+      <DependentUpon>rpt3_ediFORM5_2_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM5_2.en-GB.resx">
+      <DependentUpon>rpt3_ediFORM5_2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM5_2.en-US.resx">
+      <DependentUpon>rpt3_ediFORM5_2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM5_2.resx">
+      <DependentUpon>rpt3_ediFORM5_2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM4_61.resx">
+      <DependentUpon>rpt3_ediFORM4_61.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM4_8_New.resx">
+      <DependentUpon>rpt3_ediFORM4_8_New.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM441_4.en-GB.resx">
+      <DependentUpon>rpt3_ediFORM441_4.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM441_4.en-US.resx">
+      <DependentUpon>rpt3_ediFORM441_4.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM441_4.resx">
+      <DependentUpon>rpt3_ediFORM441_4.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM44_41.en-GB.resx">
+      <DependentUpon>rpt3_ediFORM44_41.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM44_41.en-US.resx">
+      <DependentUpon>rpt3_ediFORM44_41.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM44_41.resx">
+      <DependentUpon>rpt3_ediFORM44_41.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM44_44.en-GB.resx">
+      <DependentUpon>rpt3_ediFORM44_44.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM44_44.en-US.resx">
+      <DependentUpon>rpt3_ediFORM44_44.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM44_44.resx">
+      <DependentUpon>rpt3_ediFORM44_44.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM44_4.en-GB.resx">
+      <DependentUpon>rpt3_ediFORM44_4.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM44_4.en-US.resx">
+      <DependentUpon>rpt3_ediFORM44_4.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM44_4.resx">
+      <DependentUpon>rpt3_ediFORM44_4.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM4_6.resx">
+      <DependentUpon>rpt3_ediFORM4_6.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM5_1.resx">
+      <DependentUpon>rpt3_ediFORM5_1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM4.en-GB.resx">
+      <DependentUpon>rpt3_ediFORM4.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM4.en-US.resx">
+      <DependentUpon>rpt3_ediFORM4.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM44.en-GB.resx">
+      <DependentUpon>rpt3_ediFORM44.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM44.en-US.resx">
+      <DependentUpon>rpt3_ediFORM44.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM44.resx">
+      <DependentUpon>rpt3_ediFORM44.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM441.resx">
+      <DependentUpon>rpt3_ediFORM441.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM4_2_New.resx">
+      <DependentUpon>rpt3_ediFORM4_2_New.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM2_4.resx">
+      <DependentUpon>rpt3_ediFORM2_4.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM3_1.resx">
+      <DependentUpon>rpt3_ediFORM3_1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM4_1.resx">
+      <DependentUpon>rpt3_ediFORM4_1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM4_2.resx">
+      <DependentUpon>rpt3_ediFORM4_2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM4_2_ST003.resx">
+      <DependentUpon>rpt3_ediFORM4_2_ST003.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM4_91.resx">
+      <DependentUpon>rpt3_ediFORM4_91.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM7.resx">
+      <DependentUpon>rpt3_ediFORM7.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM8.resx">
+      <DependentUpon>rpt3_ediFORM8.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM8_7.resx">
+      <DependentUpon>rpt3_ediFORM8_7.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM4_61_pr.resx">
+      <DependentUpon>rpt3_ediFORM4_61_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM4_8_New_pr.resx">
+      <DependentUpon>rpt3_ediFORM4_8_New_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM441_4_pr.en-GB.resx">
+      <DependentUpon>rpt3_ediFORM441_4_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM441_4_pr.resx">
+      <DependentUpon>rpt3_ediFORM441_4_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM44_41_pr.en-GB.resx">
+      <DependentUpon>rpt3_ediFORM44_41_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM44_41_pr.resx">
+      <DependentUpon>rpt3_ediFORM44_41_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM44_44_pr.en-GB.resx">
+      <DependentUpon>rpt3_ediFORM44_44_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM44_44_pr.resx">
+      <DependentUpon>rpt3_ediFORM44_44_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM44_4_pr.en-GB.resx">
+      <DependentUpon>rpt3_ediFORM44_4_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM44_4_pr.resx">
+      <DependentUpon>rpt3_ediFORM44_4_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM4_8_pr.resx">
+      <DependentUpon>rpt3_ediFORM4_8_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM5_1_pr.resx">
+      <DependentUpon>rpt3_ediFORM5_1_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM2_1CM001_pr.resx">
+      <DependentUpon>rpt3_ediFORM2_1CM001_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM441_pr.resx">
+      <DependentUpon>rpt3_ediFORM441_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM44_pr.resx">
+      <DependentUpon>rpt3_ediFORM44_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM4_2_pr_New.resx">
+      <DependentUpon>rpt3_ediFORM4_2_pr_New.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM2_4_pr.resx">
+      <DependentUpon>rpt3_ediFORM2_4_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM3_1_pr.resx">
+      <DependentUpon>rpt3_ediFORM3_1_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM4_1_pr.resx">
+      <DependentUpon>rpt3_ediFORM4_1_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM4_2_pr.resx">
+      <DependentUpon>rpt3_ediFORM4_2_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM4_2_pr_ST003.resx">
+      <DependentUpon>rpt3_ediFORM4_2_pr_ST003.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM4_91_pr.resx">
+      <DependentUpon>rpt3_ediFORM4_91_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM1_1_pr.resx">
+      <DependentUpon>rpt3_ediFORM1_1_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM1_4_pr.resx">
+      <DependentUpon>rpt3_ediFORM1_4_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM1_3_pr.resx">
+      <DependentUpon>rpt3_ediFORM1_3_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM1_2_pr.resx">
+      <DependentUpon>rpt3_ediFORM1_2_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM4_9_pr.resx">
+      <DependentUpon>rpt3_ediFORM4_9_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM4_9.resx">
+      <DependentUpon>rpt3_ediFORM4_9.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM4_pr.en-GB.resx">
+      <DependentUpon>rpt3_ediFORM4_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM4_pr.resx">
+      <DependentUpon>rpt3_ediFORM4_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM7_pr.resx">
+      <DependentUpon>rpt3_ediFORM7_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM8_7_pr.resx">
+      <DependentUpon>rpt3_ediFORM8_7_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM8_pr.resx">
+      <DependentUpon>rpt3_ediFORM8_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORMs4_3_pr.resx">
+      <DependentUpon>rpt3_ediFORMs4_3_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM9_pr.resx">
+      <DependentUpon>rpt3_ediFORM9_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM6_pr.resx">
+      <DependentUpon>rpt3_ediFORM6_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM5_pr.resx">
+      <DependentUpon>rpt3_ediFORM5_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM4_5_pr.resx">
+      <DependentUpon>rpt3_ediFORM4_5_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM4_4_pr.resx">
+      <DependentUpon>rpt3_ediFORM4_4_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM3_pr.resx">
+      <DependentUpon>rpt3_ediFORM3_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM2_3_pr.resx">
+      <DependentUpon>rpt3_ediFORM2_3_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM2_2_pr.resx">
+      <DependentUpon>rpt3_ediFORM2_2_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM2_1_pr.resx">
+      <DependentUpon>rpt3_ediFORM2_1_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM2_pr.resx">
+      <DependentUpon>rpt3_ediFORM2_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM1RU_pr.resx">
+      <DependentUpon>rpt3_ediFORM1RU_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORMs4_3.resx">
+      <DependentUpon>rpt3_ediFORMs4_3.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM4_8.resx">
+      <DependentUpon>rpt3_ediFORM4_8.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM4_6_pr.resx">
+      <DependentUpon>rpt3_ediFORM4_6_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Print\rpt3_ediFORM1_pr.resx">
+      <DependentUpon>rpt3_ediFORM1_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM2_2.resx">
+      <DependentUpon>rpt3_ediFORM2_2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM1.resx">
+      <DependentUpon>rpt3_ediFORM1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM1RU.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>rpt3_ediFORM1RU.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM1_1.resx">
+      <DependentUpon>rpt3_ediFORM1_1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM1_2.resx">
+      <DependentUpon>rpt3_ediFORM1_2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM1_3.resx">
+      <DependentUpon>rpt3_ediFORM1_3.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM1_4.resx">
+      <DependentUpon>rpt3_ediFORM1_4.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM2.resx">
+      <DependentUpon>rpt3_ediFORM2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM2_1.resx">
+      <DependentUpon>rpt3_ediFORM2_1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM2_3.resx">
+      <DependentUpon>rpt3_ediFORM2_3.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM3.resx">
+      <DependentUpon>rpt3_ediFORM3.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM4.resx">
+      <DependentUpon>rpt3_ediFORM4.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM4_4.resx">
+      <DependentUpon>rpt3_ediFORM4_4.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM4_5.resx">
+      <DependentUpon>rpt3_ediFORM4_5.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM5.resx">
+      <DependentUpon>rpt3_ediFORM5.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM6.resx">
+      <DependentUpon>rpt3_ediFORM6.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report_Form\Report_Pdf\rpt3_ediFORM9.resx">
+      <DependentUpon>rpt3_ediFORM9.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Bin\" />
+    <Folder Include="Report_Form\BackFormNoUse\PDF\" />
+    <Folder Include="Report_Form\BackFormNoUse\PR\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">8.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v8.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>54140</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/DotNetNuke_2/DesktopModules/DFT_EDI_PrintCertificate</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost/DotNetNuke_2</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <UserProperties OpenAccess_UpdateDatabase="False" OpenAccess_ConfigFile="" OpenAccess_EnhancementOutputLevel="1" />
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

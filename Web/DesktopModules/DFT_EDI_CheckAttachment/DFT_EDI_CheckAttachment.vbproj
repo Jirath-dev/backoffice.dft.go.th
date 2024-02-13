@@ -1,0 +1,1257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8A04218F-D0EB-420F-9D91-63A9851450A8}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>
+    </RootNamespace>
+    <AssemblyName>DFT_EDI_CheckAttachment</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DocumentationFile>DFT_EDI_CheckAttachment.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <RemoveIntegerChecks>true</RemoveIntegerChecks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\bin\</OutputPath>
+    <DocumentationFile>DFT_EDI_CheckAttachment.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ActiveReports.PdfExport, Version=5.3.1436.2, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ActiveReports.Viewer3, Version=5.3.1436.2, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ActiveReports.Web, Version=5.3.1436.2, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="ActiveReports3, Version=5.3.1436.2, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DFT.Dotnetnuke.ClassLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="DotNetNuke">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\bin\dotnetnuke.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationBlocks.Data, Version=2.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Microsoft.ApplicationBlocks.Data.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RestSharp, Version=105.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\RestSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Windows\Microsoft.NET\Framework\v2.0.50727\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Extensions.Design" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="Telerik.Web.Design, Version=2009.2.701.20, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Telerik.Web.Design.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Telerik.Web.UI, Version=2009.2.701.20, Culture=neutral, PublicKeyToken=121fae78165ba3d4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\bin\Telerik.Web.UI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="DotNetNuke" />
+    <Import Include="DotNetNuke.Common" />
+    <Import Include="DotNetNuke.Common.Utilities" />
+    <Import Include="DotNetNuke.Data" />
+    <Import Include="DotNetNuke.Entities" />
+    <Import Include="DotNetNuke.Entities.Tabs" />
+    <Import Include="DotNetNuke.Framework" />
+    <Import Include="DotNetNuke.Modules" />
+    <Import Include="DotNetNuke.Security" />
+    <Import Include="DotNetNuke.Services" />
+    <Import Include="DotNetNuke.Services.Exceptions" />
+    <Import Include="DotNetNuke.Services.Localization" />
+    <Import Include="DotNetNuke.UI" />
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BL.aspx.designer.vb">
+      <DependentUpon>BL.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="BL.aspx.vb">
+      <DependentUpon>BL.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="class\DataUtil.vb" />
+    <Compile Include="Components\DataProvider.vb" />
+    <Compile Include="Components\DFT_EDI_CheckAttachmentController.vb" />
+    <Compile Include="Components\DFT_EDI_CheckAttachmentInfo.vb" />
+    <Compile Include="Components\SqlDataProvider.vb" />
+    <Compile Include="Duplicate_PDF\rpt3_ediFORM4_9_DC.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_9_DC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Duplicate_PDF\rpt3_ediFORM4_9_DC.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Duplicate_PDF\rpt3_ediFORME_01_DC.designer.vb">
+      <DependentUpon>rpt3_ediFORME_01_DC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Duplicate_PDF\rpt3_ediFORME_01_DC.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Duplicate_PDF\rpt3_ediFORME_ESS_DC.designer.vb">
+      <DependentUpon>rpt3_ediFORME_ESS_DC.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Duplicate_PDF\rpt3_ediFORME_ESS_DC.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM2_ESS_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM2_ESS_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM2_ESS_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM2_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM2_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM2_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM44_01.designer.vb">
+      <DependentUpon>rpt3_ediFORM44_01.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM44_01.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORMAI_ESS_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORMAI_ESS_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORMAI_ESS_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORMRCEP.designer.vb">
+      <DependentUpon>rpt3_ediFORMRCEP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORMRCEP.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORMsFTA_IN_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORMsFTA_IN_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORMsFTA_IN_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORMTP_ESS_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORMTP_ESS_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORMTP_ESS_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORMTC_ESS_pr.designer.vb">
+      <DependentUpon>rpt3_ediFORMTC_ESS_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORMTC_ESS_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORMD_ESS_.designer.vb">
+      <DependentUpon>rpt3_ediFORMD_ESS_.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORMD_ESS_.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM44_02.designer.vb">
+      <DependentUpon>rpt3_ediFORM44_02.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM44_02.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORMAHK_A4.designer.vb">
+      <DependentUpon>rpt3_ediFORMAHK_A4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORMAHK_A4.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORMD_ESS.designer.vb">
+      <DependentUpon>rpt3_ediFORMD_ESS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORMD_ESS.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORME_ESS.designer.vb">
+      <DependentUpon>rpt3_ediFORME_ESS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORME_ESS.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORME_01.designer.vb">
+      <DependentUpon>rpt3_ediFORME_01.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORME_01.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmBlackListV2.aspx.designer.vb">
+      <DependentUpon>frmBlackListV2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmBlackListV2.aspx.vb">
+      <DependentUpon>frmBlackListV2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmCheckSingleForm.aspx.designer.vb">
+      <DependentUpon>frmCheckSingleForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckSingleForm.aspx.vb">
+      <DependentUpon>frmCheckSingleForm.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="frmCheckSummary.aspx.designer.vb">
+      <DependentUpon>frmCheckSummary.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckSummary.aspx.vb">
+      <DependentUpon>frmCheckSummary.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="frmCheckForm3.aspx.designer.vb">
+      <DependentUpon>frmCheckForm3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckForm3.aspx.vb">
+      <DependentUpon>frmCheckForm3.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM2_4_pr.designer.vb">
+      <DependentUpon>rpt3_ediFORM2_4_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM2_4_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM4_2_pr_New.designer.vb">
+      <DependentUpon>rpt3_ediFORM4_2_pr_New.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM4_2_pr_New.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM4_2_pr_ST003.designer.vb">
+      <DependentUpon>rpt3_ediFORM4_2_pr_ST003.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM4_2_pr_ST003.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM4_6_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_6_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM4_6_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmCheckForm2.aspx.designer.vb">
+      <DependentUpon>frmCheckForm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckForm2.aspx.vb">
+      <DependentUpon>frmCheckForm2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="CtrlCheckHistory.ascx.designer.vb">
+      <DependentUpon>CtrlCheckHistory.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="CtrlCheckHistory.ascx.vb">
+      <DependentUpon>CtrlCheckHistory.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="EditDFT_EDI_CheckAttachment.ascx.designer.vb">
+      <DependentUpon>EditDFT_EDI_CheckAttachment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="EditDFT_EDI_CheckAttachment.ascx.vb">
+      <DependentUpon>EditDFT_EDI_CheckAttachment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM1.designer.vb">
+      <DependentUpon>rpt3_ediFORM1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM1RU.Designer.vb">
+      <DependentUpon>rpt3_ediFORM1RU.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM1RU.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM1RU_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM1RU_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM1RU_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM1_1.Designer.vb">
+      <DependentUpon>rpt3_ediFORM1_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM1_1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM1_1_pr.designer.vb">
+      <DependentUpon>rpt3_ediFORM1_1_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM1_1_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM1_2.Designer.vb">
+      <DependentUpon>rpt3_ediFORM1_2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM1_2.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM1_2_pr.designer.vb">
+      <DependentUpon>rpt3_ediFORM1_2_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM1_2_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM1_3.Designer.vb">
+      <DependentUpon>rpt3_ediFORM1_3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM1_3.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM1_3_pr.designer.vb">
+      <DependentUpon>rpt3_ediFORM1_3_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM1_3_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM1_4.designer.vb">
+      <DependentUpon>rpt3_ediFORM1_4.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM1_4.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM1_4_pr.designer.vb">
+      <DependentUpon>rpt3_ediFORM1_4_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM1_4_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM1_pr.designer.vb">
+      <DependentUpon>rpt3_ediFORM1_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM1_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM2.Designer.vb">
+      <DependentUpon>rpt3_ediFORM2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM2.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM2_1.Designer.vb">
+      <DependentUpon>rpt3_ediFORM2_1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM2_1.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM2_1_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM2_1_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM2_1_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM2_2.Designer.vb">
+      <DependentUpon>rpt3_ediFORM2_2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM2_2.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM2_3.Designer.vb">
+      <DependentUpon>rpt3_ediFORM2_3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM2_3.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM2_3_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM2_3_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM2_3_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM3.Designer.vb">
+      <DependentUpon>rpt3_ediFORM3.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM3.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM3_1_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM3_1_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM3_1_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM3_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM3_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM3_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM4_1_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_1_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM4_1_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM4_2_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_2_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM4_2_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM4_4_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_4_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM4_4_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM4_5_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_5_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM4_5_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM4_8_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_8_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM4_8_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM4_91_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_91_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM4_91_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM4_9_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_9_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM4_9_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM5.Designer.vb">
+      <DependentUpon>rpt3_ediFORM5.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM5.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM5_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM5_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM5_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM6.Designer.vb">
+      <DependentUpon>rpt3_ediFORM6.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM6.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM6_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM6_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM6_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM7.Designer.vb">
+      <DependentUpon>rpt3_ediFORM7.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM7.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM7_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM7_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM7_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM8.Designer.vb">
+      <DependentUpon>rpt3_ediFORM8.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM8.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM8_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM8_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM8_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM9.Designer.vb">
+      <DependentUpon>rpt3_ediFORM9.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM9.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM9_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM9_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM9_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORMs4_3_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORMs4_3_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORMs4_3_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmCancelForm.aspx.designer.vb">
+      <DependentUpon>frmCancelForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmCancelForm.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>frmCancelForm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckForm1.aspx.designer.vb">
+      <DependentUpon>frmCheckForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmCheckForm1.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>frmCheckForm1.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmFormPDFDuplicate.aspx.designer.vb">
+      <DependentUpon>frmFormPDFDuplicate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmFormPDFDuplicate.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>frmFormPDFDuplicate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmFormPDFPage.aspx.designer.vb">
+      <DependentUpon>frmFormPDFPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmFormPDFPage.aspx.vb">
+      <SubType>ASPXCodebehind</SubType>
+      <DependentUpon>frmFormPDFPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice.aspx.designer.vb">
+      <DependentUpon>Invoice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice.aspx.vb">
+      <DependentUpon>Invoice.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ModuleCHeckRover.vb" />
+    <Compile Include="Module_CallBathEng.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.ascx.designer.vb">
+      <DependentUpon>Settings.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.ascx.vb">
+      <DependentUpon>Settings.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ViewAttachSheet.aspx.designer.vb">
+      <DependentUpon>ViewAttachSheet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewAttachSheet.aspx.vb">
+      <DependentUpon>ViewAttachSheet.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ViewCertOfOrigin.aspx.designer.vb">
+      <DependentUpon>ViewCertOfOrigin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCertOfOrigin.aspx.vb">
+      <DependentUpon>ViewCertOfOrigin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ViewDFT_EDI_CheckAttachment.ascx.designer.vb">
+      <DependentUpon>ViewDFT_EDI_CheckAttachment.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewDFT_EDI_CheckAttachment.ascx.vb">
+      <DependentUpon>ViewDFT_EDI_CheckAttachment.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web References\DFTOriginAlert\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App_LocalResources\EditDFT_EDI_CheckAttachment.ascx.resx">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_LocalResources\Settings.ascx.resx">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="App_LocalResources\ViewDFT_EDI_CheckAttachment.ascx.resx">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="01.00.00.SqlDataProvider" />
+    <None Include="DFT_EDI_CheckAttachment.dnn" />
+    <None Include="DFT_EDI_CheckAttachment.SqlDataProvider" />
+    <None Include="Uninstall.SqlDataProvider" />
+    <Content Include="frmBlackListV2.aspx" />
+    <Content Include="frmCheckSingleForm.aspx" />
+    <Content Include="frmFormPDFDuplicate.aspx" />
+    <Content Include="Web References\DFTOriginAlert\clsExporter.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\DFTOriginAlert\clsGoods.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\DFTOriginAlert\clsPerson.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </Content>
+    <Content Include="Web References\DFTOriginAlert\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </Content>
+    <None Include="Web References\DFTOriginAlert\ws_blacklistwatchlist.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="BL.aspx" />
+    <Content Include="FORM_PDF\ctrlForm4_8.ascx" />
+    <Content Include="frmBlackList.aspx" />
+    <Content Include="frmCheckSummary.aspx" />
+    <Content Include="frmCheckForm3.aspx" />
+    <Content Include="frmCheckForm2.aspx" />
+    <Content Include="CSS\skin.css" />
+    <Content Include="CtrlCheckHistory.ascx" />
+    <Content Include="Documentation\Documentation.css" />
+    <Content Include="Documentation\Documentation.html" />
+    <Content Include="Documentation\logo.gif" />
+    <Content Include="EditDFT_EDI_CheckAttachment.ascx" />
+    <Content Include="frmCancelForm.aspx" />
+    <Content Include="frmCheckForm1.aspx" />
+    <Content Include="frmFormPDFPage.aspx" />
+    <Content Include="images\CORNER.gif" />
+    <Content Include="images\CORNER2.gif" />
+    <Content Include="images\Delete.gif" />
+    <Content Include="images\excel.gif" />
+    <Content Include="Invoice.aspx" />
+    <Content Include="popup\skin.css" />
+    <Content Include="popup\ViewErrors.aspx" />
+    <Content Include="ReCheckStatus.aspx" />
+    <Content Include="Settings.ascx" />
+    <Content Include="ViewAttachSheet.aspx" />
+    <Content Include="ViewCertDetail.aspx" />
+    <Content Include="ViewCertOfOrigin.aspx" />
+    <Content Include="ViewDFT_EDI_CheckAttachment.ascx" />
+    <None Include="Web References\DFTOriginAlert\ws_blacklistwatchlist.disco" />
+    <None Include="App_Data\RadSpell\de-DE.tdf" />
+    <None Include="App_Data\RadSpell\en-US.tdf" />
+    <None Include="App_Data\RadSpell\fr-FR.tdf" />
+    <Compile Include="checkFormFunc.vb" />
+    <Compile Include="FORM_PDF\rpt3_ediFORM2_2_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM2_2_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM2_2_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM2_5_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM2_5_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM2_5_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM2_6_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM2_6_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM2_6_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM4_911_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_911_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM4_911_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\ctrlForm4_8.ascx.designer.vb">
+      <DependentUpon>ctrlForm4_8.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\ctrlForm4_8.ascx.vb">
+      <DependentUpon>ctrlForm4_8.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM2_1CM001_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM2_1CM001_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM2_1CM001_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM441_4_pr.designer.vb">
+      <DependentUpon>rpt3_ediFORM441_4_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM441_4_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM441_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM441_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM441_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM44_41_pr.designer.vb">
+      <DependentUpon>rpt3_ediFORM44_41_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM44_41_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM44_44_pr.designer.vb">
+      <DependentUpon>rpt3_ediFORM44_44_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM44_44_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM44_4_pr.designer.vb">
+      <DependentUpon>rpt3_ediFORM44_4_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM44_4_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM44_pr.designer.vb">
+      <DependentUpon>rpt3_ediFORM44_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM44_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM4_61_pr.designer.vb">
+      <DependentUpon>rpt3_ediFORM4_61_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM4_61_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM4_8_New_pr.designer.vb">
+      <DependentUpon>rpt3_ediFORM4_8_New_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM4_8_New_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM4_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM4_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM4_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM5_1_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM5_1_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM5_1_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM5_2_pr.designer.vb">
+      <DependentUpon>rpt3_ediFORM5_2_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM5_2_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM8_7_pr.Designer.vb">
+      <DependentUpon>rpt3_ediFORM8_7_pr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FORM_PDF\rpt3_ediFORM8_7_pr.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="frmBlackList.aspx.designer.vb">
+      <DependentUpon>frmBlackList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="frmBlackList.aspx.vb">
+      <DependentUpon>frmBlackList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="popup\ViewErrors.aspx.designer.vb">
+      <DependentUpon>ViewErrors.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="popup\ViewErrors.aspx.vb">
+      <DependentUpon>ViewErrors.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ReCheckStatus.aspx.designer.vb">
+      <DependentUpon>ReCheckStatus.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ReCheckStatus.aspx.vb">
+      <DependentUpon>ReCheckStatus.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ReportPrintClass.vb" />
+    <Compile Include="ViewCertDetail.aspx.designer.vb">
+      <DependentUpon>ViewCertDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ViewCertDetail.aspx.vb">
+      <DependentUpon>ViewCertDetail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <None Include="My Project\Settings.settings">
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Duplicate_PDF\rpt3_ediFORM4_9_DC.resx">
+      <DependentUpon>rpt3_ediFORM4_9_DC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duplicate_PDF\rpt3_ediFORME_01_DC.resx">
+      <DependentUpon>rpt3_ediFORME_01_DC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Duplicate_PDF\rpt3_ediFORME_ESS_DC.resx">
+      <DependentUpon>rpt3_ediFORME_ESS_DC.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM2_2_pr.resx">
+      <DependentUpon>rpt3_ediFORM2_2_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM2_5_pr.resx">
+      <DependentUpon>rpt3_ediFORM2_5_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM2_6_pr.resx">
+      <DependentUpon>rpt3_ediFORM2_6_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM2_ESS_pr.en-GB.resx">
+      <DependentUpon>rpt3_ediFORM2_ESS_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM2_ESS_pr.en-US.resx">
+      <DependentUpon>rpt3_ediFORM2_ESS_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM2_ESS_pr.resx">
+      <DependentUpon>rpt3_ediFORM2_ESS_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM2_pr.en-GB.resx">
+      <DependentUpon>rpt3_ediFORM2_pr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM2_pr.en-US.resx">
+      <DependentUpon>rpt3_ediFORM2_pr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM2_pr.resx">
+      <DependentUpon>rpt3_ediFORM2_pr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM44_01.en-GB.resx">
+      <DependentUpon>rpt3_ediFORM44_01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM44_01.resx">
+      <DependentUpon>rpt3_ediFORM44_01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORMAI_ESS_pr.resx">
+      <DependentUpon>rpt3_ediFORMAI_ESS_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORMRCEP.en-GB.resx">
+      <DependentUpon>rpt3_ediFORMRCEP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORMRCEP.resx">
+      <DependentUpon>rpt3_ediFORMRCEP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORMsFTA_IN_pr.resx">
+      <DependentUpon>rpt3_ediFORMsFTA_IN_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORMTP_ESS_pr.resx">
+      <DependentUpon>rpt3_ediFORMTP_ESS_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORMTC_ESS_pr.en-GB.resx">
+      <DependentUpon>rpt3_ediFORMTC_ESS_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORMTC_ESS_pr.resx">
+      <DependentUpon>rpt3_ediFORMTC_ESS_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORMD_ESS_.en-GB.resx">
+      <DependentUpon>rpt3_ediFORMD_ESS_.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORMD_ESS_.resx">
+      <DependentUpon>rpt3_ediFORMD_ESS_.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM44_02.en-GB.resx">
+      <DependentUpon>rpt3_ediFORM44_02.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM44_02.resx">
+      <DependentUpon>rpt3_ediFORM44_02.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM4_911_pr.resx">
+      <DependentUpon>rpt3_ediFORM4_911_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM1.resx">
+      <DependentUpon>rpt3_ediFORM1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM1RU.resx">
+      <DependentUpon>rpt3_ediFORM1RU.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM1RU_pr.resx">
+      <DependentUpon>rpt3_ediFORM1RU_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM1_1.resx">
+      <DependentUpon>rpt3_ediFORM1_1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM1_1_pr.resx">
+      <DependentUpon>rpt3_ediFORM1_1_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM1_2.resx">
+      <DependentUpon>rpt3_ediFORM1_2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM1_2_pr.resx">
+      <DependentUpon>rpt3_ediFORM1_2_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM1_3.resx">
+      <DependentUpon>rpt3_ediFORM1_3.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM1_3_pr.resx">
+      <DependentUpon>rpt3_ediFORM1_3_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM1_4.resx">
+      <DependentUpon>rpt3_ediFORM1_4.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM1_4_pr.resx">
+      <DependentUpon>rpt3_ediFORM1_4_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM1_pr.resx">
+      <DependentUpon>rpt3_ediFORM1_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM2.resx">
+      <DependentUpon>rpt3_ediFORM2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM2_1.resx">
+      <DependentUpon>rpt3_ediFORM2_1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM2_1CM001_pr.resx">
+      <DependentUpon>rpt3_ediFORM2_1CM001_pr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM2_1_pr.resx">
+      <DependentUpon>rpt3_ediFORM2_1_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM2_2.resx">
+      <DependentUpon>rpt3_ediFORM2_2.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM2_3.resx">
+      <DependentUpon>rpt3_ediFORM2_3.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM2_3_pr.resx">
+      <DependentUpon>rpt3_ediFORM2_3_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM2_4_pr.resx">
+      <DependentUpon>rpt3_ediFORM2_4_pr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM3.resx">
+      <DependentUpon>rpt3_ediFORM3.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM3_1_pr.resx">
+      <DependentUpon>rpt3_ediFORM3_1_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM3_pr.resx">
+      <DependentUpon>rpt3_ediFORM3_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM441_4_pr.en-GB.resx">
+      <DependentUpon>rpt3_ediFORM441_4_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM441_4_pr.resx">
+      <DependentUpon>rpt3_ediFORM441_4_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM441_pr.resx">
+      <DependentUpon>rpt3_ediFORM441_pr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM44_41_pr.en-GB.resx">
+      <DependentUpon>rpt3_ediFORM44_41_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM44_41_pr.resx">
+      <DependentUpon>rpt3_ediFORM44_41_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM44_44_pr.en-GB.resx">
+      <DependentUpon>rpt3_ediFORM44_44_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM44_44_pr.resx">
+      <DependentUpon>rpt3_ediFORM44_44_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM44_4_pr.en-GB.resx">
+      <DependentUpon>rpt3_ediFORM44_4_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM44_4_pr.resx">
+      <DependentUpon>rpt3_ediFORM44_4_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM44_pr.resx">
+      <DependentUpon>rpt3_ediFORM44_pr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM4_1_pr.resx">
+      <DependentUpon>rpt3_ediFORM4_1_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM4_2_pr.resx">
+      <DependentUpon>rpt3_ediFORM4_2_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM4_2_pr_New.resx">
+      <DependentUpon>rpt3_ediFORM4_2_pr_New.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM4_2_pr_ST003.resx">
+      <DependentUpon>rpt3_ediFORM4_2_pr_ST003.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM4_4_pr.resx">
+      <DependentUpon>rpt3_ediFORM4_4_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM4_5_pr.resx">
+      <DependentUpon>rpt3_ediFORM4_5_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM4_61_pr.resx">
+      <DependentUpon>rpt3_ediFORM4_61_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM4_6_pr.resx">
+      <DependentUpon>rpt3_ediFORM4_6_pr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM4_8_New_pr.resx">
+      <DependentUpon>rpt3_ediFORM4_8_New_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM4_8_pr.resx">
+      <DependentUpon>rpt3_ediFORM4_8_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM4_91_pr.resx">
+      <DependentUpon>rpt3_ediFORM4_91_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM4_9_pr.resx">
+      <DependentUpon>rpt3_ediFORM4_9_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM4_pr.en-GB.resx">
+      <DependentUpon>rpt3_ediFORM4_pr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM4_pr.resx">
+      <DependentUpon>rpt3_ediFORM4_pr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM5.resx">
+      <DependentUpon>rpt3_ediFORM5.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM5_1_pr.resx">
+      <DependentUpon>rpt3_ediFORM5_1_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM5_2_pr.en-GB.resx">
+      <DependentUpon>rpt3_ediFORM5_2_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM5_2_pr.resx">
+      <DependentUpon>rpt3_ediFORM5_2_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM5_pr.resx">
+      <DependentUpon>rpt3_ediFORM5_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM6.resx">
+      <DependentUpon>rpt3_ediFORM6.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM6_pr.resx">
+      <DependentUpon>rpt3_ediFORM6_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM7.resx">
+      <DependentUpon>rpt3_ediFORM7.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM7_pr.resx">
+      <DependentUpon>rpt3_ediFORM7_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM8.resx">
+      <DependentUpon>rpt3_ediFORM8.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM8_7_pr.resx">
+      <DependentUpon>rpt3_ediFORM8_7_pr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM8_pr.resx">
+      <DependentUpon>rpt3_ediFORM8_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM9.resx">
+      <DependentUpon>rpt3_ediFORM9.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORM9_pr.resx">
+      <DependentUpon>rpt3_ediFORM9_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORMAHK_A4.en-GB.resx">
+      <DependentUpon>rpt3_ediFORMAHK_A4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORMAHK_A4.resx">
+      <DependentUpon>rpt3_ediFORMAHK_A4.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORMD_ESS.en-GB.resx">
+      <DependentUpon>rpt3_ediFORMD_ESS.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORMD_ESS.resx">
+      <DependentUpon>rpt3_ediFORMD_ESS.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORME_ESS.resx">
+      <DependentUpon>rpt3_ediFORME_ESS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORME_01.resx">
+      <DependentUpon>rpt3_ediFORME_01.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FORM_PDF\rpt3_ediFORMs4_3_pr.resx">
+      <DependentUpon>rpt3_ediFORMs4_3_pr.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFormPDFDuplicate.aspx.resx">
+      <DependentUpon>frmFormPDFDuplicate.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFormPDFPage.aspx.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmFormPDFPage.aspx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://origin-alert.dft.go.th/ws/ws_blacklistwatchlist.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\DFTOriginAlert\</RelPath>
+      <UpdateFromURL>http://origin-alert.dft.go.th/ws/ws_blacklistwatchlist.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>DFT_EDI_CheckAttachment_DFTOriginAlert_ws_blacklistwatchlist</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">8.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v8.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53996</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/DotNetNuke_2/DesktopModules/DFT_EDI_CheckAttachment</IISUrl>
+          <OverrideIISAppRootUrl>True</OverrideIISAppRootUrl>
+          <IISAppRootUrl>http://localhost/DotNetNuke_2</IISAppRootUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

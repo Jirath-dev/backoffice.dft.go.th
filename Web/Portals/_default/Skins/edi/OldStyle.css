@@ -1,0 +1,276 @@
+/* ODL Website (SOMPOL) */
+.HEADER-STYLE
+{
+	font-size: 10pt;
+	color: #ffffff;
+	font-family: Tahoma;
+	height: 14pt;
+	background-color: #396594;
+	text-align: center;
+}
+
+.FOOTER-STYLE
+{
+	color: White;
+	background-color : #CECFBD;
+	font-family: Tahoma;
+    font-size: 10pt;	
+    height: 14pt;
+    /* #CECFBD */
+}	
+.GRID-STYLE
+{
+	color: black;
+	font-family: Tahoma;
+    font-size: 10pt;	
+}
+/* title font attribute */
+.FormFld {
+	color:#0000FF;
+    BACKGROUND-COLOR: #EDFEFE;
+    BORDER-BOTTOM: 1px dotted #666;
+    BORDER-LEFT: 0px dotted #F1EEE9;
+    BORDER-RIGHT: 0px dotted #F1EEE9;
+    BORDER-TOP: 0px dotted #F1EEE9;
+    FONT-FAMILY: Tahoma;
+    FONT-SIZE: 10pt;
+    HEIGHT: 20px;
+    width: 30px
+}
+.FormLabel 
+{
+	font-family:Tahoma;
+	font-size:10pt;
+	color:#000000;
+	font-weight: normal;
+}
+.FormErr 
+{
+	font-family: Tahoma;
+	font-size:14pt;
+	color:Red;
+	font-weight: bold;
+	text-decoration: blink;
+}
+
+.FormHeader 
+{
+	font-family:Tahoma;
+	font-size:13pt;
+	color:#000000;
+	font-weight: bold;
+}
+.groupbox 
+{
+	font-family:Tahoma;
+	font-size:10pt;
+	color:#fff;
+	font-weight: bold;
+}
+
+/* title corner background color */
+.groupboxcorner
+{
+	background-color: #F1EEE9;
+}
+
+/* title corner background color */
+.groupboxcornerimg
+{
+	width:19px;
+	height:19px;
+   	background-image:url(../images/groupbox/corner.gif);
+}
+
+/* title background color */
+.groupboxheader
+{
+
+	background: #507EAC;
+	text-indent:10px;
+	line-height:normal;
+	height:19px;
+
+}
+
+
+.m-body {
+    BACKGROUND-COLOR: #FFFFFF;
+}
+
+.m-body2 {
+    BACKGROUND-COLOR: #FFFFFF;
+    overflow: hidden; 
+}
+
+/* WebForm Page Navigator */
+.m-frm-nav          {color:#cccccc; font-family:Tahoma; font-size:11px;}
+a.m-frm-nav:Active  {color:#ffffff; text-decoration:none;}
+a.m-frm-nav:Visited {color:#ffffff; text-decoration:none;}
+a.m-frm-nav:Hover   {color:#cccccc;}
+a.m-frm-nav:Link    {color:#ffffff; text-decoration:none;}
+
+
+
+/* Form */
+.m-form {
+   BACKGROUND-COLOR: #EEEEEE;
+   BORDER-BOTTOM: #97A1C9 1px solid;
+   BORDER-LEFT: #97A1C9 1px solid;
+   BORDER-RIGHT: #97A1C9 1px solid;
+   BORDER-TOP: #97A1C9 1px solid;
+   FONT-FAMILY: Tahoma;
+   FONT-SIZE: 8pt;
+}
+
+/* WebForm Caption */
+.m-frm-hdr {
+	font-family: Tahoma;
+	font-weight: bold;
+    background-color: #EDFEFE;
+	color: #000000;
+	text-decoration: none;
+}
+
+
+/* WebForm Border */
+.m-frm-bdr {
+	font-family:Tahoma;
+	font-weight: normal;
+	padding-top: 0px;
+	overflow: hidden; 
+	background-color: #EDFEFE;
+	border-style: solid; 
+	border-color: #666; 
+	border-width:1px;
+}
+
+.m-frm-bdr2 {
+	font-family:Tahoma;
+	font-weight: normal;
+	overflow: hidden; 
+	background-color: #FFFFFF;
+    BORDER-BOTTOM: white 1px solid;
+	border-color: #8D8D80; 
+	border-width: 1px;
+	padding-top: 0px;
+}
+.m-frm-bdr3 {
+	font-family:Tahoma;
+	font-weight: normal;
+	overflow: hidden; 
+	background-color: #F1EEE9;
+}
+
+/* WebForm Page Navigator */
+.m-frm-nav          {color:#cccccc; font-family:Tahoma; font-size:11px;}
+a.m-frm-nav:Active  {color:#ffffff; text-decoration:none;}
+a.m-frm-nav:Visited {color:#ffffff; text-decoration:none;}
+a.m-frm-nav:Hover   {color:#ffffff;}
+a.m-frm-nav:Link    {color:#ffffff; text-decoration:none;}
+
+
+/* Fields */
+.hd-msg {
+    COLOR: #FFFFFF;
+    BACKGROUND-COLOR: #000000;
+    FONT-SIZE: 9pt;
+    FONT-FAMILY: Tahoma;
+    font-weight: normal
+}
+
+.m-fld {
+   FONT-FAMILY: Tahoma;
+   FONT-SIZE: 9pt;
+   HEIGHT: 18px;
+   width: 30px
+}
+
+.m-fld2 {
+    BACKGROUND-COLOR: #EEEEEE;
+    BORDER-BOTTOM: #97A1C9 1px solid;
+    BORDER-LEFT: #97A1C9 1px solid;
+    BORDER-RIGHT: #97A1C9 1px solid;
+    BORDER-TOP: #97A1C9 1px solid;
+    FONT-FAMILY: Tahoma;
+    FONT-SIZE: 9pt;
+    HEIGHT: 18px;
+    width: 30px;
+}
+.m-fld-view {
+    COLOR: blue;
+    BACKGROUND-COLOR: #EEEEEE;
+    BORDER-BOTTOM: #97A1C9 1px solid;
+    BORDER-LEFT: #97A1C9 1px solid;
+    BORDER-RIGHT: #97A1C9 1px solid;
+    BORDER-TOP: #97A1C9 1px solid;
+    FONT-SIZE: 8pt;
+    HEIGHT: 18px;
+    FONT-FAMILY: Tahoma;
+    font-weight: normal;
+
+}
+/* Fields Optional */
+.m-fld-cpn {
+   font-family: Tahoma;
+   font-size: 8pt;
+   color: #000000;
+}
+/* Standard Buttons */
+.m-btn {
+    background:#FFF;
+	border:1px solid #6CF;
+   COLOR: #06F;
+   CURSOR: hand;
+   FONT-FAMILY: Tahoma;
+   FONT-SIZE: 9pt;
+   TEXT-ALIGN: center
+}
+
+.m-btn-dtm {
+   BACKGROUND-IMAGE: url(../images/buttons/b_calendar.gif);
+   BORDER-BOTTOM: #7e7e72 1px solid;
+   BORDER-LEFT: #cdcdbe 1px solid;
+   BORDER-RIGHT: #7e7e72 1px solid;
+   BORDER-TOP: #cdcdbe 1px solid;
+   COLOR: #000000;
+   CURSOR: hand;
+   FONT-FAMILY: Tahoma;
+   FONT-SIZE: 8pt;
+   TEXT-ALIGN: center
+}
+/* Error Messages */
+.m-err {
+   color: Red;
+   FONT-WEIGHT: bold;
+   FONT-SIZE: 8pt;
+   FONT-FAMILY: Tahoma;
+}
+/* Alert Messages */
+.m-alert {
+   color: Blue;
+   FONT-WEIGHT: bold;
+   FONT-SIZE: 8pt;
+   FONT-FAMILY: Tahoma;
+}
+
+/* DataGrid */
+.m-grd-num {
+   BACKGROUND-COLOR: #EEEEEE;
+   BORDER-BOTTOM: #97A1C9 1px solid;
+   BORDER-LEFT: #97A1C9 1px solid;
+   BORDER-RIGHT: #97A1C9 1px solid;
+   BORDER-TOP: #97A1C9 1px solid;
+   FONT-FAMILY: Tahoma;
+   FONT-SIZE: 8pt;
+   TEXT-ALIGN: right
+}
+.m-grd-txt {
+   BACKGROUND-COLOR: #EEEEEE;
+   BORDER-BOTTOM: #97A1C9 1px solid;
+   BORDER-LEFT: #97A1C9 1px solid;
+   BORDER-RIGHT: #97A1C9 1px solid;
+   BORDER-TOP: #97A1C9 1px solid;
+   FONT-FAMILY: Tahoma;
+   FONT-SIZE: 8pt;
+}

@@ -1,0 +1,24 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DFT_AddTariffFormAll", "DFT_AddTariffFormAll.vbproj", "{0A90B17D-6C52-4124-8637-567940C9D41E}"
+	ProjectSection(WebsiteProperties) = preProject
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.Debug = "False"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0A90B17D-6C52-4124-8637-567940C9D41E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A90B17D-6C52-4124-8637-567940C9D41E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A90B17D-6C52-4124-8637-567940C9D41E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A90B17D-6C52-4124-8637-567940C9D41E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

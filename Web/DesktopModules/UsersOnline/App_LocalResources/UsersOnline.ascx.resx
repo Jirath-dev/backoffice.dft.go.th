@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<root>
+    <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+        <xsd:element name="root" msdata:IsDataSet="true">
+            <xsd:complexType>
+                <xsd:choice maxOccurs="unbounded">
+                    <xsd:element name="data">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" />
+                            <xsd:attribute name="type" type="xsd:string" />
+                            <xsd:attribute name="mimetype" type="xsd:string" />
+                        </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="resheader">
+                        <xsd:complexType>
+                            <xsd:sequence>
+                                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                            </xsd:sequence>
+                            <xsd:attribute name="name" type="xsd:string" use="required" />
+                        </xsd:complexType>
+                    </xsd:element>
+                </xsd:choice>
+            </xsd:complexType>
+        </xsd:element>
+    </xsd:schema>
+    <resheader name="ResMimeType">
+        <value>text/microsoft-resx</value>
+    </resheader>
+    <resheader name="Version">
+        <value>1.0.0.0</value>
+    </resheader>
+    <resheader name="Reader">
+        <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <resheader name="Writer">
+        <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=1.0.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+    </resheader>
+    <data name="imgMembership.Text">
+        <value>Membership</value>
+    </data>
+    <data name="imgLatest.Text">
+        <value>Latest New User</value>
+    </data>
+    <data name="imgNewToday.Text">
+        <value>New Today</value>
+    </data>
+    <data name="imgNewYesterday.Text">
+        <value>New Yesterday</value>
+    </data>
+    <data name="imgUserCount.Text">
+        <value>User Count</value>
+    </data>
+    <data name="imgPeopleOnline.Text">
+        <value>People Online</value>
+    </data>
+    <data name="imgVisitors.Text">
+        <value>Visitors</value>
+    </data>
+    <data name="imgMemberCount.Text">
+        <value>Members</value>
+    </data>
+    <data name="imgTotalCount.Text">
+        <value>Total</value>
+    </data>
+    <data name="imgOnlineNow.Text">
+        <value>Online Now</value>
+    </data>
+    <data name="MembershipLabel.Text">
+        <value>&lt;u&gt;Membership:&lt;/u&gt;</value>
+    </data>
+    <data name="LatestUserLabel.Text">
+        <value>&lt;u&gt;Latest:&lt;/u&gt;</value>
+    </data>
+    <data name="NewTodayLabel.Text">
+        <value>New Today:</value>
+    </data>
+    <data name="NewYesterdayLabel.Text">
+        <value>New Yesterday:</value>
+    </data>
+
+    <data name="OverallLabel.Text">
+        <value>Overall:</value>
+    </data>
+    <data name="PeopleOnlineLabel.Text">
+        <value>&lt;u&gt;People Online:&lt;/u&gt;</value>
+    </data>
+    <data name="VisitorsLabel.Text">
+        <value>Visitors:</value>
+    </data>
+    <data name="MembersLabel.Text">
+        <value>Members:</value>
+    </data>
+    <data name="TotalLabel.Text">
+        <value>Total:</value>
+    </data>
+    <data name="ModuleHelp.Text">
+        <value>&lt;h1&gt;About the Users Online Module&lt;/h1&gt;&lt;p&gt;The Users Online Module displays one or all of three membership information: membership details, people online, and members online.&lt;/p&gt;</value>
+    </data>
+    <data name="OnlineNowLabel.Text">
+     	<value><u>Online Now:</u></value>
+    </data>
+</root>

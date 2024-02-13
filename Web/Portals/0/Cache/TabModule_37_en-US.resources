@@ -1,0 +1,35 @@
+<div id="dnn_ctr348_HtmlModule_HtmlModule_lblContent" class="Normal">
+	<div class="hr"><hr />
+</div>
+<div id="LoginInfo">
+<h2 class="Head">Getting Started</h2>
+<p>If your site was installed automatically, a couple of default user accounts were created which allow you to access the various site management features offered by the application. In this case, please take note of the following user account information:</p>
+<div class="LoginBlock">
+<h3 class="NormalBold">Administrator Login:</h3>
+<dl><dt>Username: </dt><dd>admin<br />
+</dd><dt>Password: </dt><dd>dnnadmin </dd></dl>
+<p class="LoginNotes">* The Administrator account is a privileged user account which allows you to manage various aspects of your site. Once you login as the Administrator, an Admin menu option will be visible in the site navigation. Please note that the first time you login to the site using this account, you will be prompted to enter a new password for security purposes.</p>
+</div>
+<div class="LoginBlock">
+<h3 class="NormalBold">Host Login:</h3>
+<dl><dt>Username: </dt><dd>host<br />
+</dd><dt>Password: </dt><dd>dnnhost </dd></dl>
+<p class="LoginNotes">* The Host account is a highly privileged user account which allows you to manage various aspects of your hosting environment. Once you login as the Host, a Host menu option will be visible in the site navigation. Please note that the first time you login to the site using this account, you will be prompted to enter a new password for security purposes.</p>
+</div>
+</div>
+<div id="QuickLinks">
+<h2 class="Head">Quick Links</h2>
+<p>The following links provide additional information about using DotNetNuke and some of the people behind the project.</p>
+<ul>
+    <li><a class="Normal" title="The DotNetNuke Guided Tour" target="_self" href="http://www.dotnetnuke.com/guidedtour">Guided Tour</a></li>
+    <li><a class="Normal" title="DotNetNuke Forge" target="_self" href="http://www.dotnetnuke.com/Products/Development/Forge/tabid/824/Default.aspx">DotNetNuke Forge</a></li>
+    <li><a class="Normal" title="DotNetNuke Project Blogs" target="_self" href="http://www.dotnetnuke.com/tabid/825/default.aspx">Project Blogs</a></li>
+    <li><a class="Normal" title="Language Packs for DotNetNuke" target="_self" href="http://www.dotnetnuke.com/tabid/785/Default.aspx">Language Packs</a></li>
+    <li><a class="Normal" title="Join or Create a DotNetNuke User Group in your area." target="_self" href="http://www.dotnetnuke.com/Community/UserGroupProgram/tabid/1074/Default.aspx">Join a User Group</a></li>
+    <li><a class="Normal" title="The DotNetNuke Issue Tracking System" target="_self" href="http://support.dotnetnuke.com/Default.aspx?x=1">Issue Tracking</a></li>
+    <li><a class="Normal" title="Creators and maintainers of DotNetNuke." target="_self" href="http://www.dotnetnukecorp.com/Default.aspx">DotNetNuke Corporation</a></li>
+</ul>
+</div>
+<div class="hr"><hr />
+</div>
+</div>

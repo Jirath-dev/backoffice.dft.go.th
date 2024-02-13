@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="getExporterBlacklistWatchlist">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TAXID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getExporterBlacklistWatchlistResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getExporterBlacklistWatchlistResult" type="tns:ArrayOfClsExporter" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfClsExporter">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="clsExporter" nillable="true" type="tns:clsExporter" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="clsExporter">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="TaxID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyNameThai" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CompanyNameEng" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BlacklistType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cause" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Formtype" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Goods" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Msg" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getPersonBlacklistWatchlist">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CitizenID" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getPersonBlacklistWatchlistResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getPersonBlacklistWatchlistResult" type="tns:ArrayOfClsPerson" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfClsPerson">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="clsPerson" nillable="true" type="tns:clsPerson" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="clsPerson">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CitizenID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NameThai" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="NameEng" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BlacklistType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cause" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="msg" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="getGoodsBlacklistWatchlist">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HamonizedCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="getGoodsBlacklistWatchlistResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="getGoodsBlacklistWatchlistResult" type="tns:ArrayOfClsGoods" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfClsGoods">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="clsGoods" nillable="true" type="tns:clsGoods" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="clsGoods">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="HamonizedCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Goods" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BlackListType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FormType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cause" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="msg" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="getExporterBlacklistWatchlistSoapIn">
+    <wsdl:part name="parameters" element="tns:getExporterBlacklistWatchlist" />
+  </wsdl:message>
+  <wsdl:message name="getExporterBlacklistWatchlistSoapOut">
+    <wsdl:part name="parameters" element="tns:getExporterBlacklistWatchlistResponse" />
+  </wsdl:message>
+  <wsdl:message name="getPersonBlacklistWatchlistSoapIn">
+    <wsdl:part name="parameters" element="tns:getPersonBlacklistWatchlist" />
+  </wsdl:message>
+  <wsdl:message name="getPersonBlacklistWatchlistSoapOut">
+    <wsdl:part name="parameters" element="tns:getPersonBlacklistWatchlistResponse" />
+  </wsdl:message>
+  <wsdl:message name="getGoodsBlacklistWatchlistSoapIn">
+    <wsdl:part name="parameters" element="tns:getGoodsBlacklistWatchlist" />
+  </wsdl:message>
+  <wsdl:message name="getGoodsBlacklistWatchlistSoapOut">
+    <wsdl:part name="parameters" element="tns:getGoodsBlacklistWatchlistResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ws_blacklistwatchlistSoap">
+    <wsdl:operation name="getExporterBlacklistWatchlist">
+      <wsdl:input message="tns:getExporterBlacklistWatchlistSoapIn" />
+      <wsdl:output message="tns:getExporterBlacklistWatchlistSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getPersonBlacklistWatchlist">
+      <wsdl:input message="tns:getPersonBlacklistWatchlistSoapIn" />
+      <wsdl:output message="tns:getPersonBlacklistWatchlistSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="getGoodsBlacklistWatchlist">
+      <wsdl:input message="tns:getGoodsBlacklistWatchlistSoapIn" />
+      <wsdl:output message="tns:getGoodsBlacklistWatchlistSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ws_blacklistwatchlistSoap" type="tns:ws_blacklistwatchlistSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getExporterBlacklistWatchlist">
+      <soap:operation soapAction="http://tempuri.org/getExporterBlacklistWatchlist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPersonBlacklistWatchlist">
+      <soap:operation soapAction="http://tempuri.org/getPersonBlacklistWatchlist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGoodsBlacklistWatchlist">
+      <soap:operation soapAction="http://tempuri.org/getGoodsBlacklistWatchlist" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ws_blacklistwatchlistSoap12" type="tns:ws_blacklistwatchlistSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="getExporterBlacklistWatchlist">
+      <soap12:operation soapAction="http://tempuri.org/getExporterBlacklistWatchlist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getPersonBlacklistWatchlist">
+      <soap12:operation soapAction="http://tempuri.org/getPersonBlacklistWatchlist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getGoodsBlacklistWatchlist">
+      <soap12:operation soapAction="http://tempuri.org/getGoodsBlacklistWatchlist" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ws_blacklistwatchlist">
+    <wsdl:port name="ws_blacklistwatchlistSoap" binding="tns:ws_blacklistwatchlistSoap">
+      <soap:address location="http://origin-alert.dft.go.th/ws/ws_blacklistwatchlist.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ws_blacklistwatchlistSoap12" binding="tns:ws_blacklistwatchlistSoap12">
+      <soap12:address location="http://origin-alert.dft.go.th/ws/ws_blacklistwatchlist.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

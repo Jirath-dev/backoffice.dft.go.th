@@ -1,0 +1,22 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+drop procedure {databaseOwner}{objectQualifier}GetOnlineUserStatistics
+GO
+
+drop procedure {databaseOwner}{objectQualifier}GetOnlineUsers
+GO
+
+drop view {databaseOwner}{objectQualifier}[UserPortals]
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

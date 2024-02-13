@@ -1,0 +1,151 @@
+﻿/************************************************************/
+/*****              SqlDataProvider                     *****/
+/*****                                                  *****/
+/*****                                                  *****/
+/***** Note: To manually execute this script you must   *****/
+/*****       perform a search and replace operation     *****/
+/*****       for {databaseOwner} and {objectQualifier}  *****/
+/*****                                                  *****/
+/************************************************************/
+
+/** Create Table **/
+
+if not exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Nti_DFT_EDI_ResetReceipt]') and OBJECTPROPERTY(id, N'IsTable') = 1)
+	BEGIN
+		CREATE TABLE {databaseOwner}[{objectQualifier}Nti_DFT_EDI_ResetReceipt]
+		(
+			[ModuleID] [int] NOT NULL,
+			[ItemID] [int] NOT NULL IDENTITY(1, 1),
+			[Content] [ntext] NOT NULL,
+			[CreatedByUser] [int] NOT NULL,
+			[CreatedDate] [datetime] NOT NULL
+		)
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}Nti_DFT_EDI_ResetReceipt] ADD CONSTRAINT [PK_{objectQualifier}Nti_DFT_EDI_ResetReceipt] PRIMARY KEY CLUSTERED  ([ItemID])
+		CREATE NONCLUSTERED INDEX [IX_{objectQualifier}Nti_DFT_EDI_ResetReceipt] ON {databaseOwner}[{objectQualifier}Nti_DFT_EDI_ResetReceipt] ([ModuleID])
+
+		ALTER TABLE {databaseOwner}[{objectQualifier}Nti_DFT_EDI_ResetReceipt] WITH NOCHECK ADD CONSTRAINT [FK_{objectQualifier}Nti_DFT_EDI_ResetReceipt_{objectQualifier}Modules] FOREIGN KEY ([ModuleID]) REFERENCES {databaseOwner}[{objectQualifier}Modules] ([ModuleID]) ON DELETE CASCADE NOT FOR REPLICATION
+	END
+GO
+
+
+/** Drop Existing Stored Procedures **/
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Nti_GetDFT_EDI_ResetReceipts]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Nti_GetDFT_EDI_ResetReceipts
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Nti_GetDFT_EDI_ResetReceipt]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Nti_GetDFT_EDI_ResetReceipt
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Nti_AddDFT_EDI_ResetReceipt]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Nti_AddDFT_EDI_ResetReceipt
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Nti_UpdateDFT_EDI_ResetReceipt]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Nti_UpdateDFT_EDI_ResetReceipt
+GO
+
+if exists (select * from dbo.sysobjects where id = object_id(N'{databaseOwner}[{objectQualifier}Nti_DeleteDFT_EDI_ResetReceipt]') and OBJECTPROPERTY(id, N'IsProcedure') = 1)
+	drop procedure {databaseOwner}{objectQualifier}Nti_DeleteDFT_EDI_ResetReceipt
+GO
+
+/** Create Stored Procedures **/
+
+
+create procedure {databaseOwner}{objectQualifier}Nti_GetDFT_EDI_ResetReceipts
+
+	@ModuleId int
+
+as
+
+select ModuleId,
+       ItemId,
+       Content,
+       CreatedByUser,
+       CreatedDate,
+       'CreatedByUserName' = {objectQualifier}Users.FirstName + ' ' + {objectQualifier}Users.LastName
+from {objectQualifier}Nti_DFT_EDI_ResetReceipt
+inner join {objectQualifier}Users on {objectQualifier}Nti_DFT_EDI_ResetReceipt.CreatedByUser = {objectQualifier}Users.UserId
+where  ModuleId = @ModuleId
+GO
+
+create procedure {databaseOwner}{objectQualifier}Nti_GetDFT_EDI_ResetReceipt
+
+	@ModuleId int,
+        @ItemId int
+
+as
+
+select ModuleId,
+       ItemId,
+       Content,
+       CreatedByUser,
+       CreatedDate,
+       'CreatedByUserName' = {objectQualifier}Users.FirstName + ' ' + {objectQualifier}Users.LastName
+from {objectQualifier}Nti_DFT_EDI_ResetReceipt
+inner join {objectQualifier}Users on {objectQualifier}Nti_DFT_EDI_ResetReceipt.CreatedByUser = {objectQualifier}Users.UserId
+where  ModuleId = @ModuleId
+and ItemId = @ItemId
+GO
+
+
+create procedure {databaseOwner}{objectQualifier}Nti_AddDFT_EDI_ResetReceipt
+
+	@ModuleId       int,
+	@Content        ntext,
+	@UserID         int
+
+as
+
+insert into {objectQualifier}Nti_DFT_EDI_ResetReceipt (
+	ModuleId,
+	Content,
+	CreatedByUser,
+	CreatedDate
+) 
+values (
+	@ModuleId,
+	@Content,
+	@UserID,
+	getdate()
+)
+
+GO
+
+create procedure {databaseOwner}{objectQualifier}Nti_UpdateDFT_EDI_ResetReceipt
+
+	@ModuleId       int,
+        @ItemId         int,
+	@Content        ntext,
+	@UserID         int
+
+as
+
+update {objectQualifier}Nti_DFT_EDI_ResetReceipt
+set    Content       = @Content,
+       CreatedByUser = @UserID,
+       CreatedDate   = getdate()
+where  ModuleId = @ModuleId
+and    ItemId = @ItemId
+
+GO
+
+create procedure {databaseOwner}{objectQualifier}Nti_DeleteDFT_EDI_ResetReceipt
+
+	@ModuleId       int,
+        @ItemId         int
+
+as
+
+delete
+from   {objectQualifier}Nti_DFT_EDI_ResetReceipt
+where  ModuleId = @ModuleId
+and    ItemId = @ItemId
+
+GO
+
+/************************************************************/
+/*****              SqlDataProvider                     *****/
+/************************************************************/

@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "DFT_EDI_Report_04", "DFT_EDI_Report_04.vbproj", "{C25E5C85-7150-4E52-B0E1-C4E9EBB1EC84}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C25E5C85-7150-4E52-B0E1-C4E9EBB1EC84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C25E5C85-7150-4E52-B0E1-C4E9EBB1EC84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C25E5C85-7150-4E52-B0E1-C4E9EBB1EC84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C25E5C85-7150-4E52-B0E1-C4E9EBB1EC84}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

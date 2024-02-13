@@ -1,0 +1,132 @@
+
+/*--------- dnn menu style ----------*/
+/* main menu td */
+.main_dnnmenu_bar 
+{
+	cursor:pointer;
+	font-size:10pt;
+	background-color:transparent;
+
+}
+
+/*  Main Menu Normal  */
+.main_dnnmenu_rootitem 
+{	
+	color: #169;
+	font-size: 10pt; 
+	font-weight:bold;
+	line-height:36px;
+	padding:10px 10px 10px  10px;
+	margin:0;
+	background-color:transparent;
+}
+
+/*  Main menu hover  */
+.main_dnnmenu_rootitem_hover
+{  
+	color:#fff;
+	font-size: 10pt; 
+	font-weight:bold;
+	text-align:center;
+	line-height:36px;
+	margin:0;
+	padding:10px 10px 10px  10px;
+	background:#09C url(../images/edi_nav_hov.png) repeat-x top left ;
+}
+
+/*  Main menu selected  */
+.main_dnnmenu_rootitem_selected, main_dnnmenu_rootitem_selected td
+{
+	color:#800;
+	font-weight:bold;
+	text-align:center;
+	font-size: 10pt; 
+	line-height:36px;
+	padding:10px 10px 10px  10px;
+	margin:0;
+	background:#fc0 url(../images/edi_nav_act.png) repeat-x top left;
+}
+
+/*  SUB Menu Normal */
+.main_dnnmenu_submenu 
+{
+	border:1px solid #bcd;
+}
+
+.main_dnnmenu_submenu td
+{
+	
+	background-color:#eff;
+	z-index: 1000;
+	font-size: 10pt; 
+	font-weight:normal;
+	text-align:left;
+	color:#169;
+	line-height:2em;
+	padding: 0px 5px;
+	margin:0px;
+}
+
+/*  SUB Menu hover & selected */
+.main_dnnmenu_itemhover td  
+{  
+	font-size: 10pt;
+	background: #079;
+	color:#fff;
+	font-weight:normal;
+	text-align:left;
+	line-height:2em;
+	z-index: 1000; 
+	padding: 0px 5px;
+	margin:0px;
+}
+.main_dnnmenu_itemselected td   
+{  
+	font-size: 10pt;
+	background: #fc0;
+	color:#800;
+	font-weight:normal;
+	text-align:left;
+	line-height:2em;
+	z-index: 1000; 
+	padding: 0px 5px;
+	margin:0px;
+}
+
+.main_dnnmenu_break
+{
+	height: 2px;
+	background-color: #fac31c;
+}
+
+/* Module Action Menus */
+.ModuleTitle_SubMenu
+{
+	border:1px solid #d0e1a8;
+}
+
+.ModuleTitle_SubMenu td{
+
+	white-space: nowrap;
+} 
+
+.ModuleTitle_MenuIcon {
+
+	border:none;
+	padding: 0px ;
+}
+
+.ModuleTitle_MenuItemSel td, .ModuleTitle_MenuItemSel .ModuleTitle_MenuIcon{
+	background: #fac31c ;
+	color: #800;
+}
+
+.ModuleTitle_MenuBreak td, .ModuleTitle_MenuBreak .ModuleTitle_MenuIcon
+{
+	height: 2px;
+	background-color: #993;
+}
+
+
+
+
