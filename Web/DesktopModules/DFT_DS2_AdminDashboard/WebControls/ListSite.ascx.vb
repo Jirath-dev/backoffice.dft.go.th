@@ -18,22 +18,24 @@ Partial Public Class ListSite
         Try
             Dim ds As New DataSet
             Dim strCommand As String
-            strCommand = "SELECT site_id,site_name+' : '+site_id AS site_name  FROM site_plus " & _
-                         "WHERE (active_status = 'Y') AND (type_site = 'A') AND (ds_status='N') " & _
-                         "ORDER BY site_code"
+            strCommand = "SELECT form_type,form_name+' : '+form_type AS form_name  
+                          FROM form_type " &
+                         "WHERE (ShowForm  = '0')  " &
+                         "ORDER BY form_type"
             ds = SqlHelper.ExecuteDataset(strConn, CommandType.Text, strCommand)
             lstSiteClose.DataSource = ds.Tables(0)
-            lstSiteClose.DataTextField = "site_name"
-            lstSiteClose.DataValueField = "site_id"
+            lstSiteClose.DataTextField = "form_name"
+            lstSiteClose.DataValueField = "form_type"
             lstSiteClose.DataBind()
 
-            strCommand = "SELECT site_id,site_name+' : '+site_id AS site_name FROM site_plus " & _
-                         "WHERE (active_status = 'Y') AND (type_site = 'A') AND (ds_status='Y') " & _
-                         "ORDER BY site_code"
+            strCommand = "SELECT form_type,form_name+' : '+form_type AS form_name
+                          FROM form_type " &
+                         "WHERE (ShowForm = '1')  " &
+                         "ORDER BY form_type"
             ds = SqlHelper.ExecuteDataset(strConn, CommandType.Text, strCommand)
             lstSiteOpen.DataSource = ds.Tables(0)
-            lstSiteOpen.DataTextField = "site_name"
-            lstSiteOpen.DataValueField = "site_id"
+            lstSiteOpen.DataTextField = "form_name"
+            lstSiteOpen.DataValueField = "form_type"
             lstSiteOpen.DataBind()
         Catch ex As Exception
             Response.Write(ex.Message)
@@ -41,7 +43,7 @@ Partial Public Class ListSite
     End Sub
 
     Protected Sub btnAdd_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnAdd.Click
-        SiteDo("Y")
+        SiteDo("1")
     End Sub
 
     Private Function SiteDo(ByVal status As Char) As String
@@ -49,19 +51,21 @@ Partial Public Class ListSite
             Dim str_err As String = ""
             Dim strCommand As String = ""
 
-            If status = "N" Then
+            If status = "1" Then
                 If lstSiteOpen.SelectedValue <> "" Then
-                    strCommand = "UPDATE site_plus SET ds_status='" & status & "' " & _
-                                    "WHERE (site_id='" & lstSiteOpen.SelectedValue & "')"
+                    strCommand = "UPDATE form_type 
+                                  SET ShowForm='" & status & "' " &
+                                  "WHERE (form_type='" & lstSiteOpen.SelectedValue & "')"
                 Else
-                    str_err = "โปรดเลือกชื่อสาขาจากช่อง สาขาที่เปิดใช้งานเรียบร้อยแล้ว ทางด้านขวาให้เรียบร้อยก่อน"
+                    str_err = "โปรดเลือกฟอร์ม เปิดใช้งานเรียบร้อยแล้ว ทางด้านขวาให้เรียบร้อยก่อน"
                 End If
             Else
                 If lstSiteClose.SelectedValue <> "" Then
-                    strCommand = "UPDATE site_plus SET ds_status='" & status & "' " & _
-                                    "WHERE (site_id='" & lstSiteClose.SelectedValue & "')"
+                    strCommand = "UPDATE form_type 
+                                  SET ShowForm='" & status & "' " &
+                                  "WHERE (form_type='" & lstSiteClose.SelectedValue & "')"
                 Else
-                    str_err = "โปรดเลือกชื่อสาขาจากช่อง สาขา ทางด้านซ้ายให้เรียบร้อยก่อน"
+                    str_err = "โปรดเลือกโปรดเลือกฟอร์ม จากช่อง ฟอร์ม ทางด้านซ้ายให้เรียบร้อยก่อน"
                 End If
             End If
 
@@ -85,7 +89,7 @@ Partial Public Class ListSite
     End Function
 
     Protected Sub btnRemove_Click(ByVal sender As Object, ByVal e As EventArgs) Handles btnRemove.Click
-        SiteDo("N")
+        SiteDo("0")
     End Sub
 
     Private Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load

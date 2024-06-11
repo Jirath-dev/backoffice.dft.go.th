@@ -1,22 +1,22 @@
 ﻿<%@ Control Language="vb" AutoEventWireup="false" CodeBehind="ListSite.ascx.vb" Inherits=".ListSite" %>
-<h2>จัดการข้อมูลสถานที่สาขาสำหรับรับหนังสือรับรอง</h2>
+<h2>จัดการข้อมูหนังสือรับรอง</h2>
 <div class="m-frm-bdr" style="border: 1px solid #999; margin-top: 10px;">
     <div class="groupboxheader" style="width: 450px;">
-        <font class="groupbox">&nbsp;กำหนดสาขาสถานที่สำหรับรับหนังสือรับรอง &nbsp;</font></div>
+        <font class="groupbox">&nbsp;กำหนดหนังสือรับรอง &nbsp;</font></div>
     <div style="font-size: 8pt; margin: 10px; color: #666; border-bottom: 1px solid #ccc;
         padding-bottom: 5px;">
-        ใช้สำหรับกำหนดสถานะเพื่อ เปิด-ปิด สาขาสถานที่สำหรับรับแบบคำขอหนังสือรับรอง 
+        ใช้สำหรับกำหนดสถานะเพื่อ เปิด-ปิด คำขอหนังสือรับรอง 
         เพื่อการตรวจสอบสำหรับเจ้าหน้าที่</div>
     <div style="margin: 20px;text-align:center">
         
         <table>
             <tr>
                 <td align="center">
-                    <b>สาขา</b></td>
+                    <b>ฟอร์ม</b></td>
                 <td align="center">
                     &nbsp;</td>
                 <td align="center">
-                    <b>สาขาที่เปิดใช้งานเรียบร้อยแล้ว</b></td>
+                    <b>ฟอร์มที่เปิดใช้งานเรียบร้อยแล้ว</b></td>
             </tr>
             <tr>
                 <td class="FormLabel">
@@ -43,7 +43,7 @@
 
 </div>
 
-    <div style="font-size:10pt;margin-top:10px;border:1px solid #cccccc;padding:15px;">
+    <%--<div style="font-size:10pt;margin-top:10px;border:1px solid #cccccc;padding:15px;">
     <h2 style="margin-bottom:10px;">เพิ่มสาขาใหม่ (New Site)</h2>
         ชื่อสาขาที่รับหนังสือ: <asp:TextBox ID="txtSiteName" runat="server"></asp:TextBox> 
         &nbsp;<asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
@@ -61,4 +61,4 @@
         <asp:Button ID="Button1" runat="server" Text="บันทึกข้อมูล" />
         &nbsp;
         <p>&nbsp;</p>
-        </div>
+        </div>--%>

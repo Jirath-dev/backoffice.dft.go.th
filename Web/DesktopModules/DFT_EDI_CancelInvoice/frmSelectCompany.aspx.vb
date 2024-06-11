@@ -6,6 +6,7 @@ Imports Telerik.Web.UI
 Partial Public Class frmSelectCompany
     Inherits System.Web.UI.Page
     Dim strTradingConn As String = ConfigurationManager.ConnectionStrings("tmpCardConn").ConnectionString
+    Dim strEDIConn As String = ConfigurationManager.ConnectionStrings("OriginConnection").ConnectionString
     Dim objConn As SqlConnection = Nothing
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -34,7 +35,7 @@ Partial Public Class frmSelectCompany
         If TypeOf e.Item Is GridDataItem Then
             Dim editLink As HyperLink = DirectCast(e.Item.FindControl("SelectLink"), HyperLink)
             editLink.Attributes("href") = "#"
-            editLink.Attributes("onclick") = [String].Format("return returnToParent('{0}','{1}');", e.Item.OwnerTableView.DataKeyValues(e.Item.ItemIndex)("Company_Taxno"), e.Item.OwnerTableView.DataKeyValues(e.Item.ItemIndex)("CompanyName_Eng"))
+            editLink.Attributes("onclick") = [String].Format("return returnToParent('{0}','{1}','{2}','{3}');", e.Item.OwnerTableView.DataKeyValues(e.Item.ItemIndex)("Company_Taxno"), e.Item.OwnerTableView.DataKeyValues(e.Item.ItemIndex)("CompanyName_Eng"), e.Item.OwnerTableView.DataKeyValues(e.Item.ItemIndex)("invh_run_auto"), e.Item.OwnerTableView.DataKeyValues(e.Item.ItemIndex)("invoice_no1"))
         End If
     End Sub
 
@@ -46,11 +47,12 @@ Partial Public Class frmSelectCompany
 
     Function LoadCompany() As DataTable
         Try
-            objConn = New SqlConnection(strTradingConn)
+            objConn = New SqlConnection(strEDIConn)
             Dim ds As New DataSet
             Dim strCommand As String
             'ค้นหาจาก P_Company ก่อน
-            strCommand = "SELECT company_taxno AS Company_Taxno, company_eng AS CompanyName_Eng, company_thai AS CompanyName_Th FROM P_Company " & _
+            strCommand = "SELECT company_taxno AS Company_Taxno, company_eng AS CompanyName_Eng, company_thai AS CompanyName_Th 
+                          FROM Company " &
                          "WHERE (company_taxno = '" & txtCompany_Search.Text.Trim() & "') OR (company_eng LIKE '%" & txtCompany_Search.Text & "%') OR (company_thai like '%" & txtCompany_Search.Text & "%') ORDER BY company_eng"
             ds = SqlHelper.ExecuteDataset(objConn, CommandType.Text, strCommand)
             If ds.Tables(0).Rows.Count > 0 Then

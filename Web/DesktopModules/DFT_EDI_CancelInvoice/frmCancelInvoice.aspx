@@ -87,10 +87,12 @@
                 </td>
             </tr>
         </table>
-        <asp:Label ID="lblCompany_Taxno" runat="server"></asp:Label>
-        <asp:Label ID="lblInvoiceNo" runat="server"></asp:Label>
-        <asp:Label ID="lblInvoiceYear" runat="server"></asp:Label>
-        <asp:Label ID="lblFType" runat="server"></asp:Label>
+
+        <asp:Label ID="lblCompany_Taxno" runat="server" ></asp:Label>
+           <asp:Label ID="lblinvh_run_auto" runat="server" ></asp:Label>
+        <asp:Label ID="lblInvoiceNo" runat="server" ></asp:Label>
+        <asp:Label ID="lblInvoiceYear" runat="server" ></asp:Label>
+        <asp:Label ID="lblFType" runat="server" ></asp:Label>
     </form>
 </body>
 </html>

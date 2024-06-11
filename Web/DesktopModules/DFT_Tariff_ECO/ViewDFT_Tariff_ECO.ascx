@@ -123,5 +123,5 @@
     </tr>
 </table>
 <asp:SqlDataSource ID="SqlForm" runat="server" ConnectionString="<%$ ConnectionStrings:OriginConnection %>"
-    SelectCommand="sp_common_get_formTypeForTariffSearching_NewDS" SelectCommandType="StoredProcedure">
+    SelectCommand="sp_common_get_formTypeForTariffSearching_NewDS_back" SelectCommandType="StoredProcedure">
 </asp:SqlDataSource>

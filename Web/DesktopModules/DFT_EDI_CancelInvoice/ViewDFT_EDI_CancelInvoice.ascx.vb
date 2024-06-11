@@ -18,7 +18,7 @@ Namespace NTi.Modules.DFT_EDI_CancelInvoice
 
         Private Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
             If Not Page.IsPostBack Then
-                rgInvoiceList.DataSource = LoadInvoice(txtCompany_Taxno.Text.Trim(), txtInvoiceNo.Text, rblSearchType.SelectedValue)
+                rgInvoiceList.DataSource = LoadInvoice(txtCompany_Taxno.Text.Trim(), txtInvoiceNo.Text, txtinvh_run_auto.Text, rblSearchType.SelectedValue)
                 rgInvoiceList.DataBind()
 
                 txtInvoiceNo.Focus()
@@ -29,8 +29,9 @@ Namespace NTi.Modules.DFT_EDI_CancelInvoice
             txtCompany_Taxno.Text = ""
             txtCompanyName_Eng.Text = ""
             txtInvoiceNo.Text = ""
+            txtinvh_run_auto.Text = ""
 
-            rgInvoiceList.DataSource = LoadInvoice(txtCompany_Taxno.Text.Trim(), txtInvoiceNo.Text, rblSearchType.SelectedValue)
+            rgInvoiceList.DataSource = LoadInvoice(txtCompany_Taxno.Text.Trim(), txtInvoiceNo.Text, txtinvh_run_auto.Text, rblSearchType.SelectedValue)
             rgInvoiceList.DataBind()
 
             txtInvoiceNo.Focus()
@@ -38,23 +39,23 @@ Namespace NTi.Modules.DFT_EDI_CancelInvoice
 
         Protected Sub btnSearch_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnSearch.Click
             If txtCompany_Taxno.Text.Trim() <> "" Then
-                rgInvoiceList.DataSource = LoadInvoice(txtCompany_Taxno.Text.Trim(), txtInvoiceNo.Text, rblSearchType.SelectedValue)
+                rgInvoiceList.DataSource = LoadInvoice(txtCompany_Taxno.Text.Trim(), txtInvoiceNo.Text, txtinvh_run_auto.Text, rblSearchType.SelectedValue)
                 rgInvoiceList.DataBind()
             End If
 
             txtInvoiceNo.Focus()
         End Sub
 
-        Function LoadInvoice(ByVal Company_Taxno As String, ByVal InvoiceNo As String, ByVal FType As String) As DataTable
+        Function LoadInvoice(ByVal Company_Taxno As String, ByVal InvoiceNo As String, ByVal FType As String, selectedValue As String) As DataTable
             Try
                 Session("ssSearchType") = FType
                 Session("ssCompany_Taxno") = Company_Taxno
 
                 'sp_common_form_edi_getInvoiceByCompany '3191002037','',0
                 Dim ds As New DataSet
-                ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "sp_common_form_edi_getInvoiceByCompany_NewDS", _
-                New SqlParameter("@COMPANY_TAXNO", CommonUtility.Get_StringValue(Company_Taxno)), _
-                New SqlParameter("@INVOICE_NO", CommonUtility.Get_StringValue(InvoiceNo)), _
+                ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "sp_common_form_edi_getInvoiceByCompany_NewDS",
+                New SqlParameter("@COMPANY_TAXNO", CommonUtility.Get_StringValue(Company_Taxno)),
+                New SqlParameter("@INVOICE_NO", CommonUtility.Get_StringValue(InvoiceNo)),
                 New SqlParameter("@FTYPE", CommonUtility.Get_Int32(FType)))
 
                 Return ds.Tables(0)
@@ -64,7 +65,7 @@ Namespace NTi.Modules.DFT_EDI_CancelInvoice
         End Function
 
         Private Sub RadAjaxManager1_AjaxRequest(ByVal sender As Object, ByVal e As Telerik.Web.UI.AjaxRequestEventArgs) Handles RadAjaxManager1.AjaxRequest
-            rgInvoiceList.DataSource = LoadInvoice(txtCompany_Taxno.Text.Trim(), txtInvoiceNo.Text, rblSearchType.SelectedValue)
+            rgInvoiceList.DataSource = LoadInvoice(txtCompany_Taxno.Text.Trim(), txtInvoiceNo.Text, txtinvh_run_auto.Text, rblSearchType.SelectedValue)
             rgInvoiceList.DataBind()
         End Sub
 
@@ -78,7 +79,7 @@ Namespace NTi.Modules.DFT_EDI_CancelInvoice
 
         Private Sub rgInvoiceList_PageIndexChanged(ByVal source As Object, ByVal e As Telerik.Web.UI.GridPageChangedEventArgs) Handles rgInvoiceList.PageIndexChanged
             rgInvoiceList.CurrentPageIndex = e.NewPageIndex
-            rgInvoiceList.DataSource = LoadInvoice(txtCompany_Taxno.Text.Trim(), txtInvoiceNo.Text, rblSearchType.SelectedValue)
+            rgInvoiceList.DataSource = LoadInvoice(txtCompany_Taxno.Text.Trim(), txtInvoiceNo.Text, txtinvh_run_auto.Text, rblSearchType.SelectedValue)
             rgInvoiceList.DataBind()
         End Sub
 

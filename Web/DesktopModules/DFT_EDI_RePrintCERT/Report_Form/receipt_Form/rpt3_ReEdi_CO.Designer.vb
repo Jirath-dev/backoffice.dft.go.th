@@ -183,7 +183,6 @@ Partial Public Class rpt3_ReEdi_CO
         Me.Shape5 = New DataDynamics.ActiveReports.Shape()
         Me.Picture_SealAuthor = New DataDynamics.ActiveReports.Picture()
         Me.TextBox48 = New DataDynamics.ActiveReports.TextBox()
-        Me.ShapeSealSign = New DataDynamics.ActiveReports.Shape()
         Me.Shape3 = New DataDynamics.ActiveReports.Shape()
         Me.Shape4 = New DataDynamics.ActiveReports.Shape()
         Me.Line6 = New DataDynamics.ActiveReports.Line()
@@ -3543,7 +3542,7 @@ Partial Public Class rpt3_ReEdi_CO
         '
         'PageFooter1
         '
-        Me.PageFooter1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.Shape5, Me.TextBox33, Me.TextBox35, Me.Picture_SealAuthor, Me.TextBox48, Me.TextBox19, Me.TextBox20, Me.txtfactory_address, Me.ShapeSealSign, Me.txtrequest_person_2, Me.Shape3, Me.txtSum_Net_Weight, Me.txtNET_WEIGHTPage, Me.txtSum_Fob_Amt, Me.Shape4, Me.txtInvoince_Date, Me.TextBox31, Me.txtTotal, Me.txtSum_Gross_Weight, Me.TextBox32, Me.txtbill_type0, Me.TextBox34, Me.txtbill_type1, Me.TextBox36, Me.txtbill_type2, Me.TextBox38, Me.txtbill_type3, Me.TextBox40, Me.txtbill_type_other, Me.TextBox41, Me.TextBox42, Me.txtbl_no, Me.txtTemp_sailing_date, Me.TextBox44, Me.txtTemp_edi_date, Me.TextBox45, Me.txtbill_type, Me.TextBox16, Me.TextBox17, Me.TextBox18, Me.txtattach_file, Me.txtfactory, Me.txtfactory_Temp, Me.TextBox37, Me.TextBox39, Me.TextBox43, Me.TextBox46, Me.Line6, Me.txtauthorize2, Me.txtedi_date, Me.txtsailing_date, Me.txtgross_weightH, Me.txtg_unit_code, Me.txtSumFOB_AMTPage, Me.txtTemp_destination_country, Me.txtTemp_form_type, Me.txttotalSum_fob_amt, Me.txttotal_real_net_weight, Me.TextBox47, Me.txtFactoryName})
+        Me.PageFooter1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.txtfactory_Temp, Me.Shape5, Me.Picture_SealAuthor, Me.TextBox48, Me.TextBox33, Me.TextBox35, Me.TextBox19, Me.TextBox20, Me.txtfactory_address, Me.txtrequest_person_2, Me.Shape3, Me.txtSum_Net_Weight, Me.txtNET_WEIGHTPage, Me.txtSum_Fob_Amt, Me.Shape4, Me.txtInvoince_Date, Me.TextBox31, Me.txtTotal, Me.txtSum_Gross_Weight, Me.TextBox32, Me.txtbill_type0, Me.TextBox34, Me.txtbill_type1, Me.TextBox36, Me.txtbill_type2, Me.TextBox38, Me.txtbill_type3, Me.TextBox40, Me.txtbill_type_other, Me.TextBox41, Me.TextBox42, Me.txtbl_no, Me.txtTemp_sailing_date, Me.TextBox44, Me.txtTemp_edi_date, Me.TextBox45, Me.txtbill_type, Me.TextBox16, Me.TextBox17, Me.TextBox18, Me.txtattach_file, Me.txtfactory, Me.TextBox37, Me.TextBox39, Me.TextBox43, Me.TextBox46, Me.Line6, Me.txtauthorize2, Me.txtedi_date, Me.txtsailing_date, Me.txtgross_weightH, Me.txtg_unit_code, Me.txtSumFOB_AMTPage, Me.txtTemp_destination_country, Me.txtTemp_form_type, Me.txttotalSum_fob_amt, Me.txttotal_real_net_weight, Me.TextBox47, Me.txtFactoryName})
         Me.PageFooter1.Height = 5.2!
         Me.PageFooter1.Name = "PageFooter1"
         '
@@ -3578,10 +3577,10 @@ Partial Public Class rpt3_ReEdi_CO
         Me.Picture_SealAuthor.Height = 1.968504!
         Me.Picture_SealAuthor.Image = Nothing
         Me.Picture_SealAuthor.ImageData = Nothing
-        Me.Picture_SealAuthor.Left = 0.7204725!
+        Me.Picture_SealAuthor.Left = 0.9375!
         Me.Picture_SealAuthor.LineWeight = 0!
         Me.Picture_SealAuthor.Name = "Picture_SealAuthor"
-        Me.Picture_SealAuthor.Top = 2.397638!
+        Me.Picture_SealAuthor.Top = 2.875!
         Me.Picture_SealAuthor.Visible = False
         Me.Picture_SealAuthor.Width = 3.543307!
         '
@@ -3604,24 +3603,6 @@ Partial Public Class rpt3_ReEdi_CO
     "ม(1)-(4)  เป็นความเท็จ ข้าพเจ้ายินยอมให้กรมการค้าต่างประเทศดำเนินคดีตามกฎหมาย"
         Me.TextBox48.Top = 4.15!
         Me.TextBox48.Width = 7.5625!
-        '
-        'ShapeSealSign
-        '
-        Me.ShapeSealSign.Border.BottomColor = System.Drawing.Color.Black
-        Me.ShapeSealSign.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.ShapeSealSign.Border.LeftColor = System.Drawing.Color.Black
-        Me.ShapeSealSign.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.ShapeSealSign.Border.RightColor = System.Drawing.Color.Black
-        Me.ShapeSealSign.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.ShapeSealSign.Border.TopColor = System.Drawing.Color.Black
-        Me.ShapeSealSign.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.ShapeSealSign.Height = 1.968504!
-        Me.ShapeSealSign.Left = 0.6875!
-        Me.ShapeSealSign.Name = "ShapeSealSign"
-        Me.ShapeSealSign.RoundingRadius = 9.999999!
-        Me.ShapeSealSign.Top = 2.375!
-        Me.ShapeSealSign.Visible = False
-        Me.ShapeSealSign.Width = 3.543307!
         '
         'Shape3
         '
@@ -4292,7 +4273,6 @@ Partial Public Class rpt3_ReEdi_CO
     Friend WithEvents txtCheck_StatusWeb As DataDynamics.ActiveReports.TextBox
     Friend WithEvents txtdeclare_doc As DataDynamics.ActiveReports.TextBox
     Friend WithEvents txtdeclare_Remark As DataDynamics.ActiveReports.TextBox
-    Friend WithEvents ShapeSealSign As DataDynamics.ActiveReports.Shape
     Friend WithEvents txtTemp_destination_country As DataDynamics.ActiveReports.TextBox
     Friend WithEvents txtTemp_form_type As DataDynamics.ActiveReports.TextBox
     Friend WithEvents Picture_SealAuthor As DataDynamics.ActiveReports.Picture

@@ -209,11 +209,14 @@ Namespace NTi.Modules.DFT_EDI_RePrintCERT
                                 ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_select_PrintBack_NewDS_06",
                                                                                 New SqlParameter("@TCat", TCAT),
                                                                                 New SqlParameter("@invh_run_auto", CommonUtility.Get_StringValue(txtSearchValue.Text.Trim())))
-                            Case "7" 'OriginConnection ต้องเป็น Table อื่น
+                            Case "7" 'OriginConnection ต้องเป็น Table อื่น 2019
                                 ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_select_PrintBack_NewDS_07",
                                                                                 New SqlParameter("@TCat", TCAT),
                                                                                 New SqlParameter("@invh_run_auto", CommonUtility.Get_StringValue(txtSearchValue.Text.Trim())))
-
+                            Case "8" 'OriginConnection ต้องเป็น Table อื่น 2021
+                                ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_select_PrintBack_NewDS_08",
+                                                                                New SqlParameter("@TCat", TCAT),
+                                                                                New SqlParameter("@invh_run_auto", CommonUtility.Get_StringValue(txtSearchValue.Text.Trim())))
                         End Select
                     Case False
                         ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_select_PrintBack_NewDS",
@@ -823,6 +826,11 @@ Namespace NTi.Modules.DFT_EDI_RePrintCERT
                                 temp_store = "sp_common_UpdateRePrint_NewDS05"
                             Case "6"
                                 temp_store = "sp_common_UpdateRePrint_NewDS06"
+                            Case "7"
+                                temp_store = "sp_common_UpdateRePrint_NewDS07"
+                            Case "8"
+                                temp_store = "sp_common_UpdateRePrint_NewDS08"
+
                         End Select
                 End Select
 

@@ -96,7 +96,7 @@ Namespace NTI.Modules.DFT_EDI_ListSendFormDS2
         Function LoadRequestFormList() As DataTable
             Try
                 Dim ds As New DataSet
-                ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_form_edi_getListFormSend_NewDS2_old",
+                ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_form_edi_getListFormSend_NewDS2",
                 New SqlParameter("@FORM_TYPE", CommonUtility.Get_StringValue(dropFormType.SelectedValue)),
                 New SqlParameter("@FROM_DATE", FunctionUtility.DMY2YMD(rdpFromDate.SelectedDate.Value)),
                 New SqlParameter("@TO_DATE", FunctionUtility.DMY2YMD(rdpToDate.SelectedDate.Value)),

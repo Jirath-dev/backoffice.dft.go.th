@@ -114,9 +114,9 @@ Partial Public Class rpt3_ediFORMD_ESS
         Me.txtNewEmail_ch01 = New DataDynamics.ActiveReports.TextBox()
         Me.txtTitleHead = New DataDynamics.ActiveReports.TextBox()
         Me.PageFooter1 = New DataDynamics.ActiveReports.PageFooter()
+        Me.ShapeSealSign = New DataDynamics.ActiveReports.Shape()
         Me.ShapeApproveSign = New DataDynamics.ActiveReports.Shape()
         Me.Picture_SealAuthor = New DataDynamics.ActiveReports.Picture()
-        Me.ShapeSealSign = New DataDynamics.ActiveReports.Shape()
         Me.PictureApproveSign = New DataDynamics.ActiveReports.Picture()
         Me.Pic_ch5_exhibi = New DataDynamics.ActiveReports.Picture()
         Me.Pic_ch7_Issued = New DataDynamics.ActiveReports.Picture()
@@ -2205,6 +2205,24 @@ Partial Public Class rpt3_ediFORMD_ESS
         Me.PageFooter1.Height = 4.22!
         Me.PageFooter1.Name = "PageFooter1"
         '
+        'ShapeSealSign
+        '
+        Me.ShapeSealSign.Border.BottomColor = System.Drawing.Color.Black
+        Me.ShapeSealSign.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.ShapeSealSign.Border.LeftColor = System.Drawing.Color.Black
+        Me.ShapeSealSign.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.ShapeSealSign.Border.RightColor = System.Drawing.Color.Black
+        Me.ShapeSealSign.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.ShapeSealSign.Border.TopColor = System.Drawing.Color.Black
+        Me.ShapeSealSign.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.ShapeSealSign.Height = 1.968504!
+        Me.ShapeSealSign.Left = 0.4375!
+        Me.ShapeSealSign.Name = "ShapeSealSign"
+        Me.ShapeSealSign.RoundingRadius = 9.999999!
+        Me.ShapeSealSign.Top = 0.375!
+        Me.ShapeSealSign.Visible = False
+        Me.ShapeSealSign.Width = 3.543307!
+        '
         'ShapeApproveSign
         '
         Me.ShapeApproveSign.Border.BottomColor = System.Drawing.Color.Black
@@ -2242,24 +2260,6 @@ Partial Public Class rpt3_ediFORMD_ESS
         Me.Picture_SealAuthor.Top = 0.375!
         Me.Picture_SealAuthor.Visible = False
         Me.Picture_SealAuthor.Width = 3.543307!
-        '
-        'ShapeSealSign
-        '
-        Me.ShapeSealSign.Border.BottomColor = System.Drawing.Color.Black
-        Me.ShapeSealSign.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.ShapeSealSign.Border.LeftColor = System.Drawing.Color.Black
-        Me.ShapeSealSign.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.ShapeSealSign.Border.RightColor = System.Drawing.Color.Black
-        Me.ShapeSealSign.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.ShapeSealSign.Border.TopColor = System.Drawing.Color.Black
-        Me.ShapeSealSign.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.ShapeSealSign.Height = 1.968504!
-        Me.ShapeSealSign.Left = 0.4375!
-        Me.ShapeSealSign.Name = "ShapeSealSign"
-        Me.ShapeSealSign.RoundingRadius = 9.999999!
-        Me.ShapeSealSign.Top = 0.375!
-        Me.ShapeSealSign.Visible = False
-        Me.ShapeSealSign.Width = 3.543307!
         '
         'PictureApproveSign
         '

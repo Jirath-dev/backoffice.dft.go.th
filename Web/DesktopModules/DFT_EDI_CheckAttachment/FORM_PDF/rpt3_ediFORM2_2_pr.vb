@@ -2201,9 +2201,9 @@ Public Class rpt3_ediFORM2_2_pr
     End Sub
 
     Private Sub rpt3_ediFORM2_6_pr_PageStart(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.PageStart
-        Me.CurrentPage.DrawLine(0.06, 4, 0.06, 7) '7.74
-        Me.CurrentPage.DrawLine(6.14, 4, 6.14, 7)
-        Me.CurrentPage.DrawLine(8.23, 4, 8.23, 7)
+        Me.CurrentPage.DrawLine(0.06, 4, 0.06, 7.67) '7.74
+        Me.CurrentPage.DrawLine(6.14, 4, 6.14, 7.67)
+        Me.CurrentPage.DrawLine(8.23, 4, 8.23, 7.67)
     End Sub
 
     Function FLine_SizeSetting(ByVal By_form As String, ByVal By_Headline As Single, ByVal By_FootLine As Single, ByVal By_TempLineX As Single) As Single

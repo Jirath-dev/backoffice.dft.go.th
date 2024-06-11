@@ -132,7 +132,9 @@ Module Module_CallBathEng
         If Check_Point(F_Mynumber) = True Then
             BahtOnly = Baht & Satang + " (" + Format(CDec(F_Mynumber), "#,##0.00##") + ") " + Myq_unit_code + "****"
         Else
-            BahtOnly = Baht + " (" + Format(CInt(F_Mynumber), "#,##0") + ") " + Myq_unit_code + "****"
+            ''ByTine 25-11-2558 แก้จาก CInt เป็น CLng เนื่องจากจำนวนมูลค่ามีเกิน 1 พันล้าน ใช้ CInt แล้ว Error
+            BahtOnly = Baht + " (" + Format(CLng(F_Mynumber), "#,##0") + ") " + Myq_unit_code + "****"
+            'BahtOnly = Baht + " (" + Format(CInt(F_Mynumber), "#,##0") + ") " + Myq_unit_code + "****"
             ' BahtOnly = Baht & Satang + " (" + Format(CInt(F_Mynumber), "#,##0.00") + ") " + Myq_unit_code + "****"
 
         End If
@@ -514,7 +516,6 @@ Module Module_CallBathEng
     End Function
 
     'issued date D, E, AJ , AANZ
-
     Public Function CheckIssuedDateAllForms(ByVal dateEdi As Date, ByVal Check_PrintDate As Date) As Boolean
 
         Dim returnCheckValue As Boolean = False
@@ -596,7 +597,7 @@ Module Module_CallBathEng
 
     End Function
 
-    'ByTine 28-10-2558 เพิ่มเติมฟอร์มไทย-ชิลี (TC) issued date ฟอร์ม ไทย-ชิลี เท่านั้นที่ไม่เหมือนฟอร์มอื่น ใช้เช็คมากกว่า 3 วัน
+    'ByTine 19-10-2558 เพิ่มเติมฟอร์มไทย-ชิลี (TC) issued date ฟอร์ม ไทย-ชิลี เท่านั้นที่ไม่เหมือนฟอร์มอื่น ใช้เช็คมากกว่า 3 วัน
     Public Function CheckIssuedDate_Forms_TC(ByVal dateEdi As Date, ByVal Check_PrintDate As Date) As Boolean
 
         Dim returnCheckValue As Boolean = False
@@ -637,6 +638,86 @@ Module Module_CallBathEng
 
     End Function
 
+    Public Function CheckIssuedDate_Forms_AHK(ByVal dateEdi As Date, ByVal Check_PrintDate As Date) As Boolean
+
+        Dim returnCheckValue As Boolean = False
+
+        Select Case Not IsDBNull(Check_PrintDate) 'check printFormDate
+
+            Case False '
+
+                Select Case WorkingDaysElapsed(dateEdi, Now)
+                    Case Is > 4
+                        returnCheckValue = True
+                    Case Else
+                        returnCheckValue = False
+                End Select
+            Case True '
+                Select Case WorkingDaysElapsed(dateEdi, Check_PrintDate)
+                    Case Is > 4
+                        returnCheckValue = True
+                    Case Else
+                        returnCheckValue = False
+                End Select
+
+        End Select
+
+        Return returnCheckValue
+
+    End Function
+    Public Function CheckIssuedDate_Forms_RCEP(ByVal dateEdi As Date, ByVal Check_PrintDate As Date) As Boolean
+
+        Dim returnCheckValue As Boolean = False
+
+        Select Case Not IsDBNull(Check_PrintDate) 'check printFormDate
+
+            Case False '
+
+                Select Case DateDiff("d", dateEdi, Now)
+
+                    Case Is >= 1
+
+                        returnCheckValue = True
+
+                    Case Else
+
+                        returnCheckValue = False
+
+                End Select
+
+            Case True '
+
+                Select Case DateDiff("d", dateEdi, Check_PrintDate)
+
+                    Case Is >= 1
+
+                        returnCheckValue = True
+
+                    Case Else
+
+                        returnCheckValue = False
+
+                End Select
+
+        End Select
+
+        Return returnCheckValue
+
+    End Function
+
+    Public Function WorkingDaysElapsed(StartDate As Date, EndDate As Date)
+        Dim count = 0
+        Dim totalDays = (EndDate - StartDate).Days
+
+        For i As Integer = 0 To totalDays
+            Dim weekday As DayOfWeek = StartDate.AddDays(i).DayOfWeek
+            If weekday <> DayOfWeek.Saturday AndAlso weekday <> DayOfWeek.Sunday Then
+                count += 1
+            End If
+        Next
+        Return count
+    End Function
+
 #Region "Seal Sign"
     'code get ค่า path report
     Public Function reports_CardID(ByVal _strCardID As String) As String
@@ -650,7 +731,7 @@ Module Module_CallBathEng
         Dim m_iReturnCheck As New DataSet
         Dim send_Check As String = ""
         'check
-        m_iReturnCheck = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_GetBy_AutoID_ImagesSign_NewDS2", _
+        m_iReturnCheck = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_GetBy_AutoID_ImagesSign_NewDS2",
                    New SqlParameter("@im_AutoID", _strCardID))
 
         If m_iReturnCheck.Tables(0).Rows.Count > 0 Then
@@ -673,7 +754,7 @@ Module Module_CallBathEng
         Dim dsFormImage As DataSet
         Dim strEDIConn As String = ConfigurationManager.ConnectionStrings("OriginConnection").ConnectionString
 
-        dsFormImage = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_Search_FormSign_image_NewDS2", _
+        dsFormImage = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_Search_FormSign_image_NewDS2",
                         New SqlParameter("@im_invh_run_auto", Func_runForm))
 
         Return dsFormImage
@@ -685,9 +766,9 @@ Module Module_CallBathEng
 
         Dim strEDIConn As String = ConfigurationManager.ConnectionStrings("OriginConnection").ConnectionString
         Dim sql As String = ""
-        sql = "SELECT     company_taxno, company_branchNo, card_id, commit_name, expire_date, password, active_flag, AuthName, AuthName_Thai,  AuthPersonID, card_type " & _
-"FROM         rfcard " & _
-"WHERE     (card_id = @card_id) AND (active_flag <> 'C')"
+        sql = "SELECT     company_taxno, company_branchNo, card_id, commit_name, expire_date, password, active_flag, AuthName, AuthName_Thai,  AuthPersonID, card_type " &
+"FROM         rfcard " &
+"WHERE     (card_id = @card_id) AND (active_flag in('C','Z'))"
         Dim prm(0) As SqlClient.SqlParameter
         prm(0) = New SqlClient.SqlParameter("@card_id", By_Cardid)
 
@@ -701,7 +782,7 @@ Module Module_CallBathEng
         Dim Temp_ As String = ""
         Dim strEDIConn As String = ConfigurationManager.ConnectionStrings("OriginConnection").ConnectionString
         Dim sql As String = ""
-        sql = "SELECT     * FROM         im_SignImages " & _
+        sql = "SELECT     * FROM         im_SignImages " &
 "WHERE     (im_Taxid = @im_Taxid) AND (im_AuthPersonID = @im_AuthPersonID) and (im_CheckStatus='1')"
 
         Dim prm(2) As SqlClient.SqlParameter
@@ -721,8 +802,8 @@ Module Module_CallBathEng
         Dim re_check As Boolean = False
         Dim strEDIConn As String = ConfigurationManager.ConnectionStrings("OriginConnection").ConnectionString
         Dim sql As String = ""
-        sql = "SELECT      im_invh_run_auto, SignImageID, SignImage_ApproveID, SignImage_ApproveName, im_create, im_update, im_form_type, im_CheckCaseSave " & _
-"FROM         FormSign_image " & _
+        sql = "SELECT      im_invh_run_auto, SignImageID, SignImage_ApproveID, SignImage_ApproveName, im_create, im_update, im_form_type, im_CheckCaseSave " &
+"FROM         FormSign_image " &
 "WHERE     (im_invh_run_auto = @im_invh_run_auto) AND (im_CheckCaseSave = '1')"
 
         Dim prm(0) As SqlClient.SqlParameter
@@ -739,21 +820,21 @@ Module Module_CallBathEng
     Public Function Req_IDSeal(ByVal By_inv As String) As String
         Dim re_id As String = ""
         Dim strEDIConn As String = ConfigurationManager.ConnectionStrings("OriginConnection").ConnectionString
-        Dim sql_ As String = ""
-        sql_ = "SELECT     * FROM         FormSign_image WHERE     (im_invh_run_auto = @im_invh_run_auto)"
+        Dim sql_ As String = "vi_GetBy_AutoID_ImagesSign_ESS"
+        ' sql_ = "SELECT     * FROM         FormSign_image WHERE     (im_invh_run_auto = @im_invh_run_auto)"
         Dim dsSeal As New DataSet
         Dim prmSeal(0) As SqlClient.SqlParameter
         prmSeal(0) = New SqlClient.SqlParameter("@im_invh_run_auto", By_inv)
 
-        dsSeal = SqlHelper.ExecuteDataset(strEDIConn, CommandType.Text, sql_, prmSeal)
+        dsSeal = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, sql_, prmSeal)
 
         If dsSeal.Tables(0).Rows.Count > 0 Then
-            Dim str_temp As String = dsSeal.Tables(0).Rows(0).Item("SignImageID")
+            Dim str_temp As String = dsSeal.Tables(0).Rows(0).Item("im_AutoID")
             If str_temp <> "" Then
-                Dim arr_ As Array
-                arr_ = str_temp.Split(";")
-
-                re_id = arr_(0).ToString
+                'Dim arr_ As Array
+                'arr_ = str_temp.Split(";")
+                re_id = str_temp
+                're_id = arr_(0).ToString
             End If
         End If
 
@@ -782,7 +863,8 @@ Module Module_CallBathEng
 
         If m_iReturnCheck.Tables(0).Rows.Count > 0 Then
             With m_iReturnCheck.Tables(0).Rows(0)
-                send_Check = PathSiteAll_pageMainBack & "\" & PathSiteAll_page & .Item("SiteUser") & "\" & .Item("UserNameTemp") & "\" & .Item("UserName") & .Item("FileStr") & IIf(CInt(.Item("FileNum")) = 1, "", .Item("FileNum")) & .Item("FileNameGov")
+                'send_Check = PathSiteAll_pageMainBack & "\" & PathSiteAll_page & .Item("SiteUser") & "\" & .Item("UserNameTemp") & "\" & .Item("UserName") & .Item("FileStr") & IIf(CInt(.Item("FileNum")) = 1, "", .Item("FileNum")) & .Item("FileNameGov")
+                send_Check = PathSiteAll_pageMainBack & PathSiteAll_page & .Item("SiteUser") & "\" & .Item("UserNameTemp") & "\" & .Item("UserName") & .Item("FileStr") & IIf(CInt(.Item("FileNum")) = 1, "", .Item("FileNum")) & .Item("FileNameGov")
 
             End With
         Else
@@ -793,33 +875,100 @@ Module Module_CallBathEng
 
     'get string ชื่อ ตามสาขา
     Function String_SiteNameReport01(ByVal By_Site As String) As String
+        Dim strEDIConn As String = ConfigurationManager.ConnectionStrings("OriginConnection").ConnectionString
         Dim str_txt As String = ""
-        Select Case By_Site.ToUpper
-            Case "ST-001" 'ส่วนกลาง สนามบินน้ำ
-                str_txt = "BANGkok"
-            Case "ST-002" 'คลองเตย
-                str_txt = "BANGKOK PORT"
-            Case "ST-003" 'สุวรรณภูมิ
-                str_txt = "SUVARNABHUM" '& vbNewLine & "AIRPORT"
-            Case "ST-004" 'สอ
-                str_txt = "BANGKOK"
-            Case "CB-003" 'ชลบุรี
-                str_txt = "Chonburi"
-            Case "CM-001" 'สคต.เขต1 (เชียงใหม่)
-                str_txt = "Chiang Mai"
-            Case "CR-006" 'สคต.เขต6 (เชียงราย)
-                str_txt = "Chiangrai"
-        End Select
+        'Select Case By_Site.ToUpper
+        '    Case "ST-001" 'ส่วนกลาง สนามบินน้ำ
+        '        str_txt = "BANGkok"
+        '    Case "ST-002" 'คลองเตย
+        '        str_txt = "BANGKOK PORT"
+        '    Case "ST-003" 'สุวรรณภูมิ
+        '        str_txt = "SUVARNABHUMI" '& vbNewLine & "AIRPORT"
+        '    Case "ST-004" 'สอ
+        '        str_txt = "BANGKOK"
+        '    Case "CB-003" 'ชลบุรี
+        '        str_txt = "Chonburi"
+        '    Case "CM-001" 'สคต.เขต1 (เชียงใหม่)
+        '        str_txt = "Chiang Mai"
+        '    Case "CR-006" 'สคต.เขต6 (เชียงราย)
+        '        str_txt = "Chiangrai"
+        '    Case "MH-009"  'สคต มุกดาหาร'
+        '        str_txt = "Mukdahan"
+        '    Case "SK-004"  'สคต สระแก้ว'
+        '        str_txt = "Srakaeo"
+        '    Case "TK-008"  'สคต ตาก'
+        '        str_txt = "Tak"
+        '    Case "NK-005"  'สคต หนองคาย'
+        '        str_txt = "Nong Khai"
+        '    Case "HY-002"  'สคต สงขลา'
+        '        str_txt = "Songkhla"
+
+        'End Select
+
+        Dim cmd As String = "SP_GetPortName_ESS"
+        Dim ds As New DataSet
+        ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, cmd, New SqlParameter("@siteid", By_Site.ToUpper))
+        If ds.Tables(0).Rows.Count > 0 Then
+            str_txt = ds.Tables(0).Rows(0).Item("port_name")
+        End If
+
+        Return str_txt
+    End Function
+    'get string ชื่อ ตามสาขา(EDIT)
+    Function String_SiteNameReport03(ByVal By_Site As String) As String
+        Dim strEDIConn As String = ConfigurationManager.ConnectionStrings("OriginConnection").ConnectionString
+        Dim str_txt As String = ""
+        'Select Case By_Site.ToUpper
+        '    Case "ST-001" 'ส่วนกลาง สนามบินน้ำ
+        '        str_txt = "BANGkok"
+        '    Case "ST-002" 'คลองเตย
+        '        str_txt = "BANGKOK PORT"
+        '    Case "ST-003" 'สุวรรณภูมิ
+        '        str_txt = "SUVARNABHUMI" '& vbNewLine & "AIRPORT"
+        '    Case "ST-004" 'สอ
+        '        str_txt = "BANGKOK"
+        '    Case "CB-003" 'ชลบุรี
+        '        str_txt = "Chonburi"
+        '    Case "CM-001" 'สคต.เขต1 (เชียงใหม่)
+        '        str_txt = "Chiang Mai"
+        '    Case "CR-006" 'สคต.เขต6 (เชียงราย)
+        '        str_txt = "Chiangrai"
+        '    Case "MH-009"  'สคต มุกดาหาร'
+        '        str_txt = "Mukdahan"
+        '    Case "SK-004"  'สคต สระแก้ว'
+        '        str_txt = "Srakaeo"
+        '    Case "TK-008"  'สคต ตาก'
+        '        str_txt = "Tak"
+        '    Case "NK-005"  'สคต หนองคาย'
+        '        str_txt = "Nong Khai"
+        '    Case "HY-002"  'สคต สงขลา'
+        '        str_txt = "Songkhla"
+
+        'End Select
+
+        Dim cmd As String = "SP_GetPortName_ESS"
+        Dim ds As New DataSet
+        ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, cmd, New SqlParameter("@siteid", By_Site.ToUpper))
+        If ds.Tables(0).Rows.Count > 0 Then
+            str_txt = ds.Tables(0).Rows(0).Item("port_name3")
+        End If
 
         Return str_txt
     End Function
     'get string ชื่อ ตามสาขา
     Function String_SiteNameReport02(ByVal By_Site As String) As String
+        Dim strEDIConn As String = ConfigurationManager.ConnectionStrings("OriginConnection").ConnectionString
         Dim str_txt As String = ""
-        Select Case By_Site.ToUpper
-            Case "ST-003" 'สุวรรณภูมิ
-                str_txt = "AIRPORT"
-        End Select
+        'Select Case By_Site.ToUpper
+        '    Case "ST-003" 'สุวรรณภูมิ
+        '        str_txt = "AIRPORT"
+        'End Select
+        Dim cmd As String = "SP_GetPortName_ESS"
+        Dim ds As New DataSet
+        ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, cmd, New SqlParameter("@siteid", By_Site.ToUpper))
+        If ds.Tables(0).Rows.Count > 0 Then
+            str_txt = ds.Tables(0).Rows(0).Item("port_name2")
+        End If
 
         Return str_txt
     End Function
@@ -832,7 +981,7 @@ Module Module_CallBathEng
 
         date_tempStr = IIf(D_str.Length = 1, "-" & D_str, D_str) & " " & MonthName(CInt(M_str), True) & " " & Year(CDate(Y_str))
 
-        Return date_tempStr
+        Return date_tempStr.ToUpper
     End Function
     'get string วันที่ตามตราครุฑ สำหรับ reprint
     Function String_DateSiteReport_Reprint(ByVal By_datePrintSelect As String, ByVal By_datePrintApprove As Object, ByVal By_caseReprint As Boolean) As String
@@ -855,7 +1004,7 @@ Module Module_CallBathEng
 
         End Select
 
-        Return date_tempStr
+        Return date_tempStr.ToUpper
     End Function
     'หาเลข บัตรประชาชน
     Public Function Req_CheckIDSealSign_perID(ByVal By_perID As String) As String
@@ -863,7 +1012,7 @@ Module Module_CallBathEng
         Dim strEDIConn As String = ConfigurationManager.ConnectionStrings("OriginConnection").ConnectionString
         Dim dsSeal As New DataSet
 
-        dsSeal = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_GetBy_AutoID_ImagesSign_NewDS2", _
+        dsSeal = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_GetBy_AutoID_ImagesSign_NewDS2",
                            New SqlParameter("@im_AutoID", By_perID))
 
         If dsSeal.Tables(0).Rows.Count > 0 Then
@@ -879,9 +1028,9 @@ Module Module_CallBathEng
     'check รายการถ้าไม่มีเลยไม่ต้องเข้า case
     Public Function CheckListDetail_ALL(ByVal By_invh_run_auto As String) As Boolean
         Dim strEDIConn As String = ConfigurationManager.ConnectionStrings("OriginConnection").ConnectionString
-        Dim SQL As String = "SELECT        TOP (1) invh_run_auto, invd_run_auto, gross_weight, unit_code3 " & _
-"FROM            form_detail_edi " & _
-"WHERE        (invh_run_auto = @invh_run_auto) " & _
+        Dim SQL As String = "SELECT        TOP (1) invh_run_auto, invd_run_auto, gross_weight, unit_code3 " &
+"FROM            form_detail_edi " &
+"WHERE        (invh_run_auto = @invh_run_auto) " &
 "ORDER BY invh_run_auto"
 
         Dim temp_ As String = False
@@ -899,10 +1048,10 @@ Module Module_CallBathEng
     'code check detail หน่วย
     Public Function CheckUnitDetail(ByVal By_invh_run_auto As String, Optional ByVal By_unit As String = "") As String
         Dim strEDIConn As String = ConfigurationManager.ConnectionStrings("OriginConnection").ConnectionString
-        Dim SQL As String = "SELECT        TOP (1) invh_run_auto, invd_run_auto, gross_weight, unit_code3 " & _
-"FROM            form_detail_edi " & _
-"WHERE        (invh_run_auto = @invh_run_auto) " & _
-"ORDER BY invh_run_auto"
+        Dim SQL As String = "SELECT        TOP (1) invh_run_auto, invd_run_auto, gross_weight, unit_code3 " &
+                            "FROM            form_detail_edi " &
+                            "WHERE        (invh_run_auto = @invh_run_auto) " &
+                            "ORDER BY invh_run_auto"
 
         Dim temp_ As String = ""
 
@@ -922,12 +1071,42 @@ Module Module_CallBathEng
 
         Return temp_
     End Function
+
+    Public Function CheckUnitDetail_ASW(ByVal By_invh_run_auto As String, Optional ByVal By_unit As String = "") As String
+        Dim strEDIConn As String = ConfigurationManager.ConnectionStrings("OriginConnection").ConnectionString
+        Dim SQL As String = "sp_asw_get_form_unitcode"
+
+        Dim temp_ As String = ""
+
+        Dim prm As SqlClient.SqlParameter = New SqlClient.SqlParameter("@invh_run_auto", By_invh_run_auto)
+        Dim ds As DataSet
+        ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, SQL, prm)
+
+        If ds.Tables(0).Rows.Count > 0 Then
+            If By_unit <> "" Then
+                temp_ = By_unit
+            Else
+                If Not ds.Tables(0).Rows(0).Item("unit_code3").Equals(System.DBNull.Value) Then
+                    temp_ = ds.Tables(0).Rows(0).Item("unit_code3")
+                Else
+                    temp_ = "KILOGRAM"
+                End If
+                ' temp_ = checkUnit(ds.Tables(0).Rows(0).Item("unit_code3"))
+                ' temp_ = ds.Tables(0).Rows(0).Item("unit_code3")
+            End If
+        Else
+            temp_ = By_unit
+        End If
+
+        Return temp_
+    End Function
+
     Public Function CheckListIN_Detail(ByVal By_invh_run_auto As String, ByVal By_AutoDetail As String) As Boolean
         Dim strEDIConn As String = ConfigurationManager.ConnectionStrings("OriginConnection").ConnectionString
-        Dim SQL As String = "SELECT        TOP (1) invh_run_auto, invd_run_auto, gross_weight, unit_code3 " & _
-"FROM            form_detail_edi " & _
-"WHERE        (invh_run_auto = @invh_run_auto) " & _
-"ORDER BY invh_run_auto"
+        Dim SQL As String = "SELECT TOP (1) invh_run_auto, invd_run_auto, gross_weight, unit_code3 " &
+            "FROM            form_detail_edi " &
+            "WHERE        (invh_run_auto = @invh_run_auto) " &
+            "ORDER BY invh_run_auto"
 
         Dim temp_ As String = False
 
@@ -969,16 +1148,22 @@ Module Module_CallBathEng
             Next
             Select Case By_form.ToUpper
                 '"FORM4", "FORM4_1", "FORM44", "FORM441", "FORM44_4", "FORM44_44", "FORM441_4"
-                Case "FORM44_4", "FORM44_44", "FORM44_41", "FORM441_4"
+                Case "FORM44_4", "FORM44_44", "FORM44_41", "FORM441_4", "FORMD_ESS_", "FORMAHK", "FORMD_ESS", "FORMD_ESS_ATTS"
                     Check_Count = Check_Count.Replace("2", "")
                     Check_Count = Check_Count.Replace("8", "")
                 Case "FORM4_8" 'เนื่องจากเงื่อนไข rvc ไม่เหมือนกัน
                     Check_Count = Check_Count.Replace("3", "")
                 Case "FORM4_911" 'เนื่องจากเงื่อนไข rvc ไม่เหมือนกัน
                     Check_Count = Check_Count.Replace("4", "")
+                Case "FORM4_2" 'สำหรับฟอร์ม E
+                    Check_Count = ""
+                Case "FORME_01", "FORME_ESS" 'สำหรับฟอร์ม E ใหม่
+                    Check_Count = Check_Count.Replace("3", "")
+                    Check_Count = Check_Count.Replace("6", "")
+                    Check_Count = Check_Count.Replace("7", "")
+                Case "FORMRCEP"
+                    Check_Count = Check_Count.Replace("10", "")
             End Select
-            'Check_Count = Check_Count.Replace("2", "")
-            'Check_Count = Check_Count.Replace("8", "")
 
             Select Case Check_Count
                 Case ""
@@ -1001,70 +1186,290 @@ Module Module_CallBathEng
         Return temp_str
     End Function
 
-    Public Function String_Total_USDOnly_New(ByVal By_Currency_Code As String, ByVal By_TFOB As String, ByVal By_third As String, ByVal By_usdThird As Decimal, ByVal By_UsdOther As Decimal) As String
+    'Public Function String_Total_USDOnly_New(ByVal By_Currency_Code As String, ByVal By_TFOB As String, ByVal By_third As String, ByVal By_usdThird As Decimal, ByVal By_UsdOther As Decimal) As String
+    '    Dim temp_str As String = ""
+
+    '    Select Case Mid(By_third, 1, 1)
+    '        Case "1" 'use third
+    '            Select Case By_Currency_Code
+    '                Case Is <> "USD"
+    '                    temp_str = "TOTAL: " & BahtOnly(Format(By_UsdOther, "#,##0.00##"), "USD") & vbNewLine
+    '                    'temp_str = "TOTAL: " & BahtOnly(By_UsdOther, By_Currency_Code) & vbNewLine
+    '                Case Else
+    '                    temp_str = "TOTAL: " & BahtOnly(Format(By_usdThird, "#,##0.00##"), By_Currency_Code) & vbNewLine
+    '            End Select
+    '        Case Else 'not third
+    '            Select Case By_Currency_Code
+    '                Case Is <> "USD" 'กรณีใช้สกุลเงินอื่น แต่ต้องเอาค่าจาก usd หลักและหน่วยต้องเป็น USD เท่านั้น ไม่เอาหน่วยจาก Currency_Code
+    '                    temp_str = "TOTAL: " & BahtOnly(By_TFOB, "USD") & vbNewLine
+    '                Case Else
+    '                    temp_str = "TOTAL: " & BahtOnly(By_TFOB, By_Currency_Code) & vbNewLine
+    '            End Select
+
+    '    End Select
+
+    '    Return temp_str
+    'End Function
+
+    'Public Function String_Total_USDOnly_New_Attach(ByVal By_Currency_Code As String, ByVal By_TFOB As String, ByVal By_third As String, ByVal By_usdThird As Decimal, ByVal By_UsdOther As Decimal, ByVal By_grossTotal As Decimal, ByVal By_G_uniGross As String) As String
+    '    Dim temp_str As String = ""
+    '    Dim temp_Gross As String = ""
+    '    Dim temp_ReturnAll As String = ""
+    '    'เพิ่ม Gross weight ให้แสดง Total รวมด้วย TOTAL G.W.:
+    '    temp_Gross = "TOTAL G.W.: " & BahtOnly(Format(By_grossTotal, "#,##0.00##"), By_G_uniGross) & vbNewLine
+    '    Select Case Mid(By_third, 1, 1)
+    '        Case "1" 'use third
+    '            Select Case By_Currency_Code
+    '                Case Is <> "USD"
+    '                    temp_str = "TOTAL: " & BahtOnly(Format(By_UsdOther, "#,##0.00##"), "USD") & vbNewLine
+    '                    'temp_str = "TOTAL: " & BahtOnly(By_UsdOther, By_Currency_Code) & vbNewLine
+    '                Case Else
+    '                    temp_str = "TOTAL: " & BahtOnly(Format(By_usdThird, "#,##0.00##"), By_Currency_Code) & vbNewLine
+    '            End Select
+    '        Case Else 'not third
+    '            Select Case By_Currency_Code
+    '                Case Is <> "USD" 'กรณีใช้สกุลเงินอื่น แต่ต้องเอาค่าจาก usd หลักและหน่วยต้องเป็น USD เท่านั้น ไม่เอาหน่วยจาก Currency_Code
+    '                    temp_str = "TOTAL: " & BahtOnly(By_TFOB, "USD") & vbNewLine
+    '                Case Else
+    '                    temp_str = "TOTAL: " & BahtOnly(By_TFOB, By_Currency_Code) & vbNewLine
+    '            End Select
+
+    '    End Select
+    '    temp_ReturnAll = temp_Gross & temp_str
+    '    Return temp_ReturnAll
+    'End Function
+
+    Public Function String_Total_USDOnly_New(ByVal By_CaseDisplayUSD7 As String, ByVal By_Currency_Code As String, ByVal By_TFOB As String, ByVal By_third As String, ByVal By_usdThird As Decimal, ByVal By_UsdOther As Decimal) As String
         Dim temp_str As String = ""
+        Select Case By_CaseDisplayUSD7
+            Case Is <> "1" 'แสดงมูลค่าที่ช่องที่ 7
+                Select Case Mid(By_third, 1, 1)
+                    Case "1" 'use third
+                        Select Case By_Currency_Code
+                            Case Is <> "USD"
+                                temp_str = "TOTAL: " & BahtOnly(Format(By_UsdOther, "#,##0.00##"), "USD") & vbNewLine
+                                'temp_str = "TOTAL: " & BahtOnly(Format(By_UsdOther, "#,##0.00##"), "USD") & vbNewLine & "        "
+                                'temp_str = "TOTAL: " & BahtOnly(By_UsdOther, By_Currency_Code) & vbNewLine
+                            Case Else
+                                temp_str = "TOTAL: " & BahtOnly(Format(By_usdThird, "#,##0.00##"), By_Currency_Code) & vbNewLine
+                                'temp_str = "TOTAL: " & BahtOnly(Format(By_usdThird, "#,##0.00##"), By_Currency_Code) & vbNewLine & "        "
+                        End Select
+                    Case Else 'not third
+                        Select Case By_Currency_Code
+                            Case Is <> "USD" 'กรณีใช้สกุลเงินอื่น แต่ต้องเอาค่าจาก usd หลักและหน่วยต้องเป็น USD เท่านั้น ไม่เอาหน่วยจาก Currency_Code
+                                temp_str = "TOTAL: " & BahtOnly(By_TFOB, "USD") & vbNewLine
+                                'temp_str = "TOTAL: " & BahtOnly(By_TFOB, "USD") & vbNewLine & "        "
+                            Case Else
+                                temp_str = "TOTAL: " & BahtOnly(By_TFOB, By_Currency_Code) & vbNewLine
+                                'temp_str = "TOTAL: " & BahtOnly(By_TFOB, By_Currency_Code) & vbNewLine & "        "
+                        End Select
 
-        Select Case Mid(By_third, 1, 1)
-            Case "1" 'use third
-                Select Case By_Currency_Code
-                    Case Is <> "USD"
-                        temp_str = "TOTAL: " & BahtOnly(Format(By_UsdOther, "#,##0.00##"), "USD") & vbNewLine
-                        'temp_str = "TOTAL: " & BahtOnly(By_UsdOther, By_Currency_Code) & vbNewLine
-                    Case Else
-                        temp_str = "TOTAL: " & BahtOnly(Format(By_usdThird, "#,##0.00##"), By_Currency_Code) & vbNewLine
-                End Select
-            Case Else 'not third
-                Select Case By_Currency_Code
-                    Case Is <> "USD" 'กรณีใช้สกุลเงินอื่น แต่ต้องเอาค่าจาก usd หลักและหน่วยต้องเป็น USD เท่านั้น ไม่เอาหน่วยจาก Currency_Code
-                        temp_str = "TOTAL: " & BahtOnly(By_TFOB, "USD") & vbNewLine
-                    Case Else
-                        temp_str = "TOTAL: " & BahtOnly(By_TFOB, By_Currency_Code) & vbNewLine
-                End Select
 
+                End Select
         End Select
 
         Return temp_str
     End Function
 
-    Public Function String_Total_USDOnly_New_Attach(ByVal By_Currency_Code As String, ByVal By_TFOB As String, ByVal By_third As String, ByVal By_usdThird As Decimal, ByVal By_UsdOther As Decimal, ByVal By_grossTotal As Decimal, ByVal By_G_uniGross As String) As String
+    Public Function String_Total_USDOnly_New_Attach(ByVal By_CaseDisplayUSD7 As String, ByVal By_Currency_Code As String, ByVal By_TFOB As String, ByVal By_third As String, ByVal By_usdThird As Decimal, ByVal By_UsdOther As Decimal, ByVal By_grossTotal As Decimal, ByVal By_G_uniGross As String, Optional ByVal By_invh_run_auto As String = "") As String
         Dim temp_str As String = ""
         Dim temp_Gross As String = ""
         Dim temp_ReturnAll As String = ""
         'เพิ่ม Gross weight ให้แสดง Total รวมด้วย TOTAL G.W.:
-        temp_Gross = "TOTAL G.W.: " & BahtOnly(Format(By_grossTotal, "#,##0.00##"), By_G_uniGross) & vbNewLine
-        Select Case Mid(By_third, 1, 1)
-            Case "1" 'use third
-                Select Case By_Currency_Code
-                    Case Is <> "USD"
-                        temp_str = "TOTAL: " & BahtOnly(Format(By_UsdOther, "#,##0.00##"), "USD") & vbNewLine
-                        'temp_str = "TOTAL: " & BahtOnly(By_UsdOther, By_Currency_Code) & vbNewLine
-                    Case Else
-                        temp_str = "TOTAL: " & BahtOnly(Format(By_usdThird, "#,##0.00##"), By_Currency_Code) & vbNewLine
-                End Select
-            Case Else 'not third
-                Select Case By_Currency_Code
-                    Case Is <> "USD" 'กรณีใช้สกุลเงินอื่น แต่ต้องเอาค่าจาก usd หลักและหน่วยต้องเป็น USD เท่านั้น ไม่เอาหน่วยจาก Currency_Code
-                        temp_str = "TOTAL: " & BahtOnly(By_TFOB, "USD") & vbNewLine
-                    Case Else
-                        temp_str = "TOTAL: " & BahtOnly(By_TFOB, By_Currency_Code) & vbNewLine
-                End Select
+        'เฉพาะ D att 
+        If By_invh_run_auto <> "" Then
+            Select Case CheckUnitDetail(By_invh_run_auto).ToLower
+                Case "KGM", "KGS", "kgm", "kgs"
+                    temp_Gross = "TOTAL G.W.: " & BahtOnly(Format(By_grossTotal, "#,##0.00##"), By_G_uniGross) & vbNewLine
+                    'temp_Gross = "TOTAL : " & BahtOnly(Format(By_grossTotal, "#,##0.00##"), By_G_uniGross) & vbNewLine
+                Case Else
+                    temp_Gross = "TOTAL : " & BahtOnly(Format(By_grossTotal, "#,##0.00##"), By_G_uniGross) & vbNewLine
+                    'temp_Gross = "TOTAL G.W.: " & BahtOnly(Format(By_grossTotal, "#,##0.00##"), By_G_uniGross) & vbNewLine
+            End Select
+        Else
+            temp_Gross = "TOTAL G.W.: " & BahtOnly(Format(By_grossTotal, "#,##0.00##"), By_G_uniGross) & vbNewLine
+        End If
 
+        '        temp_Gross = "TOTAL G.W.: " & BahtOnly(Format(By_grossTotal, "#,##0.00##"), By_G_uniGross) & vbNewLine
+        Select Case By_CaseDisplayUSD7
+            Case Is <> "1" 'แสดงมูลค่าที่ช่องที่ 7
+                Select Case Mid(By_third, 1, 1)
+                    Case "1" 'use third
+                        Select Case By_Currency_Code
+                            Case Is <> "USD"
+                                temp_str = "TOTAL: " & BahtOnly(Format(By_UsdOther, "#,##0.00##"), "USD") & vbNewLine
+                                'temp_str = "TOTAL: " & BahtOnly(By_UsdOther, By_Currency_Code) & vbNewLine
+                            Case Else
+                                temp_str = "TOTAL: " & BahtOnly(Format(By_usdThird, "#,##0.00##"), By_Currency_Code) & vbNewLine
+                        End Select
+                    Case Else 'not third
+                        Select Case By_Currency_Code
+                            Case Is <> "USD" 'กรณีใช้สกุลเงินอื่น แต่ต้องเอาค่าจาก usd หลักและหน่วยต้องเป็น USD เท่านั้น ไม่เอาหน่วยจาก Currency_Code
+                                temp_str = "TOTAL: " & BahtOnly(By_TFOB, "USD") & vbNewLine
+                            Case Else
+                                temp_str = "TOTAL: " & BahtOnly(By_TFOB, By_Currency_Code) & vbNewLine
+                        End Select
+
+                End Select
         End Select
+
         temp_ReturnAll = temp_Gross & temp_str
         Return temp_ReturnAll
     End Function
+
+    Public Function String_Total_USDOnly_New_ForAgent(ByVal By_CaseDisplayUSD7 As String, ByVal By_Currency_Code As String, ByVal By_TFOB As String, ByVal By_third As String, ByVal By_usdThird As Decimal, ByVal By_UsdOther As Decimal, ByVal Isagent As Boolean, ByVal By_Usdagent As Decimal, ByVal InvAgentType As String) As String
+        Dim temp_str As String = ""
+        Select Case By_CaseDisplayUSD7
+            Case Is <> "1" 'แสดงมูลค่าที่ช่องที่ 7
+                Select Case Mid(By_third, 1, 1)
+                    Case "1" 'use third
+                        Select Case By_Currency_Code
+                            Case Is <> "USD"
+                                temp_str = "TOTAL: " & BahtOnly(Format(By_UsdOther, "#,##0.00##"), "USD") & vbNewLine
+                            Case Else
+                                temp_str = "TOTAL: " & BahtOnly(Format(By_usdThird, "#,##0.00##"), By_Currency_Code) & vbNewLine
+                        End Select
+                    Case Else 'not third
+                        ''Inv นายหน้า
+                        If Isagent = True Then
+                            Select Case By_Currency_Code
+                                Case Is <> "USD"
+                                    '' ไม่เท่ากับ USD = ใช้สกุลเงินอื่นๆ
+                                    If InvAgentType = 0 Then
+                                        ''0 = แสดงมูลค่า Inv นายหน้า
+                                        temp_str = "TOTAL: " & BahtOnly(Format(By_Usdagent, "#,##0.00##"), By_Currency_Code) & vbNewLine
+                                    Else
+                                        temp_str = "TOTAL: " & BahtOnly(Format(By_UsdOther, "#,##0.00##"), By_Currency_Code) & vbNewLine
+                                        'temp_str = "TOTAL: " & BahtOnly(Format(By_UsdOther, "#,##0.00##"), "USD") & vbNewLine
+                                    End If
+                                Case Else
+                                    '' ใช้สกุลเงิน USD
+                                    If InvAgentType = 0 Then
+                                        ''0 = แสดงมูลค่า Inv นายหน้า
+                                        temp_str = "TOTAL: " & BahtOnly(Format(By_Usdagent, "#,##0.00##"), By_Currency_Code) & vbNewLine
+                                    Else
+                                        temp_str = "TOTAL: " & BahtOnly(By_TFOB, "USD") & vbNewLine
+                                    End If
+                            End Select
+                        Else
+                            Select Case By_Currency_Code
+                                Case Is <> "USD" 'กรณีใช้สกุลเงินอื่น แต่ต้องเอาค่าจาก usd หลักและหน่วยต้องเป็น USD เท่านั้น ไม่เอาหน่วยจาก Currency_Code
+                                    temp_str = "TOTAL: " & BahtOnly(By_TFOB, "USD") & vbNewLine
+                                Case Else
+                                    temp_str = "TOTAL: " & BahtOnly(By_TFOB, By_Currency_Code) & vbNewLine
+                            End Select
+                        End If
+                End Select
+        End Select
+
+        Return temp_str
+    End Function
+
+    Public Function String_Total_USDOnly_New_FORME(ByVal By_CaseDisplayUSD7 As String, ByVal By_Currency_Code As String, ByVal By_TFOB As String, ByVal By_third As String, ByVal By_usdThird As Decimal, ByVal By_UsdOther As Decimal) As String
+        Dim temp_str As String = ""
+        Dim temp_value As Decimal = 0
+        temp_value = By_TFOB
+        If By_CaseDisplayUSD7 <> "1" Then
+            Select Case Mid(By_third, 1, 1)
+                Case "1" 'use third
+                    temp_value = By_usdThird
+                Case Else 'not third
+                    temp_value = By_TFOB
+
+            End Select
+
+            Dim temp_data As String = temp_value.ToString("N2")
+
+            '//temp_str = "TOTAL: " & BahtOnly(temp_value, By_Currency_Code)
+            temp_str = "TOTAL: " & BahtOnly(temp_data, "USD") '//& vbCrLf
+        End If
+
+        If temp_str <> "" Then
+            temp_str &= vbCrLf
+        End If
+
+        Return temp_str
+    End Function
+
+    Public Function String_Total_USDOnly_New_Attach_ForAgent(ByVal By_CaseDisplayUSD7 As String, ByVal By_Currency_Code As String, ByVal By_TFOB As String, ByVal By_third As String, ByVal By_usdThird As Decimal, ByVal By_UsdOther As Decimal, ByVal By_grossTotal As Decimal, ByVal By_G_uniGross As String, ByVal Isagent As Boolean, ByVal By_Usdagent As Decimal, ByVal InvAgentType As String, Optional ByVal By_invh_run_auto As String = "") As String
+        Dim temp_str As String = ""
+        Dim temp_Gross As String = ""
+        Dim temp_ReturnAll As String = ""
+        'เพิ่ม Gross weight ให้แสดง Total รวมด้วย TOTAL G.W.:
+        'เฉพาะ D att 
+        If By_invh_run_auto <> "" Then
+            Select Case CheckUnitDetail(By_invh_run_auto).ToLower
+                Case "KGM", "KGS", "kgm", "kgs"
+                    temp_Gross = "TOTAL G.W.: " & BahtOnly(Format(By_grossTotal, "#,##0.00##"), By_G_uniGross) & vbNewLine
+                    'temp_Gross = "TOTAL : " & BahtOnly(Format(By_grossTotal, "#,##0.00##"), By_G_uniGross) & vbNewLine
+                Case Else
+                    temp_Gross = "TOTAL : " & BahtOnly(Format(By_grossTotal, "#,##0.00##"), By_G_uniGross) & vbNewLine
+                    'temp_Gross = "TOTAL G.W.: " & BahtOnly(Format(By_grossTotal, "#,##0.00##"), By_G_uniGross) & vbNewLine
+            End Select
+        Else
+            temp_Gross = "TOTAL G.W.: " & BahtOnly(Format(By_grossTotal, "#,##0.00##"), By_G_uniGross) & vbNewLine
+        End If
+
+        '        temp_Gross = "TOTAL G.W.: " & BahtOnly(Format(By_grossTotal, "#,##0.00##"), By_G_uniGross) & vbNewLine
+        Select Case By_CaseDisplayUSD7
+            Case Is <> "1" 'แสดงมูลค่าที่ช่องที่ 7
+                Select Case Mid(By_third, 1, 1)
+                    Case "1" 'use third
+                        Select Case By_Currency_Code
+                            Case Is <> "USD"
+                                temp_str = "TOTAL: " & BahtOnly(Format(By_UsdOther, "#,##0.00##"), "USD") & vbNewLine
+                                'temp_str = "TOTAL: " & BahtOnly(By_UsdOther, By_Currency_Code) & vbNewLine
+                            Case Else
+                                temp_str = "TOTAL: " & BahtOnly(Format(By_usdThird, "#,##0.00##"), By_Currency_Code) & vbNewLine
+                        End Select
+                    Case Else 'not third
+                        ''Inv นายหน้า
+                        If Isagent = True Then
+                            Select Case By_Currency_Code
+                                Case Is <> "USD" 'กรณีใช้สกุลเงินอื่น แต่ต้องเอาค่าจาก usd หลักและหน่วยต้องเป็น USD เท่านั้น ไม่เอาหน่วยจาก Currency_Code
+                                    '' ไม่เท่ากับ USD = ใช้สกุลเงินอื่นๆ
+                                    If InvAgentType = 0 Then
+                                        ''0 = แสดงมูลค่า Inv นายหน้า
+                                        temp_str = "TOTAL: " & BahtOnly(By_Usdagent, By_Currency_Code) & vbNewLine
+                                    Else
+                                        temp_str = "TOTAL: " & BahtOnly(By_UsdOther, "USD") & vbNewLine
+                                    End If
+                                Case Else
+                                    '' ใช้สกุลเงิน USD
+                                    If InvAgentType = 0 Then
+                                        temp_str = "TOTAL: " & BahtOnly(By_Usdagent, By_Currency_Code) & vbNewLine
+                                    Else
+                                        temp_str = "TOTAL: " & BahtOnly(By_TFOB, "USD") & vbNewLine
+                                    End If
+                            End Select
+                        Else
+                            ''ไม่ใช่ Inv นายหน้า
+                            Select Case By_Currency_Code
+                                Case Is <> "USD" 'กรณีใช้สกุลเงินอื่น แต่ต้องเอาค่าจาก usd หลักและหน่วยต้องเป็น USD เท่านั้น ไม่เอาหน่วยจาก Currency_Code
+                                    temp_str = "TOTAL: " & BahtOnly(By_TFOB, "USD") & vbNewLine
+                                Case Else
+                                    temp_str = "TOTAL: " & BahtOnly(By_TFOB, By_Currency_Code) & vbNewLine
+                            End Select
+                        End If
+                End Select
+        End Select
+
+        temp_ReturnAll = temp_Gross & temp_str
+        Return temp_ReturnAll
+    End Function
+
 #End Region
 #End Region
 
 #Region "Check Form4_8 เก่าหรือไม่"
     Public Function Check_Form4_8(ByVal By_invh_run_auto As String) As Boolean
         Dim strEDIConn As String = ConfigurationManager.ConnectionStrings("OriginConnection").ConnectionString
-        Dim SQLForm4_8 As String = "SELECT        dbo.form_header_edi.invh_run_auto, dbo.form_header_edi.company_taxno, dbo.form_header_edi.form_type, dbo.form_header_edi.edi_status_id, " & _
-"                         dbo.form_header_edi.SentBy, dbo.form_detail_edi.CheckGrossDetail " & _
-"FROM            dbo.form_header_edi INNER JOIN " & _
-"                         dbo.form_detail_edi ON dbo.form_header_edi.invh_run_auto = dbo.form_detail_edi.invh_run_auto " & _
-"GROUP BY dbo.form_header_edi.invh_run_auto, dbo.form_header_edi.company_taxno, dbo.form_header_edi.form_type, dbo.form_header_edi.edi_status_id, " & _
-"                         dbo.form_header_edi.SentBy, dbo.form_detail_edi.CheckGrossDetail " & _
+        Dim SQLForm4_8 As String = "SELECT        dbo.form_header_edi.invh_run_auto, dbo.form_header_edi.company_taxno, dbo.form_header_edi.form_type, dbo.form_header_edi.edi_status_id, " &
+"                         dbo.form_header_edi.SentBy, dbo.form_detail_edi.CheckGrossDetail " &
+"FROM            dbo.form_header_edi INNER JOIN " &
+"                         dbo.form_detail_edi ON dbo.form_header_edi.invh_run_auto = dbo.form_detail_edi.invh_run_auto " &
+"GROUP BY dbo.form_header_edi.invh_run_auto, dbo.form_header_edi.company_taxno, dbo.form_header_edi.form_type, dbo.form_header_edi.edi_status_id, " &
+"                         dbo.form_header_edi.SentBy, dbo.form_detail_edi.CheckGrossDetail " &
 "HAVING        (dbo.form_header_edi.invh_run_auto = @invh_run_auto) AND (dbo.form_detail_edi.CheckGrossDetail = 'GWDetail')"
 
         Dim Form4_8Detail As Boolean = False
@@ -1079,38 +1484,152 @@ Module Module_CallBathEng
 
         Return Form4_8Detail
     End Function
+    'by rut เพิ่มให้เลือกไม่แสดง USD ช่องที่ 7
+    Public Function Check_DisplayUSD7(ByVal By_invh_run_auto As String) As String
+        Dim strEDIConn As String = ConfigurationManager.ConnectionStrings("OriginConnection").ConnectionString
+        Dim SQL As String = "SELECT        TOP (1) invh_run_auto, invd_run_auto, DisplayUSD7 " &
+"FROM            form_detail_edi " &
+"WHERE        (invh_run_auto = @invh_run_auto) " &
+"ORDER BY invh_run_auto"
+
+        Dim temp_ As String = ""
+
+        Dim prm As SqlClient.SqlParameter = New SqlClient.SqlParameter("@invh_run_auto", By_invh_run_auto)
+        Dim ds As DataSet
+        ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.Text, SQL, prm)
+
+        If ds.Tables(0).Rows.Count > 0 Then
+            temp_ = CommonUtility.Get_StringValue(ds.Tables(0).Rows(0).Item("DisplayUSD7"))
+        End If
+
+        Return temp_
+    End Function
 #End Region
 
-    ''ByTine 28-10-2558
+#Region "check RVC box8 AJ"
+    'check count RVC Form4_6 AJ
+    Public Function CheckCount_RVCByAJ(ByVal By_invh_run_auto As String, ByVal By_form As String) As Integer
+        Dim strEDIConn As String = ConfigurationManager.ConnectionStrings("OriginConnection").ConnectionString
+        Dim SQL As String = "SELECT     invh_run_auto, invd_run_auto, tariff_code, letter, box8 FROM         form_detail_edi WHERE     (invh_run_auto = @invh_run_auto)"
+
+        Dim Case_CheckReturn As Boolean = False
+        Dim Check_Count As String = ""
+
+        Dim prm As SqlClient.SqlParameter = New SqlClient.SqlParameter("@invh_run_auto", By_invh_run_auto)
+        Dim ds As DataSet
+        ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.Text, SQL, prm)
+
+        If ds.Tables(0).Rows.Count > 0 Then
+            'ต้องตรวจสอบ value กรณี 6 ว่าค่าใน box8 มี RVC สลับตำแหน่งหรือไม่
+            Dim TempRvc_ As String = ""
+
+            For i As Integer = 0 To ds.Tables(0).Rows.Count - 1
+                With ds.Tables(0).Rows(i)
+                    If Check_Count = "" Then
+                        Check_Count = .Item("letter")
+                    Else
+                        Check_Count = Check_Count & .Item("letter")
+                    End If
+
+                    If .Item("letter") = 6 Then
+                        If TempRvc_ = "" Then
+                            TempRvc_ = Check4_6RVC(.Item("box8"))
+                        Else
+                            TempRvc_ = TempRvc_ & Check4_6RVC(.Item("box8"))
+                        End If
+                    End If
+
+                    'ต้องตรวจสอบ value กรณี 6 ว่าค่าใน box8 มี RVC สลับตำแหน่งหรือไม่
+                    'If TempRvc_true = False Then
+                    '    Select Case .Item("letter")
+                    '        Case "6"
+                    '            'True= มีเงื่อนไข RVC อยู่
+                    '            TempRvc_true = Check4_6RVC(.Item("box8"))
+                    '    End Select
+                    'End If
+                End With
+            Next
+            Select Case By_form.ToUpper
+                Case "FORM4_61" 'เนื่องจากเงื่อนไข rvc ไม่เหมือนกัน
+                    Check_Count = Check_Count.Replace("3", "")
+                    Check_Count = Check_Count.Replace("6", "")
+
+                    'ถ้าไม่เท่ากับค่าว่างแสดงว่า ใน box8 มีอย่างอื่นที่ไม่ใช่ rvc
+                    TempRvc_ = TempRvc_.Replace("1", "")
+            End Select
+
+            Select Case Check_Count
+                Case ""
+                    Select Case TempRvc_
+                        Case ""
+                            Return 1
+                        Case Else
+                            '9 มีอย่างอื่นปน ไม่แสดงมูลค่ารวม
+                            Return 9
+                    End Select
+                Case Else
+                    '9 มีอย่างอื่นปน ไม่แสดงมูลค่ารวม
+                    Return 9
+            End Select
+        End If
+    End Function
+    Function Check4_6RVC(ByVal By_RvcTemp As String) As String
+        Dim str_1 As Array = By_RvcTemp.ToString.Split("+")
+        Dim rvc_1 As String = """" & "RVC"
+        Dim rvc_2 As String = "RVC" & """"
+        Dim rvc_true As String = "9"
+        If str_1.Length > 0 Then
+            For i1 As Integer = 0 To str_1.Length - 1
+                If str_1(i1).ToString.ToUpper = rvc_1 Or str_1(i1).ToString.ToUpper = rvc_2 Then
+                    rvc_true = "1"
+                End If
+            Next
+        End If
+
+        Return rvc_true
+    End Function
+    Function Check4_6In_report(ByVal By_letter As String, ByVal By_box8 As String) As String
+        Dim Temp_str As String = ""
+        Select Case By_letter
+            Case "6"
+                Select Case Check4_6RVC(By_box8)
+                    Case "1"
+                        Temp_str = "3"
+                End Select
+            Case "3"
+                Temp_str = "3"
+        End Select
+
+        Return Temp_str
+    End Function
+#End Region
+
+    'form in ('FORM4','FORM4_1','FORM44','FORM44_4','FORM44_41','FORM44_44','FORM441','FORM441_4')
+    '23/06/2558 เงื่อนไขใหม่ เหมือนฟอร์มอี แสดงช่อง 7 ก่อน Total
     Public Function Form_NewStr_AddressDetail(ByVal strOB_address As String) As String
         Dim Substr_OB_add As String = ""
         If strOB_address <> "" And strOB_address.Trim <> "" And Not strOB_address = String.Empty = True Then
-            Substr_OB_add = strOB_address & vbCrLf
+            Substr_OB_add = strOB_address & vbNewLine & vbNewLine
         Else
             Substr_OB_add = ""
         End If
         Return Substr_OB_add
     End Function
 
-    ''ByTine 28-10-2558 ใช้ดึงข้อมูลวันที่พิมพ์ฟอร์มของเลขที่อ้างอิงชุดเดิมที่มีการขอแก้ไข
+    ''ByTine 20-10-2558 ใช้ดึงข้อมูลวันที่พิมพ์ฟอร์มของเลขที่อ้างอิงชุดเดิมที่มีการขอแก้ไข
     Public Function CheckPrintDate(ByVal _RefCode2 As String)
         Try
             Dim StrConn As String = ConfigurationManager.ConnectionStrings("OriginConnection").ConnectionString
             Dim Strcommand As String
             Dim _PrintDate As DateTime
-            Strcommand = " SELECT printFormDate FROM form_header_edi WHERE (reference_code2 = @reference_code2) "
+            Strcommand = " SELECT printFormDate FROM form_header_edi WHERE (reference_code2 = '" & _RefCode2 & "' OR reference_code2 = '" & _RefCode2 & "_C') "
             Dim dr As SqlDataReader
-            dr = SqlHelper.ExecuteReader(StrConn, CommandType.Text, Strcommand, New SqlClient.SqlParameter("@reference_code2", _RefCode2))
+            dr = SqlHelper.ExecuteReader(StrConn, CommandType.Text, Strcommand)
             dr.Read()
             If dr.HasRows Then
                 _PrintDate = dr.Item("printFormDate")
             Else
-                dr = SqlHelper.ExecuteReader(StrConn, CommandType.Text, Strcommand, New SqlClient.SqlParameter("@reference_code2", _RefCode2 & "_C"))
-                If dr.HasRows Then
-                    _PrintDate = dr.Item("printFormDate")
-                Else
-                    _PrintDate = ""
-                End If
+                _PrintDate = ""
             End If
             Return _PrintDate.ToString("dd/MM/yyyy")
         Catch ex As Exception
@@ -1152,4 +1671,100 @@ Module Module_CallBathEng
             Return ""
         End Try
     End Function
+
+    Public Function CheckInvAgent(ByVal _IsAgent As Boolean, ByVal _InvAgent As String, ByVal _CompanyAgentName As String)
+        Try
+            Dim ret As String = ""
+            If _IsAgent = True Then
+                ret = _InvAgent & vbNewLine & _CompanyAgentName & "  " & "THAILAND" & vbNewLine
+            End If
+
+            Return ret
+
+        Catch ex As Exception
+            Return ""
+        End Try
+    End Function
+
+    Public Function CheckInvAgent_AHK(ByVal _IsAgent As Boolean, ByVal _InvAgent As String, ByVal _CompanyAgentName As String)
+        Try
+            Dim ret As String = ""
+            If _IsAgent = True Then
+                ret = _CompanyAgentName & "  " & "THAILAND" & vbNewLine
+            End If
+
+            Return ret
+
+        Catch ex As Exception
+            Return ""
+        End Try
+    End Function
+
+#Region "Check ค่าว่าง สำหรับช่อง 7 บรรทัดสุดท้าย (Total)"
+    ''ByTine 20-03-2560
+    Public Function CheckIsZeroOrNothing(ByVal _Value As Object) As Boolean
+        Try
+            Dim ret As Boolean = False
+
+            ''Check เป็น Null หรือเปล่า
+            If DBNull.Value.Equals(_Value) = False Then
+                If IsNumeric(_Value) = True Then
+                    If _Value <> 0 Then
+                        ret = True
+                    Else
+                        ret = False
+                    End If
+                Else
+                    If _Value = " " Then
+                        ret = False
+                    ElseIf _Value <> "" Or _Value IsNot Nothing Then
+                        ret = True
+                    Else
+                        ret = False
+                    End If
+                End If
+            Else
+                ret = False
+            End If
+
+            Return ret
+
+        Catch ex As Exception
+            Return False
+        End Try
+    End Function
+
+#End Region
+
+    ''ByTine 13-2-2561 Form E แยก GW
+    Public Function CheckUnitDetail_FormE(ByVal By_invh_run_auto As String, Optional ByVal By_unit As String = "") As String
+        Dim strEDIConn As String = ConfigurationManager.ConnectionStrings("OriginConnection").ConnectionString
+        Dim SQL As String = "SELECT        TOP (1) invh_run_auto, invd_run_auto, gross_weight, unit_code3,net_weight,unit_code2 " &
+        "FROM            form_detail_edi " &
+        "WHERE        (invh_run_auto = @invh_run_auto) " &
+        "ORDER BY invh_run_auto"
+
+        Dim temp_ As String = ""
+
+        Dim prm As SqlClient.SqlParameter = New SqlClient.SqlParameter("@invh_run_auto", By_invh_run_auto)
+        Dim ds As DataSet
+        ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.Text, SQL, prm)
+
+        If ds.Tables(0).Rows.Count > 0 Then
+            If By_unit <> "" Then
+                temp_ = By_unit
+            Else
+                If DBNull.Value.Equals(ds.Tables(0).Rows(0).Item("unit_code3")) = False Then
+                    temp_ = ds.Tables(0).Rows(0).Item("unit_code3")
+                Else
+                    temp_ = ds.Tables(0).Rows(0).Item("unit_code2")
+                End If
+            End If
+        Else
+            temp_ = By_unit
+        End If
+
+        Return temp_
+    End Function
+
 End Module

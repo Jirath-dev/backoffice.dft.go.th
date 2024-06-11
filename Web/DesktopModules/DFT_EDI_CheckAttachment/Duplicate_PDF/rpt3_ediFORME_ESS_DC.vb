@@ -2500,7 +2500,7 @@ Public Class rpt3_ediFORME_ESS_DC
 
         Picture_SealAuthor.SizeMode = SizeModes.Clip
         PictureApproveSign.Image = New Drawing.Bitmap(reports_Approveid(arr_(0).ToString))
-        'txtTemp_SiteSend.Text = "ST-003"
+        '        txtTemp_SiteSend.Text = "ST-003"
         Select Case txtTemp_SiteSend.Text
             Case "ST-003"
                 txtTemp_Date.Visible = True

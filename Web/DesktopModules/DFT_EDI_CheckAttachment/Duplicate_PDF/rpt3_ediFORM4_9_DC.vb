@@ -59,7 +59,7 @@ Public Class rpt3_ediFORM4_9_DC
         End Select
         'by rut Title New End-------------------------------------------
 
-        Check_Issued()
+        ' Check_Issued()
     End Sub
     '   'à§×èÍ¹ä¢àªç¤ IsIssuedRetro (form_header_edi)
     Private Sub Check_Issued()

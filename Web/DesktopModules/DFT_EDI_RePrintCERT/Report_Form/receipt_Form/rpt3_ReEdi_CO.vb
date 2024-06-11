@@ -739,7 +739,7 @@ Public Class rpt3_ReEdi_CO
                     '                    IIf(CommonUtility.Get_StringValue(Check_NULLALL(txtcompany_email.Text)) <> "", " E-mail: " & txtcompany_email.Text, "")
 
                 End If
-            Case "FORM2"
+            Case "form2", "FORM2_ESS"
                 If Mid(txtdest_remark.Text, 1, 3) = "C/O" Then
                     StrtxtRerutn = txtob_address.Text & IIf(Check_NULLALL(txtNewEmail_ch01.Text) <> "", " E-mail: " & txtNewEmail_ch01.Text, "") & " CARE OF " & txtcompany_name.Text & " " & txtcompany_address.Text _
                                        & " " & txtcompany_province.Text & " " & txtcompany_country.Text &
@@ -1900,7 +1900,7 @@ Public Class rpt3_ReEdi_CO
                                         IIf(Check_NULLALL(txtplace_exibition.Text) <> "", " " & txtplace_exibition.Text, "")
 
                 End If
-            Case "FORM2"
+            Case "form2", "FORM2_ESS"
                 Select Case Check_RFC_Tax(CommonUtility.Get_StringValue(txtdestination_taxid.Text))
                     Case True 'rfc
                         If Mid(txtdest_remark1.Text, 1, 3) = "C/O" Then
@@ -2289,7 +2289,7 @@ Public Class rpt3_ReEdi_CO
         C_Fob_Amt += CDec(txtFOB_AMT.Text)
 
         Select Case CommonUtility.Get_StringValue(txtform_type.Text)
-            Case "FORM2", "FORM2_2", "FORM2_3", "FORM2_4", "FORM2_5", "FORM2_6", "FORM3", "FORM3_1"
+            Case "form2", "FORM2_ESS", "FORM2_2", "FORM2_3", "FORM2_4", "FORM2_5", "FORM2_6", "FORM3", "FORM3_1"
                 txtPRODUCT_NAME.Text = txtTemp_PRODUCT_NAME.Text
             Case Else
                 txtPRODUCT_NAME.Text = txtTemp_PRODUCT_NAME.Text & " " & txtRover.Text
@@ -2323,7 +2323,7 @@ Public Class rpt3_ReEdi_CO
                 txtForm_Name_Temp.Text = "คำขอหนังสือรับรองถิ่นกำเนิดสินค้าแบบ" & txtForm_Name.Text
         End Select
         Select Case CommonUtility.Get_StringValue(txtform_type.Text)
-            Case "FORM2", "FORM2_2", "FORM2_3", "FORM2_4", "FORM2_5", "FORM2_6", "FORM3", "FORM3_1"
+            Case "form2", "FORM2_ESS", "FORM2_2", "FORM2_3", "FORM2_4", "FORM2_5", "FORM2_6", "FORM3", "FORM3_1"
                 txtL1.Visible = False
                 txtL2.Visible = False
                 txtL3.Visible = False
@@ -2368,7 +2368,7 @@ Public Class rpt3_ReEdi_CO
         'check สมัครใจ
         'เฉพาะฟอร์ม CO ทั่วไป กับ แม็กซิโก
         Select Case CommonUtility.Get_StringValue(txtform_type.Text)
-            Case "FORM2", "FORM3", "FORM3_1"
+            Case "form2", "FORM2_ESS", "FORM3", "FORM3_1"
                 Select Case check2_1request(txtcompany_taxno.Text)
                     Case True
                         txtCheckTax.Visible = True
@@ -2510,7 +2510,7 @@ Public Class rpt3_ReEdi_CO
                     End If
 
                     ''ByTine 17-12-2558 เพิ่มใหม่ฟอร์ม AK ใช้ Seal Sign ใข้ได้ทุกประเทศ
-                Case "FORM4_8", "FORM4_81", "FORMAHk"
+                Case "FORM4_8", "FORM4_81", "FORMAHk", "FORM2_ESS"
                     If Get_Cardid_Num(txtcard_id.Text).Tables(0).Rows.Count > 0 Then 'เพื่อเอาเลขบัตรประชาชนตาม cardid
                         With Get_Cardid_Num(txtcard_id.Text).Tables(0).Rows(0)
                             'check บัตรก่อน ว่าเป็นบัตรบริษัท

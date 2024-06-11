@@ -738,9 +738,9 @@ Module Module_CallBathEng
 
         Dim strEDIConn As String = ConfigurationManager.ConnectionStrings("OriginConnection").ConnectionString
         Dim sql As String = ""
-        sql = "SELECT     company_taxno, company_branchNo, card_id, commit_name, expire_date, password, active_flag, AuthName, AuthName_Thai,  AuthPersonID, card_type " & _
-"FROM         rfcard " & _
-"WHERE     (card_id = @card_id) AND (active_flag <> 'C')"
+        sql = "SELECT     company_taxno, company_branchNo, card_id, commit_name, expire_date, password, active_flag, AuthName, AuthName_Thai,  AuthPersonID, card_type " &
+"FROM         rfcard " &
+"WHERE     (card_id = @card_id) AND (active_flag in( 'C','Z'))"
         Dim prm(0) As SqlClient.SqlParameter
         prm(0) = New SqlClient.SqlParameter("@card_id", By_Cardid)
 

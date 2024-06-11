@@ -68,19 +68,19 @@ Partial Public Class frmCheckForm1
 
             ''ByTine 4-1-2564
             ''ตรวจสอบ BlackList / WatchList
-            If ReportPrintClass.CheckSetActiveWsRover = True Then ''เปิดใช้งาน
-                '//Dim blacklist As String = ReportPrintClass.CheckBlackList(Request.QueryString("TaxNo"))
-                Dim blacklist As String = ReportPrintClass.CheckOrginAlert(Request.QueryString("TaxNo"))
-                If blacklist = "" Or blacklist Is Nothing Then
-                    ''ถ้าเป็นค่าว่าง หรือ Nothing ให้ซ่อน Label ไว้
-                    lblMsgBlackList.Visible = False
-                Else
-                    lblMsgBlackList.Visible = True
-                    lblMsgBlackList.Text = "<a href=# onclick=ShowBlackList();><u>" & blacklist & "</u></a>"
-                End If
-            Else
-                lblMsgBlackList.Visible = False
-            End If
+            'If ReportPrintClass.CheckSetActiveWsRover = True Then ''เปิดใช้งาน
+            '    '//Dim blacklist As String = ReportPrintClass.CheckBlackList(Request.QueryString("TaxNo"))
+            '    Dim blacklist As String = ReportPrintClass.CheckOrginAlert(Request.QueryString("TaxNo"))
+            '    If blacklist = "" Or blacklist Is Nothing Then
+            '        ''ถ้าเป็นค่าว่าง หรือ Nothing ให้ซ่อน Label ไว้
+            '        lblMsgBlackList.Visible = False
+            '    Else
+            '        lblMsgBlackList.Visible = True
+            '        lblMsgBlackList.Text = "<a href=# onclick=ShowBlackList();><u>" & blacklist & "</u></a>"
+            '    End If
+            'Else
+            '    lblMsgBlackList.Visible = False
+            'End If
         End If
 
     End Sub

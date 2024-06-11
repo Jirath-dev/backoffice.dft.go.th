@@ -84,6 +84,10 @@ Partial Public Class View_ReportDUP
                             dsRequestDetails = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_form4_edi_RePrintFormBar_NewDS_Ole07",
                                                                                New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("SendCell")),
                                                                                New SqlParameter("@SITE_ID", SiteID))
+                        Case "8"
+                            dsRequestDetails = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_form4_edi_RePrintFormBar_NewDS_Ole08",
+                                                                               New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("SendCell")),
+                                                                               New SqlParameter("@SITE_ID", SiteID))
                     End Select
                 Case False
                     Dim cmd As String = "vi_form4_edi_printFormBar_NewDS_test"
@@ -129,6 +133,10 @@ Partial Public Class View_ReportDUP
                                                    New SqlParameter("@SITE_ID", SiteID))
                         Case "7"
                             dsRequestDetails = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_form4_edi_RePrintFormBar_NewDS_Ole07",
+                                                   New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("SendCell")),
+                                                   New SqlParameter("@SITE_ID", SiteID))
+                        Case "8"
+                            dsRequestDetails = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_form4_edi_RePrintFormBar_NewDS_Ole08",
                                                    New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("SendCell")),
                                                    New SqlParameter("@SITE_ID", SiteID))
                     End Select

@@ -32,30 +32,46 @@
        
        function OnClientClose(oWnd,args) {
             var arg = args.get_argument();
-            
+
                 if(arg) { 
                 
                     var vCompany_Taxno = arg.Company_Taxno;
                     var vCompanyName_Eng = arg.CompanyName_Eng;
+                    var vInvoiceNo = arg.InvoiceNo;
+                    var vinvh_run_auto = arg.invh_run_auto;
 
                     var Company_Taxno = $find("<%=txtCompany_Taxno.ClientID %>");  
                     Company_Taxno.set_value(vCompany_Taxno);
                     
                     var CompanyName_Eng = $find("<%=txtCompanyName_Eng.ClientID %>");
                     CompanyName_Eng.set_value(vCompanyName_Eng);
+
+                    var InvoiceNo = $find("<%=txtInvoiceNo.ClientID %>");  
+                    InvoiceNo.set_value(vInvoiceNo);
+
+                    var invh_run_auto = $find("<%=txtinvh_run_auto.ClientID %>");  
+                    invh_run_auto.set_value(vinvh_run_auto);
                     
                     $find("<%= RadAjaxManager1.ClientID %>").ajaxRequest("Search");
                 }
                 else{
                     var vCompany_Taxno = "";
                     var vCompanyName_Eng = "";
+                    var vInvoiceNo = "";
+                    var vinvh_run_auto = "";
 
                     var Company_Taxno = $find("<%=txtCompany_Taxno.ClientID %>");  
                     Company_Taxno.set_value(vCompany_Taxno);
                     
                     var CompanyName_Eng = $find("<%=txtCompanyName_Eng.ClientID %>");
                     CompanyName_Eng.set_value(vCompanyName_Eng);
-                    
+
+                    var InvoiceNo = $find("<%=txtInvoiceNo.ClientID %>");  
+                    InvoiceNo.set_value(vInvoiceNo);
+
+                    var invh_run_auto = $find("<%=txtinvh_run_auto.ClientID %>");  
+                    invh_run_auto.set_value(vinvh_run_auto);
+
                     $find("<%= RadAjaxManager1.ClientID %>").ajaxRequest("Search");
                 }
         }
@@ -64,11 +80,14 @@
             window.radopen("/DesktopModules/DFT_EDI_CancelInvoice/frmSelectCompany.aspx", "SearchDialog");
             return false; 
         }
-        
+           function ShowInv() {
+            window.radopen("/DesktopModules/DFT_EDI_CancelInvoice/frmSelectInvh.aspx", "SearchDialog");
+            return false; 
+        }
         function ShowDeleteForm(invoiceno,year) {
            window.radopen("/DesktopModules/DFT_EDI_CancelInvoice/frmCancelInvoice.aspx?invoiceno=" + invoiceno + "&year=" + year , "DeleteDialog")
            return false;
-       }
+        }
 
     </script>
 </telerik:RadCodeBlock>
@@ -140,6 +159,7 @@
                                                             <cc1:ShortcutButton ID="btnClear" runat="server" Character="ESC" Text="ล้างข้อมูล [ESC]"
                                                                 Width="150px" /></td>
                                                     </tr>
+                                                  
                                                     <tr>
                                                         <td style="text-align: right">
                                                             <font class="FormLabel">เลขที่ Invoice :</font>
@@ -151,6 +171,19 @@
                                                             <cc1:ShortcutButton ID="btnSearch" runat="server" Character="F9" Text="ค้นหา [F9]"
                                                                 Width="150px" /></td>
                                                     </tr>
+                                                    <tr>
+                                                        <td style="text-align: right">
+                                                            <font class="FormLabel">เลขที่อ้างอิง :</font>
+                                                            <telerik:RadTextBox ID="txtinvh_run_auto" runat="server" Font-Names="Tahoma" Font-Size="12pt"
+                                                                Width="300px">
+                                                            </telerik:RadTextBox>
+                                                        </td>
+                                                      <td>
+                                                            <cc1:ShortcutButton ID="btnSearchInv" runat="server" Character="F6" Text="ค้นหาเลขที่อ้างอิง"
+                                                                Width="150px" OnClientClick="ShowInv(); return false;" /></td>
+                                                     
+                                                    </tr>
+
                                                     <tr>
                                                         <td style="text-align: center">
                                                             <asp:Panel ID="Panel1" runat="server" BackColor="Transparent" Font-Names="Tahoma"
@@ -235,9 +268,18 @@
                                                                             <HeaderStyle HorizontalAlign="Center" Width="50px" />
                                                                             <ItemStyle HorizontalAlign="Center" Width="50px" />
                                                                         </telerik:GridTemplateColumn>
+                                                                        
+                                                                        <telerik:GridBoundColumn DataField="invh_run_auto" HeaderText="เลขที่อ้างอิง" ReadOnly="True"
+                                                                            SortExpression="invh_run_auto" UniqueName="invh_run_auto">
+                                                                            <ItemStyle Font-Names="Tahoma" Font-Size="10pt" />
+                                                                        </telerik:GridBoundColumn>
                                                                         <telerik:GridBoundColumn DataField="invoice_no" HeaderText="เลขที่ Invoice" ReadOnly="True"
                                                                             SortExpression="invoice_no" UniqueName="invoice_no">
-                                                                            <ItemStyle Font-Names="Tahoma" Font-Size="10pt" />
+                                                                            <ItemStyle Font-Names="Tahoma" Font-Size="10pt" HorizontalAlign="Center" />
+                                                                        </telerik:GridBoundColumn>
+                                                                          <telerik:GridBoundColumn DataField="active_flag" HeaderText="สถานะ" ReadOnly="True" 
+                                                                            SortExpression="active_flag" UniqueName="active_flag">
+                                                                            <ItemStyle Font-Names="Tahoma" Font-Size="10pt" HorizontalAlign="Center" />
                                                                         </telerik:GridBoundColumn>
                                                                         <telerik:GridBoundColumn DataField="edi_year" HeaderText="ปี" ReadOnly="True"
                                                                             SortExpression="edi_year" UniqueName="edi_year">

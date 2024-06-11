@@ -3722,13 +3722,13 @@ Public Class rpt3_ediFORM4_9_pr
     End Sub
 
     Private Sub rpt3_ediFORM4_9_pr_PageStart(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.PageStart
-        Me.CurrentPage.DrawLine(0.06, 4.13, 0.06, 7.7)
-        Me.CurrentPage.DrawLine(0.72, 4.13, 0.72, 7.7)
-        Me.CurrentPage.DrawLine(1.8, 4.13, 1.8, 7.7)
-        Me.CurrentPage.DrawLine(5.2, 4.13, 5.2, 7.7)
-        Me.CurrentPage.DrawLine(6.0, 4.13, 6.0, 7.7)
-        Me.CurrentPage.DrawLine(7.1, 4.13, 7.1, 7.7)
-        Me.CurrentPage.DrawLine(8.19, 4.13, 8.19, 7.7)
+        Me.CurrentPage.DrawLine(0.06, 4.13, 0.06, 7.71)
+        Me.CurrentPage.DrawLine(0.72, 4.13, 0.72, 7.71)
+        Me.CurrentPage.DrawLine(1.8, 4.13, 1.8, 7.71)
+        Me.CurrentPage.DrawLine(5.2, 4.13, 5.2, 7.71)
+        Me.CurrentPage.DrawLine(6.0, 4.13, 6.0, 7.71)
+        Me.CurrentPage.DrawLine(7.0, 4.13, 7.0, 7.71)
+        Me.CurrentPage.DrawLine(8.18, 4.13, 8.18, 7.71)
     End Sub
 
     Private Sub rpt3_ediFORM4_9_pr_ReportEnd(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.ReportEnd

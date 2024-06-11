@@ -2214,8 +2214,8 @@ Public Class rpt3_ediFORM4_4_pr
 
     Function tariff_All(ByVal _tariff As String) As String
         Dim str_tariff As String
-        str_tariff = Mid(_tariff, 1, 4) & "." & Mid(_tariff, 5, 2) & "." & Mid(_tariff, 7, 4)
-
+        'str_tariff = Mid(_tariff, 1, 4) & "." & Mid(_tariff, 5, 2) & "." & Mid(_tariff, 7, 4)
+        str_tariff = Mid(_tariff, 1, 4) & "." & Mid(_tariff, 5, 2)
         Return str_tariff
     End Function
 

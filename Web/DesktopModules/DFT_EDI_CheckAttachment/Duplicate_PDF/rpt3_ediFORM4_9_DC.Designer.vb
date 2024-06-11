@@ -2844,7 +2844,7 @@ Partial Public Class rpt3_ediFORM4_9_DC
         Me.Label51.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
         Me.Label51.Border.TopColor = System.Drawing.Color.Black
         Me.Label51.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.Label51.Height = 0.1875!
+        Me.Label51.Height = 0.25!
         Me.Label51.HyperLink = Nothing
         Me.Label51.Left = 5.1875!
         Me.Label51.Name = "Label51"

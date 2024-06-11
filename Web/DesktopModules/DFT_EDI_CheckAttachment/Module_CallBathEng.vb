@@ -759,7 +759,7 @@ Module Module_CallBathEng
 
             Case False '
 
-                Select Case DateDiff("d", dateEdi, Now)
+                Select Case DateDiff("d", dateEdi, Check_PrintDate)
 
                     Case Is >= 3
 
@@ -1745,6 +1745,19 @@ Module Module_CallBathEng
         ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, cmd, New SqlParameter("@siteid", By_Site.ToUpper))
         If ds.Tables(0).Rows.Count > 0 Then
             str_txt = ds.Tables(0).Rows(0).Item("port_name2")
+        End If
+
+        Return str_txt
+    End Function
+    Function String_SiteNameReport03(ByVal By_Site As String) As String
+        Dim strEDIConn As String = ConfigurationManager.ConnectionStrings("OriginConnection").ConnectionString
+        Dim str_txt As String = ""
+
+        Dim cmd As String = "SP_GetPortName_ESS"
+        Dim ds As New DataSet
+        ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, cmd, New SqlParameter("@siteid", By_Site.ToUpper))
+        If ds.Tables(0).Rows.Count > 0 Then
+            str_txt = ds.Tables(0).Rows(0).Item("port_name3")
         End If
 
         Return str_txt

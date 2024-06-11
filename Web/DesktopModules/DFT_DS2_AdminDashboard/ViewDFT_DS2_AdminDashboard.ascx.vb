@@ -73,6 +73,9 @@ Namespace NTI.Modules.DFT_DS2_AdminDashboard
         Protected Sub LinkButton4_Click(ByVal sender As Object, ByVal e As EventArgs) Handles LinkButton4.Click
             Response.Redirect(EditUrl("ListSite"))
         End Sub
+        Protected Sub LinkButton3_Click(ByVal sender As Object, ByVal e As EventArgs) Handles LinkButton3.Click
+            Response.Redirect(EditUrl("ListFrom"))
+        End Sub
 
         Protected Sub LinkPrinter_Click(ByVal sender As Object, ByVal e As EventArgs) Handles linkPrinter.Click
             Response.Redirect(EditUrl("Printer"))

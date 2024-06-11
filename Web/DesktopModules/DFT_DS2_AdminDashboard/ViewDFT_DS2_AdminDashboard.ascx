@@ -40,6 +40,10 @@
                 <asp:Image ID="Image5" runat="server" ImageUrl="Images/Gear-icon.png" /><br />
                 <asp:LinkButton ID="LinkButton4"  CausesValidation="false" runat="server">สาขาที่รับฟอร์ม</asp:LinkButton>
             </td>
+             </td><td width="80">
+                <asp:Image ID="Image16" runat="server" ImageUrl="Images/Gear-icon.png" /><br />
+                <asp:LinkButton ID="LinkButton3"  CausesValidation="false" runat="server">ฟอร์มที่เปิดใช้งาน</asp:LinkButton>
+            </td>
             <td width="80">
                 <asp:Image ID="Image8" runat="server" ImageUrl="Images/Gear-icon.png" /><br />
                 <asp:LinkButton ID="linkPrinter"  CausesValidation="false" runat="server">เครื่องพิมพ์ (Printer)</asp:LinkButton>

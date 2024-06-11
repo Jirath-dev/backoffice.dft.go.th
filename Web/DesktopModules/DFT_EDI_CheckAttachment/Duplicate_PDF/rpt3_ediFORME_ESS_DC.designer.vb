@@ -5075,7 +5075,7 @@ Partial Public Class rpt3_ediFORME_ESS_DC
     Friend WithEvents txtTemp_Date As DataDynamics.ActiveReports.TextBox
     Friend WithEvents txtTemp_Bangkok01 As DataDynamics.ActiveReports.TextBox
     Friend WithEvents txtTemp_Bangkok02 As DataDynamics.ActiveReports.TextBox
-    Friend WithEvents txtTemp_SiteSend As DataDynamics.ActiveReports.TextBox
     Friend WithEvents Picture_SealAuthor As DataDynamics.ActiveReports.Picture
     Friend WithEvents PictureApproveSign As DataDynamics.ActiveReports.Picture
+    Public WithEvents txtTemp_SiteSend As DataDynamics.ActiveReports.TextBox
 End Class

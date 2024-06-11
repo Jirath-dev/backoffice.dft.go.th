@@ -420,7 +420,7 @@ Partial Public Class rpt3_ediFORM4_9_pr
         Me.txtTolInvoice.Border.TopColor = System.Drawing.Color.Black
         Me.txtTolInvoice.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
         Me.txtTolInvoice.Height = 0.25!
-        Me.txtTolInvoice.Left = 7.0!
+        Me.txtTolInvoice.Left = 7.1875!
         Me.txtTolInvoice.Name = "txtTolInvoice"
         Me.txtTolInvoice.Style = "color: Blue; ddo-char-set: 1; text-align: center; font-size: 10pt; font-family: B" &
     "rowalliaUPC; "

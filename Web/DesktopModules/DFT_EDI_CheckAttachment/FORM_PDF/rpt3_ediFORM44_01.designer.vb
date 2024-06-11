@@ -4558,8 +4558,6 @@ Partial Public Class rpt3_ediFORM44_01
         Me.StyleSheet.Add(New DDCssLib.StyleSheetRule("font-family: Times New Roman; font-size: 14pt; font-weight: bold; font-style: ita" &
             "lic; ", "Heading2", "Normal"))
         Me.StyleSheet.Add(New DDCssLib.StyleSheetRule("font-size: 13pt; font-weight: bold; ", "Heading3", "Normal"))
-        'Me.Watermark = CType(resources.GetObject("$this.Watermark"), System.Drawing.Image)
-        'Me.WatermarkSizeMode = DataDynamics.ActiveReports.SizeModes.Stretch
         CType(Me.txtNumRowCount, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtTemp_marks, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtT_product, System.ComponentModel.ISupportInitialize).EndInit()

@@ -178,8 +178,8 @@ Partial Public Class rpt3_ReEdi_A
         Me.txtAttNetweightTotal = New DataDynamics.ActiveReports.TextBox()
         Me.txtAttUSDTotal = New DataDynamics.ActiveReports.TextBox()
         Me.PageFooter1 = New DataDynamics.ActiveReports.PageFooter()
-        Me.Picture_SealAuthor = New DataDynamics.ActiveReports.Picture()
         Me.Shape5 = New DataDynamics.ActiveReports.Shape()
+        Me.Picture_SealAuthor = New DataDynamics.ActiveReports.Picture()
         Me.Shape3 = New DataDynamics.ActiveReports.Shape()
         Me.Shape4 = New DataDynamics.ActiveReports.Shape()
         Me.Line6 = New DataDynamics.ActiveReports.Line()
@@ -3495,9 +3495,27 @@ Partial Public Class rpt3_ReEdi_A
         '
         'PageFooter1
         '
-        Me.PageFooter1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.Shape5, Me.Picture_SealAuthor, Me.TextBox37, Me.txtrequest_person_2, Me.Shape3, Me.txtSum_Net_Weight, Me.txtNET_WEIGHTPage, Me.txtSum_Fob_Amt, Me.Shape4, Me.txtInvoince_Date, Me.TextBox31, Me.txtTotal, Me.txtSum_Gross_Weight, Me.TextBox32, Me.txtbill_type0, Me.TextBox34, Me.txtbill_type1, Me.TextBox36, Me.txtbill_type2, Me.TextBox38, Me.txtbill_type3, Me.TextBox40, Me.txtbill_type_other, Me.TextBox41, Me.TextBox42, Me.txtbl_no, Me.txtTemp_sailing_date, Me.TextBox44, Me.txtTemp_edi_date, Me.TextBox45, Me.txtbill_type, Me.TextBox16, Me.TextBox17, Me.TextBox18, Me.txtattach_file, Me.TextBox19, Me.txtfactory, Me.txtfactory_Temp, Me.txtfactory_address, Me.TextBox39, Me.TextBox43, Me.TextBox46, Me.Line6, Me.txtauthorize2, Me.txtedi_date, Me.txtsailing_date, Me.txtgross_weightH, Me.txtg_unit_code, Me.txtSumFOB_AMTPage, Me.txtTemp_form_type, Me.txtTemp_destination_country, Me.txttotalSum_fob_amt, Me.txttotal_real_net_weight, Me.txtTemp_Net, Me.txtTempUSD, Me.TextBox33, Me.TextBox20, Me.TextBox35})
+        Me.PageFooter1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.Picture_SealAuthor, Me.txtrequest_person_2, Me.Shape5, Me.TextBox37, Me.Shape3, Me.txtSum_Net_Weight, Me.txtNET_WEIGHTPage, Me.txtSum_Fob_Amt, Me.Shape4, Me.txtInvoince_Date, Me.TextBox31, Me.txtTotal, Me.txtSum_Gross_Weight, Me.TextBox32, Me.txtbill_type0, Me.TextBox34, Me.txtbill_type1, Me.TextBox36, Me.txtbill_type2, Me.TextBox38, Me.txtbill_type3, Me.TextBox40, Me.txtbill_type_other, Me.TextBox41, Me.TextBox42, Me.txtbl_no, Me.txtTemp_sailing_date, Me.TextBox44, Me.txtTemp_edi_date, Me.TextBox45, Me.txtbill_type, Me.TextBox16, Me.TextBox17, Me.TextBox18, Me.txtattach_file, Me.TextBox19, Me.txtfactory, Me.txtfactory_Temp, Me.txtfactory_address, Me.TextBox39, Me.TextBox43, Me.TextBox46, Me.Line6, Me.txtauthorize2, Me.txtedi_date, Me.txtsailing_date, Me.txtgross_weightH, Me.txtg_unit_code, Me.txtSumFOB_AMTPage, Me.txtTemp_form_type, Me.txtTemp_destination_country, Me.txttotalSum_fob_amt, Me.txttotal_real_net_weight, Me.txtTemp_Net, Me.txtTempUSD, Me.TextBox33, Me.TextBox20, Me.TextBox35})
         Me.PageFooter1.Height = 4.708333!
         Me.PageFooter1.Name = "PageFooter1"
+        '
+        'Shape5
+        '
+        Me.Shape5.Border.BottomColor = System.Drawing.Color.Black
+        Me.Shape5.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.Solid
+        Me.Shape5.Border.LeftColor = System.Drawing.Color.Black
+        Me.Shape5.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.Solid
+        Me.Shape5.Border.RightColor = System.Drawing.Color.Black
+        Me.Shape5.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.Solid
+        Me.Shape5.Border.TopColor = System.Drawing.Color.Black
+        Me.Shape5.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.Shape5.Height = 2.510417!
+        Me.Shape5.Left = 0.0625!
+        Me.Shape5.LineStyle = DataDynamics.ActiveReports.LineStyle.Transparent
+        Me.Shape5.Name = "Shape5"
+        Me.Shape5.RoundingRadius = 9.999999!
+        Me.Shape5.Top = 2.0!
+        Me.Shape5.Width = 7.6875!
         '
         'Picture_SealAuthor
         '
@@ -3518,24 +3536,6 @@ Partial Public Class rpt3_ReEdi_A
         Me.Picture_SealAuthor.Top = 2.395833!
         Me.Picture_SealAuthor.Visible = False
         Me.Picture_SealAuthor.Width = 3.543307!
-        '
-        'Shape5
-        '
-        Me.Shape5.Border.BottomColor = System.Drawing.Color.Black
-        Me.Shape5.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.Solid
-        Me.Shape5.Border.LeftColor = System.Drawing.Color.Black
-        Me.Shape5.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.Solid
-        Me.Shape5.Border.RightColor = System.Drawing.Color.Black
-        Me.Shape5.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.Solid
-        Me.Shape5.Border.TopColor = System.Drawing.Color.Black
-        Me.Shape5.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.Shape5.Height = 2.510417!
-        Me.Shape5.Left = 0.0625!
-        Me.Shape5.LineStyle = DataDynamics.ActiveReports.LineStyle.Transparent
-        Me.Shape5.Name = "Shape5"
-        Me.Shape5.RoundingRadius = 9.999999!
-        Me.Shape5.Top = 2.0!
-        Me.Shape5.Width = 7.6875!
         '
         'Shape3
         '
