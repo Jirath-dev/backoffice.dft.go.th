@@ -51,15 +51,15 @@ Public Class rpt3_ediFORM4_9_DC
         If CommonUtility.Get_StringValue(txtSINGLE_COUNTRY_CONTENT.Value) = "1" And CommonUtility.Get_StringValue(txtTitleMain.Text) <> "" Then
             txtTitleHead.Visible = True
         End If
-        Select Case CheckIssuedDateAllForms(CDate(txtdeparture_date.Value), CDate(IIf(IsDBNull(txtapprove_date.Value) = True, Now.Date, txtapprove_date.Value)))
-            Case True
-                lblIssuedRetro.Visible = True
-            Case False
-                lblIssuedRetro.Visible = False
-        End Select
+        'Select Case CheckIssuedDateAllForms(CDate(txtdeparture_date.Value), CDate(IIf(IsDBNull(txtapprove_date.Value) = True, Now.Date, txtapprove_date.Value)))
+        '    Case True
+        '        lblIssuedRetro.Visible = True
+        '    Case False
+        '        lblIssuedRetro.Visible = False
+        'End Select
         'by rut Title New End-------------------------------------------
 
-        ' Check_Issued()
+        Check_Issued()
     End Sub
     '   'à§×èÍ¹ä¢àªç¤ IsIssuedRetro (form_header_edi)
     Private Sub Check_Issued()
@@ -730,7 +730,7 @@ Public Class rpt3_ediFORM4_9_DC
     End Function
     Sub CallInvoiceCheck() 'Check Invoince
         Select Case txtshow_check.Text
-            Case "1000", "10000"
+            Case "1000", "10000", "1001"
                 txtTolInvoice.Text = txtNumInvoice.Text
             Case Else
                 If CommonUtility.Get_String(txtinvoice_no1.Text) <> "" And CommonUtility.Get_String(txtinvoice_date1.Text) <> "" And CommonUtility.Get_String(txtinvoice_no2.Text) = "" And CommonUtility.Get_String(txtinvoice_date2.Text) = "" And CommonUtility.Get_String(txtinvoice_no3.Text) = "" And CommonUtility.Get_String(txtinvoice_date3.Text) = "" And CommonUtility.Get_String(txtinvoice_no4.Text) = "" And CommonUtility.Get_String(txtinvoice_date4.Text) = "" And CommonUtility.Get_String(txtinvoice_no5.Text) = "" And CommonUtility.Get_String(txtinvoice_date5.Text) = "" Then
@@ -821,7 +821,7 @@ Public Class rpt3_ediFORM4_9_DC
     Function CallInvoice_() As String 'Check Invoince
         Dim str_invoice As String
         Select Case txtshow_check.Text
-            Case "1000", "10000"
+            Case "1000", "10000", "1001"
                 Select Case CommonUtility.Get_StringValue(Check_NULLALL(txtNumInvoice.Text))
                     Case ""
                         str_invoice = Callinvoice_board(0)

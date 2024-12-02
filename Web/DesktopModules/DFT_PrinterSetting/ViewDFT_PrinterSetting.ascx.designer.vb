@@ -76,5 +76,32 @@ Namespace Modules.DFT_PrinterSetting
         '''To modify move field declaration from designer file to code-behind file.
         '''</remarks>
         Protected WithEvents grdPrinters As Global.Telerik.Web.UI.RadGrid
+        
+        '''<summary>
+        '''RadCodeBlock3 control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents RadCodeBlock3 As Global.Telerik.Web.UI.RadCodeBlock
+        
+        '''<summary>
+        '''ddlIE control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents ddlIE As Global.System.Web.UI.WebControls.DropDownList
+        
+        '''<summary>
+        '''grdlog control.
+        '''</summary>
+        '''<remarks>
+        '''Auto-generated field.
+        '''To modify move field declaration from designer file to code-behind file.
+        '''</remarks>
+        Protected WithEvents grdlog As Global.Telerik.Web.UI.RadGrid
     End Class
 End Namespace

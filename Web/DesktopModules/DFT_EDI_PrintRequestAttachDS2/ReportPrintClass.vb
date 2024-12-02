@@ -260,7 +260,7 @@ Public Class ReportPrintClass
                             Else
                                 Return False
                             End If
-                        Case "FORM2"
+                        Case "FORM2", "FORM2_ESS"
 
                             Dim rpt = New rpt3_ReEdi_A
                             rpt.Document.Printer.PrinterName = PrintReceipt(sendFormType, SiteID, sendRequest_print, sendUser) 'ConfigurationManager.AppSettings("printNameCall").ToString()
@@ -1090,7 +1090,7 @@ Public Class ReportPrintClass
                             Else
                                 Return False
                             End If
-                        Case "FORM2"
+                        Case "FORM2", "FORM2_ESS"
                             'view
                             Dim rpt = New rpt3_ediFORM2_pr
                             rpt.Document.Printer.PrinterName = PrintComplete(sendFormType, SiteID, sendUser) 'ConfigurationManager.AppSettings("printNameCall").ToString()
@@ -1731,7 +1731,7 @@ Public Class ReportPrintClass
                         Print_name = Call_SitePrints_ST_001(sendFormTypePrinter)
                         Return Print_name
                 End Select
-                
+
             Case "ST-001T" 'ที่ คต form2_1
                 Print_name = Call_SitePrints_ST_001(sendFormTypePrinter)
                 Return Print_name
@@ -1850,7 +1850,7 @@ Public Class ReportPrintClass
             Case "FORM1_4"
                 SendPrinterName = ConfigurationManager.AppSettings("ST_001Edi_FORM1_4").ToString()
                 Return SendPrinterName
-            Case "FORM2"
+            Case "FORM2", "FORM2_ESS"
                 SendPrinterName = ConfigurationManager.AppSettings("ST_001Edi_FORM2").ToString()
                 Return SendPrinterName
             Case "FORM2_1"
@@ -1940,7 +1940,7 @@ Public Class ReportPrintClass
             Case "FORM1_4"
                 SendPrinterName = ConfigurationManager.AppSettings("ST_001_01Edi_FORM1_4").ToString()
                 Return SendPrinterName
-            Case "FORM2"
+            Case "FORM2", "FORM2_ESS"
                 SendPrinterName = ConfigurationManager.AppSettings("ST_001_01Edi_FORM2").ToString()
                 Return SendPrinterName
             Case "FORM2_1"
@@ -2030,7 +2030,7 @@ Public Class ReportPrintClass
             Case "FORM1_4"
                 SendPrinterName = ConfigurationManager.AppSettings("ST_002Edi_FORM1_4").ToString()
                 Return SendPrinterName
-            Case "FORM2"
+            Case "FORM2", "FORM2_ESS"
                 SendPrinterName = ConfigurationManager.AppSettings("ST_002Edi_FORM2").ToString()
                 Return SendPrinterName
             Case "FORM2_1"
@@ -2122,7 +2122,7 @@ Public Class ReportPrintClass
             Case "FORM1_4"
                 SendPrinterName = ConfigurationManager.AppSettings("ST_003Edi_FORM1_4").ToString()
                 Return SendPrinterName
-            Case "FORM2"
+            Case "FORM2", "FORM2_ESS"
                 SendPrinterName = ConfigurationManager.AppSettings("ST_003Edi_FORM2").ToString()
                 Return SendPrinterName
             Case "FORM2_1"
@@ -2214,7 +2214,7 @@ Public Class ReportPrintClass
             Case "FORM1_4"
                 SendPrinterName = ConfigurationManager.AppSettings("ST_004Edi_FORM1_4").ToString()
                 Return SendPrinterName
-            Case "FORM2"
+            Case "FORM2", "FORM2_ESS"
                 SendPrinterName = ConfigurationManager.AppSettings("ST_004Edi_FORM2").ToString()
                 Return SendPrinterName
             Case "FORM2_1"
@@ -2306,7 +2306,7 @@ Public Class ReportPrintClass
             Case "FORM1_4"
                 SendPrinterName = ConfigurationManager.AppSettings("ST_005Edi_FORM1_4").ToString()
                 Return SendPrinterName
-            Case "FORM2"
+            Case "FORM2", "FORM2_ESS"
                 SendPrinterName = ConfigurationManager.AppSettings("ST_005Edi_FORM2").ToString()
                 Return SendPrinterName
             Case "FORM2_1"
@@ -2398,7 +2398,7 @@ Public Class ReportPrintClass
             Case "FORM1_4"
                 SendPrinterName = ConfigurationManager.AppSettings("CB_003Edi_FORM1_4").ToString()
                 Return SendPrinterName
-            Case "FORM2"
+            Case "FORM2", "FORM2_ESS"
                 SendPrinterName = ConfigurationManager.AppSettings("CB_003Edi_FORM2").ToString()
                 Return SendPrinterName
             Case "FORM2_1"
@@ -2490,7 +2490,7 @@ Public Class ReportPrintClass
             Case "FORM1_4"
                 SendPrinterName = ConfigurationManager.AppSettings("ST_001_01Edi_receiptFORM1_4").ToString()
                 Return SendPrinterName
-            Case "FORM2"
+            Case "FORM2", "FORM2_ESS"
                 SendPrinterName = ConfigurationManager.AppSettings("ST_001_01Edi_receiptFORM2").ToString()
                 Return SendPrinterName
             Case "FORM2_1"
@@ -2579,7 +2579,7 @@ Public Class ReportPrintClass
             Case "FORM1_4"
                 SendPrinterName = ConfigurationManager.AppSettings("ST_001_02Edi_receiptFORM1_4").ToString()
                 Return SendPrinterName
-            Case "FORM2"
+            Case "FORM2", "FORM2_ESS"
                 SendPrinterName = ConfigurationManager.AppSettings("ST_001_02Edi_receiptFORM2").ToString()
                 Return SendPrinterName
             Case "FORM2_1"
@@ -2669,7 +2669,7 @@ Public Class ReportPrintClass
             Case "FORM1_4"
                 SendPrinterName = ConfigurationManager.AppSettings("ST_001_03Edi_receiptFORM1_4").ToString()
                 Return SendPrinterName
-            Case "FORM2"
+            Case "FORM2", "FORM2_ESS"
                 SendPrinterName = ConfigurationManager.AppSettings("ST_001_03Edi_receiptFORM2").ToString()
                 Return SendPrinterName
             Case "FORM2_1"
@@ -2760,7 +2760,7 @@ Public Class ReportPrintClass
             Case "FORM1_4"
                 SendPrinterName = ConfigurationManager.AppSettings("ST_002_01Edi_receiptFORM1_4").ToString()
                 Return SendPrinterName
-            Case "FORM2"
+            Case "FORM2", "FORM2_ESS"
                 SendPrinterName = ConfigurationManager.AppSettings("ST_002_01Edi_receiptFORM2").ToString()
                 Return SendPrinterName
             Case "FORM2_1"
@@ -2850,7 +2850,7 @@ Public Class ReportPrintClass
             Case "FORM1_4"
                 SendPrinterName = ConfigurationManager.AppSettings("ST_002_02Edi_receiptFORM1_4").ToString()
                 Return SendPrinterName
-            Case "FORM2"
+            Case "FORM2", "FORM2_ESS"
                 SendPrinterName = ConfigurationManager.AppSettings("ST_002_02Edi_receiptFORM2").ToString()
                 Return SendPrinterName
             Case "FORM2_1"
@@ -2941,7 +2941,7 @@ Public Class ReportPrintClass
             Case "FORM1_4"
                 SendPrinterName = ConfigurationManager.AppSettings("ST_003_01Edi_receiptFORM1_4").ToString()
                 Return SendPrinterName
-            Case "FORM2"
+            Case "FORM2", "FORM2_ESS"
                 SendPrinterName = ConfigurationManager.AppSettings("ST_003_01Edi_receiptFORM2").ToString()
                 Return SendPrinterName
             Case "FORM2_1"
@@ -3032,7 +3032,7 @@ Public Class ReportPrintClass
             Case "FORM1_4"
                 SendPrinterName = ConfigurationManager.AppSettings("ST_004_01Edi_receiptFORM1_4").ToString()
                 Return SendPrinterName
-            Case "FORM2"
+            Case "FORM2", "FORM2_ESS"
                 SendPrinterName = ConfigurationManager.AppSettings("ST_004_01Edi_receiptFORM2").ToString()
                 Return SendPrinterName
             Case "FORM2_1"
@@ -3123,7 +3123,7 @@ Public Class ReportPrintClass
             Case "FORM1_4"
                 SendPrinterName = ConfigurationManager.AppSettings("ST_005_01Edi_receiptFORM1_4").ToString()
                 Return SendPrinterName
-            Case "FORM2"
+            Case "FORM2", "FORM2_ESS"
                 SendPrinterName = ConfigurationManager.AppSettings("ST_005_01Edi_receiptFORM2").ToString()
                 Return SendPrinterName
             Case "FORM2_1"
@@ -3214,7 +3214,7 @@ Public Class ReportPrintClass
             Case "FORM1_4"
                 SendPrinterName = ConfigurationManager.AppSettings("CB_003_01Edi_receiptFORM1_4").ToString()
                 Return SendPrinterName
-            Case "FORM2"
+            Case "FORM2", "FORM2_ESS"
                 SendPrinterName = ConfigurationManager.AppSettings("CB_003_01Edi_receiptFORM2").ToString()
                 Return SendPrinterName
             Case "FORM2_1"
@@ -3329,7 +3329,7 @@ Public Class ReportPrintClass
     '        Case "FORM1_4"
     '            SendPrinterName = ConfigurationManager.AppSettings("ST_001Edi_FORM1_4").ToString()
     '            Return SendPrinterName
-    '        Case "FORM2"
+    '        Case "FORM2","FORM2_ESS"
     '            SendPrinterName = ConfigurationManager.AppSettings("ST_001Edi_FORM2").ToString()
     '            Return SendPrinterName
     '        Case "FORM2_1"

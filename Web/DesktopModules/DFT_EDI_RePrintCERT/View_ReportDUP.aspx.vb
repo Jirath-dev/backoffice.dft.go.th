@@ -419,7 +419,7 @@ Partial Public Class View_ReportDUP
                                 Return 3
                             End If
                         Case "FORMRussia"
-                            Dim rpt = New rpt3_ediFORM1RU_VR
+                            Dim rpt = New rpt3_ediFORM1RU_pr
                             If dsRequestDetails.Tables(0).Rows.Count > 0 Then
                                 'POL
                                 Dim m_stream As New System.IO.MemoryStream()
@@ -559,7 +559,7 @@ Partial Public Class View_ReportDUP
                                 Return 3
                             End If
                         Case "FORM2_ESS"
-                            Dim rpt = New rpt3_ediFORM2_ESS_VR
+                            Dim rpt = New rpt3_ediFORM2_ESS_pr
                             If dsRequestDetails.Tables(0).Rows.Count > 0 Then
                                 'POL
                                 Dim m_stream As New System.IO.MemoryStream()
@@ -606,7 +606,7 @@ Partial Public Class View_ReportDUP
                                 Return 3
                             End If
                         Case "FORM2_2"
-                            Dim rpt = New rpt3_ediFORM2_2_VR
+                            Dim rpt = New rpt3_ediFORM2_2_pr
                             If dsRequestDetails.Tables(0).Rows.Count > 0 Then
                                 'POL
                                 Dim m_stream As New System.IO.MemoryStream()
@@ -924,11 +924,11 @@ Partial Public Class View_ReportDUP
 
                                 Dim rpt As Object
                                 If IsNewFormE = True Then
-                                    rpt = New rpt3_ediFORME_01_VR
+                                    rpt = New rpt3_ediFORME_01_v2
                                     ''ByTine 14-2-2561 แยก GW
                                     rpt.txtCheck_CaseRVCCount.text = CheckCount_RVC(Request.QueryString("SendCell"), SendFormTypes)
                                 Else
-                                    rpt = New rpt3_ediFORME_01_VR
+                                    rpt = New rpt3_ediFORME_01_v2
                                 End If
 
                                 'POL
@@ -960,11 +960,11 @@ Partial Public Class View_ReportDUP
 
                                 Dim rpt As Object
                                 If IsNewFormE = True Then
-                                    rpt = New rpt3_ediFORME_VR
+                                    rpt = New rpt3_ediFORME_ESS
                                     ''ByTine 14-2-2561 แยก GW
                                     rpt.txtCheck_CaseRVCCount.text = CheckCount_RVC(Request.QueryString("SendCell"), SendFormTypes)
                                 Else
-                                    rpt = New rpt3_ediFORME_VR
+                                    rpt = New rpt3_ediFORME_ESS
                                 End If
 
                                 'POL
@@ -1093,7 +1093,7 @@ Partial Public Class View_ReportDUP
                         Case "FORMAHK"
                             'Dim string_IP As String = Request.ServerVariables("REMOTE_ADDR")
                             'Label1.Text = string_IP
-                            Dim rpt = New rpt3_ediFORMAHK_VR
+                            Dim rpt = New rpt3_ediFORMAHK_reprint
                             If dsRequestDetails.Tables(0).Rows.Count > 0 Then
                                 'POL
                                 Dim m_stream As New System.IO.MemoryStream()
@@ -1120,7 +1120,7 @@ Partial Public Class View_ReportDUP
                         Case "FORMTC_ESS"
                             'Dim string_IP As String = Request.ServerVariables("REMOTE_ADDR")
                             'Label1.Text = string_IP
-                            Dim rpt = New rpt3_ediFORMTC_ESS_VR
+                            Dim rpt = New rpt3_ediFORMTC_ESS_pr
                             If dsRequestDetails.Tables(0).Rows.Count > 0 Then
                                 'POL
                                 Dim m_stream As New System.IO.MemoryStream()
@@ -1147,7 +1147,7 @@ Partial Public Class View_ReportDUP
                         Case "FORM4_5"
                             'Dim string_IP As String = Request.ServerVariables("REMOTE_ADDR")
                             'Label1.Text = string_IP
-                            Dim rpt = New rpt3_ediFORM4_5_VR
+                            Dim rpt = New rpt3_ediFORM4_5_pr
                             If dsRequestDetails.Tables(0).Rows.Count > 0 Then
                                 'POL
                                 Dim m_stream As New System.IO.MemoryStream()
@@ -1204,7 +1204,7 @@ Partial Public Class View_ReportDUP
                                 Return 3
                             End If
                         Case "FORM4_61" 'ใหม่
-                            Dim rpt = New rpt3_ediFORM4_61_VR
+                            Dim rpt = New rpt3_ediFORM4_61_pr
                             Dim dataReadRfcard As SqlDataReader = SqlHelper.ExecuteReader(strEDIConn, CommandType.StoredProcedure, "vi_Nr_Rfcard_GetAll", New SqlParameter("@card_id ", CommonUtility.Get_String(dsRequestDetails.Tables(0).Rows(0).Item("card_id"))))
                             Dim dataRead_Sum As SqlDataReader = SqlHelper.ExecuteReader(strEDIConn, CommandType.StoredProcedure, "sp_getSummaryPrintForm", New SqlParameter("@invh_run_auto ", CommonUtility.Get_String(Request.QueryString("SendCell"))))
 
@@ -1284,7 +1284,7 @@ Partial Public Class View_ReportDUP
                                 If dataRead_Sum.Read Then
                                     Select Case Check_Form4_8(Request.QueryString("SendCell"))
                                         Case True 'ใหม่
-                                            rpt = New rpt3_ediFORM4_8_VR
+                                            rpt = New rpt3_ediFORM4_8_pr
                                             'เงื่อนไขใหม่ ปรับแก้ วันที่ 03-12-2012 เกี่ยวกับ RVC สองอัน Case 2,8 ต้องแสดงมูลค่า ที่เหลือไม่แสดง
                                             'begin RVC
                                             rpt.txtCheck_CaseRVCCount.text = CheckCount_RVC(Request.QueryString("SendCell"), SendFormTypes)
@@ -1295,7 +1295,7 @@ Partial Public Class View_ReportDUP
                                                 'rpt._TempB2B = LoadDataForB2B(Request.QueryString("SendCell"))
 
                                         Case False 'เก่า
-                                            rpt = New rpt3_ediFORM4_8_VR
+                                            rpt = New rpt3_ediFORM4_8_pr
                                     End Select
 
                                     rpt.txtSum_Gross_Weight.Text = dataRead_Sum.Item("Gross_Weight").ToString()
@@ -1325,7 +1325,7 @@ Partial Public Class View_ReportDUP
                                 Return 3
                             End If
                         Case "FORM4_9"
-                            Dim rpt = New rpt3_ediFORM4_9_VR
+                            Dim rpt = New rpt3_ediFORM4_9
 
                             Dim dataReadRfcard As SqlDataReader = SqlHelper.ExecuteReader(strEDIConn, CommandType.StoredProcedure, "vi_Nr_Rfcard_GetAll", New SqlParameter("@card_id ", CommonUtility.Get_String(dsRequestDetails.Tables(0).Rows(0).Item("card_id"))))
 
@@ -1400,7 +1400,7 @@ Partial Public Class View_ReportDUP
 
                                 ''ByTine 23-03-2559 AANZ ใหม่
                         Case "FORM4_911"
-                            Dim rpt = New rpt3_ediFORM4_911_VR
+                            Dim rpt = New rpt3_ediFORM4_911_pr
 
                             Dim dataReadRfcard As SqlDataReader = SqlHelper.ExecuteReader(strEDIConn, CommandType.StoredProcedure, "vi_Nr_Rfcard_GetAll", New SqlParameter("@card_id ", CommonUtility.Get_String(dsRequestDetails.Tables(0).Rows(0).Item("card_id"))))
 
@@ -1437,7 +1437,7 @@ Partial Public Class View_ReportDUP
                             End If
 
                         Case "FORM5"
-                            Dim rpt = New rpt3_ediFORM5_VR
+                            Dim rpt = New rpt3_ediFORM5_pr
 
                             If dsRequestDetails.Tables(0).Rows.Count > 0 Then
                                 'POL
@@ -1526,7 +1526,7 @@ Partial Public Class View_ReportDUP
                             End If
 
                         Case "FORM6"
-                            Dim rpt = New rpt3_ediFORM6_VR
+                            Dim rpt = New rpt3_ediFORM6_pr
 
                             If dsRequestDetails.Tables(0).Rows.Count > 0 Then
                                 'POL

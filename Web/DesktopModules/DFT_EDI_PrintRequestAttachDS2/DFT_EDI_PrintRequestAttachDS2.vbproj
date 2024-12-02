@@ -660,12 +660,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Report_Form\receipt_Form\rpt3_ReEdi_A _RCEP.en-GB.resx">
       <DependentUpon>rpt3_ReEdi_A _RCEP.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Report_Form\receipt_Form\rpt3_ReEdi_A _RCEP.resx">
       <DependentUpon>rpt3_ReEdi_A _RCEP.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Report_Form\receipt_Form\rpt3_ReEdi_A _RCEP.th-TH.resx">
       <DependentUpon>rpt3_ReEdi_A _RCEP.vb</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Report_Form\receipt_Form\rpt3_ReEdi_CO.en-GB.resx">
       <DependentUpon>rpt3_ReEdi_CO.vb</DependentUpon>

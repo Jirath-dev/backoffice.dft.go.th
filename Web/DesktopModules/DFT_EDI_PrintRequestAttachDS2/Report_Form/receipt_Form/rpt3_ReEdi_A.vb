@@ -2361,9 +2361,9 @@ Public Class rpt3_ReEdi_A
             With Get_Cardid_Num(txtcard_id.Text).Tables(0).Rows(0)
                 'check บัตรก่อน ว่าเป็นบัตรบริษัท
                 Select Case CommonUtility.Get_StringValue(.Item("card_type"))
-                    Case "C" 'เนื่องจากบัตรกรรมการ ใน rfcard ไม่ได้เก็บเลขบัตรประชาชน
-                        'เอาเลข id ของรูปลายเซ็นมา
-                        CaseCheck_numimagesSign_Request(Req_IDSeal(txtinvh_run_auto.Text))
+                    'Case "C" 'เนื่องจากบัตรกรรมการ ใน rfcard ไม่ได้เก็บเลขบัตรประชาชน
+                    '    'เอาเลข id ของรูปลายเซ็นมา
+                    '    CaseCheck_numimagesSign_Request(Req_IDSeal(txtinvh_run_auto.Text))
                     Case Else
                         'check เลขบัตรประชาชน ของ บัตรและ id sealsign ว่าเป็นคนเดียวกันหรือไม่ ถ้าเป็นคนเดียวกัน
                         'จะมีลายเซ็น sealsign ออก ถ้าไม่ใช่จะไม่มีลายเซ็น sealsign

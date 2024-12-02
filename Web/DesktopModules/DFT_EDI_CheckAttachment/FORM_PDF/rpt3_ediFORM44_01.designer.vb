@@ -1671,7 +1671,7 @@ Partial Public Class rpt3_ediFORM44_01
         'PageHeader1
         '
         Me.PageHeader1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.Label38, Me.Label36, Me.Label59, Me.Label37, Me.Label34, Me.txtreference_code2_Temp, Me.Label19, Me.txtCompany_Check_1, Me.txtdestination_Check2, Me.txttransport_by, Me.txtcompany_taxno, Me.txtcompany_country, Me.txtcompany_province, Me.txtcompany_address, Me.txtcompany_name, Me.txtob_address, Me.txtdest_remark, Me.txtcompany_fax, Me.txtcompany_phone, Me.txtdestination_company, Me.txtdestination_fax, Me.txtdestination_address, Me.txtdestination_phone, Me.txtdestination_province, Me.txtdest_Receive_country, Me.txtreference_code2, Me.txtcompany_email, Me.txtdestination_email, Me.txtdestination_taxid, Me.txtdest_remark1, Me.txtob_dest_address, Me.txtdeparture_date, Me.txtvasel_name, Me.txtport_discharge, Me.ReportInfo1, Me.txtform_type, Me.txtNewEmail_ch02, Me.txtNewEmail_ch01, Me.txtTitleHead, Me.Line9, Me.Line8, Me.Line13, Me.Line14, Me.Line12, Me.Line3, Me.Label42, Me.Label43, Me.Label44, Me.Line11, Me.Label3, Me.Label2, Me.Label5, Me.Label4, Me.Label1, Me.Label8, Me.Label7, Me.Label16, Me.Label21, Me.Label17, Me.Label22, Me.Line19, Me.Label6, Me.Shape1, Me.Label29, Me.Label30, Me.Shape3, Me.Label33, Me.Label48, Me.Label47, Me.Label46, Me.Line10, Me.Label18, Me.Label20, Me.Label27, Me.Label32, Me.Label35, Me.Label39, Me.Label45, Me.Label56, Me.Label57, Me.Line4, Me.Line15, Me.Label60, Me.Label61, Me.Label15, Me.Label31})
-        Me.PageHeader1.Height = 4.625!
+        Me.PageHeader1.Height = 4.716667!
         Me.PageHeader1.Name = "PageHeader1"
         '
         'Label38

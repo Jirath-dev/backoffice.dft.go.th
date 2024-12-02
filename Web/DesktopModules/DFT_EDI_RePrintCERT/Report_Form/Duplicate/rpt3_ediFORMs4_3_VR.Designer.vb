@@ -155,6 +155,8 @@ Partial Public Class rpt3_ediFORMs4_3_VR
         Me.GroupHeader1 = New DataDynamics.ActiveReports.GroupHeader()
         Me.GroupFooter1 = New DataDynamics.ActiveReports.GroupFooter()
         Me.txtTotalAll = New DataDynamics.ActiveReports.TextBox()
+        Me.lblIssuedRetro = New DataDynamics.ActiveReports.TextBox()
+        Me.txtIsIssued = New DataDynamics.ActiveReports.TextBox()
         CType(Me.txtNumRowCount, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTemp_marks, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtT_product, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -274,6 +276,8 @@ Partial Public Class rpt3_ediFORMs4_3_VR
         CType(Me.txtapprove_date, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtdateSelectRPT, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTotalAll, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.lblIssuedRetro, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtIsIssued, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'Detail1
@@ -1301,7 +1305,7 @@ Partial Public Class rpt3_ediFORMs4_3_VR
         '
         'PageHeader1
         '
-        Me.PageHeader1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.Line9, Me.Label44, Me.txtCompany_Check_1, Me.txtreference_code2_Temp, Me.txtdestination_Check2, Me.txttransport_by, Me.txtcompany_taxno, Me.txtcompany_country, Me.txtcompany_province, Me.txtcompany_address, Me.txtcompany_name, Me.txtob_address, Me.txtdest_remark, Me.txtcompany_fax, Me.txtcompany_phone, Me.txtdestination_company, Me.txtdestination_fax, Me.txtdestination_address, Me.txtdestination_phone, Me.txtdestination_province, Me.txtdest_Receive_country, Me.txtreference_code2, Me.txtcompany_email, Me.txtdestination_email, Me.txtdestination_taxid, Me.txtdest_remark1, Me.txtob_dest_address, Me.txtIndia_Thailand, Me.ReportInfo1, Me.txtNewEmail_ch02, Me.txtNewEmail_ch01, Me.txtTitleHead, Me.Line17, Me.Line16, Me.Label8, Me.Line13, Me.Label2, Me.Label16, Me.Label20, Me.Label22, Me.Label17, Me.Label4, Me.Line19, Me.Label21, Me.Label1, Me.Line23, Me.Label3, Me.Label6, Me.Line18, Me.Line22, Me.Label42, Me.Label43, Me.Label46, Me.Label47, Me.Label48, Me.Line21, Me.Label7, Me.Label11})
+        Me.PageHeader1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.Line9, Me.Label44, Me.txtCompany_Check_1, Me.txtreference_code2_Temp, Me.txtdestination_Check2, Me.txttransport_by, Me.txtcompany_taxno, Me.txtcompany_country, Me.txtcompany_province, Me.txtcompany_address, Me.txtcompany_name, Me.txtob_address, Me.txtdest_remark, Me.txtcompany_fax, Me.txtcompany_phone, Me.txtdestination_company, Me.txtdestination_fax, Me.txtdestination_address, Me.txtdestination_phone, Me.txtdestination_province, Me.txtdest_Receive_country, Me.txtreference_code2, Me.txtcompany_email, Me.txtdestination_email, Me.txtdestination_taxid, Me.txtdest_remark1, Me.txtob_dest_address, Me.txtIndia_Thailand, Me.ReportInfo1, Me.txtNewEmail_ch02, Me.txtNewEmail_ch01, Me.txtTitleHead, Me.Line17, Me.Line16, Me.Label8, Me.Line13, Me.Label2, Me.Label16, Me.Label20, Me.Label22, Me.Label17, Me.Label4, Me.Line19, Me.Label21, Me.Label1, Me.Line23, Me.Label3, Me.Label6, Me.Line18, Me.Line22, Me.Label42, Me.Label43, Me.Label46, Me.Label47, Me.Label48, Me.Line21, Me.Label7, Me.Label11, Me.lblIssuedRetro, Me.txtIsIssued})
         Me.PageHeader1.Height = 5.006945!
         Me.PageHeader1.Name = "PageHeader1"
         '
@@ -2998,6 +3002,47 @@ Partial Public Class rpt3_ediFORMs4_3_VR
         Me.txtTotalAll.Visible = False
         Me.txtTotalAll.Width = 3.469488!
         '
+        'lblIssuedRetro
+        '
+        Me.lblIssuedRetro.Border.BottomColor = System.Drawing.Color.Black
+        Me.lblIssuedRetro.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.lblIssuedRetro.Border.LeftColor = System.Drawing.Color.Black
+        Me.lblIssuedRetro.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.lblIssuedRetro.Border.RightColor = System.Drawing.Color.Black
+        Me.lblIssuedRetro.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.lblIssuedRetro.Border.TopColor = System.Drawing.Color.Black
+        Me.lblIssuedRetro.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.lblIssuedRetro.CanGrow = False
+        Me.lblIssuedRetro.Height = 0.25!
+        Me.lblIssuedRetro.Left = 4.4375!
+        Me.lblIssuedRetro.Name = "lblIssuedRetro"
+        Me.lblIssuedRetro.Style = "color: Black; ddo-char-set: 1; text-align: center; font-weight: bold; font-size: " &
+    "14pt; font-family: BrowalliaUPC; "
+        Me.lblIssuedRetro.Text = "ISSUED RETROACTIVELY"
+        Me.lblIssuedRetro.Top = 3.625!
+        Me.lblIssuedRetro.Visible = False
+        Me.lblIssuedRetro.Width = 3.5625!
+        '
+        'txtIsIssued
+        '
+        Me.txtIsIssued.Border.BottomColor = System.Drawing.Color.Black
+        Me.txtIsIssued.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtIsIssued.Border.LeftColor = System.Drawing.Color.Black
+        Me.txtIsIssued.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtIsIssued.Border.RightColor = System.Drawing.Color.Black
+        Me.txtIsIssued.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtIsIssued.Border.TopColor = System.Drawing.Color.Black
+        Me.txtIsIssued.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtIsIssued.DataField = "IsIssuedRetro"
+        Me.txtIsIssued.Height = 0.1979167!
+        Me.txtIsIssued.Left = 6.0625!
+        Me.txtIsIssued.Name = "txtIsIssued"
+        Me.txtIsIssued.Style = "color: Red; "
+        Me.txtIsIssued.Text = "IsIssue"
+        Me.txtIsIssued.Top = 3.375!
+        Me.txtIsIssued.Visible = False
+        Me.txtIsIssued.Width = 1.0!
+        '
         'rpt3_ediFORMs4_3_VR
         '
         Me.MasterReport = False
@@ -3144,6 +3189,8 @@ Partial Public Class rpt3_ediFORMs4_3_VR
         CType(Me.txtapprove_date, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtdateSelectRPT, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtTotalAll, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.lblIssuedRetro, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtIsIssued, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub
@@ -3287,4 +3334,6 @@ Partial Public Class rpt3_ediFORMs4_3_VR
     Friend WithEvents txtapprove_date As DataDynamics.ActiveReports.TextBox
     Public WithEvents txtSendCheckSeletedate As DataDynamics.ActiveReports.TextBox
     Public WithEvents txtdateSelectRPT As DataDynamics.ActiveReports.TextBox
+    Friend WithEvents lblIssuedRetro As DataDynamics.ActiveReports.TextBox
+    Friend WithEvents txtIsIssued As DataDynamics.ActiveReports.TextBox
 End Class

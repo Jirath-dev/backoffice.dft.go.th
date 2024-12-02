@@ -17,7 +17,6 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(rpt3_ediFORMD_ESS_DC))
         Me.Detail1 = New DataDynamics.ActiveReports.Detail()
         Me.txtNumRowCount = New DataDynamics.ActiveReports.TextBox()
-        Me.txtTemp_marks = New DataDynamics.ActiveReports.TextBox()
         Me.txtT_product = New DataDynamics.ActiveReports.TextBox()
         Me.txtTemp_box8 = New DataDynamics.ActiveReports.TextBox()
         Me.txtTolInvoice = New DataDynamics.ActiveReports.TextBox()
@@ -80,6 +79,7 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.txtUSDAgent = New DataDynamics.ActiveReports.TextBox()
         Me.txtDisplayUnitType = New DataDynamics.ActiveReports.TextBox()
         Me.PageHeader1 = New DataDynamics.ActiveReports.PageHeader()
+        Me.Label36 = New DataDynamics.ActiveReports.Label()
         Me.Label27 = New DataDynamics.ActiveReports.Label()
         Me.txtCompany_Check_1 = New DataDynamics.ActiveReports.TextBox()
         Me.txtreference_code2_Temp = New DataDynamics.ActiveReports.TextBox()
@@ -160,6 +160,10 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.Label34 = New DataDynamics.ActiveReports.Label()
         Me.Label35 = New DataDynamics.ActiveReports.Label()
         Me.PageFooter1 = New DataDynamics.ActiveReports.PageFooter()
+        Me.PictureApproveSign = New DataDynamics.ActiveReports.Picture()
+        Me.ShapeApproveSign = New DataDynamics.ActiveReports.Shape()
+        Me.Picture_SealAuthor = New DataDynamics.ActiveReports.Picture()
+        Me.ShapeSealSign = New DataDynamics.ActiveReports.Shape()
         Me.Pic_ch5_exhibi = New DataDynamics.ActiveReports.Picture()
         Me.Pic_ch7_Issued = New DataDynamics.ActiveReports.Picture()
         Me.Pic_ch6_demin = New DataDynamics.ActiveReports.Picture()
@@ -216,21 +220,20 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.txtInvAgentType = New DataDynamics.ActiveReports.TextBox()
         Me.Label58 = New DataDynamics.ActiveReports.Label()
         Me.Line7 = New DataDynamics.ActiveReports.Line()
+        Me.txtTemp_Date = New DataDynamics.ActiveReports.TextBox()
+        Me.txtprintFormDate = New DataDynamics.ActiveReports.TextBox()
+        Me.txtapprove_date = New DataDynamics.ActiveReports.TextBox()
+        Me.txtSendCheckSeletedate = New DataDynamics.ActiveReports.TextBox()
+        Me.txtdateSelectRPT = New DataDynamics.ActiveReports.TextBox()
+        Me.txtTemp_Bangkok02 = New DataDynamics.ActiveReports.TextBox()
+        Me.txtTemp_Bangkok01 = New DataDynamics.ActiveReports.TextBox()
+        Me.txtPrintDate = New DataDynamics.ActiveReports.TextBox()
+        Me.txtTemp_SiteSend = New DataDynamics.ActiveReports.TextBox()
         Me.GroupHeader1 = New DataDynamics.ActiveReports.GroupHeader()
         Me.GroupFooter1 = New DataDynamics.ActiveReports.GroupFooter()
         Me.txtTotalAll = New DataDynamics.ActiveReports.TextBox()
-        Me.Picture_SealAuthor = New DataDynamics.ActiveReports.Picture()
-        Me.ShapeSealSign = New DataDynamics.ActiveReports.Shape()
-        Me.PictureApproveSign = New DataDynamics.ActiveReports.Picture()
-        Me.ShapeApproveSign = New DataDynamics.ActiveReports.Shape()
-        Me.txtTemp_Bangkok02 = New DataDynamics.ActiveReports.TextBox()
-        Me.txtTemp_Bangkok01 = New DataDynamics.ActiveReports.TextBox()
-        Me.txtTemp_Date = New DataDynamics.ActiveReports.TextBox()
-        Me.txtTemp_SiteSend = New DataDynamics.ActiveReports.TextBox()
-        Me.txtprintFormDate = New DataDynamics.ActiveReports.TextBox()
-        Me.txtapprove_date = New DataDynamics.ActiveReports.TextBox()
+        Me.txtTemp_marks = New DataDynamics.ActiveReports.TextBox()
         CType(Me.txtNumRowCount, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtTemp_marks, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtT_product, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTemp_box8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTolInvoice, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -292,6 +295,7 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         CType(Me.txtletter, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtUSDAgent, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtDisplayUnitType, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label36, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Label27, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtCompany_Check_1, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtreference_code2_Temp, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -358,6 +362,8 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         CType(Me.Label32, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Label34, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Label35, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.PictureApproveSign, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Picture_SealAuthor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Pic_ch5_exhibi, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Pic_ch7_Issued, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Pic_ch6_demin, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -397,22 +403,24 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         CType(Me.txtByCom_CH03, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtInvAgentType, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Label58, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtTotalAll, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Picture_SealAuthor, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.PictureApproveSign, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtTemp_Bangkok02, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtTemp_Bangkok01, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTemp_Date, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtTemp_SiteSend, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtprintFormDate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtapprove_date, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtSendCheckSeletedate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtdateSelectRPT, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtTemp_Bangkok02, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtTemp_Bangkok01, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtPrintDate, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtTemp_SiteSend, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtTotalAll, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtTemp_marks, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'Detail1
         '
         Me.Detail1.ColumnSpacing = 0!
-        Me.Detail1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.txtNumRowCount, Me.txtTemp_marks, Me.txtT_product, Me.txtTemp_box8, Me.txtTolInvoice, Me.txtinvoice_no1, Me.txtinvoice_no2, Me.txtinvoice_no3, Me.txtinvoice_no4, Me.txtinvoice_no5, Me.txtinvoice_date1, Me.txtinvoice_date2, Me.txtinvoice_date3, Me.txtinvoice_date4, Me.txtinvoice_date5, Me.txtGross_Weight, Me.txtmarks, Me.txtproduct_n1, Me.txtproduct_n2, Me.txtquantity1, Me.txtq_unit_code1, Me.txtquantity2, Me.txtq_unit_code2, Me.txtquantity3, Me.txtq_unit_code3, Me.txtquantity4, Me.txtq_unit_code4, Me.txtquantity5, Me.txtq_unit_code5, Me.txtg_unit_code, Me.C_TotalRowDe, Me.txttariff_code, Me.txtGrossTxt, Me.txtg_Unit_Desc, Me.txtFOB_AMT, Me.txtinvoice_board, Me.txtWeightDisplayHeader, Me.txtFOBDisplay, Me.txtunit_code2, Me.txtnet_weight, Me.txtgross_weightH, Me.txtGrossTxt_, Me.txtthird_country, Me.txtplace_Exibition, Me.txtNumInvoice, Me.txtUSDInvoice, Me.txtbox8, Me.txtunit_code3, Me.txtUSDInvoiceDetail, Me.txtWeightDisplayHeaderH, Me.txtgross_weightD, Me.txtCheckGrossDetail, Me.txtInvoiceDetailTH, Me.txtSINGLE_COUNTRY_CONTENT, Me.txt_NewEmail_ch02, Me.txtproduct_model, Me.txtvoince, Me.txtTitleMain, Me.txtPriceOtherDetail, Me.txtCurrency_Code, Me.txtletter, Me.txtUSDAgent, Me.txtDisplayUnitType})
-        Me.Detail1.Height = 0.3583333!
+        Me.Detail1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.txtNumRowCount, Me.txtT_product, Me.txtTemp_box8, Me.txtTolInvoice, Me.txtinvoice_no1, Me.txtinvoice_no2, Me.txtinvoice_no3, Me.txtinvoice_no4, Me.txtinvoice_no5, Me.txtinvoice_date1, Me.txtinvoice_date2, Me.txtinvoice_date3, Me.txtinvoice_date4, Me.txtinvoice_date5, Me.txtGross_Weight, Me.txtmarks, Me.txtproduct_n1, Me.txtproduct_n2, Me.txtquantity1, Me.txtq_unit_code1, Me.txtquantity2, Me.txtq_unit_code2, Me.txtquantity3, Me.txtq_unit_code3, Me.txtquantity4, Me.txtq_unit_code4, Me.txtquantity5, Me.txtq_unit_code5, Me.txtg_unit_code, Me.C_TotalRowDe, Me.txttariff_code, Me.txtGrossTxt, Me.txtg_Unit_Desc, Me.txtFOB_AMT, Me.txtinvoice_board, Me.txtWeightDisplayHeader, Me.txtFOBDisplay, Me.txtunit_code2, Me.txtnet_weight, Me.txtgross_weightH, Me.txtGrossTxt_, Me.txtthird_country, Me.txtplace_Exibition, Me.txtNumInvoice, Me.txtUSDInvoice, Me.txtbox8, Me.txtunit_code3, Me.txtUSDInvoiceDetail, Me.txtWeightDisplayHeaderH, Me.txtgross_weightD, Me.txtCheckGrossDetail, Me.txtInvoiceDetailTH, Me.txtSINGLE_COUNTRY_CONTENT, Me.txt_NewEmail_ch02, Me.txtproduct_model, Me.txtvoince, Me.txtTitleMain, Me.txtPriceOtherDetail, Me.txtCurrency_Code, Me.txtletter, Me.txtUSDAgent, Me.txtDisplayUnitType, Me.txtTemp_marks})
+        Me.Detail1.Height = 0.3125!
         Me.Detail1.Name = "Detail1"
         '
         'txtNumRowCount
@@ -428,30 +436,11 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.txtNumRowCount.Height = 0.2204724!
         Me.txtNumRowCount.Left = 0.25!
         Me.txtNumRowCount.Name = "txtNumRowCount"
-        Me.txtNumRowCount.Style = "color: Blue; ddo-char-set: 1; text-align: center; font-size: 10pt; font-family: B" &
-    "rowalliaUPC; "
+        Me.txtNumRowCount.Style = "color: Black; ddo-char-set: 1; text-align: center; font-size: 10pt; font-family: " &
+    "BrowalliaUPC; "
         Me.txtNumRowCount.Text = Nothing
         Me.txtNumRowCount.Top = 0!
         Me.txtNumRowCount.Width = 0.3937007!
-        '
-        'txtTemp_marks
-        '
-        Me.txtTemp_marks.Border.BottomColor = System.Drawing.Color.Black
-        Me.txtTemp_marks.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtTemp_marks.Border.LeftColor = System.Drawing.Color.Black
-        Me.txtTemp_marks.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtTemp_marks.Border.RightColor = System.Drawing.Color.Black
-        Me.txtTemp_marks.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtTemp_marks.Border.TopColor = System.Drawing.Color.Black
-        Me.txtTemp_marks.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtTemp_marks.Height = 0.2214567!
-        Me.txtTemp_marks.Left = 0.8858268!
-        Me.txtTemp_marks.Name = "txtTemp_marks"
-        Me.txtTemp_marks.Style = "color: Blue; ddo-char-set: 1; font-size: 10pt; font-family: BrowalliaUPC; "
-        Me.txtTemp_marks.Text = Nothing
-        Me.txtTemp_marks.Top = 0!
-        Me.txtTemp_marks.Visible = False
-        Me.txtTemp_marks.Width = 0.9448819!
         '
         'txtT_product
         '
@@ -466,7 +455,7 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.txtT_product.Height = 0.3125!
         Me.txtT_product.Left = 1.875!
         Me.txtT_product.Name = "txtT_product"
-        Me.txtT_product.Style = "color: Blue; ddo-char-set: 1; font-size: 10pt; font-family: BrowalliaUPC; "
+        Me.txtT_product.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: BrowalliaUPC; "
         Me.txtT_product.Text = Nothing
         Me.txtT_product.Top = 0!
         Me.txtT_product.Width = 3.5!
@@ -484,8 +473,8 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.txtTemp_box8.Height = 0.2214567!
         Me.txtTemp_box8.Left = 5.38878!
         Me.txtTemp_box8.Name = "txtTemp_box8"
-        Me.txtTemp_box8.Style = "color: Blue; ddo-char-set: 1; text-align: center; font-size: 10pt; font-family: B" &
-    "rowalliaUPC; "
+        Me.txtTemp_box8.Style = "color: Black; ddo-char-set: 1; text-align: center; font-size: 10pt; font-family: " &
+    "BrowalliaUPC; "
         Me.txtTemp_box8.Text = Nothing
         Me.txtTemp_box8.Top = 0!
         Me.txtTemp_box8.Width = 0.5943241!
@@ -1062,8 +1051,8 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.txtGrossTxt.Height = 0.221!
         Me.txtGrossTxt.Left = 6.0!
         Me.txtGrossTxt.Name = "txtGrossTxt"
-        Me.txtGrossTxt.Style = "color: Blue; ddo-char-set: 1; text-align: center; font-size: 10pt; font-family: B" &
-    "rowalliaUPC; "
+        Me.txtGrossTxt.Style = "color: Black; ddo-char-set: 1; text-align: center; font-size: 10pt; font-family: " &
+    "BrowalliaUPC; "
         Me.txtGrossTxt.Text = Nothing
         Me.txtGrossTxt.Top = 0!
         Me.txtGrossTxt.Width = 1.125!
@@ -1542,8 +1531,8 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.txtvoince.Height = 0.2214567!
         Me.txtvoince.Left = 7.1875!
         Me.txtvoince.Name = "txtvoince"
-        Me.txtvoince.Style = "color: Blue; ddo-char-set: 1; text-align: center; font-size: 10pt; font-family: B" &
-    "rowalliaUPC; "
+        Me.txtvoince.Style = "color: Black; ddo-char-set: 1; text-align: center; font-size: 10pt; font-family: " &
+    "BrowalliaUPC; "
         Me.txtvoince.Text = Nothing
         Me.txtvoince.Top = 0!
         Me.txtvoince.Width = 0.9842519!
@@ -1670,9 +1659,29 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         '
         'PageHeader1
         '
-        Me.PageHeader1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.Label27, Me.txtCompany_Check_1, Me.txtreference_code2_Temp, Me.txtdestination_Check2, Me.txttransport_by, Me.txtcompany_taxno, Me.txtcompany_country, Me.txtcompany_province, Me.txtcompany_address, Me.txtcompany_name, Me.txtob_address, Me.txtdest_remark, Me.txtcompany_fax, Me.txtcompany_phone, Me.txtdestination_company, Me.txtdestination_fax, Me.txtdestination_address, Me.txtdestination_phone, Me.txtdestination_province, Me.txtdest_Receive_country, Me.txtreference_code2, Me.txtcompany_email, Me.txtdestination_email, Me.txtdestination_taxid, Me.txtdest_remark1, Me.txtob_dest_address, Me.txtdeparture_date, Me.txtvasel_name, Me.txtport_discharge, Me.ReportInfo1, Me.txtform_type, Me.txtNewEmail_ch02, Me.txtNewEmail_ch01, Me.txtTitleHead, Me.Line9, Me.Line8, Me.Line13, Me.Line14, Me.Line12, Me.Line3, Me.Label42, Me.Label43, Me.Label44, Me.Line11, Me.Label3, Me.Label2, Me.Label5, Me.Label4, Me.Label1, Me.Label8, Me.Label7, Me.Label16, Me.Label21, Me.Label17, Me.Label22, Me.Line19, Me.Label19, Me.Label6, Me.Shape1, Me.Label29, Me.Label30, Me.Shape3, Me.Label33, Me.Label48, Me.Line10, Me.Label56, Me.Label57, Me.Line4, Me.Label59, Me.Label15, Me.Line15, Me.Label46, Me.Label20, Me.Label40, Me.Label31, Me.Label18, Me.Label32, Me.Label34, Me.Label35})
-        Me.PageHeader1.Height = 4.5625!
+        Me.PageHeader1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.Label36, Me.Label27, Me.txtCompany_Check_1, Me.txtreference_code2_Temp, Me.txtdestination_Check2, Me.txttransport_by, Me.txtcompany_taxno, Me.txtcompany_country, Me.txtcompany_province, Me.txtcompany_address, Me.txtcompany_name, Me.txtob_address, Me.txtdest_remark, Me.txtcompany_fax, Me.txtcompany_phone, Me.txtdestination_company, Me.txtdestination_fax, Me.txtdestination_address, Me.txtdestination_phone, Me.txtdestination_province, Me.txtdest_Receive_country, Me.txtreference_code2, Me.txtcompany_email, Me.txtdestination_email, Me.txtdestination_taxid, Me.txtdest_remark1, Me.txtob_dest_address, Me.txtdeparture_date, Me.txtvasel_name, Me.txtport_discharge, Me.ReportInfo1, Me.txtform_type, Me.txtNewEmail_ch02, Me.txtNewEmail_ch01, Me.txtTitleHead, Me.Line9, Me.Line8, Me.Line13, Me.Line14, Me.Line12, Me.Line3, Me.Label42, Me.Label43, Me.Label44, Me.Line11, Me.Label3, Me.Label2, Me.Label5, Me.Label4, Me.Label1, Me.Label8, Me.Label7, Me.Label16, Me.Label21, Me.Label17, Me.Label22, Me.Line19, Me.Label19, Me.Label6, Me.Shape1, Me.Label29, Me.Label30, Me.Shape3, Me.Label33, Me.Label48, Me.Line10, Me.Label56, Me.Label57, Me.Line4, Me.Label59, Me.Label15, Me.Line15, Me.Label46, Me.Label20, Me.Label40, Me.Label31, Me.Label18, Me.Label32, Me.Label34, Me.Label35})
+        Me.PageHeader1.Height = 4.65625!
         Me.PageHeader1.Name = "PageHeader1"
+        '
+        'Label36
+        '
+        Me.Label36.Border.BottomColor = System.Drawing.Color.Black
+        Me.Label36.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.Label36.Border.LeftColor = System.Drawing.Color.Black
+        Me.Label36.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.Label36.Border.RightColor = System.Drawing.Color.Black
+        Me.Label36.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.Label36.Border.TopColor = System.Drawing.Color.Black
+        Me.Label36.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.Label36.Height = 0.25!
+        Me.Label36.HyperLink = Nothing
+        Me.Label36.Left = 5.25!
+        Me.Label36.Name = "Label36"
+        Me.Label36.Style = "color: Red; ddo-char-set: 0; text-align: right; font-weight: bold; font-size: 13." &
+    "8pt; font-family: BrowalliaUPC; "
+        Me.Label36.Text = "DUPLICATE"
+        Me.Label36.Top = 0.0625!
+        Me.Label36.Width = 2.875!
         '
         'Label27
         '
@@ -1707,7 +1716,7 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.txtCompany_Check_1.Height = 0.8858271!
         Me.txtCompany_Check_1.Left = 0.4375!
         Me.txtCompany_Check_1.Name = "txtCompany_Check_1"
-        Me.txtCompany_Check_1.Style = "color: Blue; ddo-char-set: 1; font-size: 10pt; font-family: BrowalliaUPC; "
+        Me.txtCompany_Check_1.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: BrowalliaUPC; "
         Me.txtCompany_Check_1.Text = Nothing
         Me.txtCompany_Check_1.Top = 0.5!
         Me.txtCompany_Check_1.Width = 3.779528!
@@ -1725,8 +1734,8 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.txtreference_code2_Temp.Height = 0.3312007!
         Me.txtreference_code2_Temp.Left = 5.375!
         Me.txtreference_code2_Temp.Name = "txtreference_code2_Temp"
-        Me.txtreference_code2_Temp.Style = "color: Blue; ddo-char-set: 1; font-weight: bold; font-size: 16pt; font-family: Br" &
-    "owalliaUPC; "
+        Me.txtreference_code2_Temp.Style = "color: Black; ddo-char-set: 1; font-weight: bold; font-size: 16pt; font-family: B" &
+    "rowalliaUPC; "
         Me.txtreference_code2_Temp.Text = "D2019-00001"
         Me.txtreference_code2_Temp.Top = 0.1875!
         Me.txtreference_code2_Temp.Width = 1.648622!
@@ -1745,7 +1754,7 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.txtdestination_Check2.Height = 0.8536742!
         Me.txtdestination_Check2.Left = 0.4375!
         Me.txtdestination_Check2.Name = "txtdestination_Check2"
-        Me.txtdestination_Check2.Style = "color: Blue; ddo-char-set: 1; font-size: 10pt; font-family: BrowalliaUPC; "
+        Me.txtdestination_Check2.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: BrowalliaUPC; "
         Me.txtdestination_Check2.Text = Nothing
         Me.txtdestination_Check2.Top = 1.5625!
         Me.txtdestination_Check2.Width = 3.779528!
@@ -1764,7 +1773,7 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.txttransport_by.Height = 0.319882!
         Me.txttransport_by.Left = 0.5625!
         Me.txttransport_by.Name = "txttransport_by"
-        Me.txttransport_by.Style = "color: Blue; ddo-char-set: 222; font-size: 12pt; font-family: BrowalliaUPC; "
+        Me.txttransport_by.Style = "color: Black; ddo-char-set: 222; font-size: 12pt; font-family: BrowalliaUPC; "
         Me.txttransport_by.Text = "transport_by"
         Me.txttransport_by.Top = 2.5625!
         Me.txttransport_by.Width = 3.566929!
@@ -2205,7 +2214,7 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.txtdeparture_date.Left = 0.5413386!
         Me.txtdeparture_date.Name = "txtdeparture_date"
         Me.txtdeparture_date.OutputFormat = resources.GetString("txtdeparture_date.OutputFormat")
-        Me.txtdeparture_date.Style = "color: Blue; ddo-char-set: 222; font-size: 12pt; font-family: BrowalliaUPC; "
+        Me.txtdeparture_date.Style = "color: Black; ddo-char-set: 222; font-size: 12pt; font-family: BrowalliaUPC; "
         Me.txtdeparture_date.Text = "departure_date"
         Me.txtdeparture_date.Top = 2.951854!
         Me.txtdeparture_date.Width = 3.567913!
@@ -2224,7 +2233,7 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.txtvasel_name.Height = 0.319882!
         Me.txtvasel_name.Left = 0.5413386!
         Me.txtvasel_name.Name = "txtvasel_name"
-        Me.txtvasel_name.Style = "color: Blue; ddo-char-set: 222; font-size: 12pt; font-family: BrowalliaUPC; "
+        Me.txtvasel_name.Style = "color: Black; ddo-char-set: 222; font-size: 12pt; font-family: BrowalliaUPC; "
         Me.txtvasel_name.Text = "vasel_name"
         Me.txtvasel_name.Top = 3.289699!
         Me.txtvasel_name.Width = 3.567913!
@@ -2243,7 +2252,7 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.txtport_discharge.Height = 0.319882!
         Me.txtport_discharge.Left = 0.5413386!
         Me.txtport_discharge.Name = "txtport_discharge"
-        Me.txtport_discharge.Style = "color: Blue; ddo-char-set: 222; font-size: 12pt; font-family: BrowalliaUPC; "
+        Me.txtport_discharge.Style = "color: Black; ddo-char-set: 222; font-size: 12pt; font-family: BrowalliaUPC; "
         Me.txtport_discharge.Text = "port_discharge"
         Me.txtport_discharge.Top = 3.658792!
         Me.txtport_discharge.Width = 3.567913!
@@ -2262,8 +2271,8 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.ReportInfo1.Height = 0.3125!
         Me.ReportInfo1.Left = 3.5625!
         Me.ReportInfo1.Name = "ReportInfo1"
-        Me.ReportInfo1.Style = "color: Blue; text-align: center; font-family: BrowalliaUPC; vertical-align: botto" &
-    "m; "
+        Me.ReportInfo1.Style = "color: Black; text-align: center; font-family: BrowalliaUPC; vertical-align: bott" &
+    "om; "
         Me.ReportInfo1.Top = 4.1875!
         Me.ReportInfo1.Width = 1.5!
         '
@@ -2340,7 +2349,7 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.txtTitleHead.Height = 0.25!
         Me.txtTitleHead.Left = 1.88!
         Me.txtTitleHead.Name = "txtTitleHead"
-        Me.txtTitleHead.Style = "color: Blue; ddo-char-set: 1; font-size: 10pt; font-family: BrowalliaUPC; "
+        Me.txtTitleHead.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: BrowalliaUPC; "
         Me.txtTitleHead.Text = Nothing
         Me.txtTitleHead.Top = 4.6177!
         Me.txtTitleHead.Visible = False
@@ -2757,8 +2766,8 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.Label22.HyperLink = Nothing
         Me.Label22.Left = 5.8125!
         Me.Label22.Name = "Label22"
-        Me.Label22.Style = "color: Blue; ddo-char-set: 0; text-align: center; font-weight: bold; font-size: 1" &
-    "1.25pt; font-family: Times New Roman; "
+        Me.Label22.Style = "color: Black; ddo-char-set: 0; text-align: center; font-weight: bold; font-size: " &
+    "11.25pt; font-family: Times New Roman; "
         Me.Label22.Text = "FORM D"
         Me.Label22.Top = 1.0625!
         Me.Label22.Width = 0.8125!
@@ -3231,9 +3240,85 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         '
         'PageFooter1
         '
-        Me.PageFooter1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.PictureApproveSign, Me.ShapeApproveSign, Me.Picture_SealAuthor, Me.ShapeSealSign, Me.Pic_ch5_exhibi, Me.Pic_ch7_Issued, Me.Pic_ch6_demin, Me.Pic_ch4_par, Me.Pic_ch3_back, Me.Pic_ch1_third, Me.Pic_ch2_accu, Me.txtTemp_back_country, Me.txtIMPORT_COUNTRY, Me.txtcompany_provincefoot1, Me.txtcompany_provincefoot, Me.txtshow_check, Me.txtback_country, Me.txtinvh_run_auto, Me.txtCheckIssued, Me.txttotalSum_fob_amt, Me.Line27, Me.Line2, Me.Line20, Me.Label25, Me.Line25, Me.Line1, Me.Line6, Me.Line26, Me.Label23, Me.Label24, Me.Label10, Me.Label11, Me.Label26, Me.Label12, Me.Line16, Me.Label13, Me.Label28, Me.Label14, Me.Line17, Me.Label9, Me.Shape11, Me.Shape12, Me.Shape13, Me.Shape14, Me.Label52, Me.Label53, Me.Label54, Me.Label55, Me.Shape9, Me.Shape8, Me.Shape15, Me.Label51, Me.Label50, Me.Label49, Me.txtCheck_CaseRVCCount, Me.txtDisplayUDS7, Me.txtByCom_CH03, Me.txtInvAgentType, Me.Label58, Me.Line7, Me.txtTemp_Bangkok02, Me.txtTemp_Bangkok01, Me.txtTemp_Date, Me.txtTemp_SiteSend, Me.txtprintFormDate, Me.txtapprove_date})
+        Me.PageFooter1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.PictureApproveSign, Me.ShapeApproveSign, Me.Picture_SealAuthor, Me.ShapeSealSign, Me.Pic_ch5_exhibi, Me.Pic_ch7_Issued, Me.Pic_ch6_demin, Me.Pic_ch4_par, Me.Pic_ch3_back, Me.Pic_ch1_third, Me.Pic_ch2_accu, Me.txtTemp_back_country, Me.txtIMPORT_COUNTRY, Me.txtcompany_provincefoot1, Me.txtcompany_provincefoot, Me.txtshow_check, Me.txtback_country, Me.txtinvh_run_auto, Me.txtCheckIssued, Me.txttotalSum_fob_amt, Me.Line27, Me.Line2, Me.Line20, Me.Label25, Me.Line25, Me.Line1, Me.Line6, Me.Line26, Me.Label23, Me.Label24, Me.Label10, Me.Label11, Me.Label26, Me.Label12, Me.Line16, Me.Label13, Me.Label28, Me.Label14, Me.Line17, Me.Label9, Me.Shape11, Me.Shape12, Me.Shape13, Me.Shape14, Me.Label52, Me.Label53, Me.Label54, Me.Label55, Me.Shape9, Me.Shape8, Me.Shape15, Me.Label51, Me.Label50, Me.Label49, Me.txtCheck_CaseRVCCount, Me.txtDisplayUDS7, Me.txtByCom_CH03, Me.txtInvAgentType, Me.Label58, Me.Line7, Me.txtTemp_Date, Me.txtprintFormDate, Me.txtapprove_date, Me.txtSendCheckSeletedate, Me.txtdateSelectRPT, Me.txtTemp_Bangkok02, Me.txtTemp_Bangkok01, Me.txtPrintDate, Me.txtTemp_SiteSend})
         Me.PageFooter1.Height = 4.22!
         Me.PageFooter1.Name = "PageFooter1"
+        '
+        'PictureApproveSign
+        '
+        Me.PictureApproveSign.Border.BottomColor = System.Drawing.Color.Black
+        Me.PictureApproveSign.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.PictureApproveSign.Border.LeftColor = System.Drawing.Color.Black
+        Me.PictureApproveSign.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.PictureApproveSign.Border.RightColor = System.Drawing.Color.Black
+        Me.PictureApproveSign.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.PictureApproveSign.Border.TopColor = System.Drawing.Color.Black
+        Me.PictureApproveSign.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.PictureApproveSign.Height = 1.9375!
+        Me.PictureApproveSign.Image = Nothing
+        Me.PictureApproveSign.ImageData = Nothing
+        Me.PictureApproveSign.Left = 4.4375!
+        Me.PictureApproveSign.LineWeight = 0!
+        Me.PictureApproveSign.Name = "PictureApproveSign"
+        Me.PictureApproveSign.Top = 0.75!
+        Me.PictureApproveSign.Visible = False
+        Me.PictureApproveSign.Width = 3.5625!
+        '
+        'ShapeApproveSign
+        '
+        Me.ShapeApproveSign.Border.BottomColor = System.Drawing.Color.Black
+        Me.ShapeApproveSign.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.ShapeApproveSign.Border.LeftColor = System.Drawing.Color.Black
+        Me.ShapeApproveSign.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.ShapeApproveSign.Border.RightColor = System.Drawing.Color.Black
+        Me.ShapeApproveSign.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.ShapeApproveSign.Border.TopColor = System.Drawing.Color.Black
+        Me.ShapeApproveSign.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.ShapeApproveSign.Height = 1.968504!
+        Me.ShapeApproveSign.Left = 4.4375!
+        Me.ShapeApproveSign.Name = "ShapeApproveSign"
+        Me.ShapeApproveSign.RoundingRadius = 9.999999!
+        Me.ShapeApproveSign.Top = 0.6875!
+        Me.ShapeApproveSign.Visible = False
+        Me.ShapeApproveSign.Width = 3.543307!
+        '
+        'Picture_SealAuthor
+        '
+        Me.Picture_SealAuthor.Border.BottomColor = System.Drawing.Color.Black
+        Me.Picture_SealAuthor.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.Picture_SealAuthor.Border.LeftColor = System.Drawing.Color.Black
+        Me.Picture_SealAuthor.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.Picture_SealAuthor.Border.RightColor = System.Drawing.Color.Black
+        Me.Picture_SealAuthor.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.Picture_SealAuthor.Border.TopColor = System.Drawing.Color.Black
+        Me.Picture_SealAuthor.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.Picture_SealAuthor.Height = 1.968504!
+        Me.Picture_SealAuthor.Image = Nothing
+        Me.Picture_SealAuthor.ImageData = Nothing
+        Me.Picture_SealAuthor.Left = 0.5!
+        Me.Picture_SealAuthor.LineWeight = 0!
+        Me.Picture_SealAuthor.Name = "Picture_SealAuthor"
+        Me.Picture_SealAuthor.Top = 0.4375!
+        Me.Picture_SealAuthor.Visible = False
+        Me.Picture_SealAuthor.Width = 3.543307!
+        '
+        'ShapeSealSign
+        '
+        Me.ShapeSealSign.Border.BottomColor = System.Drawing.Color.Black
+        Me.ShapeSealSign.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.ShapeSealSign.Border.LeftColor = System.Drawing.Color.Black
+        Me.ShapeSealSign.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.ShapeSealSign.Border.RightColor = System.Drawing.Color.Black
+        Me.ShapeSealSign.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.ShapeSealSign.Border.TopColor = System.Drawing.Color.Black
+        Me.ShapeSealSign.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.ShapeSealSign.Height = 1.968504!
+        Me.ShapeSealSign.Left = 0.5!
+        Me.ShapeSealSign.Name = "ShapeSealSign"
+        Me.ShapeSealSign.RoundingRadius = 9.999999!
+        Me.ShapeSealSign.Top = 0.375!
+        Me.ShapeSealSign.Visible = False
+        Me.ShapeSealSign.Width = 3.543307!
         '
         'Pic_ch5_exhibi
         '
@@ -3388,8 +3473,8 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.txtTemp_back_country.Height = 0.3103673!
         Me.txtTemp_back_country.Left = 0.492126!
         Me.txtTemp_back_country.Name = "txtTemp_back_country"
-        Me.txtTemp_back_country.Style = "color: Blue; ddo-char-set: 1; text-align: center; font-weight: bold; font-size: 1" &
-    "4pt; font-family: BrowalliaUPC; "
+        Me.txtTemp_back_country.Style = "color: Black; ddo-char-set: 1; text-align: center; font-weight: bold; font-size: " &
+    "14pt; font-family: BrowalliaUPC; "
         Me.txtTemp_back_country.Text = Nothing
         Me.txtTemp_back_country.Top = 0.71!
         Me.txtTemp_back_country.Width = 3.469488!
@@ -3408,8 +3493,8 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.txtIMPORT_COUNTRY.Height = 0.3937007!
         Me.txtIMPORT_COUNTRY.Left = 0.492126!
         Me.txtIMPORT_COUNTRY.Name = "txtIMPORT_COUNTRY"
-        Me.txtIMPORT_COUNTRY.Style = "color: Blue; ddo-char-set: 1; text-align: center; font-weight: bold; font-size: 1" &
-    "4pt; font-family: BrowalliaUPC; vertical-align: bottom; "
+        Me.txtIMPORT_COUNTRY.Style = "color: Black; ddo-char-set: 1; text-align: center; font-weight: bold; font-size: " &
+    "14pt; font-family: BrowalliaUPC; vertical-align: bottom; "
         Me.txtIMPORT_COUNTRY.Text = "IMPORT_COUNTRY"
         Me.txtIMPORT_COUNTRY.Top = 1.41!
         Me.txtIMPORT_COUNTRY.Width = 3.469488!
@@ -3447,8 +3532,8 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.txtcompany_provincefoot.Height = 0.3125!
         Me.txtcompany_provincefoot.Left = 0.5!
         Me.txtcompany_provincefoot.Name = "txtcompany_provincefoot"
-        Me.txtcompany_provincefoot.Style = "color: Blue; ddo-char-set: 222; text-align: center; font-weight: bold; font-size:" &
-    " 12pt; font-family: BrowalliaUPC; vertical-align: bottom; "
+        Me.txtcompany_provincefoot.Style = "color: Black; ddo-char-set: 222; text-align: center; font-weight: bold; font-size" &
+    ": 12pt; font-family: BrowalliaUPC; vertical-align: bottom; "
         Me.txtcompany_provincefoot.Text = Nothing
         Me.txtcompany_provincefoot.Top = 1.9375!
         Me.txtcompany_provincefoot.Width = 3.5!
@@ -4329,157 +4414,6 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.Line7.Y1 = 2.1875!
         Me.Line7.Y2 = 2.1875!
         '
-        'GroupHeader1
-        '
-        Me.GroupHeader1.Height = 0!
-        Me.GroupHeader1.Name = "GroupHeader1"
-        Me.GroupHeader1.Visible = False
-        '
-        'GroupFooter1
-        '
-        Me.GroupFooter1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.txtTotalAll})
-        Me.GroupFooter1.Height = 0.25!
-        Me.GroupFooter1.KeepTogether = True
-        Me.GroupFooter1.Name = "GroupFooter1"
-        Me.GroupFooter1.Visible = False
-        '
-        'txtTotalAll
-        '
-        Me.txtTotalAll.Border.BottomColor = System.Drawing.Color.Black
-        Me.txtTotalAll.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtTotalAll.Border.LeftColor = System.Drawing.Color.Black
-        Me.txtTotalAll.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtTotalAll.Border.RightColor = System.Drawing.Color.Black
-        Me.txtTotalAll.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtTotalAll.Border.TopColor = System.Drawing.Color.Black
-        Me.txtTotalAll.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtTotalAll.Height = 0.2214567!
-        Me.txtTotalAll.Left = 1.87!
-        Me.txtTotalAll.Name = "txtTotalAll"
-        Me.txtTotalAll.Style = "color: Blue; ddo-char-set: 1; font-size: 10pt; font-family: BrowalliaUPC; "
-        Me.txtTotalAll.Text = Nothing
-        Me.txtTotalAll.Top = 0!
-        Me.txtTotalAll.Visible = False
-        Me.txtTotalAll.Width = 3.492126!
-        '
-        'Picture_SealAuthor
-        '
-        Me.Picture_SealAuthor.Border.BottomColor = System.Drawing.Color.Black
-        Me.Picture_SealAuthor.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.Picture_SealAuthor.Border.LeftColor = System.Drawing.Color.Black
-        Me.Picture_SealAuthor.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.Picture_SealAuthor.Border.RightColor = System.Drawing.Color.Black
-        Me.Picture_SealAuthor.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.Picture_SealAuthor.Border.TopColor = System.Drawing.Color.Black
-        Me.Picture_SealAuthor.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.Picture_SealAuthor.Height = 1.968504!
-        Me.Picture_SealAuthor.Image = Nothing
-        Me.Picture_SealAuthor.ImageData = Nothing
-        Me.Picture_SealAuthor.Left = 0.5!
-        Me.Picture_SealAuthor.LineWeight = 0!
-        Me.Picture_SealAuthor.Name = "Picture_SealAuthor"
-        Me.Picture_SealAuthor.Top = 0.4375!
-        Me.Picture_SealAuthor.Visible = False
-        Me.Picture_SealAuthor.Width = 3.543307!
-        '
-        'ShapeSealSign
-        '
-        Me.ShapeSealSign.Border.BottomColor = System.Drawing.Color.Black
-        Me.ShapeSealSign.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.ShapeSealSign.Border.LeftColor = System.Drawing.Color.Black
-        Me.ShapeSealSign.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.ShapeSealSign.Border.RightColor = System.Drawing.Color.Black
-        Me.ShapeSealSign.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.ShapeSealSign.Border.TopColor = System.Drawing.Color.Black
-        Me.ShapeSealSign.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.ShapeSealSign.Height = 1.968504!
-        Me.ShapeSealSign.Left = 0.5!
-        Me.ShapeSealSign.Name = "ShapeSealSign"
-        Me.ShapeSealSign.RoundingRadius = 9.999999!
-        Me.ShapeSealSign.Top = 0.375!
-        Me.ShapeSealSign.Visible = False
-        Me.ShapeSealSign.Width = 3.543307!
-        '
-        'PictureApproveSign
-        '
-        Me.PictureApproveSign.Border.BottomColor = System.Drawing.Color.Black
-        Me.PictureApproveSign.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.PictureApproveSign.Border.LeftColor = System.Drawing.Color.Black
-        Me.PictureApproveSign.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.PictureApproveSign.Border.RightColor = System.Drawing.Color.Black
-        Me.PictureApproveSign.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.PictureApproveSign.Border.TopColor = System.Drawing.Color.Black
-        Me.PictureApproveSign.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.PictureApproveSign.Height = 1.9375!
-        Me.PictureApproveSign.Image = Nothing
-        Me.PictureApproveSign.ImageData = Nothing
-        Me.PictureApproveSign.Left = 4.4375!
-        Me.PictureApproveSign.LineWeight = 0!
-        Me.PictureApproveSign.Name = "PictureApproveSign"
-        Me.PictureApproveSign.Top = 0.75!
-        Me.PictureApproveSign.Visible = False
-        Me.PictureApproveSign.Width = 3.5625!
-        '
-        'ShapeApproveSign
-        '
-        Me.ShapeApproveSign.Border.BottomColor = System.Drawing.Color.Black
-        Me.ShapeApproveSign.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.ShapeApproveSign.Border.LeftColor = System.Drawing.Color.Black
-        Me.ShapeApproveSign.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.ShapeApproveSign.Border.RightColor = System.Drawing.Color.Black
-        Me.ShapeApproveSign.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.ShapeApproveSign.Border.TopColor = System.Drawing.Color.Black
-        Me.ShapeApproveSign.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.ShapeApproveSign.Height = 1.968504!
-        Me.ShapeApproveSign.Left = 4.4375!
-        Me.ShapeApproveSign.Name = "ShapeApproveSign"
-        Me.ShapeApproveSign.RoundingRadius = 9.999999!
-        Me.ShapeApproveSign.Top = 0.6875!
-        Me.ShapeApproveSign.Visible = False
-        Me.ShapeApproveSign.Width = 3.543307!
-        '
-        'txtTemp_Bangkok02
-        '
-        Me.txtTemp_Bangkok02.Border.BottomColor = System.Drawing.Color.Black
-        Me.txtTemp_Bangkok02.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtTemp_Bangkok02.Border.LeftColor = System.Drawing.Color.Black
-        Me.txtTemp_Bangkok02.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtTemp_Bangkok02.Border.RightColor = System.Drawing.Color.Black
-        Me.txtTemp_Bangkok02.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtTemp_Bangkok02.Border.TopColor = System.Drawing.Color.Black
-        Me.txtTemp_Bangkok02.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtTemp_Bangkok02.CanGrow = False
-        Me.txtTemp_Bangkok02.Height = 0.3019193!
-        Me.txtTemp_Bangkok02.Left = 4.4375!
-        Me.txtTemp_Bangkok02.Name = "txtTemp_Bangkok02"
-        Me.txtTemp_Bangkok02.Style = "ddo-char-set: 222; text-align: center; font-weight: bold; font-size: 16pt; font-f" &
-    "amily: BrowalliaUPC; vertical-align: top; "
-        Me.txtTemp_Bangkok02.Text = "BANGKOK"
-        Me.txtTemp_Bangkok02.Top = 2.125!
-        Me.txtTemp_Bangkok02.Visible = False
-        Me.txtTemp_Bangkok02.Width = 1.386237!
-        '
-        'txtTemp_Bangkok01
-        '
-        Me.txtTemp_Bangkok01.Border.BottomColor = System.Drawing.Color.Black
-        Me.txtTemp_Bangkok01.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtTemp_Bangkok01.Border.LeftColor = System.Drawing.Color.Black
-        Me.txtTemp_Bangkok01.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtTemp_Bangkok01.Border.RightColor = System.Drawing.Color.Black
-        Me.txtTemp_Bangkok01.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtTemp_Bangkok01.Border.TopColor = System.Drawing.Color.Black
-        Me.txtTemp_Bangkok01.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtTemp_Bangkok01.CanGrow = False
-        Me.txtTemp_Bangkok01.Height = 0.3019193!
-        Me.txtTemp_Bangkok01.Left = 4.4375!
-        Me.txtTemp_Bangkok01.Name = "txtTemp_Bangkok01"
-        Me.txtTemp_Bangkok01.Style = "ddo-char-set: 222; text-align: center; font-weight: bold; font-size: 16pt; font-f" &
-    "amily: BrowalliaUPC; vertical-align: top; "
-        Me.txtTemp_Bangkok01.Text = "BANGKOK PORT"
-        Me.txtTemp_Bangkok01.Top = 2.3125!
-        Me.txtTemp_Bangkok01.Visible = False
-        Me.txtTemp_Bangkok01.Width = 1.386237!
-        '
         'txtTemp_Date
         '
         Me.txtTemp_Date.Border.BottomColor = System.Drawing.Color.Black
@@ -4500,27 +4434,6 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.txtTemp_Date.Top = 2.3125!
         Me.txtTemp_Date.Visible = False
         Me.txtTemp_Date.Width = 1.771654!
-        '
-        'txtTemp_SiteSend
-        '
-        Me.txtTemp_SiteSend.Border.BottomColor = System.Drawing.Color.Black
-        Me.txtTemp_SiteSend.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtTemp_SiteSend.Border.LeftColor = System.Drawing.Color.Black
-        Me.txtTemp_SiteSend.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtTemp_SiteSend.Border.RightColor = System.Drawing.Color.Black
-        Me.txtTemp_SiteSend.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtTemp_SiteSend.Border.TopColor = System.Drawing.Color.Black
-        Me.txtTemp_SiteSend.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtTemp_SiteSend.CanGrow = False
-        Me.txtTemp_SiteSend.Height = 0.3019193!
-        Me.txtTemp_SiteSend.Left = 6.125!
-        Me.txtTemp_SiteSend.Name = "txtTemp_SiteSend"
-        Me.txtTemp_SiteSend.Style = "color: Green; ddo-char-set: 222; text-align: center; font-weight: bold; font-size" &
-    ": 16pt; font-family: BrowalliaUPC; "
-        Me.txtTemp_SiteSend.Text = "txtTemp_SiteSend"
-        Me.txtTemp_SiteSend.Top = 2.8125!
-        Me.txtTemp_SiteSend.Visible = False
-        Me.txtTemp_SiteSend.Width = 1.771654!
         '
         'txtprintFormDate
         '
@@ -4562,6 +4475,180 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.txtapprove_date.Visible = False
         Me.txtapprove_date.Width = 1.0!
         '
+        'txtSendCheckSeletedate
+        '
+        Me.txtSendCheckSeletedate.Border.BottomColor = System.Drawing.Color.Black
+        Me.txtSendCheckSeletedate.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtSendCheckSeletedate.Border.LeftColor = System.Drawing.Color.Black
+        Me.txtSendCheckSeletedate.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtSendCheckSeletedate.Border.RightColor = System.Drawing.Color.Black
+        Me.txtSendCheckSeletedate.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtSendCheckSeletedate.Border.TopColor = System.Drawing.Color.Black
+        Me.txtSendCheckSeletedate.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtSendCheckSeletedate.Height = 0.1979167!
+        Me.txtSendCheckSeletedate.Left = 0!
+        Me.txtSendCheckSeletedate.Name = "txtSendCheckSeletedate"
+        Me.txtSendCheckSeletedate.Style = "color: Lime; "
+        Me.txtSendCheckSeletedate.Text = "SendCheckSeletedate"
+        Me.txtSendCheckSeletedate.Top = 0.25!
+        Me.txtSendCheckSeletedate.Visible = False
+        Me.txtSendCheckSeletedate.Width = 1.0!
+        '
+        'txtdateSelectRPT
+        '
+        Me.txtdateSelectRPT.Border.BottomColor = System.Drawing.Color.Black
+        Me.txtdateSelectRPT.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtdateSelectRPT.Border.LeftColor = System.Drawing.Color.Black
+        Me.txtdateSelectRPT.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtdateSelectRPT.Border.RightColor = System.Drawing.Color.Black
+        Me.txtdateSelectRPT.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtdateSelectRPT.Border.TopColor = System.Drawing.Color.Black
+        Me.txtdateSelectRPT.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtdateSelectRPT.Height = 0.1979167!
+        Me.txtdateSelectRPT.Left = 0!
+        Me.txtdateSelectRPT.Name = "txtdateSelectRPT"
+        Me.txtdateSelectRPT.Style = "color: Lime; "
+        Me.txtdateSelectRPT.Text = "dateSelectRPT"
+        Me.txtdateSelectRPT.Top = 0!
+        Me.txtdateSelectRPT.Visible = False
+        Me.txtdateSelectRPT.Width = 1.0!
+        '
+        'txtTemp_Bangkok02
+        '
+        Me.txtTemp_Bangkok02.Border.BottomColor = System.Drawing.Color.Black
+        Me.txtTemp_Bangkok02.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtTemp_Bangkok02.Border.LeftColor = System.Drawing.Color.Black
+        Me.txtTemp_Bangkok02.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtTemp_Bangkok02.Border.RightColor = System.Drawing.Color.Black
+        Me.txtTemp_Bangkok02.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtTemp_Bangkok02.Border.TopColor = System.Drawing.Color.Black
+        Me.txtTemp_Bangkok02.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtTemp_Bangkok02.CanGrow = False
+        Me.txtTemp_Bangkok02.Height = 0.3019193!
+        Me.txtTemp_Bangkok02.Left = 4.5625!
+        Me.txtTemp_Bangkok02.Name = "txtTemp_Bangkok02"
+        Me.txtTemp_Bangkok02.Style = "color: Black; ddo-char-set: 222; text-align: center; font-weight: bold; font-size" &
+    ": 16pt; font-family: BrowalliaUPC; vertical-align: top; "
+        Me.txtTemp_Bangkok02.Text = "BANGKOK"
+        Me.txtTemp_Bangkok02.Top = 2.0625!
+        Me.txtTemp_Bangkok02.Visible = False
+        Me.txtTemp_Bangkok02.Width = 1.386237!
+        '
+        'txtTemp_Bangkok01
+        '
+        Me.txtTemp_Bangkok01.Border.BottomColor = System.Drawing.Color.Black
+        Me.txtTemp_Bangkok01.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtTemp_Bangkok01.Border.LeftColor = System.Drawing.Color.Black
+        Me.txtTemp_Bangkok01.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtTemp_Bangkok01.Border.RightColor = System.Drawing.Color.Black
+        Me.txtTemp_Bangkok01.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtTemp_Bangkok01.Border.TopColor = System.Drawing.Color.Black
+        Me.txtTemp_Bangkok01.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtTemp_Bangkok01.CanGrow = False
+        Me.txtTemp_Bangkok01.Height = 0.3019193!
+        Me.txtTemp_Bangkok01.Left = 4.5625!
+        Me.txtTemp_Bangkok01.Name = "txtTemp_Bangkok01"
+        Me.txtTemp_Bangkok01.Style = "color: Black; ddo-char-set: 222; text-align: center; font-weight: bold; font-size" &
+    ": 16pt; font-family: BrowalliaUPC; vertical-align: top; "
+        Me.txtTemp_Bangkok01.Text = "BANGKOK PORT"
+        Me.txtTemp_Bangkok01.Top = 2.3125!
+        Me.txtTemp_Bangkok01.Visible = False
+        Me.txtTemp_Bangkok01.Width = 1.386237!
+        '
+        'txtPrintDate
+        '
+        Me.txtPrintDate.Border.BottomColor = System.Drawing.Color.Black
+        Me.txtPrintDate.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtPrintDate.Border.LeftColor = System.Drawing.Color.Black
+        Me.txtPrintDate.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtPrintDate.Border.RightColor = System.Drawing.Color.Black
+        Me.txtPrintDate.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtPrintDate.Border.TopColor = System.Drawing.Color.Black
+        Me.txtPrintDate.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtPrintDate.Height = 0.25!
+        Me.txtPrintDate.Left = 4.4375!
+        Me.txtPrintDate.Name = "txtPrintDate"
+        Me.txtPrintDate.Style = "color: Black; ddo-char-set: 1; text-align: right; font-weight: normal; font-size:" &
+    " 12pt; font-family: BrowalliaUPC; "
+        Me.txtPrintDate.Text = Nothing
+        Me.txtPrintDate.Top = 3.3125!
+        Me.txtPrintDate.Visible = False
+        Me.txtPrintDate.Width = 3.6875!
+        '
+        'txtTemp_SiteSend
+        '
+        Me.txtTemp_SiteSend.Border.BottomColor = System.Drawing.Color.Black
+        Me.txtTemp_SiteSend.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtTemp_SiteSend.Border.LeftColor = System.Drawing.Color.Black
+        Me.txtTemp_SiteSend.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtTemp_SiteSend.Border.RightColor = System.Drawing.Color.Black
+        Me.txtTemp_SiteSend.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtTemp_SiteSend.Border.TopColor = System.Drawing.Color.Black
+        Me.txtTemp_SiteSend.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtTemp_SiteSend.CanGrow = False
+        Me.txtTemp_SiteSend.DataField = "site_id"
+        Me.txtTemp_SiteSend.Height = 0.3019193!
+        Me.txtTemp_SiteSend.Left = 5.625!
+        Me.txtTemp_SiteSend.Name = "txtTemp_SiteSend"
+        Me.txtTemp_SiteSend.Style = "color: Green; ddo-char-set: 222; text-align: center; font-weight: bold; font-size" &
+    ": 16pt; font-family: BrowalliaUPC; "
+        Me.txtTemp_SiteSend.Text = "txtTemp_SiteSend"
+        Me.txtTemp_SiteSend.Top = 3.0625!
+        Me.txtTemp_SiteSend.Visible = False
+        Me.txtTemp_SiteSend.Width = 1.771654!
+        '
+        'GroupHeader1
+        '
+        Me.GroupHeader1.Height = 0!
+        Me.GroupHeader1.Name = "GroupHeader1"
+        Me.GroupHeader1.Visible = False
+        '
+        'GroupFooter1
+        '
+        Me.GroupFooter1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.txtTotalAll})
+        Me.GroupFooter1.Height = 0.25!
+        Me.GroupFooter1.KeepTogether = True
+        Me.GroupFooter1.Name = "GroupFooter1"
+        Me.GroupFooter1.Visible = False
+        '
+        'txtTotalAll
+        '
+        Me.txtTotalAll.Border.BottomColor = System.Drawing.Color.Black
+        Me.txtTotalAll.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtTotalAll.Border.LeftColor = System.Drawing.Color.Black
+        Me.txtTotalAll.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtTotalAll.Border.RightColor = System.Drawing.Color.Black
+        Me.txtTotalAll.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtTotalAll.Border.TopColor = System.Drawing.Color.Black
+        Me.txtTotalAll.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtTotalAll.Height = 0.2214567!
+        Me.txtTotalAll.Left = 1.875!
+        Me.txtTotalAll.Name = "txtTotalAll"
+        Me.txtTotalAll.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: BrowalliaUPC; "
+        Me.txtTotalAll.Text = Nothing
+        Me.txtTotalAll.Top = 0!
+        Me.txtTotalAll.Visible = False
+        Me.txtTotalAll.Width = 3.492126!
+        '
+        'txtTemp_marks
+        '
+        Me.txtTemp_marks.Border.BottomColor = System.Drawing.Color.Black
+        Me.txtTemp_marks.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtTemp_marks.Border.LeftColor = System.Drawing.Color.Black
+        Me.txtTemp_marks.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtTemp_marks.Border.RightColor = System.Drawing.Color.Black
+        Me.txtTemp_marks.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtTemp_marks.Border.TopColor = System.Drawing.Color.Black
+        Me.txtTemp_marks.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtTemp_marks.Height = 0.25!
+        Me.txtTemp_marks.Left = 0.8125!
+        Me.txtTemp_marks.Name = "txtTemp_marks"
+        Me.txtTemp_marks.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: BrowalliaUPC; "
+        Me.txtTemp_marks.Text = Nothing
+        Me.txtTemp_marks.Top = 0!
+        Me.txtTemp_marks.Visible = False
+        Me.txtTemp_marks.Width = 1.0!
+        '
         'rpt3_ediFORMD_ESS_DC
         '
         Me.MasterReport = False
@@ -4588,7 +4675,6 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.StyleSheet.Add(New DDCssLib.StyleSheetRule("font-size: 13pt; font-weight: bold; ", "Heading3", "Normal"))
         Me.WatermarkSizeMode = DataDynamics.ActiveReports.SizeModes.Stretch
         CType(Me.txtNumRowCount, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtTemp_marks, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtT_product, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtTemp_box8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtTolInvoice, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4650,6 +4736,7 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         CType(Me.txtletter, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtUSDAgent, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtDisplayUnitType, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label36, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Label27, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtCompany_Check_1, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtreference_code2_Temp, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4716,6 +4803,8 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         CType(Me.Label32, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Label34, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Label35, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.PictureApproveSign, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Picture_SealAuthor, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Pic_ch5_exhibi, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Pic_ch7_Issued, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Pic_ch6_demin, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4755,21 +4844,22 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         CType(Me.txtByCom_CH03, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtInvAgentType, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Label58, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtTotalAll, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Picture_SealAuthor, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.PictureApproveSign, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtTemp_Bangkok02, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtTemp_Bangkok01, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtTemp_Date, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtTemp_SiteSend, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtprintFormDate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtapprove_date, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtSendCheckSeletedate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtdateSelectRPT, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtTemp_Bangkok02, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtTemp_Bangkok01, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtPrintDate, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtTemp_SiteSend, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtTotalAll, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtTemp_marks, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub
     Friend WithEvents Detail1 As DataDynamics.ActiveReports.Detail
     Friend WithEvents txtNumRowCount As DataDynamics.ActiveReports.TextBox
-    Friend WithEvents txtTemp_marks As DataDynamics.ActiveReports.TextBox
     Friend WithEvents txtT_product As DataDynamics.ActiveReports.TextBox
     Friend WithEvents txtTemp_box8 As DataDynamics.ActiveReports.TextBox
     Friend WithEvents txtTolInvoice As DataDynamics.ActiveReports.TextBox
@@ -4975,10 +5065,15 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
     Friend WithEvents ShapeSealSign As DataDynamics.ActiveReports.Shape
     Friend WithEvents PictureApproveSign As DataDynamics.ActiveReports.Picture
     Friend WithEvents ShapeApproveSign As DataDynamics.ActiveReports.Shape
-    Friend WithEvents txtTemp_Bangkok02 As DataDynamics.ActiveReports.TextBox
-    Friend WithEvents txtTemp_Bangkok01 As DataDynamics.ActiveReports.TextBox
     Friend WithEvents txtTemp_Date As DataDynamics.ActiveReports.TextBox
-    Friend WithEvents txtTemp_SiteSend As DataDynamics.ActiveReports.TextBox
     Friend WithEvents txtprintFormDate As DataDynamics.ActiveReports.TextBox
     Friend WithEvents txtapprove_date As DataDynamics.ActiveReports.TextBox
+    Friend WithEvents txtSendCheckSeletedate As DataDynamics.ActiveReports.TextBox
+    Friend WithEvents txtdateSelectRPT As DataDynamics.ActiveReports.TextBox
+    Friend WithEvents txtTemp_Bangkok02 As DataDynamics.ActiveReports.TextBox
+    Friend WithEvents txtTemp_Bangkok01 As DataDynamics.ActiveReports.TextBox
+    Friend WithEvents txtPrintDate As DataDynamics.ActiveReports.TextBox
+    Friend WithEvents txtTemp_SiteSend As DataDynamics.ActiveReports.TextBox
+    Friend WithEvents Label36 As DataDynamics.ActiveReports.Label
+    Friend WithEvents txtTemp_marks As DataDynamics.ActiveReports.TextBox
 End Class

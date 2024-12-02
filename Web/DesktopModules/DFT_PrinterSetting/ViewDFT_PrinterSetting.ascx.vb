@@ -32,6 +32,13 @@ Namespace Modules.DFT_PrinterSetting
                 End If
                 LoadPrinters(ddlSite.SelectedValue)
             End If
+            If Not Page.IsPostBack Then
+                LoadIE()
+                If ddlIE.Items.Count > 0 Then
+                    ddlIE.SelectedIndex = 0
+                End If
+                LoadLog(ddlIE.SelectedValue)
+            End If
         End Sub
 
         Private Sub LoadSite()
@@ -48,7 +55,20 @@ Namespace Modules.DFT_PrinterSetting
 
             End Try
         End Sub
+        Private Sub LoadIE()
+            Try
+                Dim cmd As String = "select Information_system, Information_name from Information where (active = '1') "
+                Dim ds As DataSet = Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteDataset(conn, CommandType.Text, cmd)
 
+                ddlIE.DataSource = ds
+                ddlIE.DataValueField = "Information_system"
+                ddlIE.DataTextField = "Information_name"
+                ddlIE.DataBind()
+
+            Catch ex As Exception
+
+            End Try
+        End Sub
         Private Sub LoadPrinters(site_id As String)
             Try
                 Dim cmd As String = "SP_Printer_LoadPrinterBySite"
@@ -63,6 +83,20 @@ Namespace Modules.DFT_PrinterSetting
 
             End Try
         End Sub
+        Private Sub LoadLog(Information_system As String)
+            Try
+                Dim cmd As String = "SP_Information_LoadLog"
+                Dim prm As New SqlClient.SqlParameter("@Information_system", Information_system)
+
+                Dim ds As DataSet = Microsoft.ApplicationBlocks.Data.SqlHelper.ExecuteDataset(conn, CommandType.StoredProcedure, cmd, prm)
+
+                grdlog.DataSource = ds
+                grdlog.DataBind()
+
+            Catch ex As Exception
+
+            End Try
+        End Sub
 
         Private Sub ddlSite_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlSite.SelectedIndexChanged
             LoadPrinters(ddlSite.SelectedValue)
@@ -70,6 +104,9 @@ Namespace Modules.DFT_PrinterSetting
 
         Private Sub RadAjaxManager1_AjaxRequest(sender As Object, e As AjaxRequestEventArgs) Handles RadAjaxManager1.AjaxRequest
             LoadPrinters(ddlSite.SelectedValue)
+        End Sub
+        Private Sub ddlIE_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ddlIE.SelectedIndexChanged
+            LoadLog(ddlIE.SelectedValue)
         End Sub
 
     End Class

@@ -147,6 +147,13 @@
       <DependentUpon>formSetForm.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="formRequired.aspx.designer.vb">
+      <DependentUpon>formRequired.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="formRequired.aspx.vb">
+      <DependentUpon>formRequired.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="formSetPrinter.aspx.designer.vb">
       <DependentUpon>formSetPrinter.aspx</DependentUpon>
     </Compile>
@@ -188,6 +195,7 @@
     <Content Include="Documentation\logo.gif" />
     <Content Include="EditDFT_PrinterSetting.ascx" />
     <Content Include="formSetForm.aspx" />
+    <Content Include="formRequired.aspx" />
     <Content Include="formSetPrinter.aspx" />
     <Content Include="Settings.ascx" />
     <Content Include="ViewDFT_PrinterSetting.ascx" />

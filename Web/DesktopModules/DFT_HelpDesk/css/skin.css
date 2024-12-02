@@ -1,0 +1,1127 @@
+@import url("css/menu.css");
+@import url("OldStyle.css");
+/*========================================================*/
+/*--1. Universal--*/
+/*========================================================*/
+body{
+	font-family:Tahoma,sans-serif;
+	background:#fff url(images/edi_bg.jpg) top repeat-x;
+	margin:4px 4px 20px 4px;
+}
+P{
+	font-family:Tahoma, sans-serif;
+	font-size:10pt;
+	text-align: left;
+	color:#666;
+}
+H1, H2, H3, H3, H4, H5, H6{
+	font-family:Tahoma, sans-serif;
+}
+H1
+{
+    font-size: 24pt;
+    font-weight: bold;
+    color: #003;
+   	margin: 0;
+   	padding:0;
+}
+
+H2
+{
+  	  font-size: 18pt;
+   	 font-weight: bold;
+  	  color: #006;
+  	  margin: 0;
+  	  padding:0;
+}
+
+H3
+{
+    font-size: 14pt;
+    font-weight: bold;
+    color: #009;
+	margin: 0;
+	padding:0;
+}
+
+H4
+{
+    font-size: 12pt;
+    font-weight:bold;
+    color: #00c;
+	margin: 0;
+	padding:0;
+}
+
+H5, DT
+{
+    font-size: 10pt;
+    font-weight: bold;
+    color: #00f;
+	margin: 0;
+	padding:0;
+}
+
+H6
+{
+    font-size: 8pt;
+    font-weight: bold;
+    color: #06f;
+	margin: 0;
+	padding:0;
+}
+
+TFOOT, THEAD    {
+}
+
+
+A:link{
+	color: #06f;
+	text-decoration: none;
+}
+A:visited{
+	color: #06f;
+	text-decoration: none;
+}
+A:active{	
+	color: #06f;
+	text-decoration: none;
+}
+A:hover{
+   	color: #f90;
+	text-decoration: none;
+}
+
+SMALL   {
+ 	font-family:Tahoma, sans-serif,  Verdana, Arial, Helvetica;
+	 font-size: 6pt;
+    font-weight: normal;
+    color: #666;
+	margin: 0;
+	padding:0;
+}
+
+BIG {
+	font-family:Tahoma, sans-serif,  Verdana, Arial, Helvetica;
+	 font-size: 36pt;
+    font-weight: normal;
+    color: #666;
+	margin: 0;
+	padding:0;
+}
+
+BLOCKQUOTE, PRE {
+}
+
+
+UL LI   {
+	list-style-image: url(images/listbulet.gif);
+	font-family: Tahoma, sans-serif,  Verdana, Arial, Helvetica;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	color: #666;
+}
+
+UL LI LI    {
+	list-style-image: url(images/listbulet.gif);
+	font-family: Tahoma, sans-serif,  Verdana, Arial, Helvetica;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	color: #666;
+}
+
+UL LI LI LI {
+	list-style-image: url(images/listbulet.gif);
+	font-family: Tahoma, sans-serif,  Verdana, Arial, Helvetica;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	color: #666;
+}
+
+
+OL LI   {
+	font-family: Tahoma, sans-serif,  Verdana, Arial, Helvetica;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	color: #666;
+}
+
+OL OL LI    {
+	font-family:Tahoma, sans-serif,  Verdana, Arial, Helvetica;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	color: #666;
+}
+
+OL OL OL LI {
+	font-family: Tahoma, sans-serif,  Verdana, Arial, Helvetica;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	color: #666;
+}
+OL UL LI   {
+	font-family: Tahoma, sans-serif,  Verdana, Arial, Helvetica;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	color: #666;
+}
+HR{
+	color: #CCC;
+	background-color:#ccc;
+	height: 1px;
+	text-align: left;
+}
+/*========================================================*/
+/*--2. Layout--*/
+/*========================================================*/
+.wrapper_edi{
+	width:100%;
+}
+.width_edi{
+	width:960px;
+	margin:auto;
+	padding:0 ;
+}
+.fullwidth_edi{
+	width:100%;
+	margin:auto;
+	padding:0 ;
+}
+.logo_style{
+background:url(images/edi_logo.jpg) top left no-repeat;
+height:106px;
+
+
+}
+.edi_tl{
+	background:url(images/edi_tc.jpg) top left repeat-x;
+	height:106px;
+	padding:0;
+	margin:0 8px 0 0;	
+}
+.edi_tr{
+	background:url(images/edi_tr.jpg) top right no-repeat;
+	height:106px;
+	padding:0;
+	margin:0;	
+}
+.edi_tc{
+	background:url(images/edi_tc.jpg) top  repeat-x;
+	height:106px;
+	padding:0;
+	margin:0 8px 0 0;	
+}
+
+.edi_nav_tl{
+	background:url(images/edi_nav_tl.png) top left no-repeat;
+	min-height:36px;
+	padding:0;
+	margin:0;	
+}
+.edi_nav_tr{
+	background:url(images/edi_nav_tr.png) top right no-repeat;
+	min-height:36px;
+	padding:0;
+	margin:0;	
+}
+.edi_nav_tc{
+	background:url(images/edi_nav_tc.png) top  repeat-x;
+	min-height:36px;
+	padding:0;
+	margin:0 22px 0 22px;
+		
+}
+.nav_positon{
+	margin:74px 0 0 0;
+
+}
+.edi_ml{
+	background:url(images/edi_m.jpg) top left repeat-y;
+	padding:0;
+	margin:0;	
+}
+.edi_mr{
+	background:url(images/edi_m.jpg) top right repeat-y;
+	padding:0;
+	margin:0;	
+}
+.edi_mc0{
+	background:#fff url(images/edi_mc.jpg) top left repeat-x ;
+	min-height:220px;
+	padding:0;
+	margin:0 1px 0 1px;	
+}
+
+.edi_mc0 p{
+	padding:0;
+	margin:0;
+
+}
+.edi_mc{
+	background:url(images/hilight_bg.jpg) top left no-repeat ;
+	min-height:220px;
+	padding:0;
+	margin:0;	
+}
+.edi_mc1{
+	background:#fff;
+	padding:0;
+	margin:0 1px 0 1px;	
+}
+.edi_mc1_admin{
+	background:url(images/hilight_bg.jpg) top left no-repeat;
+	min-height:258px;
+	padding:0;
+	margin:0 0 0 0;	
+}
+.edi_user_zone{
+	padding:5px;
+	margin:0 0 0 454px;
+}
+
+.edi_bl{
+	background:url(images/edi_bl.jpg) top left no-repeat;
+	height:25px;
+	padding:0;
+	margin:0;	
+}
+.edi_br{
+	background:url(images/edi_br.jpg) top right no-repeat;
+	height:25px;
+	padding:0;
+	margin:0;	
+}
+.edi_bc{
+	background:url(images/edi_bc.jpg) top  repeat-x;
+	height:25px;
+	padding:0;
+	margin:0 10px 0 10px;	
+}
+.footer_zone{
+	padding:0 0 0 0;
+	text-align:center;
+}
+.edi_Title{
+	background:url(images/edi_Title.jpg) top right no-repeat;
+	height:30px;
+	padding:0;
+	margin:0;
+}
+.edi_icon_key, .edi_icon_key a:link, .edi_icon_key a:actived{
+	list-style-image: url(images/edi_icon_key.gif);
+	font-family: Tahoma, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: normal;
+	padding:0 0 4px 0;
+	margin:0 0 4px 4px;
+	color: #fff;
+}
+.edi_icon_key a:hover{
+	list-style-image: url(images/edi_icon_key.gif);
+	font-family: Tahoma, sans-serif;
+	font-size: 10pt;
+	font-weight: bold;
+	font-style: normal;
+	padding:0 0 4px 0;
+	margin:0 0 4px 4px;
+	color: #006;
+	text-decoration:none;
+}
+.user_zone{
+	font-family: Tahoma, sans-serif;
+	font-size: 10pt;
+	text-align:right;
+}
+.margin_auto{
+	margin:auto;
+}
+.text_center{
+	text-align:center;
+}
+.float_left{
+	float:left;
+}
+.float_right{
+	float:right;
+}
+.Clear_Both{
+	clear:both;
+}
+#Bread_style{ 
+	float:left; 
+	padding:0 0 0 5px;
+	margin:0; }
+#Login_style{ 
+	float:right; 
+	padding:0 5px 0 5px;   
+	margin:0;  }
+
+.Link_login{
+	padding:10px; 
+}
+.icon_idcard,.icon_idcard a:link, .icon_idcard a:visited, .icon_idcard a:active{
+	list-style-image: url(images/icon_idcard.png);
+	font-family: Tahoma, sans-serif,  Verdana, Arial, Helvetica;
+	line-height:47px;
+	vertical-align:text-top;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #06f;
+	padding:5px 0 0 0;
+}
+.icon_idcard a:hover {
+	list-style-image: url(images/icon_idcard_hov.png);
+	font-family: Tahoma, sans-serif,  Verdana, Arial, Helvetica;
+	line-height:47px;
+	vertical-align:text-top;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #f60;
+	padding:5px 0 0 0;
+}
+.icon_u_center,.icon_u_center a:link, .icon_u_center a:visited, .icon_u_center a:active{
+	list-style-image: url(images/icon_u_center.png) ;
+	font-family: Tahoma, sans-serif,  Verdana, Arial, Helvetica;
+	line-height:47px;
+	vertical-align:text-top;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #06f;
+	padding:5px 0 0 0;
+	
+}
+.icon_u_center a:hover {
+	list-style-image: url(images/icon_u_center_hov.png);
+	font-family: Tahoma, sans-serif,  Verdana, Arial, Helvetica;
+	line-height:47px;
+	vertical-align:text-top;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #f60;
+	padding:5px 0 0 0;
+}
+.icon_tariff,.icon_tariff a:link, .icon_tariff a:visited, .icon_tariff a:active{
+	list-style-image: url(images/icon_tariff.png) ;
+	font-family: Tahoma, sans-serif,  Verdana, Arial, Helvetica;
+	line-height:47px;
+	vertical-align:text-top;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #06f;
+	padding:5px 0 0 0;
+	
+}
+.icon_tariff a:hover {
+	list-style-image: url(images/icon_tariff_hov.png);
+	font-family: Tahoma, sans-serif,  Verdana, Arial, Helvetica;
+	line-height:47px;
+	vertical-align:text-top;
+	font-size: 12pt;
+	font-weight: bold;
+	font-style: normal;
+	color: #f60;
+	padding:5px 0 0 0;
+}
+/*========================================================*/
+/*==3.Pane==*/
+/*========================================================*/
+
+.hilightpane{
+	background-color: transparent;
+	padding:2px;
+}
+.toppane {
+	
+	background-color: transparent;
+	padding:2px;
+
+}
+.leftpane {
+	
+	background-color: transparent;
+	padding:2px;
+
+}
+.rightpane {
+	
+	background-color: transparent;
+	padding:2px;
+
+}
+.contentpane {
+	
+	background-color: transparent;
+	padding:2px;
+
+
+}
+.bottompane{
+	
+	background-color: transparent;
+	padding:2px;
+}
+
+/*========================================================*/
+/*--4.Token-----*/
+/*========================================================*/
+
+.Login , A.Login:link, A.Login:visited, A.Login:active{
+	color: #666;
+	background:  url(images/icon_edi_log.jpg) no-repeat  bottom left;
+	font-family: tahoma; font-size: 8pt;
+	font-weight:normal; 
+	text-decoration: none;
+	height:16px; 
+	padding:5px 0 0 20px ;
+	margin: 40px 0  0 30px;
+}
+A.Login:hover    {
+	color: #c90;
+	background:  url(images/icon_edi_log_hov.jpg) no-repeat  bottom left;
+	font-family: tahoma; font-size: 8pt;
+	font-weight:normal; 
+	text-decoration: none;
+	height:16px; 
+	padding:5px 0 0 20px ;
+	margin: 40px 0  0 30px;
+}
+.USER, A.USER:link, A.USER:visited, A.USER:active{
+	color: #666;
+	background:  url(images/icon_edi_reg.jpg) no-repeat  bottom left;
+	font-family: tahoma; font-size: 8pt;
+	font-weight:normal; 
+	text-decoration: none;
+	height:16px; 
+	padding:5px 0 0 20px ;
+	margin: 40px 0  0 30px;
+}
+A.USER:hover    {
+	color: #C90;
+	background:  url(images/icon_edi_reg_hov.jpg) no-repeat  bottom left;
+	font-family: tahoma; font-size: 8pt;
+	font-weight:normal; 
+	text-decoration: none;
+	height:16px; 
+	padding:5px 0 0 20px ;
+	margin: 40px 0  0 30px;
+}
+.BREADCRUMB{
+	color: #666;
+	font-family: Tahoma,  sans-serif;
+	font-size: 8pt;
+	font-weight: normal;
+	font-style: normal;
+	padding-left: 1px;
+	padding-right: 1px;
+}
+
+A.BREADCRUMB:link {
+    text-decoration:none;
+    color:#666;
+}
+A.BREADCRUMB:visited  {
+    text-decoration:none;
+	  color:#666;
+
+}
+A.BREADCRUMB:active   {
+    text-decoration:none;
+	  color:#666;
+}
+
+A.BREADCRUMB:hover    {
+    text-decoration:none;
+    color:#c60;
+
+}
+/* text and link style for SkinObjects */
+.SkinObject
+{
+	color: #06F;
+	font-family:Tahoma, sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	height: 13px;
+	padding-left: 1px;
+	padding-right: 1px;
+}
+A.SkinObject:link
+{
+	text-decoration: none;
+	 color:#06F;
+}
+A.SkinObject:visited
+{
+	text-decoration: none;
+	 color:#06F;
+}
+A.SkinObject:active
+{
+	text-decoration: none;
+	 color:#06F;
+}
+A.SkinObject:hover
+{
+	color: #FC0;
+	text-decoration: none;
+}
+
+.Search
+{
+	font-weight: bold;
+	font-size: 12px;
+	color: #06F;
+	font-family: Arial;
+	height: 17px;
+	vertical-align:middle;
+}
+A.Search:link
+{
+	padding-right: 5px;
+	padding-left: 5px;
+	color: #06F;
+	text-decoration: none;
+}
+A.Search:visited
+{
+	color:#06F;
+	text-decoration: none;
+}
+A.Search:active
+{
+	color: #06F;
+	text-decoration: none;
+}
+A.Search:hover
+{
+	color: #FC0;
+	text-decoration: none;
+}
+.Search_Button
+{
+	vertical-align: middle;
+}
+.CopyRight{
+	color: #06f;
+	font-family: Tahoma,  sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	margin:0;
+	padding:0;
+}
+A.CopyRight:link
+{
+	text-decoration: none;
+	 color:#06f;
+	margin:0;
+	padding:0;
+}
+A.CopyRight:visited
+{
+	text-decoration: none;
+	 color:#06f;
+	margin:0;
+	padding:0;
+}
+A.CopyRight:active
+{
+	text-decoration: none;
+	 color:#06f;
+	margin:0;
+	padding:0;
+}
+A.CopyRight:hover
+{
+	color: #C60;
+	text-decoration: none;
+	margin:0;
+}
+.Terms{
+	color: #06F;
+	font-family: Tahoma,  sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	height: 13px;
+	padding-left: 1px;
+	padding-right: 1px;
+}
+A.Terms:link
+{
+	text-decoration: none;
+	 color:#06F;
+}
+A.Terms:visited
+{
+	text-decoration: none;
+	 color:#06F;
+}
+A.Terms:active
+{
+	text-decoration: none;
+	 color:#06F;
+}
+A.Terms:hover
+{
+	color: #fc0;
+	text-decoration: none;
+}
+.Privacy{
+	color: #06F;
+	font-family:Tahoma, sans-serif;
+	font-size:9pt;
+	font-weight: normal;
+	font-style: normal;
+	height: 13px;
+	padding-left: 1px;
+	padding-right: 1px;
+}
+A.Privacy:link
+{
+	text-decoration: none;
+	 color: #06F;
+}
+A.Privacy:visited
+{
+	text-decoration: none;
+	 color: #06F;
+}
+A.Privacy:active
+{
+	text-decoration: none;
+	 color: #06F;
+}
+A.Privacy:hover
+{
+	color: #fc0;
+	text-decoration: none;
+}
+.Date{
+   	font-family: Tahoma,  sans-serif;
+	font-size: 10pt;
+	font-weight: normal;
+	font-style: normal;
+	color: #666;
+}
+.Urhere{
+	font-family:Tahoma, sans-serif;
+	font-size:10pt;
+	font-weight: Bold;
+	font-style: normal;
+	color: #666;
+}
+
+/*============================================================================*/
+/*==5.Style For Portal.css 													==*/
+/*============================================================================*/
+/*-- Style for Module Title--*/
+.Head   {
+    font-family: Tahoma,  sans-serif;
+	font-size:12pt;
+    font-weight: Bold;
+    color: #003399;
+}
+/* style of item titles on edit and admin pages */
+.SubHead{
+ 	font-family:Tahoma, sans-serif;
+	font-size:10pt;
+	font-weight: Bold;
+	font-style: normal;
+	color: #06F;
+}
+.SubSubHead {
+	font-family:Tahoma, sans-serif;
+	font-size:8pt;
+	font-weight: Bold;
+	font-style: normal;
+	color: #0099FF;
+}
+/* text style used for most text rendered by modules */
+.Normal{
+	font-family:Tahoma, sans-serif;
+	font-size:10pt;
+	font-weight: normal;
+	font-style: normal;
+	color: #666;
+}
+.Normal_black{
+	font-family:Tahoma, sans-serif;
+	font-size:10pt;
+	font-weight: normal;
+	font-style: normal;
+	color: #000;
+}
+.Normal_red{
+	font-family:Tahoma, sans-serif;
+	font-size:10pt;
+	font-weight: normal;
+	font-style: normal;
+	color: #F00;
+}
+.Normal_green{
+	font-family:Tahoma, sans-serif;
+	font-size:10pt;
+	font-weight: normal;
+	font-style: normal;
+	color:#060;
+}
+/* text style used for textboxes in the admin and edit pages, for Nav compatibility */
+.NormalTextBox{
+	border:1px #999999 solid;
+	background:#FFFFFF;
+
+}
+/* Button Style used for Buttons */
+.StandardButton{
+	border:1px #333333 solid;
+	background:#F1F1F1;
+}
+.CommandButton{
+	color: #F60;
+	font-family:Tahoma, sans-serif;
+	font-size: 9pt;
+	font-weight: normal;
+	font-style: normal;
+	padding-left: 1px;
+	padding-right: 1px;
+}
+
+A.CommandButton:link {
+    text-decoration:none;
+    color:#F60;
+}
+A.CommandButton:visited  {
+    text-decoration:none;
+	  color:#999;
+
+}
+A.CommandButton:active   {
+    text-decoration:none;
+	  color:#F60;
+}
+
+A.CommandButton:hover    {
+    text-decoration:none;
+    color:#FC0;
+}
+/*-Style for Page setting- */
+.WorkPanel{
+	text-align:left;
+}
+.links, a.links, a.links:active,  a.links:visited {
+	color: #06f;
+	font-family: Tahoma,  sans-serif;
+	font-size: 8pt;
+	font-weight: normal;
+	font-style: normal;
+	margin:4px;
+}
+a.links:hover {
+	color: #f90;
+	font-family: Tahoma,  sans-serif;
+	font-size: 8pt;
+	font-weight: normal;
+	font-style: normal;
+	margin:4px;
+}
+	
+
+
+/* ODL Website (SOMPOL) */
+.HEADER-STYLE
+{
+	font-size: 10pt;
+	color: #ffffff;
+	font-family: Tahoma;
+	height: 14pt;
+	background-color: #396594;
+	text-align: center;
+}
+
+.FOOTER-STYLE
+{
+	color: White;
+	background-color : #CECFBD;
+	font-family: Tahoma;
+    font-size: 10pt;	
+    height: 14pt;
+    /* #CECFBD */
+}	
+.GRID-STYLE
+{
+	color: black;
+	font-family: Tahoma;
+    font-size: 10pt;	
+}
+/* title font attribute */
+.FormFld {
+	color:#0000FF;
+    BACKGROUND-COLOR: #EDFEFE;
+    BORDER-BOTTOM: 1px dotted #666;
+    BORDER-LEFT: 0px dotted #F1EEE9;
+    BORDER-RIGHT: 0px dotted #F1EEE9;
+    BORDER-TOP: 0px dotted #F1EEE9;
+    FONT-FAMILY: Tahoma;
+    FONT-SIZE: 10pt;
+    HEIGHT: 20px;
+    width: 30px
+}
+.FormLabel 
+{
+	font-family:Tahoma;
+	font-size:10pt;
+	color:#000000;
+	font-weight: normal;
+}
+.FormErr 
+{
+	font-family: Tahoma;
+	font-size:14pt;
+	color:Red;
+	font-weight: bold;
+	text-decoration: blink;
+}
+
+.FormHeader 
+{
+	font-family:Tahoma;
+	font-size:13pt;
+	color:#000000;
+	font-weight: bold;
+}
+.groupbox 
+{
+	font-family:Tahoma;
+	font-size:10pt;
+	color:#fff;
+	font-weight: bold;
+}
+
+/* title corner background color */
+.groupboxcorner
+{
+	background-color: #F1EEE9;
+}
+
+/* title corner background color */
+.groupboxcornerimg
+{
+	width:19px;
+	height:19px;
+   	background-image:url(../images/groupbox/corner.gif);
+}
+
+/* title background color */
+.groupboxheader
+{
+
+	background: #507EAC;
+	text-indent:10px;
+	line-height:normal;
+	height:19px;
+
+}
+
+
+.m-body {
+    BACKGROUND-COLOR: #FFFFFF;
+}
+
+.m-body2 {
+    BACKGROUND-COLOR: #FFFFFF;
+    overflow: hidden; 
+}
+
+/* WebForm Page Navigator */
+.m-frm-nav          {color:#cccccc; font-family:Tahoma; font-size:11px;}
+a.m-frm-nav:Active  {color:#ffffff; text-decoration:none;}
+a.m-frm-nav:Visited {color:#ffffff; text-decoration:none;}
+a.m-frm-nav:Hover   {color:#cccccc;}
+a.m-frm-nav:Link    {color:#ffffff; text-decoration:none;}
+
+
+
+/* Form */
+.m-form {
+   BACKGROUND-COLOR: #EEEEEE;
+   BORDER-BOTTOM: #97A1C9 1px solid;
+   BORDER-LEFT: #97A1C9 1px solid;
+   BORDER-RIGHT: #97A1C9 1px solid;
+   BORDER-TOP: #97A1C9 1px solid;
+   FONT-FAMILY: Tahoma;
+   FONT-SIZE: 8pt;
+}
+
+/* WebForm Caption */
+.m-frm-hdr {
+	font-family: Tahoma;
+	font-weight: bold;
+    background-color: #EDFEFE;
+	color: #000000;
+	text-decoration: none;
+}
+
+
+/* WebForm Border */
+.m-frm-bdr {
+	font-family:Tahoma;
+	font-weight: normal;
+	padding-top: 0px;
+	overflow: hidden; 
+	background-color: #EDFEFE;
+	border-style: solid; 
+	border-color: #666; 
+	border-width:1px;
+}
+
+.m-frm-bdr2 {
+	font-family:Tahoma;
+	font-weight: normal;
+	overflow: hidden; 
+	background-color: #FFFFFF;
+    BORDER-BOTTOM: white 1px solid;
+	border-color: #8D8D80; 
+	border-width: 1px;
+	padding-top: 0px;
+}
+.m-frm-bdr3 {
+	font-family:Tahoma;
+	font-weight: normal;
+	overflow: hidden; 
+	background-color: #F1EEE9;
+}
+
+/* WebForm Page Navigator */
+.m-frm-nav          {color:#cccccc; font-family:Tahoma; font-size:11px;}
+a.m-frm-nav:Active  {color:#ffffff; text-decoration:none;}
+a.m-frm-nav:Visited {color:#ffffff; text-decoration:none;}
+a.m-frm-nav:Hover   {color:#ffffff;}
+a.m-frm-nav:Link    {color:#ffffff; text-decoration:none;}
+
+
+/* Fields */
+.hd-msg {
+    COLOR: #FFFFFF;
+    BACKGROUND-COLOR: #000000;
+    FONT-SIZE: 9pt;
+    FONT-FAMILY: Tahoma;
+    font-weight: normal
+}
+
+.m-fld {
+   FONT-FAMILY: Tahoma;
+   FONT-SIZE: 9pt;
+   HEIGHT: 18px;
+   width: 30px
+}
+
+.m-fld2 {
+    BACKGROUND-COLOR: #EEEEEE;
+    BORDER-BOTTOM: #97A1C9 1px solid;
+    BORDER-LEFT: #97A1C9 1px solid;
+    BORDER-RIGHT: #97A1C9 1px solid;
+    BORDER-TOP: #97A1C9 1px solid;
+    FONT-FAMILY: Tahoma;
+    FONT-SIZE: 9pt;
+    HEIGHT: 18px;
+    width: 30px;
+}
+.m-fld-view {
+    COLOR: blue;
+    BACKGROUND-COLOR: #EEEEEE;
+    BORDER-BOTTOM: #97A1C9 1px solid;
+    BORDER-LEFT: #97A1C9 1px solid;
+    BORDER-RIGHT: #97A1C9 1px solid;
+    BORDER-TOP: #97A1C9 1px solid;
+    FONT-SIZE: 8pt;
+    HEIGHT: 18px;
+    FONT-FAMILY: Tahoma;
+    font-weight: normal;
+
+}
+/* Fields Optional */
+.m-fld-cpn {
+   font-family: Tahoma;
+   font-size: 8pt;
+   color: #000000;
+}
+/* Standard Buttons */
+.m-btn {
+    background:#FFF;
+	border:1px solid #6CF;
+   COLOR: #06F;
+   CURSOR: hand;
+   FONT-FAMILY: Tahoma;
+   FONT-SIZE: 9pt;
+   TEXT-ALIGN: center
+}
+
+.m-btn-dtm {
+   BACKGROUND-IMAGE: url(../images/buttons/b_calendar.gif);
+   BORDER-BOTTOM: #7e7e72 1px solid;
+   BORDER-LEFT: #cdcdbe 1px solid;
+   BORDER-RIGHT: #7e7e72 1px solid;
+   BORDER-TOP: #cdcdbe 1px solid;
+   COLOR: #000000;
+   CURSOR: hand;
+   FONT-FAMILY: Tahoma;
+   FONT-SIZE: 8pt;
+   TEXT-ALIGN: center
+}
+/* Error Messages */
+.m-err {
+   color: Red;
+   FONT-WEIGHT: bold;
+   FONT-SIZE: 8pt;
+   FONT-FAMILY: Tahoma;
+}
+/* Alert Messages */
+.m-alert {
+   color: Blue;
+   FONT-WEIGHT: bold;
+   FONT-SIZE: 8pt;
+   FONT-FAMILY: Tahoma;
+}
+
+/* DataGrid */
+.m-grd-num {
+   BACKGROUND-COLOR: #EEEEEE;
+   BORDER-BOTTOM: #97A1C9 1px solid;
+   BORDER-LEFT: #97A1C9 1px solid;
+   BORDER-RIGHT: #97A1C9 1px solid;
+   BORDER-TOP: #97A1C9 1px solid;
+   FONT-FAMILY: Tahoma;
+   FONT-SIZE: 8pt;
+   TEXT-ALIGN: right
+}
+.m-grd-txt {
+   BACKGROUND-COLOR: #EEEEEE;
+   BORDER-BOTTOM: #97A1C9 1px solid;
+   BORDER-LEFT: #97A1C9 1px solid;
+   BORDER-RIGHT: #97A1C9 1px solid;
+   BORDER-TOP: #97A1C9 1px solid;
+   FONT-FAMILY: Tahoma;
+   FONT-SIZE: 8pt;
+}
+/* input type style */
+label {
+ font-family:Tahoma,sans-serif;
+ font-size: 10pt;
+ font-weight: normal;
+ color: #660;
+}

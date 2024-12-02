@@ -44,7 +44,15 @@ Public Class rpt3_ediFORMs4_3_VR
         If CommonUtility.Get_StringValue(txtSINGLE_COUNTRY_CONTENT.Value) = "1" And CommonUtility.Get_StringValue(txtTitleMain.Text) <> "" Then
             txtTitleHead.Visible = True
         End If
+        Check_Issued()
         'by rut Title New End-------------------------------------------
+    End Sub
+    Private Sub Check_Issued()
+        If txtIsIssued.Text.ToLower = "true" Or txtIsIssued.Text = "1" Then
+            lblIssuedRetro.Visible = True
+        Else
+            lblIssuedRetro.Visible = False
+        End If
     End Sub
     'company
     Sub Head_Checkcompany_v1()

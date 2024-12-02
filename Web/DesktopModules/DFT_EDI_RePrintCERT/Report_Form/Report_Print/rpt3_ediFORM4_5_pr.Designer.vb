@@ -100,6 +100,7 @@ Partial Public Class rpt3_ediFORM4_5_pr
         Me.txtTitleHead = New DataDynamics.ActiveReports.TextBox()
         Me.txtIsIssued = New DataDynamics.ActiveReports.TextBox()
         Me.txtEDI_Date = New DataDynamics.ActiveReports.TextBox()
+        Me.txtIsIssueddate = New DataDynamics.ActiveReports.TextBox()
         Me.PageFooter1 = New DataDynamics.ActiveReports.PageFooter()
         Me.ShapeSealSign = New DataDynamics.ActiveReports.Shape()
         Me.Picture_SealAuthor = New DataDynamics.ActiveReports.Picture()
@@ -123,7 +124,6 @@ Partial Public Class rpt3_ediFORM4_5_pr
         Me.GroupHeader1 = New DataDynamics.ActiveReports.GroupHeader()
         Me.GroupFooter1 = New DataDynamics.ActiveReports.GroupFooter()
         Me.txtTotalAll = New DataDynamics.ActiveReports.TextBox()
-        Me.txtIsIssueddate = New DataDynamics.ActiveReports.TextBox()
         CType(Me.txtNumRowCount, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTemp_marks, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtT_product, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -207,6 +207,7 @@ Partial Public Class rpt3_ediFORM4_5_pr
         CType(Me.txtTitleHead, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtIsIssued, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtEDI_Date, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtIsIssueddate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Picture_SealAuthor, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtcompany_provincefoot, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtcompany_provincefoot1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -225,7 +226,6 @@ Partial Public Class rpt3_ediFORM4_5_pr
         CType(Me.txtTemp_form_type, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtprintFormDate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTotalAll, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtIsIssueddate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'Detail1
@@ -1277,7 +1277,7 @@ Partial Public Class rpt3_ediFORM4_5_pr
         '
         'PageHeader1
         '
-        Me.PageHeader1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.txtCompany_Check_1, Me.txtreference_code2_Temp, Me.txtdestination_Check2, Me.txttransport_by, Me.txtcompany_taxno, Me.txtcompany_country, Me.txtcompany_province, Me.txtcompany_address, Me.txtcompany_name, Me.txtob_address, Me.txtdest_remark, Me.txtcompany_fax, Me.txtcompany_phone, Me.txtdestination_company, Me.txtdestination_fax, Me.txtdestination_address, Me.txtdestination_phone, Me.txtdestination_province, Me.txtdest_Receive_country, Me.txtreference_code2, Me.txtcompany_email, Me.txtdestination_email, Me.txtdestination_taxid, Me.txtdest_remark1, Me.txtob_dest_address, Me.ReportInfo1, Me.txtNewEmail_ch02, Me.txtNewEmail_ch01, Me.txtTitleHead, Me.txtIsIssued, Me.txtEDI_Date, Me.txtIsIssueddate})
+        Me.PageHeader1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.txtIsIssueddate, Me.txtCompany_Check_1, Me.txtreference_code2_Temp, Me.txtdestination_Check2, Me.txttransport_by, Me.txtcompany_taxno, Me.txtcompany_country, Me.txtcompany_province, Me.txtcompany_address, Me.txtcompany_name, Me.txtob_address, Me.txtdest_remark, Me.txtcompany_fax, Me.txtcompany_phone, Me.txtdestination_company, Me.txtdestination_fax, Me.txtdestination_address, Me.txtdestination_phone, Me.txtdestination_province, Me.txtdest_Receive_country, Me.txtreference_code2, Me.txtcompany_email, Me.txtdestination_email, Me.txtdestination_taxid, Me.txtdest_remark1, Me.txtob_dest_address, Me.ReportInfo1, Me.txtNewEmail_ch02, Me.txtNewEmail_ch01, Me.txtTitleHead, Me.txtIsIssued, Me.txtEDI_Date})
         Me.PageHeader1.Height = 5.116!
         Me.PageHeader1.Name = "PageHeader1"
         '
@@ -1900,6 +1900,25 @@ Partial Public Class rpt3_ediFORM4_5_pr
         Me.txtEDI_Date.Visible = False
         Me.txtEDI_Date.Width = 1.75!
         '
+        'txtIsIssueddate
+        '
+        Me.txtIsIssueddate.Border.BottomColor = System.Drawing.Color.Black
+        Me.txtIsIssueddate.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtIsIssueddate.Border.LeftColor = System.Drawing.Color.Black
+        Me.txtIsIssueddate.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtIsIssueddate.Border.RightColor = System.Drawing.Color.Black
+        Me.txtIsIssueddate.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtIsIssueddate.Border.TopColor = System.Drawing.Color.Black
+        Me.txtIsIssueddate.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtIsIssueddate.CanGrow = False
+        Me.txtIsIssueddate.Height = 0.875!
+        Me.txtIsIssueddate.Left = 4.375!
+        Me.txtIsIssueddate.Name = "txtIsIssueddate"
+        Me.txtIsIssueddate.Style = "ddo-char-set: 0; font-size: 24pt; font-family: BrowalliaUPC; "
+        Me.txtIsIssueddate.Text = """ISSUED RETROACTIVELY, date of shipment is              """
+        Me.txtIsIssueddate.Top = 3.438!
+        Me.txtIsIssueddate.Width = 3.3125!
+        '
         'PageFooter1
         '
         Me.PageFooter1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.ShapeSealSign, Me.Picture_SealAuthor, Me.txtcompany_provincefoot, Me.txtcompany_provincefoot1, Me.txtback_country, Me.txtinvh_run_auto, Me.txttotalSum_fob_amt, Me.txtapprove_date, Me.txtdateSelectRPT, Me.txtSendCheckSeletedate, Me.ShapeApproveSign, Me.PictureApproveSign, Me.txtTemp_Bangkok02, Me.txtTemp_Bangkok01, Me.txtTemp_Date, Me.txtTemp_SiteSend, Me.txtTemp_destination_country, Me.txtTemp_form_type, Me.txtprintFormDate})
@@ -2316,25 +2335,6 @@ Partial Public Class rpt3_ediFORM4_5_pr
         Me.txtTotalAll.Visible = False
         Me.txtTotalAll.Width = 3.34375!
         '
-        'txtIsIssueddate
-        '
-        Me.txtIsIssueddate.Border.BottomColor = System.Drawing.Color.Black
-        Me.txtIsIssueddate.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtIsIssueddate.Border.LeftColor = System.Drawing.Color.Black
-        Me.txtIsIssueddate.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtIsIssueddate.Border.RightColor = System.Drawing.Color.Black
-        Me.txtIsIssueddate.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtIsIssueddate.Border.TopColor = System.Drawing.Color.Black
-        Me.txtIsIssueddate.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtIsIssueddate.CanGrow = False
-        Me.txtIsIssueddate.Height = 0.875!
-        Me.txtIsIssueddate.Left = 4.375!
-        Me.txtIsIssueddate.Name = "txtIsIssueddate"
-        Me.txtIsIssueddate.Style = "ddo-char-set: 0; font-size: 24pt; font-family: BrowalliaUPC; "
-        Me.txtIsIssueddate.Text = """ISSUED RETROACTIVELY, date of shipment is              """
-        Me.txtIsIssueddate.Top = 3.438!
-        Me.txtIsIssueddate.Width = 3.3125!
-        '
         'rpt3_ediFORM4_5_pr
         '
         Me.MasterReport = False
@@ -2445,6 +2445,7 @@ Partial Public Class rpt3_ediFORM4_5_pr
         CType(Me.txtTitleHead, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtIsIssued, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtEDI_Date, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtIsIssueddate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Picture_SealAuthor, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtcompany_provincefoot, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtcompany_provincefoot1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -2463,7 +2464,6 @@ Partial Public Class rpt3_ediFORM4_5_pr
         CType(Me.txtTemp_form_type, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtprintFormDate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtTotalAll, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtIsIssueddate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub

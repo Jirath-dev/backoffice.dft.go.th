@@ -829,8 +829,8 @@ Partial Public Class rpt3_ReEdi_A
         Me.txtdestination_address_province_dest_receive_country.Height = 0.8020833!
         Me.txtdestination_address_province_dest_receive_country.Left = 0.06250004!
         Me.txtdestination_address_province_dest_receive_country.Name = "txtdestination_address_province_dest_receive_country"
-        Me.txtdestination_address_province_dest_receive_country.Style = "ddo-char-set: 222; font-weight: normal; font-size: 12pt; font-family: BrowalliaUP" &
-    "C; vertical-align: top; "
+        Me.txtdestination_address_province_dest_receive_country.Style = "ddo-char-set: 222; font-weight: normal; font-size: 11.25pt; font-family: Browalli" &
+    "aUPC; vertical-align: top; "
         Me.txtdestination_address_province_dest_receive_country.Text = Nothing
         Me.txtdestination_address_province_dest_receive_country.Top = 3.125!
         Me.txtdestination_address_province_dest_receive_country.Width = 5.3!
@@ -3495,7 +3495,7 @@ Partial Public Class rpt3_ReEdi_A
         '
         'PageFooter1
         '
-        Me.PageFooter1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.Picture_SealAuthor, Me.txtrequest_person_2, Me.Shape5, Me.TextBox37, Me.Shape3, Me.txtSum_Net_Weight, Me.txtNET_WEIGHTPage, Me.txtSum_Fob_Amt, Me.Shape4, Me.txtInvoince_Date, Me.TextBox31, Me.txtTotal, Me.txtSum_Gross_Weight, Me.TextBox32, Me.txtbill_type0, Me.TextBox34, Me.txtbill_type1, Me.TextBox36, Me.txtbill_type2, Me.TextBox38, Me.txtbill_type3, Me.TextBox40, Me.txtbill_type_other, Me.TextBox41, Me.TextBox42, Me.txtbl_no, Me.txtTemp_sailing_date, Me.TextBox44, Me.txtTemp_edi_date, Me.TextBox45, Me.txtbill_type, Me.TextBox16, Me.TextBox17, Me.TextBox18, Me.txtattach_file, Me.TextBox19, Me.txtfactory, Me.txtfactory_Temp, Me.txtfactory_address, Me.TextBox39, Me.TextBox43, Me.TextBox46, Me.Line6, Me.txtauthorize2, Me.txtedi_date, Me.txtsailing_date, Me.txtgross_weightH, Me.txtg_unit_code, Me.txtSumFOB_AMTPage, Me.txtTemp_form_type, Me.txtTemp_destination_country, Me.txttotalSum_fob_amt, Me.txttotal_real_net_weight, Me.txtTemp_Net, Me.txtTempUSD, Me.TextBox33, Me.TextBox20, Me.TextBox35})
+        Me.PageFooter1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.Shape5, Me.Picture_SealAuthor, Me.TextBox37, Me.txtrequest_person_2, Me.Shape3, Me.txtSum_Net_Weight, Me.txtNET_WEIGHTPage, Me.txtSum_Fob_Amt, Me.Shape4, Me.txtInvoince_Date, Me.TextBox31, Me.txtTotal, Me.txtSum_Gross_Weight, Me.TextBox32, Me.txtbill_type0, Me.TextBox34, Me.txtbill_type1, Me.TextBox36, Me.txtbill_type2, Me.TextBox38, Me.txtbill_type3, Me.TextBox40, Me.txtbill_type_other, Me.TextBox41, Me.TextBox42, Me.txtbl_no, Me.txtTemp_sailing_date, Me.TextBox44, Me.txtTemp_edi_date, Me.TextBox45, Me.txtbill_type, Me.TextBox16, Me.TextBox17, Me.TextBox18, Me.txtattach_file, Me.TextBox19, Me.txtfactory, Me.txtfactory_Temp, Me.txtfactory_address, Me.TextBox39, Me.TextBox43, Me.TextBox46, Me.Line6, Me.txtauthorize2, Me.txtedi_date, Me.txtsailing_date, Me.txtgross_weightH, Me.txtg_unit_code, Me.txtSumFOB_AMTPage, Me.txtTemp_form_type, Me.txtTemp_destination_country, Me.txttotalSum_fob_amt, Me.txttotal_real_net_weight, Me.txtTemp_Net, Me.txtTempUSD, Me.TextBox33, Me.TextBox20, Me.TextBox35})
         Me.PageFooter1.Height = 4.708333!
         Me.PageFooter1.Name = "PageFooter1"
         '
