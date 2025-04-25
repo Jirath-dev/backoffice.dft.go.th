@@ -26,7 +26,7 @@ Partial Public Class frmFormPDFDuplicate
                 End If
 
                 Dim ds As New DataSet
-
+                '//ปรับเงื่อนไขให้สามารถเรียกได้หลายๆปีในหน้าเดียว
                 Select Case form_type
                     Case "FORM3_1"
                         ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_form4_edi_printPDF_NewDS31",

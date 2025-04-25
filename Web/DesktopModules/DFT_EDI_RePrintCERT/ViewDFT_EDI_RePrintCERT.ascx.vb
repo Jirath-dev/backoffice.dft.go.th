@@ -847,7 +847,7 @@ Namespace NTi.Modules.DFT_EDI_RePrintCERT
             Try
                 Dim ds As New DataSet
                 Dim temp_store As String = "sp_common_UpdateDuplicate_NewDS"
-
+                '//เพิ่มเงื่อนไขเก็บประวัติ..
                 Select Case check_YearsOle.Checked
                     Case True
                         Select Case DDLYears.SelectedValue
