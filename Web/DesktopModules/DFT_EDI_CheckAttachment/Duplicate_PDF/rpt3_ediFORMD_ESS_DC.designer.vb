@@ -17,6 +17,7 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(rpt3_ediFORMD_ESS_DC))
         Me.Detail1 = New DataDynamics.ActiveReports.Detail()
         Me.txtNumRowCount = New DataDynamics.ActiveReports.TextBox()
+        Me.txtTemp_marks = New DataDynamics.ActiveReports.TextBox()
         Me.txtT_product = New DataDynamics.ActiveReports.TextBox()
         Me.txtTemp_box8 = New DataDynamics.ActiveReports.TextBox()
         Me.txtTolInvoice = New DataDynamics.ActiveReports.TextBox()
@@ -232,8 +233,8 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.GroupHeader1 = New DataDynamics.ActiveReports.GroupHeader()
         Me.GroupFooter1 = New DataDynamics.ActiveReports.GroupFooter()
         Me.txtTotalAll = New DataDynamics.ActiveReports.TextBox()
-        Me.txtTemp_marks = New DataDynamics.ActiveReports.TextBox()
         CType(Me.txtNumRowCount, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtTemp_marks, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtT_product, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTemp_box8, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTolInvoice, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -413,14 +414,13 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         CType(Me.txtPrintDate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTemp_SiteSend, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTotalAll, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtTemp_marks, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'Detail1
         '
         Me.Detail1.ColumnSpacing = 0!
-        Me.Detail1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.txtNumRowCount, Me.txtT_product, Me.txtTemp_box8, Me.txtTolInvoice, Me.txtinvoice_no1, Me.txtinvoice_no2, Me.txtinvoice_no3, Me.txtinvoice_no4, Me.txtinvoice_no5, Me.txtinvoice_date1, Me.txtinvoice_date2, Me.txtinvoice_date3, Me.txtinvoice_date4, Me.txtinvoice_date5, Me.txtGross_Weight, Me.txtmarks, Me.txtproduct_n1, Me.txtproduct_n2, Me.txtquantity1, Me.txtq_unit_code1, Me.txtquantity2, Me.txtq_unit_code2, Me.txtquantity3, Me.txtq_unit_code3, Me.txtquantity4, Me.txtq_unit_code4, Me.txtquantity5, Me.txtq_unit_code5, Me.txtg_unit_code, Me.C_TotalRowDe, Me.txttariff_code, Me.txtGrossTxt, Me.txtg_Unit_Desc, Me.txtFOB_AMT, Me.txtinvoice_board, Me.txtWeightDisplayHeader, Me.txtFOBDisplay, Me.txtunit_code2, Me.txtnet_weight, Me.txtgross_weightH, Me.txtGrossTxt_, Me.txtthird_country, Me.txtplace_Exibition, Me.txtNumInvoice, Me.txtUSDInvoice, Me.txtbox8, Me.txtunit_code3, Me.txtUSDInvoiceDetail, Me.txtWeightDisplayHeaderH, Me.txtgross_weightD, Me.txtCheckGrossDetail, Me.txtInvoiceDetailTH, Me.txtSINGLE_COUNTRY_CONTENT, Me.txt_NewEmail_ch02, Me.txtproduct_model, Me.txtvoince, Me.txtTitleMain, Me.txtPriceOtherDetail, Me.txtCurrency_Code, Me.txtletter, Me.txtUSDAgent, Me.txtDisplayUnitType, Me.txtTemp_marks})
-        Me.Detail1.Height = 0.3125!
+        Me.Detail1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.txtNumRowCount, Me.txtTemp_marks, Me.txtT_product, Me.txtTemp_box8, Me.txtTolInvoice, Me.txtinvoice_no1, Me.txtinvoice_no2, Me.txtinvoice_no3, Me.txtinvoice_no4, Me.txtinvoice_no5, Me.txtinvoice_date1, Me.txtinvoice_date2, Me.txtinvoice_date3, Me.txtinvoice_date4, Me.txtinvoice_date5, Me.txtGross_Weight, Me.txtmarks, Me.txtproduct_n1, Me.txtproduct_n2, Me.txtquantity1, Me.txtq_unit_code1, Me.txtquantity2, Me.txtq_unit_code2, Me.txtquantity3, Me.txtq_unit_code3, Me.txtquantity4, Me.txtq_unit_code4, Me.txtquantity5, Me.txtq_unit_code5, Me.txtg_unit_code, Me.C_TotalRowDe, Me.txttariff_code, Me.txtGrossTxt, Me.txtg_Unit_Desc, Me.txtFOB_AMT, Me.txtinvoice_board, Me.txtWeightDisplayHeader, Me.txtFOBDisplay, Me.txtunit_code2, Me.txtnet_weight, Me.txtgross_weightH, Me.txtGrossTxt_, Me.txtthird_country, Me.txtplace_Exibition, Me.txtNumInvoice, Me.txtUSDInvoice, Me.txtbox8, Me.txtunit_code3, Me.txtUSDInvoiceDetail, Me.txtWeightDisplayHeaderH, Me.txtgross_weightD, Me.txtCheckGrossDetail, Me.txtInvoiceDetailTH, Me.txtSINGLE_COUNTRY_CONTENT, Me.txt_NewEmail_ch02, Me.txtproduct_model, Me.txtvoince, Me.txtTitleMain, Me.txtPriceOtherDetail, Me.txtCurrency_Code, Me.txtletter, Me.txtUSDAgent, Me.txtDisplayUnitType})
+        Me.Detail1.Height = 0.3583333!
         Me.Detail1.Name = "Detail1"
         '
         'txtNumRowCount
@@ -441,6 +441,25 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.txtNumRowCount.Text = Nothing
         Me.txtNumRowCount.Top = 0!
         Me.txtNumRowCount.Width = 0.3937007!
+        '
+        'txtTemp_marks
+        '
+        Me.txtTemp_marks.Border.BottomColor = System.Drawing.Color.Black
+        Me.txtTemp_marks.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtTemp_marks.Border.LeftColor = System.Drawing.Color.Black
+        Me.txtTemp_marks.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtTemp_marks.Border.RightColor = System.Drawing.Color.Black
+        Me.txtTemp_marks.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtTemp_marks.Border.TopColor = System.Drawing.Color.Black
+        Me.txtTemp_marks.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.txtTemp_marks.Height = 0.25!
+        Me.txtTemp_marks.Left = 0.75!
+        Me.txtTemp_marks.Name = "txtTemp_marks"
+        Me.txtTemp_marks.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: BrowalliaUPC; "
+        Me.txtTemp_marks.Text = Nothing
+        Me.txtTemp_marks.Top = 0!
+        Me.txtTemp_marks.Visible = False
+        Me.txtTemp_marks.Width = 0.875!
         '
         'txtT_product
         '
@@ -1660,7 +1679,7 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         'PageHeader1
         '
         Me.PageHeader1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.Label36, Me.Label27, Me.txtCompany_Check_1, Me.txtreference_code2_Temp, Me.txtdestination_Check2, Me.txttransport_by, Me.txtcompany_taxno, Me.txtcompany_country, Me.txtcompany_province, Me.txtcompany_address, Me.txtcompany_name, Me.txtob_address, Me.txtdest_remark, Me.txtcompany_fax, Me.txtcompany_phone, Me.txtdestination_company, Me.txtdestination_fax, Me.txtdestination_address, Me.txtdestination_phone, Me.txtdestination_province, Me.txtdest_Receive_country, Me.txtreference_code2, Me.txtcompany_email, Me.txtdestination_email, Me.txtdestination_taxid, Me.txtdest_remark1, Me.txtob_dest_address, Me.txtdeparture_date, Me.txtvasel_name, Me.txtport_discharge, Me.ReportInfo1, Me.txtform_type, Me.txtNewEmail_ch02, Me.txtNewEmail_ch01, Me.txtTitleHead, Me.Line9, Me.Line8, Me.Line13, Me.Line14, Me.Line12, Me.Line3, Me.Label42, Me.Label43, Me.Label44, Me.Line11, Me.Label3, Me.Label2, Me.Label5, Me.Label4, Me.Label1, Me.Label8, Me.Label7, Me.Label16, Me.Label21, Me.Label17, Me.Label22, Me.Line19, Me.Label19, Me.Label6, Me.Shape1, Me.Label29, Me.Label30, Me.Shape3, Me.Label33, Me.Label48, Me.Line10, Me.Label56, Me.Label57, Me.Line4, Me.Label59, Me.Label15, Me.Line15, Me.Label46, Me.Label20, Me.Label40, Me.Label31, Me.Label18, Me.Label32, Me.Label34, Me.Label35})
-        Me.PageHeader1.Height = 4.65625!
+        Me.PageHeader1.Height = 4.6875!
         Me.PageHeader1.Name = "PageHeader1"
         '
         'Label36
@@ -2349,7 +2368,7 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.txtTitleHead.Height = 0.25!
         Me.txtTitleHead.Left = 1.88!
         Me.txtTitleHead.Name = "txtTitleHead"
-        Me.txtTitleHead.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: BrowalliaUPC; "
+        Me.txtTitleHead.Style = "color: Blue; ddo-char-set: 1; font-size: 10pt; font-family: BrowalliaUPC; "
         Me.txtTitleHead.Text = Nothing
         Me.txtTitleHead.Top = 4.6177!
         Me.txtTitleHead.Visible = False
@@ -4630,25 +4649,6 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.txtTotalAll.Visible = False
         Me.txtTotalAll.Width = 3.492126!
         '
-        'txtTemp_marks
-        '
-        Me.txtTemp_marks.Border.BottomColor = System.Drawing.Color.Black
-        Me.txtTemp_marks.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtTemp_marks.Border.LeftColor = System.Drawing.Color.Black
-        Me.txtTemp_marks.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtTemp_marks.Border.RightColor = System.Drawing.Color.Black
-        Me.txtTemp_marks.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtTemp_marks.Border.TopColor = System.Drawing.Color.Black
-        Me.txtTemp_marks.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtTemp_marks.Height = 0.25!
-        Me.txtTemp_marks.Left = 0.8125!
-        Me.txtTemp_marks.Name = "txtTemp_marks"
-        Me.txtTemp_marks.Style = "color: Black; ddo-char-set: 1; font-size: 10pt; font-family: BrowalliaUPC; "
-        Me.txtTemp_marks.Text = Nothing
-        Me.txtTemp_marks.Top = 0!
-        Me.txtTemp_marks.Visible = False
-        Me.txtTemp_marks.Width = 1.0!
-        '
         'rpt3_ediFORMD_ESS_DC
         '
         Me.MasterReport = False
@@ -4675,6 +4675,7 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         Me.StyleSheet.Add(New DDCssLib.StyleSheetRule("font-size: 13pt; font-weight: bold; ", "Heading3", "Normal"))
         Me.WatermarkSizeMode = DataDynamics.ActiveReports.SizeModes.Stretch
         CType(Me.txtNumRowCount, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtTemp_marks, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtT_product, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtTemp_box8, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtTolInvoice, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4854,12 +4855,12 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
         CType(Me.txtPrintDate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtTemp_SiteSend, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtTotalAll, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtTemp_marks, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub
     Friend WithEvents Detail1 As DataDynamics.ActiveReports.Detail
     Friend WithEvents txtNumRowCount As DataDynamics.ActiveReports.TextBox
+    Friend WithEvents txtTemp_marks As DataDynamics.ActiveReports.TextBox
     Friend WithEvents txtT_product As DataDynamics.ActiveReports.TextBox
     Friend WithEvents txtTemp_box8 As DataDynamics.ActiveReports.TextBox
     Friend WithEvents txtTolInvoice As DataDynamics.ActiveReports.TextBox
@@ -5075,5 +5076,4 @@ Partial Public Class rpt3_ediFORMD_ESS_DC
     Friend WithEvents txtPrintDate As DataDynamics.ActiveReports.TextBox
     Friend WithEvents txtTemp_SiteSend As DataDynamics.ActiveReports.TextBox
     Friend WithEvents Label36 As DataDynamics.ActiveReports.Label
-    Friend WithEvents txtTemp_marks As DataDynamics.ActiveReports.TextBox
 End Class

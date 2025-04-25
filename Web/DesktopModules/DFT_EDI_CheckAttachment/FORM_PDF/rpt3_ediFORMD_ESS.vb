@@ -2244,6 +2244,10 @@ Public Class rpt3_ediFORMD_ESS
         Return send_invoice
     End Function
 
+    Private Sub GroupFooter1_Format(sender As Object, e As EventArgs) Handles GroupFooter1.Format
+
+    End Sub
+
     Private Sub rpt3_ediFORM4_pr_PageEnd(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.PageEnd
         'Event PageEnd จะทำทุกหน้า และตัวอักษรจะอยู่ด้านบนสุด (ทับข้อความอื่นๆ) กรณี PageStart จะอยู่ล่างสุด
         'ตัวอย่างโค้ด การใช้เมธอด DrawText (มีการ Overload ให้ใช้หลายแบบ)

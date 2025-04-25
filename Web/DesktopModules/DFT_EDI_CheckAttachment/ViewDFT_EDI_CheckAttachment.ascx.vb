@@ -266,18 +266,7 @@ Namespace NTi.Modules.DFT_EDI_CheckAttachment
             Return result
 
         End Function
-        Public Function GetPrinterImage(val As Object) As String
-            Dim ret As String = "<img src='/images/1x1.gif'>"
-            Try
-                If Convert.ToString(val).ToLower = "false" Then
-                    ret = "<img src='/images/print-disable.png' style='width:18px;height:18px;'>"
-                End If
-            Catch ex As Exception
 
-            End Try
-
-            Return ret
-        End Function
     End Class
 
 End Namespace

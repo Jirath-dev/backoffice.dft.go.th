@@ -3457,7 +3457,7 @@ Partial Public Class rpt3_ediFORME_ESS_DC
         '
         'PageFooter1
         '
-        Me.PageFooter1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.Picture_SealAuthor, Me.PictureApproveSign, Me.txtTHAILAND, Me.txtIMPORT_COUNTRY, Me.txtcompany_provincefoot1, Me.txtcompany_provincefoot, Me.txtshow_check, Me.txtback_country, Me.txtinvh_run_auto, Me.txttotalSum_fob_amt, Me.Pic_ch5_exhibi, Me.Pic_ch7_Issued, Me.Pic_ch3_back, Me.Pic_ch1_third, Me.Line10, Me.Label28, Me.Label29, Me.Line11, Me.Label23, Me.Label34, Me.Line17, Me.Label26, Me.Line20, Me.Label35, Me.Line1, Me.Label30, Me.Label21, Me.Line2, Me.Label18, Me.Shape4, Me.Shape5, Me.Label24, Me.Shape1, Me.Shape6, Me.Label33, Me.Label27, Me.txtCheck_CaseRVCCount, Me.txtPrintDate, Me.Label39, Me.Label40, Me.Line16, Me.Label41, Me.Label45, Me.Label49, Me.Line6, Me.Line4, Me.Line3, Me.txtByCom_CH03, Me.txtDisplayUDS7, Me.txtprintFormDate, Me.txtdateSelectRPT, Me.txtSendCheckSeletedate, Me.txtapprove_date, Me.ShapeApproveSign, Me.txtTemp_Date, Me.txtTemp_Bangkok01, Me.txtTemp_Bangkok02, Me.txtTemp_SiteSend})
+        Me.PageFooter1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.ShapeApproveSign, Me.Picture_SealAuthor, Me.PictureApproveSign, Me.txtTHAILAND, Me.txtIMPORT_COUNTRY, Me.txtcompany_provincefoot1, Me.txtcompany_provincefoot, Me.txtshow_check, Me.txtback_country, Me.txtinvh_run_auto, Me.txttotalSum_fob_amt, Me.Pic_ch5_exhibi, Me.Pic_ch7_Issued, Me.Pic_ch3_back, Me.Pic_ch1_third, Me.Line10, Me.Label28, Me.Label29, Me.Line11, Me.Label23, Me.Label34, Me.Line17, Me.Label26, Me.Line20, Me.Label35, Me.Line1, Me.Label30, Me.Label21, Me.Line2, Me.Label18, Me.Shape4, Me.Shape5, Me.Label24, Me.Shape1, Me.Shape6, Me.Label33, Me.Label27, Me.txtCheck_CaseRVCCount, Me.txtPrintDate, Me.Label39, Me.Label40, Me.Line16, Me.Label41, Me.Label45, Me.Label49, Me.Line6, Me.Line4, Me.Line3, Me.txtByCom_CH03, Me.txtDisplayUDS7, Me.txtprintFormDate, Me.txtdateSelectRPT, Me.txtSendCheckSeletedate, Me.txtapprove_date, Me.txtTemp_Date, Me.txtTemp_Bangkok01, Me.txtTemp_Bangkok02, Me.txtTemp_SiteSend})
         Me.PageFooter1.Height = 3.6!
         Me.PageFooter1.Name = "PageFooter1"
         '
@@ -5073,9 +5073,9 @@ Partial Public Class rpt3_ediFORME_ESS_DC
     Friend WithEvents Label34 As DataDynamics.ActiveReports.Label
     Friend WithEvents ShapeApproveSign As DataDynamics.ActiveReports.Shape
     Friend WithEvents txtTemp_Date As DataDynamics.ActiveReports.TextBox
-    Friend WithEvents txtTemp_Bangkok01 As DataDynamics.ActiveReports.TextBox
     Friend WithEvents txtTemp_Bangkok02 As DataDynamics.ActiveReports.TextBox
     Friend WithEvents Picture_SealAuthor As DataDynamics.ActiveReports.Picture
     Friend WithEvents PictureApproveSign As DataDynamics.ActiveReports.Picture
     Public WithEvents txtTemp_SiteSend As DataDynamics.ActiveReports.TextBox
+    Public WithEvents txtTemp_Bangkok01 As DataDynamics.ActiveReports.TextBox
 End Class

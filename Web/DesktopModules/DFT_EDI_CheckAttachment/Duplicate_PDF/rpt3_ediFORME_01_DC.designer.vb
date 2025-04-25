@@ -169,6 +169,7 @@ Partial Public Class rpt3_ediFORME_01_DC
         Me.Line22 = New DataDynamics.ActiveReports.Line()
         Me.Line21 = New DataDynamics.ActiveReports.Line()
         Me.Label50 = New DataDynamics.ActiveReports.Label()
+        Me.Label51 = New DataDynamics.ActiveReports.Label()
         Me.PageFooter1 = New DataDynamics.ActiveReports.PageFooter()
         Me.txtTHAILAND = New DataDynamics.ActiveReports.TextBox()
         Me.txtIMPORT_COUNTRY = New DataDynamics.ActiveReports.TextBox()
@@ -223,7 +224,6 @@ Partial Public Class rpt3_ediFORME_01_DC
         Me.GroupHeader1 = New DataDynamics.ActiveReports.GroupHeader()
         Me.GroupFooter1 = New DataDynamics.ActiveReports.GroupFooter()
         Me.txtTotalAll = New DataDynamics.ActiveReports.TextBox()
-        Me.Label51 = New DataDynamics.ActiveReports.Label()
         CType(Me.txtNumRowCount, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTemp_marks, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtT_product, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -362,6 +362,7 @@ Partial Public Class rpt3_ediFORME_01_DC
         CType(Me.Label60, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Label38, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.Label50, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.Label51, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTHAILAND, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtIMPORT_COUNTRY, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtcompany_provincefoot1, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -399,7 +400,6 @@ Partial Public Class rpt3_ediFORME_01_DC
         CType(Me.txtapprove_date, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtSendCheckSeletedate, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTotalAll, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.Label51, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'Detail1
@@ -1606,7 +1606,7 @@ Partial Public Class rpt3_ediFORME_01_DC
         'PageHeader1
         '
         Me.PageHeader1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.Label59, Me.txtCompany_Check_1, Me.txtreference_code2_Temp, Me.txtdestination_Check2, Me.txttransport_by, Me.txtcompany_taxno, Me.txtcompany_country, Me.txtcompany_province, Me.txtcompany_address, Me.txtcompany_name, Me.txtob_address, Me.txtdest_remark, Me.txtcompany_fax, Me.txtcompany_phone, Me.txtdestination_company, Me.txtdestination_fax, Me.txtdestination_address, Me.txtdestination_phone, Me.txtdestination_province, Me.txtdest_Receive_country, Me.txtreference_code2, Me.txtcompany_email, Me.txtdestination_email, Me.txtdestination_taxid, Me.txtdest_remark1, Me.txtob_dest_address, Me.txtdeparture_date, Me.txtvasel_name, Me.txtport_discharge, Me.txtTax_Status, Me.txtCheck_StatusWeb, Me.txtNewEmail_ch02, Me.txtNewEmail_ch01, Me.txtReserve1, Me.txtsupplementary_details, Me.txtRep_Doc_date2, Me.txtTitleHead, Me.Label8, Me.Label1, Me.Line13, Me.Label3, Me.Line25, Me.Line26, Me.Label19, Me.Label9, Me.Label2, Me.Label20, Me.Label22, Me.TextBox2, Me.Line19, Me.Label17, Me.Label7, Me.Label31, Me.Shape3, Me.Label32, Me.Shape2, Me.Line9, Me.Label10, Me.Line7, Me.Label14, Me.Label13, Me.Label12, Me.Line5, Me.Label25, Me.Label57, Me.Line14, Me.Line23, Me.Line15, Me.Label37, Me.Label4, Me.ReportInfo1, Me.Label42, Me.Label43, Me.Label44, Me.Label47, Me.Label46, Me.Label5, Me.Label6, Me.Label11, Me.Label15, Me.Label16, Me.Label36, Me.Label52, Me.Label62, Me.Label63, Me.Label64, Me.Label48, Me.Label60, Me.Label38, Me.Line22, Me.Line21, Me.Label50, Me.Label51})
-        Me.PageHeader1.Height = 4.8!
+        Me.PageHeader1.Height = 4.883333!
         Me.PageHeader1.Name = "PageHeader1"
         '
         'Label59
@@ -3420,6 +3420,26 @@ Partial Public Class rpt3_ediFORME_01_DC
         Me.Label50.Top = 4.1875!
         Me.Label50.Width = 0.5625!
         '
+        'Label51
+        '
+        Me.Label51.Border.BottomColor = System.Drawing.Color.Black
+        Me.Label51.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.Label51.Border.LeftColor = System.Drawing.Color.Black
+        Me.Label51.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.Label51.Border.RightColor = System.Drawing.Color.Black
+        Me.Label51.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.Label51.Border.TopColor = System.Drawing.Color.Black
+        Me.Label51.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
+        Me.Label51.Height = 0.1875!
+        Me.Label51.HyperLink = Nothing
+        Me.Label51.Left = 5.25!
+        Me.Label51.Name = "Label51"
+        Me.Label51.Style = "color: Red; ddo-char-set: 0; text-align: right; font-weight: bold; font-size: 13." &
+    "8pt; font-family: BrowalliaUPC; "
+        Me.Label51.Text = "DUPLICATE"
+        Me.Label51.Top = 0!
+        Me.Label51.Width = 2.875!
+        '
         'PageFooter1
         '
         Me.PageFooter1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.txtTHAILAND, Me.txtIMPORT_COUNTRY, Me.txtcompany_provincefoot1, Me.txtcompany_provincefoot, Me.txtshow_check, Me.txtback_country, Me.txtinvh_run_auto, Me.txttotalSum_fob_amt, Me.Pic_ch5_exhibi, Me.Pic_ch7_Issued, Me.Pic_ch3_back, Me.Pic_ch1_third, Me.Line10, Me.Label28, Me.Label29, Me.Line11, Me.Label23, Me.Label34, Me.Line17, Me.Label26, Me.Line20, Me.Label35, Me.Line1, Me.Label30, Me.Label21, Me.Line2, Me.Label18, Me.Shape4, Me.Shape5, Me.Label24, Me.Shape1, Me.Shape6, Me.Label33, Me.Label27, Me.txtCheck_CaseRVCCount, Me.txtPrintDate, Me.Label39, Me.Label40, Me.Line16, Me.Label41, Me.Label45, Me.Label49, Me.Line6, Me.Line4, Me.Line3, Me.txtByCom_CH03, Me.txtDisplayUDS7, Me.txtdateSelectRPT, Me.txtapprove_date, Me.txtSendCheckSeletedate})
@@ -4450,26 +4470,6 @@ Partial Public Class rpt3_ediFORME_01_DC
         Me.txtTotalAll.Visible = False
         Me.txtTotalAll.Width = 3.375!
         '
-        'Label51
-        '
-        Me.Label51.Border.BottomColor = System.Drawing.Color.Black
-        Me.Label51.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.Label51.Border.LeftColor = System.Drawing.Color.Black
-        Me.Label51.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.Label51.Border.RightColor = System.Drawing.Color.Black
-        Me.Label51.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.Label51.Border.TopColor = System.Drawing.Color.Black
-        Me.Label51.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.Label51.Height = 0.1875!
-        Me.Label51.HyperLink = Nothing
-        Me.Label51.Left = 5.25!
-        Me.Label51.Name = "Label51"
-        Me.Label51.Style = "color: Red; ddo-char-set: 0; text-align: right; font-weight: bold; font-size: 13." &
-    "8pt; font-family: BrowalliaUPC; "
-        Me.Label51.Text = "DUPLICATE"
-        Me.Label51.Top = 0!
-        Me.Label51.Width = 2.875!
-        '
         'rpt3_ediFORME_01_DC
         '
         Me.MasterReport = False
@@ -4634,6 +4634,7 @@ Partial Public Class rpt3_ediFORME_01_DC
         CType(Me.Label60, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Label38, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Label50, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.Label51, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtTHAILAND, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtIMPORT_COUNTRY, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtcompany_provincefoot1, System.ComponentModel.ISupportInitialize).EndInit()
@@ -4671,7 +4672,6 @@ Partial Public Class rpt3_ediFORME_01_DC
         CType(Me.txtapprove_date, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtSendCheckSeletedate, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtTotalAll, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.Label51, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub

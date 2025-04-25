@@ -261,16 +261,6 @@
                                                             <asp:HyperLink ID="viewship_by" ImageUrl="~/images/redtakeoff.png" Visible='<%# checkship(Eval("ship_by"))%>' runat="server"></asp:HyperLink>
                                                         </ItemTemplate>
                                                     </telerik:GridTemplateColumn>
-                                                    <telerik:GridTemplateColumn UniqueName="TemplateTypeColumn">
-                                            <ItemStyle HorizontalAlign="Center" VerticalAlign="Middle" Width="18px" />
-                                            <ItemTemplate>
-                                                <%--<asp:Image ID="ImgSentBy" ImageUrl="/DesktopModules/DFT_eCO_EDI/images/digital_signed.gif"
-                                                    ToolTip="แบบคำขอที่มีการลงลายมือชื่ออิเล็กทรอนิกส์" runat="server" />&nbsp;--%>
-                                                <%--<img src="/images/1x1.gif" />--%>
-
-                                                <asp:Label runat="server" ID="imgLabel" Text='<%#GetPrinterImage(Eval("IsPrintForm")) %>'></asp:Label>
-                                            </ItemTemplate>
-                                        </telerik:GridTemplateColumn>
                                                     <telerik:GridBoundColumn DataField="FORM_NAME" HeaderText="ชื่อฟอร์ม" ReadOnly="True"
                                                         SortExpression="FORM_NAME" UniqueName="FORM_NAME">
                                                         <ItemStyle Font-Names="Tahoma" Font-Size="10pt" />
@@ -318,20 +308,6 @@
                                             <span style="color: #999999; font-size: 10px;">(+)</span>
                                             <asp:LinkButton ID="LinkButton1" runat="server">แสดงประวัติการตรวจสอบเอกสาร</asp:LinkButton>
                                         </div>
-                                        <div style="text-align: left; padding: 5px;" class="formLabel">
-                                <p class="formLabel">
-                                    <b>คำอธิบายสัญลักษณ์</b>
-                                </p>
-                              <ul>
-                                    <li>
-                                        <img src="/images/print-disable.png" style='width: 18px; height: 18px;' />
-                                        คำขอที่ประสงค์จะไม่พิมพ์หนังสือรับรองฯ สำหรับ e-Form D 
-                                    </li>
-                                    <%-- <li>
-                        <img src="/DesktopModules/DFT_eCO_EDI/images/attachment.png" width="18px" height="18px"/>
-                        สำหรับพิมพ์ไฟล์ AttachSheet </li>--%>
-                                </ul>
-                            </div>
                                     </div>
                                 </td>
                             </tr>

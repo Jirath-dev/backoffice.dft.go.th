@@ -673,7 +673,7 @@ Namespace NTi.Modules.DFT_EDI_RePrintCERT
 
                             'บันทึกเหตุผลและวันที่พิมพ์ซ้ำ
                             '=========================================
-                            Call UpdateRePrint(runAuto)
+                            Call UpdateDuplicate(runAuto)
                             '=========================================
 
                             Dim spl_runAuto As Array
@@ -754,7 +754,7 @@ Namespace NTi.Modules.DFT_EDI_RePrintCERT
 
                             'บันทึกเหตุผลและวันที่พิมพ์ซ้ำ
                             '=========================================
-                            Call UpdateRePrint(runAuto)
+                            Call UpdateDuplicate(runAuto)
                             '=========================================
 
                             Dim spl_runAuto As Array
@@ -843,7 +843,43 @@ Namespace NTi.Modules.DFT_EDI_RePrintCERT
                 RadAjaxManager1.ResponseScripts.Add("window.alert('" & ex.Message & "');")
             End Try
         End Sub
+        Private Sub UpdateDuplicate(ByVal INVH_RUN_AUTO As String, Optional ByVal By_CheckCase As Object = Nothing, Optional ByVal By_StrConCase As Object = Nothing)
+            Try
+                Dim ds As New DataSet
+                Dim temp_store As String = "sp_common_UpdateDuplicate_NewDS"
 
+                Select Case check_YearsOle.Checked
+                    Case True
+                        Select Case DDLYears.SelectedValue
+                            Case "1"
+                                temp_store = "sp_common_UpdateDuplicate_NewDS01"
+                            Case "2"
+                                temp_store = "sp_common_UpdateDuplicate_NewDS02"
+                            Case "3"
+                                temp_store = "sp_common_UpdateDuplicate_NewDS03"
+                            Case "4"
+                                temp_store = "sp_common_UpdateDuplicate_NewDS04"
+                            Case "5"
+                                temp_store = "sp_common_UpdateDuplicate_NewDS05"
+                            Case "6"
+                                temp_store = "sp_common_UpdateDuplicate_NewDS06"
+                            Case "7"
+                                temp_store = "sp_common_UpdateDuplicate_NewDS07"
+                            Case "8"
+                                temp_store = "sp_common_UpdateDuplicate_NewDS08"
+
+                        End Select
+                End Select
+
+                ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, temp_store,
+                New SqlParameter("@INVH_RUN_AUTO", CommonUtility.Get_StringValue(INVH_RUN_AUTO)),
+                New SqlParameter("@REPRINT_REMARK", CommonUtility.Get_StringValue(txtRePrint_Remark.Text)),
+                New SqlParameter("@RePrint_By", CommonUtility.Get_StringValue(UserInfo.Username)))
+
+            Catch ex As Exception
+                RadAjaxManager1.ResponseScripts.Add("window.alert('" & ex.Message & "');")
+            End Try
+        End Sub
         Protected Sub CheckSelectDate_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckSelectDate.CheckedChanged
             Select Case CheckSelectDate.Checked
                 Case True

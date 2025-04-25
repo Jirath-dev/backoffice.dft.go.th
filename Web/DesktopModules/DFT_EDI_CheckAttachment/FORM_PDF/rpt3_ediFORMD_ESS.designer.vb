@@ -412,7 +412,7 @@ Partial Public Class rpt3_ediFORMD_ESS
         '
         Me.Detail1.ColumnSpacing = 0!
         Me.Detail1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.txtNumRowCount, Me.txtTemp_marks, Me.txtT_product, Me.txtTemp_box8, Me.txtTolInvoice, Me.txtinvoice_no1, Me.txtinvoice_no2, Me.txtinvoice_no3, Me.txtinvoice_no4, Me.txtinvoice_no5, Me.txtinvoice_date1, Me.txtinvoice_date2, Me.txtinvoice_date3, Me.txtinvoice_date4, Me.txtinvoice_date5, Me.txtGross_Weight, Me.txtmarks, Me.txtproduct_n1, Me.txtproduct_n2, Me.txtquantity1, Me.txtq_unit_code1, Me.txtquantity2, Me.txtq_unit_code2, Me.txtquantity3, Me.txtq_unit_code3, Me.txtquantity4, Me.txtq_unit_code4, Me.txtquantity5, Me.txtq_unit_code5, Me.txtg_unit_code, Me.C_TotalRowDe, Me.txttariff_code, Me.txtGrossTxt, Me.txtg_Unit_Desc, Me.txtFOB_AMT, Me.txtinvoice_board, Me.txtWeightDisplayHeader, Me.txtFOBDisplay, Me.txtunit_code2, Me.txtnet_weight, Me.txtgross_weightH, Me.txtGrossTxt_, Me.txtthird_country, Me.txtplace_Exibition, Me.txtNumInvoice, Me.txtUSDInvoice, Me.txtbox8, Me.txtunit_code3, Me.txtUSDInvoiceDetail, Me.txtWeightDisplayHeaderH, Me.txtgross_weightD, Me.txtCheckGrossDetail, Me.txtInvoiceDetailTH, Me.txtSINGLE_COUNTRY_CONTENT, Me.txt_NewEmail_ch02, Me.txtproduct_model, Me.txtvoince, Me.txtTitleMain, Me.txtPriceOtherDetail, Me.txtCurrency_Code, Me.txtletter, Me.txtUSDAgent, Me.txtDisplayUnitType})
-        Me.Detail1.Height = 0.25!
+        Me.Detail1.Height = 0.3833333!
         Me.Detail1.Name = "Detail1"
         '
         'txtNumRowCount
@@ -463,7 +463,7 @@ Partial Public Class rpt3_ediFORMD_ESS
         Me.txtT_product.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
         Me.txtT_product.Border.TopColor = System.Drawing.Color.Black
         Me.txtT_product.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtT_product.Height = 0.25!
+        Me.txtT_product.Height = 0.375!
         Me.txtT_product.Left = 1.625!
         Me.txtT_product.Name = "txtT_product"
         Me.txtT_product.Style = "color: Blue; ddo-char-set: 1; font-size: 10pt; font-family: BrowalliaUPC; "
@@ -481,7 +481,7 @@ Partial Public Class rpt3_ediFORMD_ESS
         Me.txtTemp_box8.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
         Me.txtTemp_box8.Border.TopColor = System.Drawing.Color.Black
         Me.txtTemp_box8.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtTemp_box8.Height = 0.25!
+        Me.txtTemp_box8.Height = 0.375!
         Me.txtTemp_box8.Left = 5.4375!
         Me.txtTemp_box8.Name = "txtTemp_box8"
         Me.txtTemp_box8.Style = "color: Blue; ddo-char-set: 1; text-align: center; font-size: 10pt; font-family: B" &
@@ -1059,7 +1059,7 @@ Partial Public Class rpt3_ediFORMD_ESS
         Me.txtGrossTxt.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
         Me.txtGrossTxt.Border.TopColor = System.Drawing.Color.Black
         Me.txtGrossTxt.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtGrossTxt.Height = 0.25!
+        Me.txtGrossTxt.Height = 0.375!
         Me.txtGrossTxt.Left = 6.0625!
         Me.txtGrossTxt.Name = "txtGrossTxt"
         Me.txtGrossTxt.Style = "color: Blue; ddo-char-set: 1; text-align: center; font-size: 10pt; font-family: B" &
@@ -1539,7 +1539,7 @@ Partial Public Class rpt3_ediFORMD_ESS
         Me.txtvoince.Border.TopColor = System.Drawing.Color.Black
         Me.txtvoince.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
         Me.txtvoince.DataField = "invoice_no"
-        Me.txtvoince.Height = 0.25!
+        Me.txtvoince.Height = 0.375!
         Me.txtvoince.Left = 7.1875!
         Me.txtvoince.Name = "txtvoince"
         Me.txtvoince.Style = "color: Blue; ddo-char-set: 1; text-align: center; font-size: 10pt; font-family: B" &
@@ -1671,7 +1671,7 @@ Partial Public Class rpt3_ediFORMD_ESS
         'PageHeader1
         '
         Me.PageHeader1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.Label38, Me.Label36, Me.Label47, Me.Label37, Me.Label15, Me.Label59, Me.Label34, Me.txtreference_code2_Temp, Me.Label19, Me.txtCompany_Check_1, Me.txtdestination_Check2, Me.txttransport_by, Me.txtcompany_taxno, Me.txtcompany_country, Me.txtcompany_province, Me.txtcompany_address, Me.txtcompany_name, Me.txtob_address, Me.txtdest_remark, Me.txtcompany_fax, Me.txtcompany_phone, Me.txtdestination_company, Me.txtdestination_fax, Me.txtdestination_address, Me.txtdestination_phone, Me.txtdestination_province, Me.txtdest_Receive_country, Me.txtreference_code2, Me.txtcompany_email, Me.txtdestination_email, Me.txtdestination_taxid, Me.txtdest_remark1, Me.txtob_dest_address, Me.txtdeparture_date, Me.txtvasel_name, Me.txtport_discharge, Me.ReportInfo1, Me.txtform_type, Me.txtNewEmail_ch02, Me.txtNewEmail_ch01, Me.txtTitleHead, Me.Line9, Me.Line8, Me.Line13, Me.Line14, Me.Line12, Me.Line3, Me.Label42, Me.Label43, Me.Label44, Me.Line11, Me.Label3, Me.Label2, Me.Label5, Me.Label4, Me.Label1, Me.Label8, Me.Label7, Me.Label16, Me.Label21, Me.Label17, Me.Label22, Me.Line19, Me.Label6, Me.Shape1, Me.Label29, Me.Label30, Me.Shape3, Me.Label33, Me.Label48, Me.Label46, Me.Line10, Me.Label18, Me.Label20, Me.Label27, Me.Label32, Me.Label35, Me.Label39, Me.Label45, Me.Label56, Me.Label57, Me.Line4, Me.Line15, Me.Label60, Me.Label61, Me.Label31})
-        Me.PageHeader1.Height = 4.675!
+        Me.PageHeader1.Height = 4.766667!
         Me.PageHeader1.Name = "PageHeader1"
         '
         'Label38
@@ -4510,7 +4510,7 @@ Partial Public Class rpt3_ediFORMD_ESS
         'GroupFooter1
         '
         Me.GroupFooter1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.txtTotalAll})
-        Me.GroupFooter1.Height = 0.3083333!
+        Me.GroupFooter1.Height = 0.2291667!
         Me.GroupFooter1.KeepTogether = True
         Me.GroupFooter1.Name = "GroupFooter1"
         Me.GroupFooter1.Visible = False

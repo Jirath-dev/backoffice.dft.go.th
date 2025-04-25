@@ -44,18 +44,8 @@ Public Class rpt3_ediFORM4_5_pr
         If CommonUtility.Get_StringValue(txtSINGLE_COUNTRY_CONTENT.Value) = "1" And CommonUtility.Get_StringValue(txtTitleMain.Text) <> "" Then
             txtTitleHead.Visible = True
         End If
-        'Check_Issued()
         'by rut Title New End-------------------------------------------
     End Sub
-    'Private Sub Check_Issued()
-    '    If txtIsIssued.Text.ToLower = "true" Or txtIsIssued.Text = "1" Then
-    '        txtEDI_Date.Visible = True
-    '        txtIsIssueddate.Visible = True
-    '    Else
-    '        txtEDI_Date.Visible = False
-    '        txtIsIssueddate.Visible = False
-    '    End If
-    'End Sub
     'company
     Sub Head_Checkcompany_v1()
         If Mid(txtdest_remark.Text, 1, 3) = "C/O" Then

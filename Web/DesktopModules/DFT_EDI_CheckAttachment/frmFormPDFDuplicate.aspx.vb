@@ -30,53 +30,79 @@ Partial Public Class frmFormPDFDuplicate
                 Select Case form_type
                     Case "FORM3_1"
                         ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_form4_edi_printPDF_NewDS31",
-                                        New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")))
+                        New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")))
+
                     Case "FORM44_01", "FORM44_02", "FORMAHK", "FORMD_ESS", "FORMD_ESS_", "FORMRCEP", "FORME_01", "FORME_ESS"
-                        ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_form4_edi_printPDF_NewDS_ASW",
-                                        New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")))
-                        'Case "FORM4_9"
-                        '    ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_form4_edi_printPDF_NewDS_Duplicate",
-                        '                    New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")))
+                        Select Case YearID
+                            Case ""
+                                ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_form4_edi_printPDF_NewDS_ASW",
+                        New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")))
+                            Case "1"
+                                ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_form4_edi_printPDF_NewDS_ASW_01",
+                        New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")))
+                            Case "2"
+                                ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_form4_edi_printPDF_NewDS_ASW_02",
+                        New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")))
+                            Case "3"
+                                ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_form4_edi_printPDF_NewDS_ASW_03",
+                        New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")))
+                            Case "4"
+                                ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_form4_edi_printPDF_NewDS_ASW_04",
+                        New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")))
+                            Case "5"
+                                ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_form4_edi_printPDF_NewDS_ASW_05",
+                        New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")))
+                            Case "6"
+                                ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_form4_edi_printPDF_NewDS_ASW_06",
+                        New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")))
+                            Case "7"
+                                ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_form4_edi_printPDF_NewDS_ASW_07",
+                        New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")))
+                            Case "8"
+                                ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_form4_edi_printPDF_NewDS_ASW_08",
+                        New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")))
+                        End Select
+
                     Case Else
                         Select Case YearID
                             Case ""
                                 ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_form4_edi_printPDF_NewDS_test",
-                                       New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")))
+                       New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")))
                             Case "1"
                                 ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_form4_edi_RePrintFormBar_NewDS_Ole01",
-                                                    New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")),
-                                                    New SqlParameter("@SITE_ID", ""))
+                                   New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")),
+                                   New SqlParameter("@SITE_ID", ""))
                             Case "2"
                                 ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_form4_edi_RePrintFormBar_NewDS_Ole02",
-                                                                               New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")),
-                                                                               New SqlParameter("@SITE_ID", ""))
+                                   New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")),
+                                   New SqlParameter("@SITE_ID", ""))
                             Case "3"
                                 ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_form4_edi_RePrintFormBar_NewDS_Ole03",
-                                                                               New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")),
-                                                                               New SqlParameter("@SITE_ID", ""))
+                                   New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")),
+                                   New SqlParameter("@SITE_ID", ""))
                             Case "4"
                                 ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_form4_edi_RePrintFormBar_NewDS_Ole04",
-                                                                               New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")),
-                                                                               New SqlParameter("@SITE_ID", ""))
+                                   New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")),
+                                   New SqlParameter("@SITE_ID", ""))
                             Case "5"
                                 ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_form4_edi_RePrintFormBar_NewDS_Ole05",
-                                                                               New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")),
-                                                                               New SqlParameter("@SITE_ID", ""))
+                                   New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")),
+                                   New SqlParameter("@SITE_ID", ""))
                             Case "6"
                                 ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_form4_edi_RePrintFormBar_NewDS_Ole06",
-                                                                               New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")),
-                                                                               New SqlParameter("@SITE_ID", ""))
+                                   New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")),
+                                   New SqlParameter("@SITE_ID", ""))
                             Case "7"
                                 ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_form4_edi_RePrintFormBar_NewDS_Ole07",
-                                                                               New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")),
-                                                                               New SqlParameter("@SITE_ID", ""))
+                                   New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")),
+                                   New SqlParameter("@SITE_ID", ""))
                             Case "8"
                                 ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_form4_edi_RePrintFormBar_NewDS_Ole08",
-                                                                               New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")),
-                                                                               New SqlParameter("@SITE_ID", ""))
+                                   New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")),
+                                   New SqlParameter("@SITE_ID", ""))
                         End Select
-
                 End Select
+
 
                 'ds = SqlHelper.ExecuteDataset(strEDIConn, CommandType.StoredProcedure, "vi_form4_edi_printPDF_NewDS",
                 'New SqlParameter("@INVH_RUN_AUTO", Request.QueryString("INVH_RUN_AUTO")))
@@ -201,11 +227,11 @@ Partial Public Class frmFormPDFDuplicate
                                 Case "FORM441_4"
                                     rpt = New rpt3_ediFORM441_4_pr
                                 Case "FORM44_01"
-                                    rpt = New rpt3_ediFORM44_01_DC
+                                    rpt = New rpt3_ediFORM44_01
                                 Case "FORMD_ESS"
                                     rpt = New rpt3_ediFORMD_ESS_DC
                                 Case "FORM44_02"
-                                    rpt = New rpt3_ediFORM44_02_DC
+                                    rpt = New rpt3_ediFORM44_02
                                 Case "FORMD_ESS_"
                                     rpt = New rpt3_ediFORMD_ESS_
                             End Select

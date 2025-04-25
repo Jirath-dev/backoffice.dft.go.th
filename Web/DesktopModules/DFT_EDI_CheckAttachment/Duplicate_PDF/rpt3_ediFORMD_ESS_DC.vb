@@ -2321,11 +2321,11 @@ Public Class rpt3_ediFORMD_ESS_DC
 
         'by rut edit ‡ Èπ
         Me.CurrentPage.DrawLine(0.06, 3.95, 0.06, 7.74) '7.74
-        Me.CurrentPage.DrawLine(0.75, 3.95, 0.75, FLine_SizeSetting("FORM4", PageHeader1.Height, PageFooter1.Height, 4.62))
-        Me.CurrentPage.DrawLine(1.82, 3.95, 1.82, FLine_SizeSetting("FORM4", PageHeader1.Height, PageFooter1.Height, 4.62))
-        Me.CurrentPage.DrawLine(5.39, 3.95, 5.39, FLine_SizeSetting("FORM4", PageHeader1.Height, PageFooter1.Height, 4.62))
-        Me.CurrentPage.DrawLine(6.07, 3.95, 6.07, FLine_SizeSetting("FORM4", PageHeader1.Height, PageFooter1.Height, 4.62))
-        Me.CurrentPage.DrawLine(7.2, 3.95, 7.2, FLine_SizeSetting("FORM4", PageHeader1.Height, PageFooter1.Height, 4.62))
+        Me.CurrentPage.DrawLine(0.75, 3.95, 0.75, FLine_SizeSetting("FORM4", PageHeader1.Height, PageFooter1.Height, 4.52))
+        Me.CurrentPage.DrawLine(1.82, 3.95, 1.82, FLine_SizeSetting("FORM4", PageHeader1.Height, PageFooter1.Height, 4.52))
+        Me.CurrentPage.DrawLine(5.39, 3.95, 5.39, FLine_SizeSetting("FORM4", PageHeader1.Height, PageFooter1.Height, 4.52))
+        Me.CurrentPage.DrawLine(6.07, 3.95, 6.07, FLine_SizeSetting("FORM4", PageHeader1.Height, PageFooter1.Height, 4.52))
+        Me.CurrentPage.DrawLine(7.2, 3.95, 7.2, FLine_SizeSetting("FORM4", PageHeader1.Height, PageFooter1.Height, 4.52))
         Me.CurrentPage.DrawLine(8.19, 3.95, 8.19, 7.74)
 
     End Sub

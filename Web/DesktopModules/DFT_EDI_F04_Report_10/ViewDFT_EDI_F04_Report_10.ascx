@@ -61,7 +61,7 @@
 </table>
 <div style="margin: 3px;">
     <asp:Button ID="btnSearch" runat="server" Text="ค้นหา" Width="100px" />
-    <asp:Button ID="btnExcel" runat="server" Text="Export Execl" Width="100px" />
+    <asp:Button ID="btnExcel" runat="server" Text="Export Excel" Width="100px" />
     <asp:Button ID="btnPDF" runat="server" Text="Export PDF" Width="100px" />
 </div>
 <div style="margin: 5px;">

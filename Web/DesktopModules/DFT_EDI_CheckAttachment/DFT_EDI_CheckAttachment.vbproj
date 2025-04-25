@@ -36,7 +36,6 @@
     <DocumentationFile>DFT_EDI_CheckAttachment.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
     <RemoveIntegerChecks>true</RemoveIntegerChecks>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -46,7 +45,6 @@
     <OutputPath>..\..\bin\</OutputPath>
     <DocumentationFile>DFT_EDI_CheckAttachment.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="ActiveReports.PdfExport, Version=5.3.1436.2, Culture=neutral, PublicKeyToken=cc4967777c49a3ff, processorArchitecture=MSIL">
@@ -155,30 +153,6 @@
     <Compile Include="Components\DFT_EDI_CheckAttachmentController.vb" />
     <Compile Include="Components\DFT_EDI_CheckAttachmentInfo.vb" />
     <Compile Include="Components\SqlDataProvider.vb" />
-    <Compile Include="Duplicate_PDF\rpt3_ediFORM2_DC.Designer.vb">
-      <DependentUpon>rpt3_ediFORM2_DC.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Duplicate_PDF\rpt3_ediFORM2_DC.vb">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Duplicate_PDF\rpt3_ediFORM44_01_DC.designer.vb">
-      <DependentUpon>rpt3_ediFORM44_01_DC.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Duplicate_PDF\rpt3_ediFORM44_01_DC.vb">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Duplicate_PDF\rpt3_ediFORM44_02_DC.designer.vb">
-      <DependentUpon>rpt3_ediFORM44_02_DC.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Duplicate_PDF\rpt3_ediFORM44_02_DC.vb">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Duplicate_PDF\rpt3_ediFORM4_8_DC.designer.vb">
-      <DependentUpon>rpt3_ediFORM4_8_DC.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Duplicate_PDF\rpt3_ediFORM4_8_DC.vb">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Duplicate_PDF\rpt3_ediFORM4_9_DC.Designer.vb">
       <DependentUpon>rpt3_ediFORM4_9_DC.vb</DependentUpon>
     </Compile>
@@ -195,12 +169,6 @@
       <DependentUpon>rpt3_ediFORME_01_DC.vb</DependentUpon>
     </Compile>
     <Compile Include="Duplicate_PDF\rpt3_ediFORME_01_DC.vb">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Duplicate_PDF\rpt3_ediFORME_DC.designer.vb">
-      <DependentUpon>rpt3_ediFORME_DC.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Duplicate_PDF\rpt3_ediFORME_DC.vb">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Duplicate_PDF\rpt3_ediFORME_ESS_DC.designer.vb">
@@ -618,8 +586,8 @@
       <DependentUpon>frmFormPDFDuplicate.aspx</DependentUpon>
     </Compile>
     <Compile Include="frmFormPDFDuplicate.aspx.vb">
-      <SubType>ASPXCodeBehind</SubType>
       <DependentUpon>frmFormPDFDuplicate.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="frmFormPDFPage.aspx.designer.vb">
       <DependentUpon>frmFormPDFPage.aspx</DependentUpon>
@@ -889,30 +857,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Duplicate_PDF\rpt3_ediFORM2_DC.en-GB.resx">
-      <DependentUpon>rpt3_ediFORM2_DC.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Duplicate_PDF\rpt3_ediFORM2_DC.en-US.resx">
-      <DependentUpon>rpt3_ediFORM2_DC.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Duplicate_PDF\rpt3_ediFORM2_DC.resx">
-      <DependentUpon>rpt3_ediFORM2_DC.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Duplicate_PDF\rpt3_ediFORM44_01_DC.en-GB.resx">
-      <DependentUpon>rpt3_ediFORM44_01_DC.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Duplicate_PDF\rpt3_ediFORM44_01_DC.resx">
-      <DependentUpon>rpt3_ediFORM44_01_DC.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Duplicate_PDF\rpt3_ediFORM44_02_DC.en-GB.resx">
-      <DependentUpon>rpt3_ediFORM44_02_DC.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Duplicate_PDF\rpt3_ediFORM44_02_DC.resx">
-      <DependentUpon>rpt3_ediFORM44_02_DC.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Duplicate_PDF\rpt3_ediFORM4_8_DC.resx">
-      <DependentUpon>rpt3_ediFORM4_8_DC.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Duplicate_PDF\rpt3_ediFORM4_9_DC.resx">
       <DependentUpon>rpt3_ediFORM4_9_DC.vb</DependentUpon>
     </EmbeddedResource>
@@ -924,9 +868,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Duplicate_PDF\rpt3_ediFORME_01_DC.resx">
       <DependentUpon>rpt3_ediFORME_01_DC.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Duplicate_PDF\rpt3_ediFORME_DC.resx">
-      <DependentUpon>rpt3_ediFORME_DC.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Duplicate_PDF\rpt3_ediFORME_ESS_DC.resx">
       <DependentUpon>rpt3_ediFORME_ESS_DC.vb</DependentUpon>

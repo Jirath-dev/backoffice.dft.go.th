@@ -159,9 +159,6 @@ Partial Public Class rpt3_ediFORM4_5_pr
         Me.GroupHeader1 = New DataDynamics.ActiveReports.GroupHeader()
         Me.GroupFooter1 = New DataDynamics.ActiveReports.GroupFooter()
         Me.txtTotalAll = New DataDynamics.ActiveReports.TextBox()
-        Me.txtIsIssueddate = New DataDynamics.ActiveReports.TextBox()
-        Me.txtIsIssued = New DataDynamics.ActiveReports.TextBox()
-        Me.txtEDI_Date = New DataDynamics.ActiveReports.TextBox()
         CType(Me.txtNumRowCount, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTemp_marks, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtT_product, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -285,9 +282,6 @@ Partial Public Class rpt3_ediFORM4_5_pr
         CType(Me.txtTemp_SiteSend, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTemp_Date, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.txtTotalAll, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtIsIssueddate, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtIsIssued, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.txtEDI_Date, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me, System.ComponentModel.ISupportInitialize).BeginInit()
         '
         'Detail1
@@ -1339,8 +1333,8 @@ Partial Public Class rpt3_ediFORM4_5_pr
         '
         'PageHeader1
         '
-        Me.PageHeader1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.txtCompany_Check_1, Me.txtreference_code2_Temp, Me.txtdestination_Check2, Me.txttransport_by, Me.txtcompany_taxno, Me.txtcompany_country, Me.txtcompany_province, Me.txtcompany_address, Me.txtcompany_name, Me.txtob_address, Me.txtdest_remark, Me.txtcompany_fax, Me.txtcompany_phone, Me.txtdestination_company, Me.txtdestination_fax, Me.txtdestination_address, Me.txtdestination_phone, Me.txtdestination_province, Me.txtdest_Receive_country, Me.txtreference_code2, Me.txtcompany_email, Me.txtdestination_email, Me.txtdestination_taxid, Me.txtdest_remark1, Me.txtob_dest_address, Me.ReportInfo1, Me.txtNewEmail_ch02, Me.txtNewEmail_ch01, Me.txtTitleHead, Me.Line17, Me.Line16, Me.Label8, Me.Label7, Me.Label2, Me.Label19, Me.Label16, Me.Label20, Me.Label22, Me.Label21, Me.Line19, Me.Label4, Me.Label17, Me.Line13, Me.Label1, Me.Label3, Me.Line23, Me.Label6, Me.Line22, Me.Label42, Me.Label43, Me.Label44, Me.Label46, Me.Label47, Me.Label48, Me.Line21, Me.Line9, Me.Line1, Me.Label51, Me.txtIsIssueddate, Me.txtIsIssued, Me.txtEDI_Date})
-        Me.PageHeader1.Height = 5.115833!
+        Me.PageHeader1.Controls.AddRange(New DataDynamics.ActiveReports.ARControl() {Me.txtCompany_Check_1, Me.txtreference_code2_Temp, Me.txtdestination_Check2, Me.txttransport_by, Me.txtcompany_taxno, Me.txtcompany_country, Me.txtcompany_province, Me.txtcompany_address, Me.txtcompany_name, Me.txtob_address, Me.txtdest_remark, Me.txtcompany_fax, Me.txtcompany_phone, Me.txtdestination_company, Me.txtdestination_fax, Me.txtdestination_address, Me.txtdestination_phone, Me.txtdestination_province, Me.txtdest_Receive_country, Me.txtreference_code2, Me.txtcompany_email, Me.txtdestination_email, Me.txtdestination_taxid, Me.txtdest_remark1, Me.txtob_dest_address, Me.ReportInfo1, Me.txtNewEmail_ch02, Me.txtNewEmail_ch01, Me.txtTitleHead, Me.Line17, Me.Line16, Me.Label8, Me.Label7, Me.Label2, Me.Label19, Me.Label16, Me.Label20, Me.Label22, Me.Label21, Me.Line19, Me.Label4, Me.Label17, Me.Line13, Me.Label1, Me.Label3, Me.Line23, Me.Label6, Me.Line22, Me.Label42, Me.Label43, Me.Label44, Me.Label46, Me.Label47, Me.Label48, Me.Line21, Me.Line9, Me.Line1, Me.Label51})
+        Me.PageHeader1.Height = 4.925!
         Me.PageHeader1.Name = "PageHeader1"
         '
         'txtCompany_Check_1
@@ -3107,68 +3101,6 @@ Partial Public Class rpt3_ediFORM4_5_pr
         Me.txtTotalAll.Visible = False
         Me.txtTotalAll.Width = 3.34375!
         '
-        'txtIsIssueddate
-        '
-        Me.txtIsIssueddate.Border.BottomColor = System.Drawing.Color.Black
-        Me.txtIsIssueddate.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtIsIssueddate.Border.LeftColor = System.Drawing.Color.Black
-        Me.txtIsIssueddate.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtIsIssueddate.Border.RightColor = System.Drawing.Color.Black
-        Me.txtIsIssueddate.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtIsIssueddate.Border.TopColor = System.Drawing.Color.Black
-        Me.txtIsIssueddate.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtIsIssueddate.CanGrow = False
-        Me.txtIsIssueddate.Height = 0.875!
-        Me.txtIsIssueddate.Left = 4.5625!
-        Me.txtIsIssueddate.Name = "txtIsIssueddate"
-        Me.txtIsIssueddate.Style = "color: Blue; ddo-char-set: 0; font-size: 24pt; font-family: BrowalliaUPC; "
-        Me.txtIsIssueddate.Text = """ISSUED RETROACTIVELY, date of shipment is              """
-        Me.txtIsIssueddate.Top = 3.4375!
-        Me.txtIsIssueddate.Width = 3.3125!
-        '
-        'txtIsIssued
-        '
-        Me.txtIsIssued.Border.BottomColor = System.Drawing.Color.Black
-        Me.txtIsIssued.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtIsIssued.Border.LeftColor = System.Drawing.Color.Black
-        Me.txtIsIssued.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtIsIssued.Border.RightColor = System.Drawing.Color.Black
-        Me.txtIsIssued.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtIsIssued.Border.TopColor = System.Drawing.Color.Black
-        Me.txtIsIssued.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtIsIssued.DataField = "IsIssuedRetro"
-        Me.txtIsIssued.Height = 0.1979167!
-        Me.txtIsIssued.Left = 4.625!
-        Me.txtIsIssued.Name = "txtIsIssued"
-        Me.txtIsIssued.Style = "color: Red; "
-        Me.txtIsIssued.Text = "IsIssue"
-        Me.txtIsIssued.Top = 3.6875!
-        Me.txtIsIssued.Visible = False
-        Me.txtIsIssued.Width = 1.0!
-        '
-        'txtEDI_Date
-        '
-        Me.txtEDI_Date.Border.BottomColor = System.Drawing.Color.Black
-        Me.txtEDI_Date.Border.BottomStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtEDI_Date.Border.LeftColor = System.Drawing.Color.Black
-        Me.txtEDI_Date.Border.LeftStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtEDI_Date.Border.RightColor = System.Drawing.Color.Black
-        Me.txtEDI_Date.Border.RightStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtEDI_Date.Border.TopColor = System.Drawing.Color.Black
-        Me.txtEDI_Date.Border.TopStyle = DataDynamics.ActiveReports.BorderLineStyle.None
-        Me.txtEDI_Date.CanGrow = False
-        Me.txtEDI_Date.DataField = "edi_date"
-        Me.txtEDI_Date.Height = 0.25!
-        Me.txtEDI_Date.Left = 5.6875!
-        Me.txtEDI_Date.Name = "txtEDI_Date"
-        Me.txtEDI_Date.OutputFormat = resources.GetString("txtEDI_Date.OutputFormat")
-        Me.txtEDI_Date.Style = "color: Blue; ddo-char-set: 1; text-align: right; font-weight: bold; font-size: 16" &
-    "pt; font-family: BrowalliaUPC; "
-        Me.txtEDI_Date.Text = "30/09/2017"
-        Me.txtEDI_Date.Top = 3.9375!
-        Me.txtEDI_Date.Visible = False
-        Me.txtEDI_Date.Width = 1.75!
-        '
         'rpt3_ediFORM4_5_pr
         '
         Me.MasterReport = False
@@ -3319,9 +3251,6 @@ Partial Public Class rpt3_ediFORM4_5_pr
         CType(Me.txtTemp_SiteSend, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtTemp_Date, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.txtTotalAll, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtIsIssueddate, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtIsIssued, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.txtEDI_Date, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me, System.ComponentModel.ISupportInitialize).EndInit()
 
     End Sub
@@ -3469,7 +3398,4 @@ Partial Public Class rpt3_ediFORM4_5_pr
     Friend WithEvents txtTemp_Date As DataDynamics.ActiveReports.TextBox
     Friend WithEvents Picture_SealAuthor As DataDynamics.ActiveReports.Picture
     Friend WithEvents Label51 As DataDynamics.ActiveReports.Label
-    Friend WithEvents txtIsIssueddate As DataDynamics.ActiveReports.TextBox
-    Friend WithEvents txtIsIssued As DataDynamics.ActiveReports.TextBox
-    Friend WithEvents txtEDI_Date As DataDynamics.ActiveReports.TextBox
 End Class
